@@ -109,4 +109,16 @@ paired transverse intervention의 exact Aer 전수 atlas는 한쪽 pulse와 $Z$�
 
 문서: [24단계 사전 예측](notes/research_protocol24_charge_graph_cutoff2_2026-10-06.tex)([PDF](output/pdf/research_protocol24_charge_graph_cutoff2_2026-10-06.pdf)), [25단계 사전 예측](notes/research_protocol25_invalid_phase_extension_2026-10-06.tex)([PDF](output/pdf/research_protocol25_invalid_phase_extension_2026-10-06.pdf)), [24--25 결과·증명](notes/research_results24_25_charge_graph_2026-10-06.tex)([PDF](output/pdf/research_results24_25_charge_graph_2026-10-06.pdf)), [26단계 사전 예측](notes/research_protocol26_physical_access_2026-10-15.md), [26단계 결과](notes/research_result26_physical_access_2026-10-15.md). 원자료: [24단계](results/qiskit_rank_holdout24_charge_graph.json), [25단계](results/qiskit_rank_holdout25_invalid_extension.json), [26단계](results/qiskit_rank_holdout26_physical_access.json).
 
-현재 전체 회귀 테스트는 `scripts/test.py`에서 154개 통과한다(2026-11-13, 21--23단계 잡음 누출 회귀 검사 포함).
+## I01 문헌 검토와 본연구 27a (2026-11-13)
+
+[문헌 검토](notes/literature_review_2026-11-13.md)에서 섹터 밖 경유 전이는 게이지 위반의 2차 유효 과정과 코히런트 게이지 드리프트의 디지털 사례이고, 균일 표지 평균은 대칭 보호 문헌의 Z_L twirl임을 확인했다. 이에 따라 기여 범위를 정확한 두 항 공식, 경로 클래스별 구조적 영, 사전등록 유한 샷 검정으로 좁혔다.
+
+이어서 [27a 사전 프로토콜](notes/research_protocol27a_exact_design_2026-11-13.md)을 코드보다 먼저 커밋하고 [샷 없는 검증](notes/research_result27a_exact_design_2026-11-13.md)을 수행했으며, 사전 판정 17개가 모두 통과했다. 결과는 네 가지다.
+- 선검증 1의 짧은 표지 실패는 Z_L 에일리어싱이며, cos τ 인자 때문에 τ=0에서만 나타난다.
+- 접근 펄스 twirl은 간섭항을 소거해 대비를 4–5자릿수 줄인다.
+- 단순 반복은 켤레 영을 깨므로 증폭 수단이 아니다.
+- 대각 잡음은 켤레 영을 보존한다.
+
+[코드](src/relational_atlas_i01/holdout/qiskit_rank_holdout27a_exact_design.py), [원자료](results/qiskit_rank_holdout27a_exact_design.json).
+
+현재 전체 회귀 테스트는 `scripts/test.py`에서 163개 통과한다(2026-11-13).
