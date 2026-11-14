@@ -1,0 +1,108 @@
+{
+  "cases_predeclared": [
+    [
+      3,
+      0.45,
+      0.55,
+      0.0,
+      7,
+      1,
+      false
+    ],
+    [
+      3,
+      1.2,
+      1.25,
+      1.5707963267948966,
+      5,
+      2,
+      true
+    ],
+    [
+      4,
+      1.2,
+      1.25,
+      1.5707963267948966,
+      9,
+      3,
+      false
+    ],
+    [
+      4,
+      0.45,
+      0.55,
+      0.0,
+      7,
+      1,
+      true
+    ]
+  ],
+  "rows": [
+    {
+      "n": 3,
+      "beta": 0.45,
+      "bias": 0.55,
+      "tau_over_pi": 0.0,
+      "phase_labels": 7,
+      "label_index": 1,
+      "physical_P_zero": false,
+      "analytic_conditional_probability": 0.3619322764091596,
+      "statevector_clock_success_probability": 0.25000000000001177,
+      "statevector_joint_zero_probability": 0.0904830691022947,
+      "analytic_joint_zero_probability": 0.0904830691022899,
+      "statevector_absolute_error": 4.801714581503802e-15,
+      "aer_density_matrix_clock_success_probability": 0.2500000000000034,
+      "aer_density_matrix_joint_zero_probability": 0.09048306910229302,
+      "aer_density_matrix_absolute_error": 3.1225022567582528e-15,
+      "transpiled_depth": 609
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "bias": 1.25,
+      "tau_over_pi": 0.5,
+      "phase_labels": 5,
+      "label_index": 2,
+      "physical_P_zero": true,
+      "analytic_conditional_probability": 0.20789949098744753,
+      "statevector_clock_success_probability": 0.2500000000000131,
+      "statevector_joint_zero_probability": 0.05197487274686472,
+      "analytic_joint_zero_probability": 0.05197487274686188,
+      "statevector_absolute_error": 2.8380076066980564e-15,
+      "aer_density_matrix_clock_success_probability": 0.2500000000000046,
+      "aer_density_matrix_joint_zero_probability": 0.051974872746863326,
+      "aer_density_matrix_absolute_error": 1.4432899320127035e-15,
+      "transpiled_depth": 588
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "bias": 1.25,
+      "tau_over_pi": 0.5,
+      "phase_labels": 9,
+      "label_index": 3,
+      "physical_P_zero": false,
+      "analytic_conditional_probability": 0.034632344608298136,
+      "statevector_clock_success_probability": 0.2000000000000715,
+      "statevector_joint_zero_probability": 0.006926468921662069,
+      "analytic_joint_zero_probability": 0.006926468921659627,
+      "statevector_absolute_error": 2.441623292437356e-15
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "bias": 0.55,
+      "tau_over_pi": 0.0,
+      "phase_labels": 7,
+      "label_index": 1,
+      "physical_P_zero": true,
+      "analytic_conditional_probability": 0.8581249479393476,
+      "statevector_clock_success_probability": 0.2000000000000719,
+      "statevector_joint_zero_probability": 0.17162498958793465,
+      "analytic_joint_zero_probability": 0.1716249895878695,
+      "statevector_absolute_error": 6.514233596988106e-14
+    }
+  ],
+  "max_statevector_absolute_error": 6.514233596988106e-14,
+  "max_aer_density_matrix_absolute_error": 3.1225022567582528e-15
+}

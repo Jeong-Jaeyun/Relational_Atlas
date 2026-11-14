@@ -1,0 +1,73 @@
+{
+  "caveat": "Calibration added after observing the independent Aer rerun; it checks inference behavior under the declared exact toy model, not general physical validity.",
+  "panels_per_case": 200,
+  "bootstraps_per_panel": 499,
+  "seed": 20261022,
+  "rows": [
+    {
+      "name": "weak_null_uniform_full_tau0",
+      "exact_null": true,
+      "exact_max_pooled_probability_difference": 8.05035175587785e-17,
+      "max_labelwise_probability_difference": 0.29199401560671545,
+      "panels": 200,
+      "bootstrap_repetitions_per_panel": 499,
+      "bootstrap_rejections_at_0_point_05": 7,
+      "bootstrap_rejections_at_0_point_00625": 1,
+      "chi_square_rejections_at_0_point_05": 9,
+      "chi_square_rejections_at_0_point_00625": 1,
+      "median_bootstrap_pvalue": 0.515
+    },
+    {
+      "name": "weak_null_uniform_full_half",
+      "exact_null": true,
+      "exact_max_pooled_probability_difference": 4.9293873692564487e-17,
+      "max_labelwise_probability_difference": 0.16884591341612942,
+      "panels": 200,
+      "bootstrap_repetitions_per_panel": 499,
+      "bootstrap_rejections_at_0_point_05": 7,
+      "bootstrap_rejections_at_0_point_00625": 3,
+      "chi_square_rejections_at_0_point_05": 7,
+      "chi_square_rejections_at_0_point_00625": 3,
+      "median_bootstrap_pvalue": 0.478
+    },
+    {
+      "name": "strong_null_skew_P_zero_tau0",
+      "exact_null": true,
+      "exact_max_pooled_probability_difference": 0.0,
+      "max_labelwise_probability_difference": 0.0,
+      "panels": 200,
+      "bootstrap_repetitions_per_panel": 499,
+      "bootstrap_rejections_at_0_point_05": 9,
+      "bootstrap_rejections_at_0_point_00625": 1,
+      "chi_square_rejections_at_0_point_05": 12,
+      "chi_square_rejections_at_0_point_00625": 1,
+      "median_bootstrap_pvalue": 0.502
+    },
+    {
+      "name": "positive_skew_full_tau0",
+      "exact_null": false,
+      "exact_max_pooled_probability_difference": 0.0028993127865560037,
+      "max_labelwise_probability_difference": 0.29199401560671545,
+      "panels": 200,
+      "bootstrap_repetitions_per_panel": 499,
+      "bootstrap_rejections_at_0_point_05": 200,
+      "bootstrap_rejections_at_0_point_00625": 197,
+      "chi_square_rejections_at_0_point_05": 200,
+      "chi_square_rejections_at_0_point_00625": 199,
+      "median_bootstrap_pvalue": 0.002
+    },
+    {
+      "name": "weak_positive_skew_full_half",
+      "exact_null": false,
+      "exact_max_pooled_probability_difference": 0.0004967589256702363,
+      "max_labelwise_probability_difference": 0.16884591341612942,
+      "panels": 200,
+      "bootstrap_repetitions_per_panel": 499,
+      "bootstrap_rejections_at_0_point_05": 37,
+      "bootstrap_rejections_at_0_point_00625": 9,
+      "chi_square_rejections_at_0_point_05": 38,
+      "chi_square_rejections_at_0_point_00625": 12,
+      "median_bootstrap_pvalue": 0.249
+    }
+  ]
+}

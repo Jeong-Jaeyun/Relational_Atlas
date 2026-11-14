@@ -1,0 +1,786 @@
+{
+  "protocol": "notes/prevalidation_protocol11_2026-10-04.tex",
+  "parameters": {
+    "workers": 6,
+    "aer_seed": 20261104,
+    "bootstrap_seed": 20261105,
+    "bootstraps": 10000,
+    "shots_per_label_if_uniform": 131072
+  },
+  "circuit_checks": {
+    "fault_qubit": 0,
+    "first_rotation": 0.01,
+    "second_rotation": -0.01,
+    "rotation_indices": [
+      503,
+      511
+    ],
+    "barrier_indices": [
+      502,
+      510
+    ]
+  },
+  "exact_case_rows": {
+    "subthreshold_constraint": {
+      "angle": 0.2,
+      "expected_type": "positive_but_low_power",
+      "exact_axis_pooled_joint_difference": [
+        8.038980535450538e-05,
+        1.2971895946413964e-05,
+        1.2971895946398425e-05
+      ],
+      "exact_maximum_absolute_joint_difference": 8.038980535450538e-05,
+      "exact_pooled_clock_acceptance_first": [
+        0.2500000000000045,
+        0.25000000000000444,
+        0.25000000000000444
+      ],
+      "exact_pooled_clock_acceptance_second": [
+        0.25000000000000455,
+        0.2500000000000045,
+        0.2500000000000045
+      ]
+    },
+    "candidate_constraint": {
+      "angle": 1.0,
+      "expected_type": "positive",
+      "exact_axis_pooled_joint_difference": [
+        0.0014421688575455426,
+        0.00023270946337636164,
+        0.00023270946337634323
+      ],
+      "exact_maximum_absolute_joint_difference": 0.0014421688575455426,
+      "exact_pooled_clock_acceptance_first": [
+        0.2500000000000045,
+        0.25000000000000455,
+        0.2500000000000045
+      ],
+      "exact_pooled_clock_acceptance_second": [
+        0.25000000000000455,
+        0.25000000000000455,
+        0.25000000000000455
+      ]
+    },
+    "candidate_distribution_control": {
+      "angle": 1.0,
+      "expected_type": "null",
+      "exact_axis_pooled_joint_difference": [
+        -1.867170513998465e-17,
+        -2.2353646593469562e-17,
+        -5.6259559322646354e-18
+      ],
+      "exact_maximum_absolute_joint_difference": 2.2353646593469562e-17,
+      "exact_pooled_clock_acceptance_first": [
+        0.2500000000000039,
+        0.25000000000000394,
+        0.2500000000000039
+      ],
+      "exact_pooled_clock_acceptance_second": [
+        0.2500000000000039,
+        0.2500000000000039,
+        0.25000000000000394
+      ]
+    },
+    "candidate_strong_control": {
+      "angle": 1.0,
+      "expected_type": "positive",
+      "exact_axis_pooled_joint_difference": [
+        0.0006368532823899013,
+        0.0008767320248439454,
+        0.000876732024843985
+      ],
+      "exact_maximum_absolute_joint_difference": 0.000876732024843985,
+      "exact_pooled_clock_acceptance_first": [
+        0.2500000000000039,
+        0.25000000000000394,
+        0.2500000000000039
+      ],
+      "exact_pooled_clock_acceptance_second": [
+        0.2500000000000039,
+        0.25000000000000394,
+        0.25000000000000394
+      ]
+    }
+  },
+  "cases": {
+    "candidate_constraint": {
+      "angle": 1.0,
+      "label_distribution": "skewed",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "expected_type": "positive",
+      "shot_allocation": [
+        176947,
+        159675,
+        120864,
+        89740,
+        89740,
+        120864,
+        159674
+      ],
+      "raw_joint_zero_counts": [
+        [
+          [
+            19273,
+            18002,
+            9691,
+            4017,
+            2317,
+            3830,
+            10571
+          ],
+          [
+            18330,
+            16248,
+            8138,
+            3323,
+            2585,
+            5283,
+            11976
+          ],
+          [
+            18410,
+            16145,
+            8235,
+            3373,
+            2554,
+            5191,
+            12120
+          ]
+        ],
+        [
+          [
+            20918,
+            14817,
+            6659,
+            2549,
+            2365,
+            6350,
+            15244
+          ],
+          [
+            18913,
+            12873,
+            5585,
+            2674,
+            3217,
+            7738,
+            15537
+          ],
+          [
+            18733,
+            12662,
+            5553,
+            2644,
+            3262,
+            7631,
+            15602
+          ]
+        ]
+      ],
+      "raw_clock_accept_counts": [
+        [
+          [
+            44781,
+            39666,
+            30072,
+            22535,
+            22335,
+            30167,
+            39915
+          ],
+          [
+            44168,
+            40226,
+            30213,
+            22298,
+            22496,
+            30373,
+            39673
+          ],
+          [
+            43864,
+            39720,
+            30263,
+            22450,
+            22379,
+            30027,
+            39775
+          ]
+        ],
+        [
+          [
+            44151,
+            39948,
+            30310,
+            22322,
+            22457,
+            30447,
+            39779
+          ],
+          [
+            44693,
+            39754,
+            30270,
+            22403,
+            22577,
+            30046,
+            40133
+          ],
+          [
+            44228,
+            39785,
+            30204,
+            22482,
+            22343,
+            30106,
+            39768
+          ]
+        ]
+      ]
+    },
+    "candidate_distribution_control": {
+      "angle": 1.0,
+      "label_distribution": "uniform",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "expected_type": "null",
+      "shot_allocation": [
+        131072,
+        131072,
+        131072,
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "raw_joint_zero_counts": [
+        [
+          [
+            11831,
+            10672,
+            166,
+            4,
+            0,
+            0,
+            191
+          ],
+          [
+            11224,
+            11931,
+            250,
+            1,
+            0,
+            13,
+            85
+          ],
+          [
+            11306,
+            11876,
+            247,
+            0,
+            0,
+            10,
+            68
+          ]
+        ],
+        [
+          [
+            15853,
+            1216,
+            0,
+            1,
+            0,
+            2,
+            5664
+          ],
+          [
+            16511,
+            1715,
+            0,
+            1,
+            2,
+            15,
+            5096
+          ],
+          [
+            16841,
+            1703,
+            0,
+            0,
+            1,
+            14,
+            4835
+          ]
+        ]
+      ],
+      "raw_clock_accept_counts": [
+        [
+          [
+            32670,
+            32559,
+            32728,
+            32878,
+            32573,
+            33022,
+            32721
+          ],
+          [
+            32926,
+            32458,
+            32834,
+            32793,
+            32975,
+            32873,
+            32710
+          ],
+          [
+            32787,
+            32724,
+            32763,
+            32676,
+            32872,
+            32793,
+            32586
+          ]
+        ],
+        [
+          [
+            32648,
+            32856,
+            32750,
+            32930,
+            32847,
+            32472,
+            32580
+          ],
+          [
+            32681,
+            32672,
+            32897,
+            32727,
+            32308,
+            32721,
+            32836
+          ],
+          [
+            32669,
+            32587,
+            32988,
+            32782,
+            32699,
+            32474,
+            33233
+          ]
+        ]
+      ]
+    },
+    "candidate_strong_control": {
+      "angle": 1.0,
+      "label_distribution": "skewed",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "expected_type": "positive",
+      "shot_allocation": [
+        176947,
+        159675,
+        120864,
+        89740,
+        89740,
+        120864,
+        159674
+      ],
+      "raw_joint_zero_counts": [
+        [
+          [
+            15772,
+            13088,
+            128,
+            2,
+            0,
+            3,
+            278
+          ],
+          [
+            15265,
+            14366,
+            237,
+            0,
+            0,
+            7,
+            84
+          ],
+          [
+            15201,
+            14353,
+            228,
+            1,
+            0,
+            7,
+            86
+          ]
+        ],
+        [
+          [
+            21507,
+            1515,
+            0,
+            2,
+            0,
+            3,
+            6874
+          ],
+          [
+            22733,
+            2040,
+            0,
+            0,
+            0,
+            10,
+            6198
+          ],
+          [
+            22607,
+            2065,
+            0,
+            0,
+            0,
+            11,
+            6026
+          ]
+        ]
+      ],
+      "raw_clock_accept_counts": [
+        [
+          [
+            43881,
+            40221,
+            30135,
+            22487,
+            22556,
+            30264,
+            39756
+          ],
+          [
+            44399,
+            39545,
+            30210,
+            22479,
+            22431,
+            30363,
+            40049
+          ],
+          [
+            44217,
+            39744,
+            30376,
+            22411,
+            22527,
+            30206,
+            39795
+          ]
+        ],
+        [
+          [
+            44195,
+            39928,
+            30420,
+            22422,
+            22632,
+            30195,
+            39861
+          ],
+          [
+            43991,
+            39713,
+            30483,
+            22447,
+            22463,
+            30103,
+            39876
+          ],
+          [
+            44054,
+            39444,
+            30167,
+            22363,
+            22556,
+            30505,
+            40032
+          ]
+        ]
+      ]
+    },
+    "subthreshold_constraint": {
+      "angle": 0.2,
+      "label_distribution": "skewed",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "expected_type": "positive_but_low_power",
+      "shot_allocation": [
+        176947,
+        159675,
+        120864,
+        89740,
+        89740,
+        120864,
+        159674
+      ],
+      "raw_joint_zero_counts": [
+        [
+          [
+            18391,
+            16686,
+            12351,
+            8989,
+            8842,
+            12064,
+            16514
+          ],
+          [
+            18493,
+            16656,
+            12318,
+            9100,
+            8828,
+            12207,
+            16266
+          ],
+          [
+            18220,
+            16603,
+            12437,
+            9034,
+            8949,
+            12228,
+            16594
+          ]
+        ],
+        [
+          [
+            18573,
+            16352,
+            12192,
+            8976,
+            9051,
+            11958,
+            16645
+          ],
+          [
+            18240,
+            16371,
+            12175,
+            8914,
+            9133,
+            12343,
+            16408
+          ],
+          [
+            18393,
+            16352,
+            12317,
+            9032,
+            9186,
+            12382,
+            16562
+          ]
+        ]
+      ],
+      "raw_clock_accept_counts": [
+        [
+          [
+            44330,
+            39760,
+            30069,
+            22465,
+            22352,
+            30203,
+            40215
+          ],
+          [
+            43975,
+            40001,
+            30194,
+            22237,
+            22024,
+            30410,
+            39763
+          ],
+          [
+            43846,
+            40143,
+            30361,
+            22591,
+            22505,
+            30267,
+            40433
+          ]
+        ],
+        [
+          [
+            44192,
+            39734,
+            29953,
+            22338,
+            22671,
+            30098,
+            39987
+          ],
+          [
+            44090,
+            39953,
+            30479,
+            22439,
+            22659,
+            30033,
+            39875
+          ],
+          [
+            44149,
+            40145,
+            30265,
+            22636,
+            22435,
+            30301,
+            39979
+          ]
+        ]
+      ]
+    }
+  },
+  "analysis": {
+    "familywise_tests": 4,
+    "familywise_bonferroni_threshold": 0.0125,
+    "rows": [
+      {
+        "case": "candidate_constraint",
+        "expected_type": "positive",
+        "test": {
+          "axis_differences": [
+            0.001308986118861604,
+            0.000712803431919643,
+            6.430489676339515e-05
+          ],
+          "axis_standard_errors": [
+            0.00038456806279047807,
+            0.0003798682272639809,
+            0.00037946911178817166
+          ],
+          "wald_chi_square_df3": 15.13551501851021,
+          "logit_null_shifts": [
+            0.00964653765677892,
+            0.005383655646218566,
+            0.00048670669381434273
+          ],
+          "fitted_null_max_weighted_difference": 2.703530435408491e-17,
+          "weak_null_bootstraps": 10000,
+          "weak_null_bootstrap_pvalue": 0.0017998200179982,
+          "chi_square_df3_pvalue_crosscheck": 0.001704428642675817
+        },
+        "observed_axis_pooled_joint_differences": [
+          0.001308986118861604,
+          0.000712803431919643,
+          6.430489676339515e-05
+        ]
+      },
+      {
+        "case": "candidate_distribution_control",
+        "expected_type": "null",
+        "test": {
+          "axis_differences": [
+            -0.00013950892857142894,
+            -0.00017874581473214211,
+            -0.0001231602260044649
+          ],
+          "axis_standard_errors": [
+            0.00022200347898047968,
+            0.0002246804564601103,
+            0.0002246514937093399
+          ],
+          "wald_chi_square_df3": 1.3283602822944478,
+          "logit_null_shifts": [
+            -0.003084716316612335,
+            -0.003858719714971537,
+            -0.0026594196162254002
+          ],
+          "fitted_null_max_weighted_difference": 4.049439989492872e-18,
+          "weak_null_bootstraps": 10000,
+          "weak_null_bootstrap_pvalue": 0.7207279272072793,
+          "chi_square_df3_pvalue_crosscheck": 0.722409915947419
+        },
+        "observed_axis_pooled_joint_differences": [
+          -0.00013950892857142894,
+          -0.00017874581473214211,
+          -0.0001231602260044649
+        ]
+      },
+      {
+        "case": "candidate_strong_control",
+        "expected_type": "positive",
+        "test": {
+          "axis_differences": [
+            0.0006866455078124991,
+            0.0011138916015625,
+            0.0009078979492187474
+          ],
+          "axis_standard_errors": [
+            0.0002527293297504891,
+            0.0002559390956354251,
+            0.000255249385611784
+          ],
+          "wald_chi_square_df3": 38.97465687256546,
+          "logit_null_shifts": [
+            0.01171478781901869,
+            0.01852975250233968,
+            0.015184852102441804
+          ],
+          "fitted_null_max_weighted_difference": 9.418496862268882e-18,
+          "weak_null_bootstraps": 10000,
+          "weak_null_bootstrap_pvalue": 9.999000099990002e-05,
+          "chi_square_df3_pvalue_crosscheck": 1.7572547590698492e-08
+        },
+        "observed_axis_pooled_joint_differences": [
+          0.0006866455078124991,
+          0.0011138916015625,
+          0.0009078979492187474
+        ]
+      },
+      {
+        "case": "subthreshold_constraint",
+        "expected_type": "positive_but_low_power",
+        "test": {
+          "axis_differences": [
+            -9.80922154017864e-05,
+            -0.0003095354352678581,
+            0.00017329624720982238
+          ],
+          "axis_standard_errors": [
+            0.0004472633734933922,
+            0.0004471285971061859,
+            0.0004480139876068247
+          ],
+          "wald_chi_square_df3": 0.6769646897151508,
+          "logit_null_shifts": [
+            -0.0005344256102832734,
+            -0.0016874255352081757,
+            0.0009409812595018163
+          ],
+          "fitted_null_max_weighted_difference": 3.028195543279279e-17,
+          "weak_null_bootstraps": 10000,
+          "weak_null_bootstrap_pvalue": 0.8775122487751225,
+          "chi_square_df3_pvalue_crosscheck": 0.8786082416940698
+        },
+        "observed_axis_pooled_joint_differences": [
+          -9.80922154017864e-05,
+          -0.0003095354352678581,
+          0.00017329624720982238
+        ]
+      }
+    ],
+    "detections": [
+      "candidate_constraint",
+      "candidate_strong_control"
+    ],
+    "total_preparations": 22020096
+  }
+}

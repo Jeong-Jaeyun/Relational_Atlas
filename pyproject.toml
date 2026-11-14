@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relational-atlas-i01"
+version = "0.1.0"
+description = "Reproducible I01 toy-model and Aer prevalidation experiments"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "matplotlib", "qiskit", "qiskit-aer"]
+
+[project.scripts]
+i01-experiment = "relational_atlas_i01.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

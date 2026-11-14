@@ -1,0 +1,41 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\setlength{\parskip}{0.27em}
+\setlength{\parindent}{0pt}
+\title{I01 Research Protocol 24: Charge-Graph Rule at Cutoff Two}
+\author{Prediction record, written before stage-24 numerical acquisition}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\section*{General finite-support statement to test}
+Let $S$ be the common finite support of preparation $|w\rangle$ and return reference $|r\rangle$, with nonzero amplitudes on every $x\in S$. Let $X_a,X_b$ be computational-basis permutations satisfying $X_a^2=X_b^2=I$, and $U$ a diagonal phase gate. If $S\cap X_aS=S\cap X_bS=\varnothing$, the odd-flip return amplitudes vanish. For $R_a(\epsilon)=\exp(-i\epsilon X_a/2)$ before $U$ and $R_b(-\epsilon)$ after $U$, the return amplitude is exactly
+\[
+\langle r|R_b(-\epsilon)UR_a(\epsilon)|w\rangle
+=\cos^2(\epsilon/2)A_0+\sin^2(\epsilon/2)A_{ab},
+\quad A_0=\langle r|U|w\rangle,\quad A_{ab}=\langle r|X_bUX_a|w\rangle.
+\]
+The graph path count is $N_{ab}=|\{x\in S:X_bX_ax\in S\}|$. This is a \emph{support} selection rule: $N_{ab}=0$ forces $A_{ab}=0$, whereas $N_{ab}>0$ does not force nonzero contrast after interference or phase averaging. Clock-zero postselection multiplies probability by $2^{-c}$ when an $c$-qubit energy clock is Hadamard-measured.
+
+\section*{Frozen cutoff-two intervention}
+For $K=2$, each axis has values $\{-2,-1,0,1,2\}$ encoded one-hot on four qubits, with 0 the all-zero word. The bits correspond to $+1,+2,-1,-2$; invalid multi-hot words remain in the circuit Hilbert space. The science phase gate is the product of $R_z(m\theta_i)$ on each bit of charge $m$. This specifies its action on invalid intermediate words as the additive bit-charge extension. Preparation and return have only $P=\sum_i k_i=0$ physical codewords with weights proportional to $e^{-\beta\sum_i k_i^2}$ and $e^{-\beta_r\sum_i k_i^2}$. Freeze $\beta=0.45$, $\beta_r=0.15$, $\tau=\pi/2$, $\epsilon=0.83$, common-phase blocks $0,0.60$, per-axis bias $1.25$, $L=2n+1$ labels, and the existing skewed largest-remainder label weights. Source is the $+1$ bit on axis 0. Returns are the same bit, $-1$ bit on axis 0, $+1$ bit on axis 1, and $-1$ bit on axis 1.
+
+With $T_m^{(K)}(q)=[z^q](\sum_{j=-K}^{K}z^j)^m$, the graph predicts, in this order, $T_n^{(K)}(0)$, $0$, $2T_{n-2}^{(K)}(-1)$, $2T_{n-2}^{(K)}(0)$. The precomputed target table is:
+\begin{center}
+\begin{tabular}{@{}c c r r r r@{}}\toprule
+$K$ & $n$ & same bit & conjugate & other/same sign & other/opposite sign\\\midrule
+1 & 2 & 3 & 0 & 0 & 2\\
+1 & 3 & 7 & 0 & 2 & 2\\
+1 & 4 & 19 & 0 & 4 & 6\\
+2 & 2 & 5 & 0 & 0 & 2\\
+2 & 3 & 19 & 0 & 2 & 2\\
+2 & 4 & 85 & 0 & 8 & 10\\\bottomrule
+\end{tabular}
+\end{center}
+The $n=3$ opening is predicted to persist but is not a claim of dimensional selection. The numerical experiment first computes the support counts directly from encoded basis words, separately from the coefficient formula. It then computes exact amplitudes by sparse summation and compares the four classes with an independently assembled Qiskit Aer statevector evolution for $n=3$. For the fixed common-phase grid, each of the $4\times2\times3\times7=168$ return probabilities must agree within $10^{-11}$ absolute error. The clock-zero overlap must agree with the analytic $2^{-c}$ factor to the same tolerance. The conjugate class must have pooled block contrast below $10^{-11}$. Failure of any criterion is recorded, not repaired by changing parameters. A positive path count is \emph{not} preregistered as a positive contrast.
+
+\section*{Interpretation gate}
+Success would extend the circuit-specific support law and angle identity to one new local cutoff/encoding under a declared invalid-word phase extension. It would not prove encoding independence, a generic qudit theorem, a practical noise diagnostic, or a physical preference for three dimensions. The next stress test should alter the return effect or use a code-independent finite-level access unitary, with a new prediction fixed before its numerical check.
+\end{document}

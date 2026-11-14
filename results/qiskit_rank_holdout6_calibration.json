@@ -1,0 +1,185 @@
+{
+  "seed": 20261032,
+  "panels_per_budget": 200,
+  "bootstraps_per_test": 999,
+  "familywise_threshold": 0.00625,
+  "results": [
+    {
+      "budget_multiplier": 1,
+      "shots_per_label_if_uniform": 131072,
+      "rows": [
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 2.0125879389694626e-17,
+          "rejections_at_family_threshold": 0,
+          "rejections_at_nominal_0_point_05": 10,
+          "median_pvalue": 0.4475
+        },
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 1.2323468423141122e-17,
+          "rejections_at_family_threshold": 0,
+          "rejections_at_nominal_0_point_05": 8,
+          "median_pvalue": 0.496
+        },
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 1,
+          "rejections_at_nominal_0_point_05": 9,
+          "median_pvalue": 0.4755
+        },
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 0,
+          "rejections_at_nominal_0_point_05": 11,
+          "median_pvalue": 0.5
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "exact_null": false,
+          "exact_max_pooled_joint_difference": 0.000724950950063239,
+          "rejections_at_family_threshold": 194,
+          "rejections_at_nominal_0_point_05": 199,
+          "median_pvalue": 0.001
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "exact_null": false,
+          "exact_max_pooled_joint_difference": 0.0001241878611914096,
+          "rejections_at_family_threshold": 11,
+          "rejections_at_nominal_0_point_05": 43,
+          "median_pvalue": 0.222
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 1,
+          "rejections_at_nominal_0_point_05": 9,
+          "median_pvalue": 0.5555000000000001
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 0,
+          "rejections_at_nominal_0_point_05": 7,
+          "median_pvalue": 0.4335
+        }
+      ],
+      "null_familywise_false_rejections": 2,
+      "panels": 200
+    },
+    {
+      "budget_multiplier": 2,
+      "shots_per_label_if_uniform": 262144,
+      "rows": [
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 2.0125879389694626e-17,
+          "rejections_at_family_threshold": 1,
+          "rejections_at_nominal_0_point_05": 9,
+          "median_pvalue": 0.5914999999999999
+        },
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 1.2323468423141122e-17,
+          "rejections_at_family_threshold": 1,
+          "rejections_at_nominal_0_point_05": 13,
+          "median_pvalue": 0.507
+        },
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 2,
+          "rejections_at_nominal_0_point_05": 11,
+          "median_pvalue": 0.5245
+        },
+        {
+          "label_distribution": "uniform",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 1,
+          "rejections_at_nominal_0_point_05": 9,
+          "median_pvalue": 0.492
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "exact_null": false,
+          "exact_max_pooled_joint_difference": 0.0007250113791107751,
+          "rejections_at_family_threshold": 200,
+          "rejections_at_nominal_0_point_05": 200,
+          "median_pvalue": 0.001
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "exact_null": false,
+          "exact_max_pooled_joint_difference": 0.0001241877113176697,
+          "rejections_at_family_threshold": 15,
+          "rejections_at_nominal_0_point_05": 63,
+          "median_pvalue": 0.1345
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 1,
+          "rejections_at_nominal_0_point_05": 16,
+          "median_pvalue": 0.4655
+        },
+        {
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "exact_null": true,
+          "exact_max_pooled_joint_difference": 0.0,
+          "rejections_at_family_threshold": 0,
+          "rejections_at_nominal_0_point_05": 8,
+          "median_pvalue": 0.58
+        }
+      ],
+      "null_familywise_false_rejections": 6,
+      "panels": 200
+    }
+  ],
+  "caveat": "Post-hoc exact-binomial method calibration; not an independent circuit experiment or a test of the physical model. Monte Carlo error is substantial at small rejection rates."
+}

@@ -1,0 +1,52 @@
+{
+  "caveat": "Exact-model pilot only; no new Aer counts observed.",
+  "n": 3,
+  "labels": 7,
+  "total_shots_per_axis_block": 229376,
+  "rows": [
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "uniform_to_skewed_max_pooled_probability_difference": 0.027487108276175412,
+      "approx_drift_noncentrality_at_229376_shots_per_axis_block": 2640.548439531204,
+      "iid_label_to_fixed_label_variance_ratio_range": [
+        1.3548566714143206,
+        1.3548566714143206
+      ],
+      "max_label_probability_range": 0.34391519416513117
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "uniform_to_skewed_max_pooled_probability_difference": 0.013433323953298715,
+      "approx_drift_noncentrality_at_229376_shots_per_axis_block": 1343.6164923036758,
+      "iid_label_to_fixed_label_variance_ratio_range": [
+        1.1601989778736166,
+        1.1601989778736166
+      ],
+      "max_label_probability_range": 0.25294585784933277
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "uniform_to_skewed_max_pooled_probability_difference": 5.551115123125783e-17,
+      "approx_drift_noncentrality_at_229376_shots_per_axis_block": 4.365282761929921e-27,
+      "iid_label_to_fixed_label_variance_ratio_range": [
+        1.0,
+        1.0
+      ],
+      "max_label_probability_range": 0.0
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "uniform_to_skewed_max_pooled_probability_difference": 0.0,
+      "approx_drift_noncentrality_at_229376_shots_per_axis_block": 0.0,
+      "iid_label_to_fixed_label_variance_ratio_range": [
+        1.0,
+        1.0
+      ],
+      "max_label_probability_range": 0.0
+    }
+  ]
+}

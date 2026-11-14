@@ -1,0 +1,442 @@
+{
+  "model": "Two local moving line patches with exactly aligned or independently fluctuating tangents",
+  "seed": 20261003,
+  "offset_sigma": 0.35,
+  "eta_values": [
+    0.0,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "warning": "The bounded-patch minimum includes box faces but omits torus windings. Eta is an assigned tangent perturbation, not a derived physical oscillation spectrum. Interior-projection slopes describe the true small-radius limit only at fixed nonzero eta; limits eta->0 and radius->0 need not commute.",
+  "by_dimension": {
+    "3": {
+      "0.0": {
+        "spatial_dimension": 3,
+        "transverse_tangent_fluctuation_eta": 0.0,
+        "number_of_independent_meeting_parameters": 2,
+        "codimension": 1,
+        "trials": 80000,
+        "interior_count": 64349,
+        "interior_probability": 0.8043625,
+        "interior_asymptotic_small_radius_slope": 0.9996320506655505,
+        "bounded_patch_finite_radius_slope": 0.9913263782180534,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 0.0091680941595562,
+            "interior_direct_mc_count": 753,
+            "interior_direct_mc_probability": 0.0094125,
+            "bounded_patch_mc_count": 753,
+            "bounded_patch_mc_probability": 0.0094125
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.018334317502211088,
+            "interior_direct_mc_count": 1494,
+            "interior_direct_mc_probability": 0.018675,
+            "bounded_patch_mc_count": 1506,
+            "bounded_patch_mc_probability": 0.018825
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.03665367533914681,
+            "interior_direct_mc_count": 2933,
+            "interior_direct_mc_probability": 0.0366625,
+            "bounded_patch_mc_count": 2976,
+            "bounded_patch_mc_probability": 0.0372
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.07318789285791596,
+            "interior_direct_mc_count": 5822,
+            "interior_direct_mc_probability": 0.072775,
+            "bounded_patch_mc_count": 5989,
+            "bounded_patch_mc_probability": 0.0748625
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.14542710440834056,
+            "interior_direct_mc_count": 11692,
+            "interior_direct_mc_probability": 0.14615,
+            "bounded_patch_mc_count": 12369,
+            "bounded_patch_mc_probability": 0.1546125
+          }
+        ]
+      },
+      "0.01": {
+        "spatial_dimension": 3,
+        "transverse_tangent_fluctuation_eta": 0.01,
+        "number_of_independent_meeting_parameters": 3,
+        "codimension": 0,
+        "trials": 80000,
+        "interior_count": 422,
+        "interior_probability": 0.005275,
+        "interior_asymptotic_small_radius_slope": 3.315584238440521e-16,
+        "bounded_patch_finite_radius_slope": 0.7884625908278694,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 0.005275,
+            "interior_direct_mc_count": 422,
+            "interior_direct_mc_probability": 0.005275,
+            "bounded_patch_mc_count": 1140,
+            "bounded_patch_mc_probability": 0.01425
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.005275,
+            "interior_direct_mc_count": 422,
+            "interior_direct_mc_probability": 0.005275,
+            "bounded_patch_mc_count": 1883,
+            "bounded_patch_mc_probability": 0.0235375
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.005275,
+            "interior_direct_mc_count": 422,
+            "interior_direct_mc_probability": 0.005275,
+            "bounded_patch_mc_count": 3401,
+            "bounded_patch_mc_probability": 0.0425125
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.005275,
+            "interior_direct_mc_count": 422,
+            "interior_direct_mc_probability": 0.005275,
+            "bounded_patch_mc_count": 6341,
+            "bounded_patch_mc_probability": 0.0792625
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.005275,
+            "interior_direct_mc_count": 422,
+            "interior_direct_mc_probability": 0.005275,
+            "bounded_patch_mc_count": 12633,
+            "bounded_patch_mc_probability": 0.1579125
+          }
+        ]
+      },
+      "0.1": {
+        "spatial_dimension": 3,
+        "transverse_tangent_fluctuation_eta": 0.1,
+        "number_of_independent_meeting_parameters": 3,
+        "codimension": 0,
+        "trials": 80000,
+        "interior_count": 3988,
+        "interior_probability": 0.04985,
+        "interior_asymptotic_small_radius_slope": -3.8681816115139404e-16,
+        "bounded_patch_finite_radius_slope": 0.281753556059583,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 0.04985,
+            "interior_direct_mc_count": 3988,
+            "interior_direct_mc_probability": 0.04985,
+            "bounded_patch_mc_count": 4742,
+            "bounded_patch_mc_probability": 0.059275
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.04985,
+            "interior_direct_mc_count": 3988,
+            "interior_direct_mc_probability": 0.04985,
+            "bounded_patch_mc_count": 5499,
+            "bounded_patch_mc_probability": 0.0687375
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.04985,
+            "interior_direct_mc_count": 3988,
+            "interior_direct_mc_probability": 0.04985,
+            "bounded_patch_mc_count": 7008,
+            "bounded_patch_mc_probability": 0.0876
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.04985,
+            "interior_direct_mc_count": 3988,
+            "interior_direct_mc_probability": 0.04985,
+            "bounded_patch_mc_count": 10157,
+            "bounded_patch_mc_probability": 0.1269625
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.04985,
+            "interior_direct_mc_count": 3988,
+            "interior_direct_mc_probability": 0.04985,
+            "bounded_patch_mc_count": 16520,
+            "bounded_patch_mc_probability": 0.2065
+          }
+        ]
+      },
+      "1.0": {
+        "spatial_dimension": 3,
+        "transverse_tangent_fluctuation_eta": 1.0,
+        "number_of_independent_meeting_parameters": 3,
+        "codimension": 0,
+        "trials": 80000,
+        "interior_count": 25261,
+        "interior_probability": 0.3157625,
+        "interior_asymptotic_small_radius_slope": 1.7959414624886152e-16,
+        "bounded_patch_finite_radius_slope": 0.06052840864847797,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 0.3157625,
+            "interior_direct_mc_count": 25261,
+            "interior_direct_mc_probability": 0.3157625,
+            "bounded_patch_mc_count": 26025,
+            "bounded_patch_mc_probability": 0.3253125
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.3157625,
+            "interior_direct_mc_count": 25261,
+            "interior_direct_mc_probability": 0.3157625,
+            "bounded_patch_mc_count": 26792,
+            "bounded_patch_mc_probability": 0.3349
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.3157625,
+            "interior_direct_mc_count": 25261,
+            "interior_direct_mc_probability": 0.3157625,
+            "bounded_patch_mc_count": 28303,
+            "bounded_patch_mc_probability": 0.3537875
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.3157625,
+            "interior_direct_mc_count": 25261,
+            "interior_direct_mc_probability": 0.3157625,
+            "bounded_patch_mc_count": 31314,
+            "bounded_patch_mc_probability": 0.391425
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.3157625,
+            "interior_direct_mc_count": 25261,
+            "interior_direct_mc_probability": 0.3157625,
+            "bounded_patch_mc_count": 37040,
+            "bounded_patch_mc_probability": 0.463
+          }
+        ]
+      }
+    },
+    "4": {
+      "0.0": {
+        "spatial_dimension": 4,
+        "transverse_tangent_fluctuation_eta": 0.0,
+        "number_of_independent_meeting_parameters": 2,
+        "codimension": 2,
+        "trials": 300000,
+        "interior_count": 268431,
+        "interior_probability": 0.89477,
+        "interior_asymptotic_small_radius_slope": 1.9994480281295786,
+        "bounded_patch_finite_radius_slope": 1.8596699617421886,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 9.129840306348185e-05,
+            "interior_direct_mc_count": 34,
+            "interior_direct_mc_probability": 0.00011333333333333333,
+            "bounded_patch_mc_count": 35,
+            "bounded_patch_mc_probability": 0.00011666666666666667
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.00036513772192628007,
+            "interior_direct_mc_count": 125,
+            "interior_direct_mc_probability": 0.0004166666666666667,
+            "bounded_patch_mc_count": 126,
+            "bounded_patch_mc_probability": 0.00042
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.0014596570985435672,
+            "interior_direct_mc_count": 457,
+            "interior_direct_mc_probability": 0.0015233333333333334,
+            "bounded_patch_mc_count": 461,
+            "bounded_patch_mc_probability": 0.0015366666666666666
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.005824356909905336,
+            "interior_direct_mc_count": 1786,
+            "interior_direct_mc_probability": 0.005953333333333333,
+            "bounded_patch_mc_count": 1812,
+            "bounded_patch_mc_probability": 0.00604
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.023070937066833493,
+            "interior_direct_mc_count": 7022,
+            "interior_direct_mc_probability": 0.023406666666666666,
+            "bounded_patch_mc_count": 7210,
+            "bounded_patch_mc_probability": 0.024033333333333334
+          }
+        ]
+      },
+      "0.01": {
+        "spatial_dimension": 4,
+        "transverse_tangent_fluctuation_eta": 0.01,
+        "number_of_independent_meeting_parameters": 3,
+        "codimension": 1,
+        "trials": 300000,
+        "interior_count": 2564,
+        "interior_probability": 0.008546666666666666,
+        "interior_asymptotic_small_radius_slope": 0.999632050665552,
+        "bounded_patch_finite_radius_slope": 1.6356041686397516,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 9.741459199097462e-05,
+            "interior_direct_mc_count": 36,
+            "interior_direct_mc_probability": 0.00012,
+            "bounded_patch_mc_count": 55,
+            "bounded_patch_mc_probability": 0.00018333333333333334
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.00019480930581949155,
+            "interior_direct_mc_count": 70,
+            "interior_direct_mc_probability": 0.00023333333333333333,
+            "bounded_patch_mc_count": 169,
+            "bounded_patch_mc_probability": 0.0005633333333333333
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.0003894596593350735,
+            "interior_direct_mc_count": 116,
+            "interior_direct_mc_probability": 0.00038666666666666667,
+            "bounded_patch_mc_count": 531,
+            "bounded_patch_mc_probability": 0.00177
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.0007776500325317525,
+            "interior_direct_mc_count": 244,
+            "interior_direct_mc_probability": 0.0008133333333333333,
+            "bounded_patch_mc_count": 2008,
+            "bounded_patch_mc_probability": 0.006693333333333333
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.0015452199545312184,
+            "interior_direct_mc_count": 452,
+            "interior_direct_mc_probability": 0.0015066666666666666,
+            "bounded_patch_mc_count": 7619,
+            "bounded_patch_mc_probability": 0.025396666666666668
+          }
+        ]
+      },
+      "0.1": {
+        "spatial_dimension": 4,
+        "transverse_tangent_fluctuation_eta": 0.1,
+        "number_of_independent_meeting_parameters": 3,
+        "codimension": 1,
+        "trials": 80000,
+        "interior_count": 7066,
+        "interior_probability": 0.088325,
+        "interior_asymptotic_small_radius_slope": 0.9996320506655503,
+        "bounded_patch_finite_radius_slope": 1.1395770355985388,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 0.0010067250980034517,
+            "interior_direct_mc_count": 81,
+            "interior_direct_mc_probability": 0.0010125,
+            "bounded_patch_mc_count": 89,
+            "bounded_patch_mc_probability": 0.0011125
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.0020132447663619257,
+            "interior_direct_mc_count": 161,
+            "interior_direct_mc_probability": 0.0020125,
+            "bounded_patch_mc_count": 193,
+            "bounded_patch_mc_probability": 0.0024125
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.004024846849934131,
+            "interior_direct_mc_count": 313,
+            "interior_direct_mc_probability": 0.0039125,
+            "bounded_patch_mc_count": 432,
+            "bounded_patch_mc_probability": 0.0054
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.008036576340487564,
+            "interior_direct_mc_count": 644,
+            "interior_direct_mc_probability": 0.00805,
+            "bounded_patch_mc_count": 1083,
+            "bounded_patch_mc_probability": 0.0135375
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.01596898039984047,
+            "interior_direct_mc_count": 1283,
+            "interior_direct_mc_probability": 0.0160375,
+            "bounded_patch_mc_count": 3122,
+            "bounded_patch_mc_probability": 0.039025
+          }
+        ]
+      },
+      "1.0": {
+        "spatial_dimension": 4,
+        "transverse_tangent_fluctuation_eta": 1.0,
+        "number_of_independent_meeting_parameters": 3,
+        "codimension": 1,
+        "trials": 80000,
+        "interior_count": 39576,
+        "interior_probability": 0.4947,
+        "interior_asymptotic_small_radius_slope": 0.9996320506655509,
+        "bounded_patch_finite_radius_slope": 1.0199706766759127,
+        "radius_scan": [
+          {
+            "radius": 0.005,
+            "interior_projection_probability": 0.0056385723858738464,
+            "interior_direct_mc_count": 465,
+            "interior_direct_mc_probability": 0.0058125,
+            "bounded_patch_mc_count": 472,
+            "bounded_patch_mc_probability": 0.0059
+          },
+          {
+            "radius": 0.01,
+            "interior_projection_probability": 0.011275994179668776,
+            "interior_direct_mc_count": 928,
+            "interior_direct_mc_probability": 0.0116,
+            "bounded_patch_mc_count": 957,
+            "bounded_patch_mc_probability": 0.0119625
+          },
+          {
+            "radius": 0.02,
+            "interior_projection_probability": 0.02254278784786204,
+            "interior_direct_mc_count": 1835,
+            "interior_direct_mc_probability": 0.0229375,
+            "bounded_patch_mc_count": 1941,
+            "bounded_patch_mc_probability": 0.0242625
+          },
+          {
+            "radius": 0.04,
+            "interior_projection_probability": 0.045012106602198676,
+            "interior_direct_mc_count": 3646,
+            "interior_direct_mc_probability": 0.045575,
+            "bounded_patch_mc_count": 4026,
+            "bounded_patch_mc_probability": 0.050325
+          },
+          {
+            "radius": 0.08,
+            "interior_projection_probability": 0.08944075407643454,
+            "interior_direct_mc_count": 7257,
+            "interior_direct_mc_probability": 0.0907125,
+            "bounded_patch_mc_count": 8754,
+            "bounded_patch_mc_probability": 0.109425
+          }
+        ]
+      }
+    }
+  }
+}

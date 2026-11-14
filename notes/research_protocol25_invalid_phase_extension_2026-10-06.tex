@@ -1,0 +1,32 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setlength{\parskip}{0.27em}
+\setlength{\parindent}{0pt}
+\title{I01 Research Protocol 25: Intermediate-Code Phase Intervention}
+\author{Prediction record, written before stage-25 numerical acquisition}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\section*{Question}
+Stage 24 changed the local cutoff while retaining one-hot bit-flip access. A bit flip can move a physical local codeword to a multi-hot word between the two pulses. Does the support graph alone fix the measured response, or does the phase action on those temporary invalid words matter? This is an intervention on the encoding extension, not on the physical $P=0$ preparation or return reference.
+
+\section*{Frozen pair of phase gates}
+Retain all stage-24 parameters: $n=3$, cutoff $K=2$, one-hot encoding, $\beta=0.45$, $\beta_r=0.15$, $\tau=\pi/2$, pulse angle $0.83$, seven skewed labels, shifts $0,0.60$, and per-axis bias $1.25$. The phase gate is diagonal and factorized by axis. Gate A assigns each local bit word the \emph{additive} charge $q_{\rm A}=\sum_m m b_m$, including multi-hot words. Gate B assigns $q_{\rm B}=q_{\rm A}$ to the five physical words (zero or one hot) and $q_{\rm B}=0$ to every multi-hot local word. In either case the local phase is $\exp(i\theta_i q)$, up to an irrelevant global phase. Thus the gates agree on every prepared and returned codeword.
+
+\section*{Predictions before acquisition}
+The encoded endpoint graph and its four path counts stay unchanged. The conjugate transfer amplitude remains zero. For a \emph{different-axis} source--return pair, any nonzero return path must have the source bit toggle $0\leftrightarrow+1$ and hence pass through a physical one-hot word. Consequently the entire pointwise return-probability grid for both different-axis classes and the conjugate class must be identical for A and B within $10^{-12}$. For the \emph{same-bit} pair, a source toggle from a nonzero local word other than $+1$ can visit a multi-hot intermediate and return to the original physical word. Therefore A and B need not agree: we predict at least one of the 42 pointwise return probabilities to differ by more than $10^{-9}$. We do not preregister the sign or size of any pooled block contrast change.
+
+At cutoff $K=1$, the only two-hot local word carries additive charge $+1-1=0$, so A and B are identical on every local word. Their four return-probability grids must agree to $10^{-12}$. For both cutoffs and both gates the odd-flip support condition survives, and the two-term pulse-angle identity remains exact, although its coefficients can change.
+
+The sparse amplitude calculation evaluates the complete 42-setting grid for all four classes and both extensions. Independently assembled Aer statevector circuits check three settings for each class and extension:
+\[
+(b,i,\ell)\in\{(0,0,0),(1,1,2),(1,2,5)\}.
+\]
+The maximum absolute probability discrepancy must be below $10^{-11}$. Any missed threshold will be reported as a failed prediction; the chosen settings and phase definitions will not be revised after seeing the outcomes.
+
+\section*{Decision boundary}
+If the cross-axis classes are invariant but the same-bit class changes, the support count is a genuine structural selector while the magnitude of an allowed response can depend on how the phase gate is extended outside the physical code. This limits any claim that path counts alone determine the observed fingerprint. It does not invalidate stage 24 under its stated additive extension.
+\end{document}

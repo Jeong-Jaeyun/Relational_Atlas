@@ -1,0 +1,102 @@
+{
+  "model": "n=4, cutoff=1, P=0, H_S=sum k_i^2, H_C=-2m for clock code m=0,1,2",
+  "interpretation": "The energy constraint is built into the prepared state; the clock is a finite reference, not a derived cosmic time.",
+  "constraint_residual": 0.0,
+  "clock_energies": [
+    0,
+    -2,
+    -4
+  ],
+  "unrestricted_system_fidelity_at_pi_analytic_control": 6.946141881100883e-07,
+  "phase_points_tau_over_pi": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "exact": [
+    {
+      "tau_over_pi": 0.0,
+      "clock_postselection_probability": 0.33333333333339715,
+      "conditional_return_fidelity": 1.0,
+      "direct_formula_fidelity": 1.0000000000000004,
+      "conditional_state_match_fidelity": 1.0000000000000333
+    },
+    {
+      "tau_over_pi": 0.25,
+      "clock_postselection_probability": 0.3333333333333923,
+      "conditional_return_fidelity": 0.5018948263402603,
+      "direct_formula_fidelity": 0.5018948263402463,
+      "conditional_state_match_fidelity": 1.0000000000000329
+    },
+    {
+      "tau_over_pi": 0.5,
+      "clock_postselection_probability": 0.33333333333339077,
+      "conditional_return_fidelity": 0.17001130738912704,
+      "direct_formula_fidelity": 0.17001130738911874,
+      "conditional_state_match_fidelity": 1.0000000000000342
+    },
+    {
+      "tau_over_pi": 0.75,
+      "clock_postselection_probability": 0.333333333333395,
+      "conditional_return_fidelity": 0.5018948263402484,
+      "direct_formula_fidelity": 0.5018948263402463,
+      "conditional_state_match_fidelity": 1.0000000000000338
+    },
+    {
+      "tau_over_pi": 1.0,
+      "clock_postselection_probability": 0.333333333333397,
+      "conditional_return_fidelity": 1.0,
+      "direct_formula_fidelity": 1.0000000000000004,
+      "conditional_state_match_fidelity": 1.0000000000000342
+    }
+  ],
+  "shots": {
+    "shots_per_circuit": 16384,
+    "transpiled_depth": 2522,
+    "transpiled_size": 2553,
+    "rows": [
+      {
+        "tau_over_pi": 0.0,
+        "clock_success_count": 5536,
+        "joint_success_count": 5536,
+        "clock_postselection_probability": 0.337890625,
+        "conditional_return_fidelity": 1.0,
+        "exact_conditional_return_fidelity": 1.0000000000000004
+      },
+      {
+        "tau_over_pi": 0.25,
+        "clock_success_count": 5452,
+        "joint_success_count": 2680,
+        "clock_postselection_probability": 0.332763671875,
+        "conditional_return_fidelity": 0.491562729273661,
+        "exact_conditional_return_fidelity": 0.5018948263402463
+      },
+      {
+        "tau_over_pi": 0.5,
+        "clock_success_count": 5531,
+        "joint_success_count": 972,
+        "clock_postselection_probability": 0.33758544921875,
+        "conditional_return_fidelity": 0.17573675646356898,
+        "exact_conditional_return_fidelity": 0.17001130738911874
+      },
+      {
+        "tau_over_pi": 0.75,
+        "clock_success_count": 5518,
+        "joint_success_count": 2779,
+        "clock_postselection_probability": 0.3367919921875,
+        "conditional_return_fidelity": 0.5036245016310258,
+        "exact_conditional_return_fidelity": 0.5018948263402463
+      },
+      {
+        "tau_over_pi": 1.0,
+        "clock_success_count": 5411,
+        "joint_success_count": 5411,
+        "clock_postselection_probability": 0.33026123046875,
+        "conditional_return_fidelity": 1.0,
+        "exact_conditional_return_fidelity": 1.0000000000000004
+      }
+    ]
+  }
+}

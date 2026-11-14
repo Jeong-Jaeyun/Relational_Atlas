@@ -1,0 +1,6452 @@
+{
+  "question": "How does nonzero anchor-science time separation limit common-phase recovery?",
+  "physical_limit": "Known zero-mean OU phase covariance is a toy prior; clock and anchor are prepared resources.",
+  "parameters": {
+    "alpha_true": 0.3,
+    "sigma_radians": 0.12,
+    "gap_over_correlation": [
+      0.05,
+      1.0
+    ],
+    "blocks_per_gap": 8,
+    "seed": 20261010,
+    "shots_per_circuit": 4096,
+    "workers": 6
+  },
+  "unobserved_phase_draws_for_reproducibility": {
+    "0.05": [
+      {
+        "anchor_before": -0.13527635523770581,
+        "science_offset": -0.10306153651288479,
+        "anchor_after": -0.09626006133584838,
+        "conditional_mean": -0.11562364861317616,
+        "unobserved_bridge_residual": 0.012562112100291373
+      },
+      {
+        "anchor_before": -0.02378447934906397,
+        "science_offset": 0.03044293395394565,
+        "anchor_after": -0.045707971724243776,
+        "conditional_mean": -0.034702837951264276,
+        "unobserved_bridge_residual": 0.06514577190520993
+      },
+      {
+        "anchor_before": 0.14941802710945945,
+        "science_offset": 0.022330274161323452,
+        "anchor_after": 0.08360455422113741,
+        "conditional_mean": 0.11636580310529683,
+        "unobserved_bridge_residual": -0.09403552894397338
+      },
+      {
+        "anchor_before": -0.37529569680140534,
+        "science_offset": -0.3593771286019446,
+        "anchor_after": -0.37157624084884594,
+        "conditional_mean": -0.37296965961499706,
+        "unobserved_bridge_residual": 0.013592531013052467
+      },
+      {
+        "anchor_before": 0.12531786216111118,
+        "science_offset": 0.0648286244049684,
+        "anchor_after": 0.024988453652776618,
+        "conditional_mean": 0.07505931421584872,
+        "unobserved_bridge_residual": -0.010230689810880322
+      },
+      {
+        "anchor_before": -0.13357717032989413,
+        "science_offset": -0.1680998467458028,
+        "anchor_after": -0.1694405709447493,
+        "conditional_mean": -0.15131968162583834,
+        "unobserved_bridge_residual": -0.01678016511996447
+      },
+      {
+        "anchor_before": 0.012233648553967299,
+        "science_offset": -0.03687044102994106,
+        "anchor_after": -0.043151200612643534,
+        "conditional_mean": -0.015439472667472696,
+        "unobserved_bridge_residual": -0.021430968362468363
+      },
+      {
+        "anchor_before": -0.07177909897234629,
+        "science_offset": -0.0772458681775796,
+        "anchor_after": -0.06062474723836666,
+        "conditional_mean": -0.06611925681434713,
+        "unobserved_bridge_residual": -0.011126611363232466
+      }
+    ],
+    "1.0": [
+      {
+        "anchor_before": 0.05066407712580809,
+        "science_offset": 0.1888785488615855,
+        "anchor_after": 0.1818399503950397,
+        "conditional_mean": 0.07533761433947551,
+        "unobserved_bridge_residual": 0.11354093452210999
+      },
+      {
+        "anchor_before": -0.09276953042376859,
+        "science_offset": -0.07029330136252891,
+        "anchor_after": -0.11332868010453537,
+        "conditional_mean": -0.06678141306367327,
+        "unobserved_bridge_residual": -0.0035118882988556394
+      },
+      {
+        "anchor_before": -0.10229704538321689,
+        "science_offset": -0.19243189948329076,
+        "anchor_after": -0.12376080539612916,
+        "conditional_mean": -0.07324887814641404,
+        "unobserved_bridge_residual": -0.11918302133687672
+      },
+      {
+        "anchor_before": 0.046171754518652415,
+        "science_offset": 0.16047793152947162,
+        "anchor_after": -0.07286288685507657,
+        "conditional_mean": -0.008648651189773999,
+        "unobserved_bridge_residual": 0.16912658271924563
+      },
+      {
+        "anchor_before": 0.02928738525445851,
+        "science_offset": -0.034088054171242894,
+        "anchor_after": -0.17035380938449451,
+        "conditional_mean": -0.04570934951397604,
+        "unobserved_bridge_residual": 0.011621295342733144
+      },
+      {
+        "anchor_before": 0.2405516454576408,
+        "science_offset": 0.16765853729574337,
+        "anchor_after": 0.06268964243317285,
+        "conditional_mean": 0.09825840628449119,
+        "unobserved_bridge_residual": 0.06940013101125218
+      },
+      {
+        "anchor_before": -0.14279971023149063,
+        "science_offset": 0.10558264284780493,
+        "anchor_after": -0.12655811730546393,
+        "conditional_mean": -0.0872792456400716,
+        "unobserved_bridge_residual": 0.19286188848787653
+      },
+      {
+        "anchor_before": -0.11396733993538337,
+        "science_offset": 0.09871483689443088,
+        "anchor_after": -0.0948143254485393,
+        "conditional_mean": -0.06765092525735718,
+        "unobserved_bridge_residual": 0.16636576215178805
+      }
+    ]
+  },
+  "exact": {
+    "bridge_parameters": [
+      {
+        "gap_over_correlation": 0.05,
+        "anchor_coefficient": 0.4993756503804445,
+        "residual_variance": 0.0007194005993934716
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "anchor_coefficient": 0.3240271368319427,
+        "residual_variance": 0.010966955845763014
+      }
+    ],
+    "free_innovation_profiled_ranks": [
+      {
+        "tau_over_pi": 0.0,
+        "rank": 3
+      },
+      {
+        "tau_over_pi": 0.5,
+        "rank": 3
+      }
+    ],
+    "uncertainty_map": {
+      "assumption": "Known zero-mean OU covariance, independent blocks, Gaussian phase-fit noise",
+      "rows": [
+        {
+          "tau_over_pi": 0.0,
+          "gap_over_correlation": 0.05,
+          "bridge_coefficient": 0.4993756503804445,
+          "irreducible_bridge_sd_per_block": 0.026821644233593726,
+          "finite_shot_sd_per_block_approx": 0.007115531953491939,
+          "blocks_in_coverage_study": 8,
+          "replicates": 20000,
+          "shot_only_95pct_coverage": 0.38025,
+          "bridge_aware_95pct_coverage": 0.948,
+          "shot_only_halfwidth": 0.004930812078142437,
+          "bridge_aware_halfwidth": 0.01922938053029011,
+          "blocks_for_0_point_02_rad_halfwidth": 8
+        },
+        {
+          "tau_over_pi": 0.0,
+          "gap_over_correlation": 1.0,
+          "bridge_coefficient": 0.3240271368319427,
+          "irreducible_bridge_sd_per_block": 0.10472323450773956,
+          "finite_shot_sd_per_block_approx": 0.006463072316536266,
+          "blocks_in_coverage_study": 8,
+          "replicates": 20000,
+          "shot_only_95pct_coverage": 0.0948,
+          "bridge_aware_95pct_coverage": 0.95,
+          "shot_only_halfwidth": 0.004478680617075406,
+          "bridge_aware_halfwidth": 0.07270757028814238,
+          "blocks_for_0_point_02_rad_halfwidth": 106
+        },
+        {
+          "tau_over_pi": 0.5,
+          "gap_over_correlation": 0.05,
+          "bridge_coefficient": 0.4993756503804445,
+          "irreducible_bridge_sd_per_block": 0.026821644233593726,
+          "finite_shot_sd_per_block_approx": 0.026245398438204233,
+          "blocks_in_coverage_study": 8,
+          "replicates": 20000,
+          "shot_only_95pct_coverage": 0.8265,
+          "bridge_aware_95pct_coverage": 0.9485,
+          "shot_only_halfwidth": 0.018187133226385096,
+          "bridge_aware_halfwidth": 0.02600438391546752,
+          "blocks_for_0_point_02_rad_halfwidth": 14
+        },
+        {
+          "tau_over_pi": 0.5,
+          "gap_over_correlation": 1.0,
+          "bridge_coefficient": 0.3240271368319427,
+          "irreducible_bridge_sd_per_block": 0.10472323450773956,
+          "finite_shot_sd_per_block_approx": 0.023581861334911237,
+          "blocks_in_coverage_study": 8,
+          "replicates": 20000,
+          "shot_only_95pct_coverage": 0.3352,
+          "bridge_aware_95pct_coverage": 0.94975,
+          "shot_only_halfwidth": 0.016341396181658252,
+          "bridge_aware_halfwidth": 0.07438664817224469,
+          "blocks_for_0_point_02_rad_halfwidth": 111
+        }
+      ]
+    }
+  },
+  "aer": {
+    "shots_per_circuit": 4096,
+    "circuits": 1728,
+    "tau_over_pi": 0.0,
+    "transpiled_depth": 4570,
+    "raw_count_axes": [
+      "segment_before_science_after",
+      "reference_axis",
+      "phase_label"
+    ],
+    "block_rows": [
+      {
+        "gap_over_correlation": 0.05,
+        "block": 0,
+        "true_phases": {
+          "anchor_before": -0.13527635523770581,
+          "science": 0.1969384634871152,
+          "anchor_after": -0.09626006133584838
+        },
+        "true_bridge_residual": 0.012562112100291373,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.134,
+            "fisher_standard_error_radians": 0.005328297726821522,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.14450000000000007,
+              -0.124
+            ],
+            "accepted_clock_counts_by_phase": [
+              3255,
+              3223,
+              3319,
+              3237,
+              3280,
+              3305,
+              3287,
+              3275,
+              3293
+            ],
+            "joint_zero_counts_by_phase": [
+              1837,
+              1836,
+              107,
+              0,
+              0,
+              0,
+              0,
+              0,
+              155
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.2004999999999999,
+            "fisher_standard_error_radians": 0.006166640922115316,
+            "profile_likelihood_95pct_interval_radians": [
+              0.1885,
+              0.21199999999999997
+            ],
+            "accepted_clock_counts_by_phase": [
+              3330,
+              3222,
+              3234,
+              3285,
+              3229,
+              3251,
+              3252,
+              3266,
+              3265
+            ],
+            "joint_zero_counts_by_phase": [
+              2525,
+              690,
+              8,
+              0,
+              0,
+              0,
+              0,
+              4,
+              664
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.10250000000000004,
+            "fisher_standard_error_radians": 0.0053443041918867385,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.11250000000000004,
+              -0.09200000000000008
+            ],
+            "accepted_clock_counts_by_phase": [
+              3260,
+              3239,
+              3321,
+              3244,
+              3191,
+              3266,
+              3319,
+              3216,
+              3265
+            ],
+            "joint_zero_counts_by_phase": [
+              1970,
+              1710,
+              100,
+              0,
+              0,
+              0,
+              0,
+              0,
+              160
+            ]
+          }
+        },
+        "alpha_estimate": 0.31860234131497506,
+        "shot_only_standard_error": 0.007227033297212786,
+        "bridge_aware_standard_error": 0.027778239859150435,
+        "clock_postselection_rate": 0.1992210105613426,
+        "mean_absolute_joint_probability_error": 0.0011437855140027824,
+        "clock_success_counts": [
+          [
+            [
+              795,
+              815,
+              810,
+              790,
+              772,
+              784,
+              834,
+              794,
+              832
+            ],
+            [
+              835,
+              804,
+              822,
+              793,
+              823,
+              863,
+              800,
+              866,
+              830
+            ],
+            [
+              821,
+              800,
+              847,
+              825,
+              840,
+              839,
+              800,
+              799,
+              820
+            ],
+            [
+              804,
+              804,
+              840,
+              829,
+              845,
+              819,
+              853,
+              816,
+              811
+            ]
+          ],
+          [
+            [
+              829,
+              776,
+              812,
+              827,
+              892,
+              783,
+              788,
+              829,
+              861
+            ],
+            [
+              850,
+              843,
+              795,
+              817,
+              777,
+              809,
+              815,
+              824,
+              766
+            ],
+            [
+              816,
+              811,
+              806,
+              826,
+              761,
+              808,
+              845,
+              792,
+              843
+            ],
+            [
+              835,
+              792,
+              821,
+              815,
+              799,
+              851,
+              804,
+              821,
+              795
+            ]
+          ],
+          [
+            [
+              776,
+              808,
+              833,
+              825,
+              761,
+              817,
+              828,
+              827,
+              811
+            ],
+            [
+              804,
+              813,
+              808,
+              835,
+              758,
+              800,
+              829,
+              802,
+              815
+            ],
+            [
+              834,
+              787,
+              816,
+              789,
+              795,
+              823,
+              822,
+              809,
+              822
+            ],
+            [
+              846,
+              831,
+              864,
+              795,
+              877,
+              826,
+              840,
+              778,
+              817
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              439,
+              454,
+              25,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32
+            ],
+            [
+              482,
+              476,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              48
+            ],
+            [
+              456,
+              454,
+              26,
+              0,
+              0,
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              460,
+              452,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              35
+            ]
+          ],
+          [
+            [
+              629,
+              163,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              178
+            ],
+            [
+              639,
+              212,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              168
+            ],
+            [
+              634,
+              146,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              160
+            ],
+            [
+              623,
+              169,
+              3,
+              0,
+              0,
+              0,
+              0,
+              1,
+              158
+            ]
+          ],
+          [
+            [
+              464,
+              413,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              46
+            ],
+            [
+              487,
+              419,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0,
+              35
+            ],
+            [
+              522,
+              437,
+              23,
+              0,
+              0,
+              0,
+              0,
+              0,
+              47
+            ],
+            [
+              497,
+              441,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 1,
+        "true_phases": {
+          "anchor_before": -0.02378447934906397,
+          "science": 0.33044293395394564,
+          "anchor_after": -0.045707971724243776
+        },
+        "true_bridge_residual": 0.06514577190520993,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.02300000000000002,
+            "fisher_standard_error_radians": 0.005520497214240401,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.033499999999999974,
+              -0.012500000000000067
+            ],
+            "accepted_clock_counts_by_phase": [
+              3208,
+              3222,
+              3250,
+              3202,
+              3313,
+              3275,
+              3293,
+              3296,
+              3220
+            ],
+            "joint_zero_counts_by_phase": [
+              2130,
+              1379,
+              62,
+              0,
+              0,
+              0,
+              0,
+              0,
+              229
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.3360000000000001,
+            "fisher_standard_error_radians": 0.005751735196582555,
+            "profile_likelihood_95pct_interval_radians": [
+              0.3254999999999999,
+              0.347
+            ],
+            "accepted_clock_counts_by_phase": [
+              3280,
+              3373,
+              3281,
+              3319,
+              3252,
+              3246,
+              3274,
+              3141,
+              3365
+            ],
+            "joint_zero_counts_by_phase": [
+              2411,
+              439,
+              2,
+              0,
+              0,
+              0,
+              0,
+              32,
+              1132
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.05600000000000005,
+            "fisher_standard_error_radians": 0.005420123688965126,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.0665,
+              -0.04600000000000004
+            ],
+            "accepted_clock_counts_by_phase": [
+              3222,
+              3202,
+              3327,
+              3266,
+              3296,
+              3300,
+              3220,
+              3258,
+              3341
+            ],
+            "joint_zero_counts_by_phase": [
+              2007,
+              1502,
+              70,
+              0,
+              0,
+              0,
+              0,
+              0,
+              228
+            ]
+          }
+        },
+        "alpha_estimate": 0.37545067638005525,
+        "shot_only_standard_error": 0.006928818015074542,
+        "bridge_aware_standard_error": 0.027702150069615412,
+        "clock_postselection_rate": 0.19947645399305555,
+        "mean_absolute_joint_probability_error": 0.0012595769938664294,
+        "clock_success_counts": [
+          [
+            [
+              813,
+              769,
+              804,
+              794,
+              830,
+              773,
+              876,
+              801,
+              820
+            ],
+            [
+              777,
+              819,
+              797,
+              794,
+              836,
+              831,
+              745,
+              868,
+              793
+            ],
+            [
+              787,
+              822,
+              783,
+              826,
+              815,
+              816,
+              810,
+              804,
+              780
+            ],
+            [
+              831,
+              812,
+              866,
+              788,
+              832,
+              855,
+              862,
+              823,
+              827
+            ]
+          ],
+          [
+            [
+              862,
+              833,
+              784,
+              808,
+              824,
+              868,
+              796,
+              745,
+              837
+            ],
+            [
+              823,
+              840,
+              839,
+              798,
+              810,
+              764,
+              825,
+              775,
+              826
+            ],
+            [
+              806,
+              860,
+              822,
+              856,
+              793,
+              813,
+              823,
+              825,
+              870
+            ],
+            [
+              789,
+              840,
+              836,
+              857,
+              825,
+              801,
+              830,
+              796,
+              832
+            ]
+          ],
+          [
+            [
+              784,
+              800,
+              791,
+              806,
+              837,
+              812,
+              809,
+              847,
+              843
+            ],
+            [
+              812,
+              801,
+              827,
+              807,
+              854,
+              827,
+              807,
+              826,
+              822
+            ],
+            [
+              808,
+              808,
+              881,
+              852,
+              829,
+              797,
+              809,
+              801,
+              812
+            ],
+            [
+              818,
+              793,
+              828,
+              801,
+              776,
+              864,
+              795,
+              784,
+              864
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              530,
+              307,
+              14,
+              0,
+              0,
+              0,
+              0,
+              0,
+              55
+            ],
+            [
+              542,
+              387,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              62
+            ],
+            [
+              522,
+              349,
+              19,
+              0,
+              0,
+              0,
+              0,
+              0,
+              50
+            ],
+            [
+              536,
+              336,
+              17,
+              0,
+              0,
+              0,
+              0,
+              0,
+              62
+            ]
+          ],
+          [
+            [
+              639,
+              99,
+              1,
+              0,
+              0,
+              0,
+              0,
+              6,
+              287
+            ],
+            [
+              626,
+              115,
+              1,
+              0,
+              0,
+              0,
+              0,
+              6,
+              265
+            ],
+            [
+              580,
+              123,
+              0,
+              0,
+              0,
+              0,
+              0,
+              9,
+              301
+            ],
+            [
+              566,
+              102,
+              0,
+              0,
+              0,
+              0,
+              0,
+              11,
+              279
+            ]
+          ],
+          [
+            [
+              491,
+              375,
+              17,
+              0,
+              0,
+              0,
+              0,
+              0,
+              59
+            ],
+            [
+              490,
+              366,
+              23,
+              0,
+              0,
+              0,
+              0,
+              0,
+              60
+            ],
+            [
+              501,
+              377,
+              21,
+              0,
+              0,
+              0,
+              0,
+              0,
+              52
+            ],
+            [
+              525,
+              384,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              57
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 2,
+        "true_phases": {
+          "anchor_before": 0.14941802710945945,
+          "science": 0.3223302741613234,
+          "anchor_after": 0.08360455422113741
+        },
+        "true_bridge_residual": -0.09403552894397338,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.15149999999999997,
+            "fisher_standard_error_radians": 0.0060902481904026706,
+            "profile_likelihood_95pct_interval_radians": [
+              0.13949999999999996,
+              0.16349999999999998
+            ],
+            "accepted_clock_counts_by_phase": [
+              3281,
+              3274,
+              3280,
+              3275,
+              3316,
+              3358,
+              3270,
+              3338,
+              3216
+            ],
+            "joint_zero_counts_by_phase": [
+              2376,
+              840,
+              17,
+              0,
+              0,
+              0,
+              0,
+              0,
+              566
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.31699999999999995,
+            "fisher_standard_error_radians": 0.0059107293896882105,
+            "profile_likelihood_95pct_interval_radians": [
+              0.3054999999999999,
+              0.3285
+            ],
+            "accepted_clock_counts_by_phase": [
+              3269,
+              3215,
+              3178,
+              3264,
+              3276,
+              3287,
+              3358,
+              3312,
+              3255
+            ],
+            "joint_zero_counts_by_phase": [
+              2369,
+              469,
+              0,
+              0,
+              0,
+              0,
+              0,
+              21,
+              1031
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": 0.08150000000000002,
+            "fisher_standard_error_radians": 0.0058082379751158465,
+            "profile_likelihood_95pct_interval_radians": [
+              0.07050000000000001,
+              0.09250000000000003
+            ],
+            "accepted_clock_counts_by_phase": [
+              3232,
+              3313,
+              3237,
+              3220,
+              3263,
+              3271,
+              3241,
+              3290,
+              3327
+            ],
+            "joint_zero_counts_by_phase": [
+              2352,
+              1101,
+              28,
+              0,
+              0,
+              0,
+              0,
+              1,
+              434
+            ]
+          }
+        },
+        "alpha_estimate": 0.2006454734613564,
+        "shot_only_standard_error": 0.007252531745608209,
+        "bridge_aware_standard_error": 0.027784884669807906,
+        "clock_postselection_rate": 0.19986979166666666,
+        "mean_absolute_joint_probability_error": 0.0011714136373464695,
+        "clock_success_counts": [
+          [
+            [
+              799,
+              854,
+              827,
+              858,
+              815,
+              839,
+              814,
+              850,
+              829
+            ],
+            [
+              817,
+              809,
+              842,
+              861,
+              857,
+              846,
+              815,
+              815,
+              803
+            ],
+            [
+              836,
+              793,
+              824,
+              770,
+              816,
+              826,
+              816,
+              826,
+              802
+            ],
+            [
+              829,
+              818,
+              787,
+              786,
+              828,
+              847,
+              825,
+              847,
+              782
+            ]
+          ],
+          [
+            [
+              816,
+              768,
+              777,
+              873,
+              826,
+              859,
+              829,
+              845,
+              814
+            ],
+            [
+              852,
+              816,
+              769,
+              792,
+              845,
+              820,
+              790,
+              848,
+              837
+            ],
+            [
+              791,
+              813,
+              785,
+              817,
+              806,
+              802,
+              868,
+              806,
+              805
+            ],
+            [
+              810,
+              818,
+              847,
+              782,
+              799,
+              806,
+              871,
+              813,
+              799
+            ]
+          ],
+          [
+            [
+              820,
+              805,
+              814,
+              803,
+              811,
+              784,
+              788,
+              811,
+              845
+            ],
+            [
+              792,
+              888,
+              829,
+              821,
+              806,
+              837,
+              799,
+              829,
+              816
+            ],
+            [
+              791,
+              836,
+              787,
+              818,
+              814,
+              817,
+              832,
+              860,
+              846
+            ],
+            [
+              829,
+              784,
+              807,
+              778,
+              832,
+              833,
+              822,
+              790,
+              820
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              581,
+              212,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              150
+            ],
+            [
+              562,
+              194,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              124
+            ],
+            [
+              621,
+              222,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              141
+            ],
+            [
+              612,
+              212,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              151
+            ]
+          ],
+          [
+            [
+              575,
+              113,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              268
+            ],
+            [
+              632,
+              125,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              259
+            ],
+            [
+              561,
+              118,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              261
+            ],
+            [
+              601,
+              113,
+              0,
+              0,
+              0,
+              0,
+              0,
+              12,
+              243
+            ]
+          ],
+          [
+            [
+              607,
+              252,
+              7,
+              0,
+              0,
+              0,
+              0,
+              1,
+              125
+            ],
+            [
+              569,
+              303,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              107
+            ],
+            [
+              580,
+              294,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              106
+            ],
+            [
+              596,
+              252,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              96
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 3,
+        "true_phases": {
+          "anchor_before": -0.37529569680140534,
+          "science": -0.059377128601944607,
+          "anchor_after": -0.37157624084884594
+        },
+        "true_bridge_residual": 0.013592531013052467,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.36350000000000005,
+            "fisher_standard_error_radians": 0.005804122051121334,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.37450000000000006,
+              -0.35250000000000004
+            ],
+            "accepted_clock_counts_by_phase": [
+              3311,
+              3211,
+              3298,
+              3229,
+              3272,
+              3253,
+              3205,
+              3285,
+              3217
+            ],
+            "joint_zero_counts_by_phase": [
+              1113,
+              2335,
+              426,
+              2,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          },
+          "science": {
+            "estimate_radians": -0.05449999999999999,
+            "fisher_standard_error_radians": 0.005389794960244667,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.0645,
+              -0.04400000000000004
+            ],
+            "accepted_clock_counts_by_phase": [
+              3330,
+              3301,
+              3237,
+              3269,
+              3288,
+              3274,
+              3340,
+              3244,
+              3241
+            ],
+            "joint_zero_counts_by_phase": [
+              2153,
+              1589,
+              76,
+              0,
+              0,
+              0,
+              0,
+              0,
+              224
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.37650000000000006,
+            "fisher_standard_error_radians": 0.0058638095631329675,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.388,
+              -0.36550000000000005
+            ],
+            "accepted_clock_counts_by_phase": [
+              3185,
+              3175,
+              3419,
+              3185,
+              3240,
+              3223,
+              3190,
+              3193,
+              3384
+            ],
+            "joint_zero_counts_by_phase": [
+              1010,
+              2269,
+              477,
+              4,
+              0,
+              0,
+              0,
+              0,
+              21
+            ]
+          }
+        },
+        "alpha_estimate": 0.315037981281529,
+        "shot_only_standard_error": 0.006784205134444902,
+        "bridge_aware_standard_error": 0.027666334030725867,
+        "clock_postselection_rate": 0.19892713758680555,
+        "mean_absolute_joint_probability_error": 0.001173771026720486,
+        "clock_success_counts": [
+          [
+            [
+              809,
+              802,
+              850,
+              844,
+              817,
+              839,
+              821,
+              827,
+              779
+            ],
+            [
+              814,
+              832,
+              825,
+              765,
+              814,
+              805,
+              798,
+              822,
+              839
+            ],
+            [
+              848,
+              773,
+              826,
+              783,
+              831,
+              806,
+              779,
+              824,
+              810
+            ],
+            [
+              840,
+              804,
+              797,
+              837,
+              810,
+              803,
+              807,
+              812,
+              789
+            ]
+          ],
+          [
+            [
+              858,
+              814,
+              802,
+              830,
+              835,
+              820,
+              812,
+              811,
+              815
+            ],
+            [
+              857,
+              851,
+              803,
+              792,
+              836,
+              803,
+              867,
+              799,
+              792
+            ],
+            [
+              799,
+              831,
+              842,
+              834,
+              802,
+              821,
+              833,
+              852,
+              812
+            ],
+            [
+              816,
+              805,
+              790,
+              813,
+              815,
+              830,
+              828,
+              782,
+              822
+            ]
+          ],
+          [
+            [
+              789,
+              776,
+              882,
+              821,
+              841,
+              843,
+              819,
+              819,
+              846
+            ],
+            [
+              755,
+              794,
+              850,
+              813,
+              774,
+              827,
+              781,
+              797,
+              821
+            ],
+            [
+              860,
+              827,
+              846,
+              747,
+              788,
+              753,
+              791,
+              811,
+              871
+            ],
+            [
+              781,
+              778,
+              841,
+              804,
+              837,
+              800,
+              799,
+              766,
+              846
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              268,
+              595,
+              108,
+              1,
+              0,
+              0,
+              0,
+              0,
+              4
+            ],
+            [
+              269,
+              595,
+              92,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              307,
+              560,
+              113,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              269,
+              585,
+              113,
+              1,
+              0,
+              0,
+              0,
+              0,
+              7
+            ]
+          ],
+          [
+            [
+              573,
+              393,
+              19,
+              0,
+              0,
+              0,
+              0,
+              0,
+              53
+            ],
+            [
+              536,
+              416,
+              20,
+              0,
+              0,
+              0,
+              0,
+              0,
+              54
+            ],
+            [
+              521,
+              392,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0,
+              54
+            ],
+            [
+              523,
+              388,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              63
+            ]
+          ],
+          [
+            [
+              269,
+              557,
+              112,
+              1,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              225,
+              561,
+              117,
+              2,
+              0,
+              0,
+              0,
+              0,
+              4
+            ],
+            [
+              270,
+              582,
+              126,
+              0,
+              0,
+              0,
+              0,
+              0,
+              7
+            ],
+            [
+              246,
+              569,
+              122,
+              1,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 4,
+        "true_phases": {
+          "anchor_before": 0.12531786216111118,
+          "science": 0.3648286244049684,
+          "anchor_after": 0.024988453652776618
+        },
+        "true_bridge_residual": -0.010230689810880322,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.127,
+            "fisher_standard_error_radians": 0.006020365286326324,
+            "profile_likelihood_95pct_interval_radians": [
+              0.11549999999999994,
+              0.13849999999999996
+            ],
+            "accepted_clock_counts_by_phase": [
+              3190,
+              3260,
+              3254,
+              3191,
+              3186,
+              3218,
+              3260,
+              3364,
+              3242
+            ],
+            "joint_zero_counts_by_phase": [
+              2370,
+              955,
+              17,
+              0,
+              0,
+              0,
+              0,
+              2,
+              525
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.3579999999999999,
+            "fisher_standard_error_radians": 0.005765544845817694,
+            "profile_likelihood_95pct_interval_radians": [
+              0.34650000000000003,
+              0.369
+            ],
+            "accepted_clock_counts_by_phase": [
+              3206,
+              3267,
+              3328,
+              3328,
+              3336,
+              3246,
+              3266,
+              3233,
+              3213
+            ],
+            "joint_zero_counts_by_phase": [
+              2285,
+              369,
+              0,
+              0,
+              0,
+              0,
+              0,
+              22,
+              1138
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": 0.019499999999999962,
+            "fisher_standard_error_radians": 0.005610876909155839,
+            "profile_likelihood_95pct_interval_radians": [
+              0.008499999999999952,
+              0.030000000000000027
+            ],
+            "accepted_clock_counts_by_phase": [
+              3318,
+              3225,
+              3295,
+              3309,
+              3330,
+              3232,
+              3235,
+              3318,
+              3289
+            ],
+            "joint_zero_counts_by_phase": [
+              2313,
+              1298,
+              39,
+              0,
+              0,
+              0,
+              0,
+              0,
+              323
+            ]
+          }
+        },
+        "alpha_estimate": 0.2848414672192648,
+        "shot_only_standard_error": 0.007080320125140004,
+        "bridge_aware_standard_error": 0.027740431367733527,
+        "clock_postselection_rate": 0.19924361617476852,
+        "mean_absolute_joint_probability_error": 0.0010233828400207253,
+        "clock_success_counts": [
+          [
+            [
+              804,
+              823,
+              775,
+              757,
+              792,
+              809,
+              828,
+              909,
+              818
+            ],
+            [
+              778,
+              822,
+              783,
+              826,
+              774,
+              797,
+              800,
+              804,
+              778
+            ],
+            [
+              837,
+              826,
+              870,
+              806,
+              834,
+              777,
+              826,
+              829,
+              799
+            ],
+            [
+              771,
+              789,
+              826,
+              802,
+              786,
+              835,
+              806,
+              822,
+              847
+            ]
+          ],
+          [
+            [
+              800,
+              800,
+              833,
+              805,
+              817,
+              822,
+              798,
+              795,
+              798
+            ],
+            [
+              771,
+              826,
+              821,
+              824,
+              863,
+              824,
+              807,
+              782,
+              770
+            ],
+            [
+              836,
+              817,
+              792,
+              875,
+              795,
+              814,
+              860,
+              815,
+              816
+            ],
+            [
+              799,
+              824,
+              882,
+              824,
+              861,
+              786,
+              801,
+              841,
+              829
+            ]
+          ],
+          [
+            [
+              828,
+              800,
+              818,
+              807,
+              824,
+              827,
+              837,
+              870,
+              827
+            ],
+            [
+              810,
+              802,
+              834,
+              855,
+              827,
+              788,
+              799,
+              813,
+              812
+            ],
+            [
+              836,
+              808,
+              844,
+              824,
+              830,
+              816,
+              808,
+              814,
+              828
+            ],
+            [
+              844,
+              815,
+              799,
+              823,
+              849,
+              801,
+              791,
+              821,
+              822
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              584,
+              233,
+              2,
+              0,
+              0,
+              0,
+              0,
+              1,
+              126
+            ],
+            [
+              588,
+              239,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              127
+            ],
+            [
+              608,
+              257,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              134
+            ],
+            [
+              590,
+              226,
+              5,
+              0,
+              0,
+              0,
+              0,
+              1,
+              138
+            ]
+          ],
+          [
+            [
+              592,
+              96,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              295
+            ],
+            [
+              548,
+              71,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              259
+            ],
+            [
+              580,
+              93,
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              275
+            ],
+            [
+              565,
+              109,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              309
+            ]
+          ],
+          [
+            [
+              593,
+              320,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              67
+            ],
+            [
+              553,
+              339,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              91
+            ],
+            [
+              583,
+              315,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              77
+            ],
+            [
+              584,
+              324,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              88
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 5,
+        "true_phases": {
+          "anchor_before": -0.13357717032989413,
+          "science": 0.13190015325419718,
+          "anchor_after": -0.1694405709447493
+        },
+        "true_bridge_residual": -0.01678016511996447,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.13950000000000007,
+            "fisher_standard_error_radians": 0.0052950351708882576,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.14950000000000008,
+              -0.12950000000000006
+            ],
+            "accepted_clock_counts_by_phase": [
+              3335,
+              3298,
+              3248,
+              3253,
+              3281,
+              3275,
+              3290,
+              3294,
+              3263
+            ],
+            "joint_zero_counts_by_phase": [
+              1844,
+              1792,
+              136,
+              0,
+              0,
+              0,
+              0,
+              0,
+              127
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.128,
+            "fisher_standard_error_radians": 0.00597977512439004,
+            "profile_likelihood_95pct_interval_radians": [
+              0.11649999999999994,
+              0.13949999999999996
+            ],
+            "accepted_clock_counts_by_phase": [
+              3289,
+              3284,
+              3333,
+              3322,
+              3298,
+              3339,
+              3350,
+              3295,
+              3313
+            ],
+            "joint_zero_counts_by_phase": [
+              2418,
+              928,
+              22,
+              0,
+              0,
+              0,
+              0,
+              2,
+              527
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.1745,
+            "fisher_standard_error_radians": 0.005327170024955011,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.18500000000000005,
+              -0.16449999999999998
+            ],
+            "accepted_clock_counts_by_phase": [
+              3312,
+              3223,
+              3286,
+              3313,
+              3225,
+              3319,
+              3307,
+              3216,
+              3262
+            ],
+            "joint_zero_counts_by_phase": [
+              1753,
+              1933,
+              153,
+              0,
+              0,
+              0,
+              0,
+              0,
+              108
+            ]
+          }
+        },
+        "alpha_estimate": 0.2848039542194596,
+        "shot_only_standard_error": 0.007058791937694471,
+        "bridge_aware_standard_error": 0.02773494443861628,
+        "clock_postselection_rate": 0.20078984013310186,
+        "mean_absolute_joint_probability_error": 0.0009021186800815316,
+        "clock_success_counts": [
+          [
+            [
+              845,
+              800,
+              837,
+              852,
+              842,
+              835,
+              803,
+              837,
+              806
+            ],
+            [
+              847,
+              853,
+              836,
+              796,
+              806,
+              796,
+              863,
+              840,
+              840
+            ],
+            [
+              818,
+              799,
+              801,
+              802,
+              794,
+              837,
+              801,
+              833,
+              824
+            ],
+            [
+              825,
+              846,
+              774,
+              803,
+              839,
+              807,
+              823,
+              784,
+              793
+            ]
+          ],
+          [
+            [
+              883,
+              837,
+              822,
+              819,
+              863,
+              850,
+              870,
+              824,
+              835
+            ],
+            [
+              801,
+              828,
+              883,
+              819,
+              808,
+              837,
+              810,
+              802,
+              822
+            ],
+            [
+              818,
+              808,
+              813,
+              853,
+              816,
+              837,
+              819,
+              856,
+              849
+            ],
+            [
+              787,
+              811,
+              815,
+              831,
+              811,
+              815,
+              851,
+              813,
+              807
+            ]
+          ],
+          [
+            [
+              827,
+              783,
+              831,
+              827,
+              808,
+              852,
+              822,
+              803,
+              844
+            ],
+            [
+              862,
+              833,
+              794,
+              874,
+              795,
+              761,
+              843,
+              796,
+              794
+            ],
+            [
+              810,
+              815,
+              852,
+              811,
+              792,
+              819,
+              845,
+              810,
+              801
+            ],
+            [
+              813,
+              792,
+              809,
+              801,
+              830,
+              887,
+              797,
+              807,
+              823
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              467,
+              428,
+              31,
+              0,
+              0,
+              0,
+              0,
+              0,
+              35
+            ],
+            [
+              457,
+              450,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0,
+              43
+            ],
+            [
+              448,
+              442,
+              39,
+              0,
+              0,
+              0,
+              0,
+              0,
+              20
+            ],
+            [
+              472,
+              472,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0,
+              29
+            ]
+          ],
+          [
+            [
+              655,
+              234,
+              4,
+              0,
+              0,
+              0,
+              0,
+              1,
+              126
+            ],
+            [
+              596,
+              224,
+              9,
+              0,
+              0,
+              0,
+              0,
+              1,
+              123
+            ],
+            [
+              593,
+              248,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              135
+            ],
+            [
+              574,
+              222,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              143
+            ]
+          ],
+          [
+            [
+              440,
+              470,
+              36,
+              0,
+              0,
+              0,
+              0,
+              0,
+              29
+            ],
+            [
+              435,
+              492,
+              38,
+              0,
+              0,
+              0,
+              0,
+              0,
+              25
+            ],
+            [
+              443,
+              500,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0,
+              28
+            ],
+            [
+              435,
+              471,
+              46,
+              0,
+              0,
+              0,
+              0,
+              0,
+              26
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 6,
+        "true_phases": {
+          "anchor_before": 0.012233648553967299,
+          "science": 0.2631295589700589,
+          "anchor_after": -0.043151200612643534
+        },
+        "true_bridge_residual": -0.021430968362468363,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.009000000000000008,
+            "fisher_standard_error_radians": 0.005549975814374484,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.0015000000000000568,
+              0.019499999999999962
+            ],
+            "accepted_clock_counts_by_phase": [
+              3325,
+              3307,
+              3224,
+              3291,
+              3271,
+              3300,
+              3364,
+              3404,
+              3281
+            ],
+            "joint_zero_counts_by_phase": [
+              2327,
+              1302,
+              55,
+              0,
+              0,
+              0,
+              0,
+              0,
+              259
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.27249999999999996,
+            "fisher_standard_error_radians": 0.0060416799964829555,
+            "profile_likelihood_95pct_interval_radians": [
+              0.26049999999999995,
+              0.28400000000000003
+            ],
+            "accepted_clock_counts_by_phase": [
+              3262,
+              3288,
+              3306,
+              3266,
+              3299,
+              3346,
+              3275,
+              3217,
+              3254
+            ],
+            "joint_zero_counts_by_phase": [
+              2409,
+              532,
+              4,
+              0,
+              0,
+              0,
+              0,
+              10,
+              862
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.045499999999999985,
+            "fisher_standard_error_radians": 0.005417240609932637,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.05600000000000005,
+              -0.03500000000000003
+            ],
+            "accepted_clock_counts_by_phase": [
+              3238,
+              3273,
+              3362,
+              3200,
+              3154,
+              3300,
+              3267,
+              3303,
+              3303
+            ],
+            "joint_zero_counts_by_phase": [
+              2057,
+              1478,
+              60,
+              0,
+              0,
+              0,
+              0,
+              0,
+              210
+            ]
+          }
+        },
+        "alpha_estimate": 0.2907272112388862,
+        "shot_only_standard_error": 0.0071764579447725066,
+        "bridge_aware_standard_error": 0.02776512467154722,
+        "clock_postselection_rate": 0.2004665798611111,
+        "mean_absolute_joint_probability_error": 0.0012369269483444216,
+        "clock_success_counts": [
+          [
+            [
+              826,
+              821,
+              810,
+              821,
+              795,
+              782,
+              855,
+              871,
+              787
+            ],
+            [
+              833,
+              851,
+              796,
+              817,
+              809,
+              881,
+              843,
+              833,
+              818
+            ],
+            [
+              862,
+              804,
+              823,
+              806,
+              853,
+              805,
+              830,
+              851,
+              832
+            ],
+            [
+              804,
+              831,
+              795,
+              847,
+              814,
+              832,
+              836,
+              849,
+              844
+            ]
+          ],
+          [
+            [
+              876,
+              827,
+              861,
+              821,
+              838,
+              831,
+              853,
+              838,
+              800
+            ],
+            [
+              828,
+              805,
+              831,
+              832,
+              845,
+              833,
+              804,
+              792,
+              843
+            ],
+            [
+              789,
+              861,
+              807,
+              834,
+              790,
+              843,
+              818,
+              800,
+              815
+            ],
+            [
+              769,
+              795,
+              807,
+              779,
+              826,
+              839,
+              800,
+              787,
+              796
+            ]
+          ],
+          [
+            [
+              867,
+              823,
+              827,
+              781,
+              761,
+              808,
+              791,
+              827,
+              809
+            ],
+            [
+              799,
+              826,
+              827,
+              814,
+              798,
+              835,
+              855,
+              795,
+              839
+            ],
+            [
+              767,
+              806,
+              849,
+              825,
+              786,
+              818,
+              811,
+              839,
+              813
+            ],
+            [
+              805,
+              818,
+              859,
+              780,
+              809,
+              839,
+              810,
+              842,
+              842
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              595,
+              320,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              65
+            ],
+            [
+              560,
+              326,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              56
+            ],
+            [
+              605,
+              325,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              69
+            ],
+            [
+              567,
+              331,
+              16,
+              0,
+              0,
+              0,
+              0,
+              0,
+              69
+            ]
+          ],
+          [
+            [
+              653,
+              133,
+              2,
+              0,
+              0,
+              0,
+              0,
+              2,
+              218
+            ],
+            [
+              586,
+              144,
+              2,
+              0,
+              0,
+              0,
+              0,
+              4,
+              209
+            ],
+            [
+              579,
+              129,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              214
+            ],
+            [
+              591,
+              126,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              221
+            ]
+          ],
+          [
+            [
+              555,
+              392,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              43
+            ],
+            [
+              485,
+              369,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              57
+            ],
+            [
+              493,
+              359,
+              26,
+              0,
+              0,
+              0,
+              0,
+              0,
+              59
+            ],
+            [
+              524,
+              358,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              51
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 0.05,
+        "block": 7,
+        "true_phases": {
+          "anchor_before": -0.07177909897234629,
+          "science": 0.22275413182242038,
+          "anchor_after": -0.06062474723836666
+        },
+        "true_bridge_residual": -0.011126611363232466,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.07150000000000001,
+            "fisher_standard_error_radians": 0.005325301475683446,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.08150000000000002,
+              -0.061000000000000054
+            ],
+            "accepted_clock_counts_by_phase": [
+              3292,
+              3370,
+              3327,
+              3220,
+              3273,
+              3284,
+              3295,
+              3347,
+              3319
+            ],
+            "joint_zero_counts_by_phase": [
+              2060,
+              1639,
+              87,
+              0,
+              0,
+              0,
+              0,
+              0,
+              193
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.22350000000000003,
+            "fisher_standard_error_radians": 0.006112181727725256,
+            "profile_likelihood_95pct_interval_radians": [
+              0.21199999999999997,
+              0.23550000000000004
+            ],
+            "accepted_clock_counts_by_phase": [
+              3309,
+              3273,
+              3362,
+              3341,
+              3202,
+              3279,
+              3286,
+              3311,
+              3309
+            ],
+            "joint_zero_counts_by_phase": [
+              2484,
+              673,
+              8,
+              0,
+              0,
+              0,
+              0,
+              9,
+              764
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.0685,
+            "fisher_standard_error_radians": 0.0053835414049144634,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.07850000000000001,
+              -0.05800000000000005
+            ],
+            "accepted_clock_counts_by_phase": [
+              3158,
+              3326,
+              3241,
+              3246,
+              3279,
+              3288,
+              3257,
+              3118,
+              3323
+            ],
+            "joint_zero_counts_by_phase": [
+              1961,
+              1580,
+              81,
+              0,
+              0,
+              0,
+              0,
+              0,
+              190
+            ]
+          }
+        },
+        "alpha_estimate": 0.2934125910532623,
+        "shot_only_standard_error": 0.007187372624191508,
+        "bridge_aware_standard_error": 0.027767947792958145,
+        "clock_postselection_rate": 0.20036485460069445,
+        "mean_absolute_joint_probability_error": 0.0010773694909973497,
+        "clock_success_counts": [
+          [
+            [
+              822,
+              837,
+              826,
+              809,
+              821,
+              787,
+              844,
+              849,
+              813
+            ],
+            [
+              831,
+              831,
+              861,
+              827,
+              822,
+              799,
+              812,
+              827,
+              887
+            ],
+            [
+              830,
+              860,
+              824,
+              796,
+              813,
+              869,
+              826,
+              850,
+              795
+            ],
+            [
+              809,
+              842,
+              816,
+              788,
+              817,
+              829,
+              813,
+              821,
+              824
+            ]
+          ],
+          [
+            [
+              829,
+              842,
+              806,
+              819,
+              844,
+              823,
+              830,
+              853,
+              811
+            ],
+            [
+              808,
+              802,
+              867,
+              842,
+              808,
+              842,
+              834,
+              819,
+              854
+            ],
+            [
+              852,
+              813,
+              866,
+              817,
+              762,
+              806,
+              816,
+              827,
+              819
+            ],
+            [
+              820,
+              816,
+              823,
+              863,
+              788,
+              808,
+              806,
+              812,
+              825
+            ]
+          ],
+          [
+            [
+              778,
+              856,
+              812,
+              832,
+              783,
+              791,
+              812,
+              782,
+              815
+            ],
+            [
+              818,
+              822,
+              824,
+              756,
+              821,
+              790,
+              796,
+              774,
+              827
+            ],
+            [
+              781,
+              825,
+              797,
+              846,
+              812,
+              867,
+              817,
+              788,
+              825
+            ],
+            [
+              781,
+              823,
+              808,
+              812,
+              863,
+              840,
+              832,
+              774,
+              856
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              489,
+              404,
+              21,
+              0,
+              0,
+              0,
+              0,
+              0,
+              55
+            ],
+            [
+              521,
+              407,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              51
+            ],
+            [
+              532,
+              428,
+              23,
+              0,
+              0,
+              0,
+              0,
+              0,
+              46
+            ],
+            [
+              518,
+              400,
+              19,
+              0,
+              0,
+              0,
+              0,
+              0,
+              41
+            ]
+          ],
+          [
+            [
+              622,
+              173,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              187
+            ],
+            [
+              596,
+              152,
+              3,
+              0,
+              0,
+              0,
+              0,
+              2,
+              219
+            ],
+            [
+              641,
+              178,
+              3,
+              0,
+              0,
+              0,
+              0,
+              4,
+              182
+            ],
+            [
+              625,
+              170,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              176
+            ]
+          ],
+          [
+            [
+              486,
+              412,
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              44
+            ],
+            [
+              513,
+              402,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              47
+            ],
+            [
+              486,
+              374,
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              49
+            ],
+            [
+              476,
+              392,
+              21,
+              0,
+              0,
+              0,
+              0,
+              0,
+              50
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 0,
+        "true_phases": {
+          "anchor_before": 0.05066407712580809,
+          "science": 0.4888785488615855,
+          "anchor_after": 0.1818399503950397
+        },
+        "true_bridge_residual": 0.11354093452210999,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.04799999999999993,
+            "fisher_standard_error_radians": 0.005745816184695071,
+            "profile_likelihood_95pct_interval_radians": [
+              0.03699999999999992,
+              0.05899999999999994
+            ],
+            "accepted_clock_counts_by_phase": [
+              3250,
+              3221,
+              3359,
+              3310,
+              3335,
+              3286,
+              3281,
+              3255,
+              3201
+            ],
+            "joint_zero_counts_by_phase": [
+              2287,
+              1178,
+              31,
+              0,
+              0,
+              0,
+              0,
+              1,
+              358
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.49249999999999994,
+            "fisher_standard_error_radians": 0.005331609214323111,
+            "profile_likelihood_95pct_interval_radians": [
+              0.482,
+              0.5025
+            ],
+            "accepted_clock_counts_by_phase": [
+              3302,
+              3368,
+              3442,
+              3190,
+              3289,
+              3378,
+              3244,
+              3233,
+              3303
+            ],
+            "joint_zero_counts_by_phase": [
+              2002,
+              188,
+              0,
+              0,
+              0,
+              0,
+              0,
+              86,
+              1581
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": 0.18199999999999994,
+            "fisher_standard_error_radians": 0.006181799976745329,
+            "profile_likelihood_95pct_interval_radians": [
+              0.17049999999999998,
+              0.19399999999999995
+            ],
+            "accepted_clock_counts_by_phase": [
+              3164,
+              3218,
+              3283,
+              3247,
+              3287,
+              3287,
+              3211,
+              3300,
+              3200
+            ],
+            "joint_zero_counts_by_phase": [
+              2379,
+              757,
+              11,
+              0,
+              0,
+              0,
+              1,
+              5,
+              619
+            ]
+          }
+        },
+        "alpha_estimate": 0.41797375852865315,
+        "shot_only_standard_error": 0.005992048951702127,
+        "bridge_aware_standard_error": 0.10489452081211205,
+        "clock_postselection_rate": 0.19993308738425927,
+        "mean_absolute_joint_probability_error": 0.0009800832640735576,
+        "clock_success_counts": [
+          [
+            [
+              794,
+              781,
+              841,
+              833,
+              840,
+              832,
+              838,
+              864,
+              780
+            ],
+            [
+              801,
+              838,
+              833,
+              851,
+              824,
+              804,
+              821,
+              811,
+              809
+            ],
+            [
+              827,
+              820,
+              847,
+              790,
+              838,
+              840,
+              813,
+              783,
+              823
+            ],
+            [
+              828,
+              782,
+              838,
+              836,
+              833,
+              810,
+              809,
+              797,
+              789
+            ]
+          ],
+          [
+            [
+              817,
+              848,
+              868,
+              764,
+              819,
+              851,
+              801,
+              808,
+              850
+            ],
+            [
+              840,
+              838,
+              860,
+              799,
+              811,
+              830,
+              819,
+              812,
+              823
+            ],
+            [
+              840,
+              840,
+              849,
+              820,
+              827,
+              860,
+              838,
+              817,
+              805
+            ],
+            [
+              805,
+              842,
+              865,
+              807,
+              832,
+              837,
+              786,
+              796,
+              825
+            ]
+          ],
+          [
+            [
+              808,
+              851,
+              787,
+              799,
+              849,
+              791,
+              829,
+              817,
+              777
+            ],
+            [
+              796,
+              768,
+              837,
+              804,
+              781,
+              849,
+              777,
+              852,
+              788
+            ],
+            [
+              811,
+              809,
+              814,
+              801,
+              848,
+              798,
+              776,
+              806,
+              839
+            ],
+            [
+              749,
+              790,
+              845,
+              843,
+              809,
+              849,
+              829,
+              825,
+              796
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              551,
+              271,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              91
+            ],
+            [
+              566,
+              303,
+              7,
+              0,
+              0,
+              0,
+              0,
+              1,
+              78
+            ],
+            [
+              582,
+              321,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              87
+            ],
+            [
+              588,
+              283,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              102
+            ]
+          ],
+          [
+            [
+              503,
+              50,
+              0,
+              0,
+              0,
+              0,
+              0,
+              19,
+              401
+            ],
+            [
+              488,
+              52,
+              0,
+              0,
+              0,
+              0,
+              0,
+              18,
+              398
+            ],
+            [
+              518,
+              47,
+              0,
+              0,
+              0,
+              0,
+              0,
+              21,
+              385
+            ],
+            [
+              493,
+              39,
+              0,
+              0,
+              0,
+              0,
+              0,
+              28,
+              397
+            ]
+          ],
+          [
+            [
+              583,
+              208,
+              4,
+              0,
+              0,
+              0,
+              0,
+              1,
+              158
+            ],
+            [
+              622,
+              180,
+              2,
+              0,
+              0,
+              0,
+              0,
+              2,
+              156
+            ],
+            [
+              608,
+              192,
+              2,
+              0,
+              0,
+              0,
+              0,
+              1,
+              165
+            ],
+            [
+              566,
+              177,
+              3,
+              0,
+              0,
+              0,
+              1,
+              1,
+              140
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 1,
+        "true_phases": {
+          "anchor_before": -0.09276953042376859,
+          "science": 0.22970669863747106,
+          "anchor_after": -0.11332868010453537
+        },
+        "true_bridge_residual": -0.0035118882988556394,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.09400000000000008,
+            "fisher_standard_error_radians": 0.005387451572811025,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.10399999999999998,
+              -0.08350000000000002
+            ],
+            "accepted_clock_counts_by_phase": [
+              3220,
+              3165,
+              3333,
+              3381,
+              3333,
+              3291,
+              3306,
+              3239,
+              3254
+            ],
+            "joint_zero_counts_by_phase": [
+              1941,
+              1631,
+              96,
+              0,
+              0,
+              0,
+              0,
+              0,
+              178
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.23899999999999988,
+            "fisher_standard_error_radians": 0.006103330673513363,
+            "profile_likelihood_95pct_interval_radians": [
+              0.22699999999999987,
+              0.25049999999999994
+            ],
+            "accepted_clock_counts_by_phase": [
+              3225,
+              3227,
+              3301,
+              3152,
+              3252,
+              3281,
+              3263,
+              3203,
+              3340
+            ],
+            "joint_zero_counts_by_phase": [
+              2419,
+              623,
+              8,
+              0,
+              0,
+              0,
+              0,
+              7,
+              821
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.118,
+            "fisher_standard_error_radians": 0.005333810857147095,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.128,
+              -0.10799999999999998
+            ],
+            "accepted_clock_counts_by_phase": [
+              3333,
+              3200,
+              3253,
+              3343,
+              3280,
+              3266,
+              3270,
+              3322,
+              3246
+            ],
+            "joint_zero_counts_by_phase": [
+              1959,
+              1700,
+              130,
+              0,
+              0,
+              0,
+              0,
+              0,
+              144
+            ]
+          }
+        },
+        "alpha_estimate": 0.30769375300837176,
+        "shot_only_standard_error": 0.006579138604033874,
+        "bridge_aware_standard_error": 0.10492969508453792,
+        "clock_postselection_rate": 0.19956009476273148,
+        "mean_absolute_joint_probability_error": 0.0011218122789162423,
+        "clock_success_counts": [
+          [
+            [
+              801,
+              781,
+              883,
+              880,
+              780,
+              856,
+              828,
+              842,
+              821
+            ],
+            [
+              798,
+              786,
+              836,
+              834,
+              860,
+              815,
+              798,
+              819,
+              835
+            ],
+            [
+              809,
+              833,
+              840,
+              834,
+              863,
+              824,
+              859,
+              775,
+              795
+            ],
+            [
+              812,
+              765,
+              774,
+              833,
+              830,
+              796,
+              821,
+              803,
+              803
+            ]
+          ],
+          [
+            [
+              801,
+              834,
+              870,
+              814,
+              788,
+              832,
+              814,
+              794,
+              797
+            ],
+            [
+              787,
+              807,
+              818,
+              799,
+              842,
+              831,
+              839,
+              821,
+              826
+            ],
+            [
+              792,
+              792,
+              805,
+              744,
+              824,
+              776,
+              773,
+              791,
+              848
+            ],
+            [
+              845,
+              794,
+              808,
+              795,
+              798,
+              842,
+              837,
+              797,
+              869
+            ]
+          ],
+          [
+            [
+              859,
+              802,
+              810,
+              810,
+              830,
+              778,
+              797,
+              846,
+              770
+            ],
+            [
+              821,
+              798,
+              816,
+              841,
+              795,
+              791,
+              827,
+              829,
+              816
+            ],
+            [
+              878,
+              809,
+              802,
+              833,
+              823,
+              808,
+              815,
+              838,
+              801
+            ],
+            [
+              775,
+              791,
+              825,
+              859,
+              832,
+              889,
+              831,
+              809,
+              859
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              492,
+              410,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              52
+            ],
+            [
+              479,
+              404,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              41
+            ],
+            [
+              493,
+              423,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              47
+            ],
+            [
+              477,
+              394,
+              23,
+              0,
+              0,
+              0,
+              0,
+              0,
+              38
+            ]
+          ],
+          [
+            [
+              621,
+              154,
+              3,
+              0,
+              0,
+              0,
+              0,
+              1,
+              196
+            ],
+            [
+              587,
+              153,
+              2,
+              0,
+              0,
+              0,
+              0,
+              3,
+              174
+            ],
+            [
+              583,
+              155,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              236
+            ],
+            [
+              628,
+              161,
+              2,
+              0,
+              0,
+              0,
+              0,
+              1,
+              215
+            ]
+          ],
+          [
+            [
+              518,
+              419,
+              31,
+              0,
+              0,
+              0,
+              0,
+              0,
+              30
+            ],
+            [
+              474,
+              429,
+              34,
+              0,
+              0,
+              0,
+              0,
+              0,
+              35
+            ],
+            [
+              525,
+              427,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0,
+              42
+            ],
+            [
+              442,
+              425,
+              32,
+              0,
+              0,
+              0,
+              0,
+              0,
+              37
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 2,
+        "true_phases": {
+          "anchor_before": -0.10229704538321689,
+          "science": 0.10756810051670923,
+          "anchor_after": -0.12376080539612916
+        },
+        "true_bridge_residual": -0.11918302133687672,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.10199999999999998,
+            "fisher_standard_error_radians": 0.005331501713120299,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.11199999999999999,
+              -0.09150000000000003
+            ],
+            "accepted_clock_counts_by_phase": [
+              3347,
+              3236,
+              3229,
+              3313,
+              3300,
+              3287,
+              3185,
+              3381,
+              3269
+            ],
+            "joint_zero_counts_by_phase": [
+              2011,
+              1677,
+              111,
+              0,
+              0,
+              0,
+              0,
+              0,
+              164
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.10349999999999993,
+            "fisher_standard_error_radians": 0.005976985018651287,
+            "profile_likelihood_95pct_interval_radians": [
+              0.09199999999999997,
+              0.11499999999999999
+            ],
+            "accepted_clock_counts_by_phase": [
+              3236,
+              3123,
+              3237,
+              3223,
+              3293,
+              3308,
+              3236,
+              3258,
+              3310
+            ],
+            "joint_zero_counts_by_phase": [
+              2349,
+              979,
+              15,
+              0,
+              0,
+              0,
+              0,
+              3,
+              477
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.11350000000000005,
+            "fisher_standard_error_radians": 0.0052769613859204355,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.124,
+              -0.10350000000000004
+            ],
+            "accepted_clock_counts_by_phase": [
+              3363,
+              3340,
+              3287,
+              3345,
+              3234,
+              3286,
+              3234,
+              3334,
+              3296
+            ],
+            "joint_zero_counts_by_phase": [
+              1927,
+              1730,
+              111,
+              0,
+              0,
+              0,
+              0,
+              0,
+              152
+            ]
+          }
+        },
+        "alpha_estimate": 0.17332784798728357,
+        "shot_only_standard_error": 0.006452322706933686,
+        "bridge_aware_standard_error": 0.10492182000936423,
+        "clock_postselection_rate": 0.20003707320601852,
+        "mean_absolute_joint_probability_error": 0.0010537956638735828,
+        "clock_success_counts": [
+          [
+            [
+              867,
+              837,
+              814,
+              832,
+              845,
+              838,
+              774,
+              848,
+              838
+            ],
+            [
+              823,
+              771,
+              836,
+              847,
+              810,
+              809,
+              795,
+              812,
+              815
+            ],
+            [
+              827,
+              809,
+              782,
+              778,
+              831,
+              829,
+              840,
+              870,
+              820
+            ],
+            [
+              830,
+              819,
+              797,
+              856,
+              814,
+              811,
+              776,
+              851,
+              796
+            ]
+          ],
+          [
+            [
+              790,
+              813,
+              814,
+              805,
+              848,
+              866,
+              808,
+              788,
+              834
+            ],
+            [
+              776,
+              767,
+              798,
+              814,
+              824,
+              816,
+              804,
+              831,
+              834
+            ],
+            [
+              847,
+              775,
+              813,
+              784,
+              792,
+              812,
+              792,
+              812,
+              810
+            ],
+            [
+              823,
+              768,
+              812,
+              820,
+              829,
+              814,
+              832,
+              827,
+              832
+            ]
+          ],
+          [
+            [
+              864,
+              857,
+              850,
+              864,
+              786,
+              831,
+              790,
+              834,
+              819
+            ],
+            [
+              796,
+              834,
+              837,
+              853,
+              817,
+              831,
+              827,
+              837,
+              862
+            ],
+            [
+              849,
+              817,
+              793,
+              775,
+              815,
+              814,
+              811,
+              851,
+              792
+            ],
+            [
+              854,
+              832,
+              807,
+              853,
+              816,
+              810,
+              806,
+              812,
+              823
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              520,
+              434,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              50
+            ],
+            [
+              490,
+              398,
+              37,
+              0,
+              0,
+              0,
+              0,
+              0,
+              30
+            ],
+            [
+              502,
+              421,
+              20,
+              0,
+              0,
+              0,
+              0,
+              0,
+              44
+            ],
+            [
+              499,
+              424,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          [
+            [
+              596,
+              258,
+              3,
+              0,
+              0,
+              0,
+              0,
+              1,
+              137
+            ],
+            [
+              550,
+              267,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              115
+            ],
+            [
+              604,
+              227,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              104
+            ],
+            [
+              599,
+              227,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              121
+            ]
+          ],
+          [
+            [
+              483,
+              456,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              41
+            ],
+            [
+              471,
+              425,
+              30,
+              0,
+              0,
+              0,
+              0,
+              0,
+              34
+            ],
+            [
+              497,
+              442,
+              30,
+              0,
+              0,
+              0,
+              0,
+              0,
+              39
+            ],
+            [
+              476,
+              407,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              38
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 3,
+        "true_phases": {
+          "anchor_before": 0.046171754518652415,
+          "science": 0.4604779315294716,
+          "anchor_after": -0.07286288685507657
+        },
+        "true_bridge_residual": 0.16912658271924563,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.04699999999999993,
+            "fisher_standard_error_radians": 0.005664987059673142,
+            "profile_likelihood_95pct_interval_radians": [
+              0.03599999999999992,
+              0.057499999999999996
+            ],
+            "accepted_clock_counts_by_phase": [
+              3277,
+              3336,
+              3320,
+              3279,
+              3320,
+              3268,
+              3376,
+              3264,
+              3313
+            ],
+            "joint_zero_counts_by_phase": [
+              2338,
+              1219,
+              37,
+              0,
+              0,
+              0,
+              0,
+              0,
+              359
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.46199999999999997,
+            "fisher_standard_error_radians": 0.005402423338887046,
+            "profile_likelihood_95pct_interval_radians": [
+              0.4515,
+              0.472
+            ],
+            "accepted_clock_counts_by_phase": [
+              3280,
+              3338,
+              3304,
+              3314,
+              3302,
+              3279,
+              3302,
+              3312,
+              3253
+            ],
+            "joint_zero_counts_by_phase": [
+              2102,
+              235,
+              0,
+              0,
+              0,
+              0,
+              0,
+              59,
+              1521
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.07550000000000001,
+            "fisher_standard_error_radians": 0.005338175215002931,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.08600000000000008,
+              -0.0655
+            ],
+            "accepted_clock_counts_by_phase": [
+              3245,
+              3376,
+              3270,
+              3212,
+              3196,
+              3281,
+              3271,
+              3230,
+              3292
+            ],
+            "joint_zero_counts_by_phase": [
+              1992,
+              1635,
+              85,
+              0,
+              0,
+              0,
+              0,
+              0,
+              184
+            ]
+          }
+        },
+        "alpha_estimate": 0.47123477339971037,
+        "shot_only_standard_error": 0.005962176578233512,
+        "bridge_aware_standard_error": 0.10489281860696208,
+        "clock_postselection_rate": 0.20076045283564814,
+        "mean_absolute_joint_probability_error": 0.0011556153646921754,
+        "clock_success_counts": [
+          [
+            [
+              839,
+              822,
+              824,
+              801,
+              850,
+              828,
+              849,
+              831,
+              854
+            ],
+            [
+              817,
+              821,
+              851,
+              833,
+              811,
+              821,
+              863,
+              804,
+              803
+            ],
+            [
+              808,
+              830,
+              799,
+              835,
+              835,
+              830,
+              853,
+              825,
+              840
+            ],
+            [
+              813,
+              863,
+              846,
+              810,
+              824,
+              789,
+              811,
+              804,
+              816
+            ]
+          ],
+          [
+            [
+              885,
+              844,
+              824,
+              873,
+              817,
+              839,
+              842,
+              848,
+              795
+            ],
+            [
+              759,
+              855,
+              856,
+              789,
+              831,
+              800,
+              834,
+              833,
+              821
+            ],
+            [
+              819,
+              839,
+              825,
+              841,
+              828,
+              818,
+              811,
+              806,
+              835
+            ],
+            [
+              817,
+              800,
+              799,
+              811,
+              826,
+              822,
+              815,
+              825,
+              802
+            ]
+          ],
+          [
+            [
+              820,
+              790,
+              788,
+              816,
+              799,
+              846,
+              810,
+              805,
+              824
+            ],
+            [
+              808,
+              833,
+              831,
+              785,
+              775,
+              793,
+              837,
+              781,
+              784
+            ],
+            [
+              820,
+              881,
+              851,
+              818,
+              796,
+              848,
+              807,
+              849,
+              854
+            ],
+            [
+              797,
+              872,
+              800,
+              793,
+              826,
+              794,
+              817,
+              795,
+              830
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              581,
+              289,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              88
+            ],
+            [
+              572,
+              315,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              83
+            ],
+            [
+              595,
+              293,
+              14,
+              0,
+              0,
+              0,
+              0,
+              0,
+              100
+            ],
+            [
+              590,
+              322,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              88
+            ]
+          ],
+          [
+            [
+              578,
+              67,
+              0,
+              0,
+              0,
+              0,
+              0,
+              12,
+              367
+            ],
+            [
+              507,
+              53,
+              0,
+              0,
+              0,
+              0,
+              0,
+              20,
+              374
+            ],
+            [
+              525,
+              50,
+              0,
+              0,
+              0,
+              0,
+              0,
+              12,
+              394
+            ],
+            [
+              492,
+              65,
+              0,
+              0,
+              0,
+              0,
+              0,
+              15,
+              386
+            ]
+          ],
+          [
+            [
+              520,
+              390,
+              23,
+              0,
+              0,
+              0,
+              0,
+              0,
+              39
+            ],
+            [
+              504,
+              385,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              45
+            ],
+            [
+              480,
+              416,
+              16,
+              0,
+              0,
+              0,
+              0,
+              0,
+              62
+            ],
+            [
+              488,
+              444,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              38
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 4,
+        "true_phases": {
+          "anchor_before": 0.02928738525445851,
+          "science": 0.2659119458287571,
+          "anchor_after": -0.17035380938449451
+        },
+        "true_bridge_residual": 0.011621295342733144,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.03200000000000003,
+            "fisher_standard_error_radians": 0.005731243975622587,
+            "profile_likelihood_95pct_interval_radians": [
+              0.021499999999999964,
+              0.04299999999999993
+            ],
+            "accepted_clock_counts_by_phase": [
+              3277,
+              3124,
+              3151,
+              3351,
+              3322,
+              3272,
+              3297,
+              3292,
+              3213
+            ],
+            "joint_zero_counts_by_phase": [
+              2318,
+              1198,
+              29,
+              0,
+              0,
+              0,
+              0,
+              1,
+              309
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.2629999999999999,
+            "fisher_standard_error_radians": 0.006044199895728626,
+            "profile_likelihood_95pct_interval_radians": [
+              0.2509999999999999,
+              0.27449999999999997
+            ],
+            "accepted_clock_counts_by_phase": [
+              3271,
+              3370,
+              3315,
+              3279,
+              3286,
+              3279,
+              3324,
+              3203,
+              3236
+            ],
+            "joint_zero_counts_by_phase": [
+              2437,
+              602,
+              2,
+              0,
+              0,
+              0,
+              0,
+              21,
+              837
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.16700000000000004,
+            "fisher_standard_error_radians": 0.005354318862609615,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.17700000000000005,
+              -0.15650000000000008
+            ],
+            "accepted_clock_counts_by_phase": [
+              3205,
+              3236,
+              3231,
+              3293,
+              3322,
+              3254,
+              3300,
+              3283,
+              3306
+            ],
+            "joint_zero_counts_by_phase": [
+              1728,
+              1868,
+              154,
+              0,
+              0,
+              0,
+              0,
+              0,
+              94
+            ]
+          }
+        },
+        "alpha_estimate": 0.3067436634723122,
+        "shot_only_standard_error": 0.006556761854676461,
+        "bridge_aware_standard_error": 0.1049282944290145,
+        "clock_postselection_rate": 0.19958948206018517,
+        "mean_absolute_joint_probability_error": 0.0011395051285317858,
+        "clock_success_counts": [
+          [
+            [
+              834,
+              714,
+              786,
+              833,
+              820,
+              823,
+              835,
+              839,
+              804
+            ],
+            [
+              851,
+              762,
+              808,
+              880,
+              830,
+              806,
+              790,
+              789,
+              776
+            ],
+            [
+              825,
+              814,
+              778,
+              842,
+              816,
+              812,
+              852,
+              856,
+              837
+            ],
+            [
+              767,
+              834,
+              779,
+              796,
+              856,
+              831,
+              820,
+              808,
+              796
+            ]
+          ],
+          [
+            [
+              865,
+              844,
+              832,
+              814,
+              828,
+              814,
+              840,
+              784,
+              811
+            ],
+            [
+              792,
+              846,
+              847,
+              812,
+              854,
+              795,
+              858,
+              810,
+              846
+            ],
+            [
+              800,
+              849,
+              786,
+              807,
+              780,
+              829,
+              828,
+              806,
+              773
+            ],
+            [
+              814,
+              831,
+              850,
+              846,
+              824,
+              841,
+              798,
+              803,
+              806
+            ]
+          ],
+          [
+            [
+              773,
+              812,
+              788,
+              806,
+              822,
+              807,
+              841,
+              813,
+              840
+            ],
+            [
+              817,
+              842,
+              809,
+              832,
+              835,
+              852,
+              840,
+              809,
+              815
+            ],
+            [
+              787,
+              798,
+              831,
+              821,
+              827,
+              809,
+              790,
+              790,
+              834
+            ],
+            [
+              828,
+              784,
+              803,
+              834,
+              838,
+              786,
+              829,
+              871,
+              817
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              574,
+              284,
+              8,
+              0,
+              0,
+              0,
+              0,
+              1,
+              79
+            ],
+            [
+              600,
+              300,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              76
+            ],
+            [
+              580,
+              303,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              74
+            ],
+            [
+              564,
+              311,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          [
+            [
+              655,
+              156,
+              0,
+              0,
+              0,
+              0,
+              0,
+              7,
+              215
+            ],
+            [
+              584,
+              140,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              223
+            ],
+            [
+              592,
+              167,
+              1,
+              0,
+              0,
+              0,
+              0,
+              8,
+              181
+            ],
+            [
+              606,
+              139,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              218
+            ]
+          ],
+          [
+            [
+              410,
+              457,
+              44,
+              0,
+              0,
+              0,
+              0,
+              0,
+              22
+            ],
+            [
+              442,
+              487,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0,
+              24
+            ],
+            [
+              417,
+              468,
+              37,
+              0,
+              0,
+              0,
+              0,
+              0,
+              29
+            ],
+            [
+              459,
+              456,
+              45,
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 5,
+        "true_phases": {
+          "anchor_before": 0.2405516454576408,
+          "science": 0.46765853729574336,
+          "anchor_after": 0.06268964243317285
+        },
+        "true_bridge_residual": 0.06940013101125218,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": 0.238,
+            "fisher_standard_error_radians": 0.006122981958111245,
+            "profile_likelihood_95pct_interval_radians": [
+              0.22599999999999998,
+              0.25
+            ],
+            "accepted_clock_counts_by_phase": [
+              3253,
+              3237,
+              3179,
+              3301,
+              3358,
+              3368,
+              3213,
+              3179,
+              3299
+            ],
+            "joint_zero_counts_by_phase": [
+              2426,
+              597,
+              10,
+              0,
+              0,
+              0,
+              0,
+              11,
+              771
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.4630000000000001,
+            "fisher_standard_error_radians": 0.005412676594889367,
+            "profile_likelihood_95pct_interval_radians": [
+              0.4524999999999999,
+              0.47350000000000003
+            ],
+            "accepted_clock_counts_by_phase": [
+              3275,
+              3314,
+              3237,
+              3268,
+              3348,
+              3181,
+              3265,
+              3201,
+              3261
+            ],
+            "joint_zero_counts_by_phase": [
+              2049,
+              240,
+              0,
+              0,
+              0,
+              0,
+              0,
+              51,
+              1513
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": 0.06699999999999995,
+            "fisher_standard_error_radians": 0.005798802867521587,
+            "profile_likelihood_95pct_interval_radians": [
+              0.05599999999999994,
+              0.07799999999999996
+            ],
+            "accepted_clock_counts_by_phase": [
+              3160,
+              3263,
+              3262,
+              3212,
+              3306,
+              3322,
+              3316,
+              3275,
+              3269
+            ],
+            "joint_zero_counts_by_phase": [
+              2274,
+              1139,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              403
+            ]
+          }
+        },
+        "alpha_estimate": 0.3641717232662576,
+        "shot_only_standard_error": 0.006063324098480161,
+        "bridge_aware_standard_error": 0.10489861650606372,
+        "clock_postselection_rate": 0.19920518663194445,
+        "mean_absolute_joint_probability_error": 0.000995413059437458,
+        "clock_success_counts": [
+          [
+            [
+              812,
+              780,
+              770,
+              843,
+              824,
+              839,
+              803,
+              766,
+              850
+            ],
+            [
+              821,
+              793,
+              806,
+              850,
+              854,
+              850,
+              827,
+              789,
+              828
+            ],
+            [
+              799,
+              834,
+              798,
+              801,
+              818,
+              860,
+              818,
+              829,
+              822
+            ],
+            [
+              821,
+              830,
+              805,
+              807,
+              862,
+              819,
+              765,
+              795,
+              799
+            ]
+          ],
+          [
+            [
+              807,
+              829,
+              840,
+              837,
+              836,
+              795,
+              804,
+              799,
+              850
+            ],
+            [
+              844,
+              818,
+              802,
+              829,
+              856,
+              801,
+              855,
+              806,
+              776
+            ],
+            [
+              819,
+              832,
+              793,
+              800,
+              859,
+              826,
+              808,
+              780,
+              829
+            ],
+            [
+              805,
+              835,
+              802,
+              802,
+              797,
+              759,
+              798,
+              816,
+              806
+            ]
+          ],
+          [
+            [
+              779,
+              829,
+              788,
+              825,
+              804,
+              879,
+              811,
+              819,
+              815
+            ],
+            [
+              838,
+              790,
+              819,
+              784,
+              877,
+              796,
+              868,
+              798,
+              815
+            ],
+            [
+              755,
+              805,
+              809,
+              807,
+              836,
+              828,
+              801,
+              836,
+              792
+            ],
+            [
+              788,
+              839,
+              846,
+              796,
+              789,
+              819,
+              836,
+              822,
+              847
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              597,
+              137,
+              2,
+              0,
+              0,
+              0,
+              0,
+              3,
+              193
+            ],
+            [
+              624,
+              138,
+              3,
+              0,
+              0,
+              0,
+              0,
+              2,
+              189
+            ],
+            [
+              586,
+              156,
+              4,
+              0,
+              0,
+              0,
+              0,
+              2,
+              195
+            ],
+            [
+              619,
+              166,
+              1,
+              0,
+              0,
+              0,
+              0,
+              4,
+              194
+            ]
+          ],
+          [
+            [
+              498,
+              60,
+              0,
+              0,
+              0,
+              0,
+              0,
+              17,
+              395
+            ],
+            [
+              528,
+              60,
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              359
+            ],
+            [
+              506,
+              56,
+              0,
+              0,
+              0,
+              0,
+              0,
+              11,
+              387
+            ],
+            [
+              517,
+              64,
+              0,
+              0,
+              0,
+              0,
+              0,
+              10,
+              372
+            ]
+          ],
+          [
+            [
+              576,
+              282,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              101
+            ],
+            [
+              601,
+              290,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              92
+            ],
+            [
+              532,
+              275,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              102
+            ],
+            [
+              565,
+              292,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              108
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 6,
+        "true_phases": {
+          "anchor_before": -0.14279971023149063,
+          "science": 0.40558264284780493,
+          "anchor_after": -0.12655811730546393
+        },
+        "true_bridge_residual": 0.19286188848787653,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.14900000000000002,
+            "fisher_standard_error_radians": 0.005297801181011464,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.15900000000000003,
+              -0.139
+            ],
+            "accepted_clock_counts_by_phase": [
+              3326,
+              3263,
+              3314,
+              3212,
+              3267,
+              3262,
+              3281,
+              3265,
+              3278
+            ],
+            "joint_zero_counts_by_phase": [
+              1849,
+              1864,
+              143,
+              0,
+              0,
+              0,
+              0,
+              0,
+              129
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.3999999999999999,
+            "fisher_standard_error_radians": 0.005535834365759249,
+            "profile_likelihood_95pct_interval_radians": [
+              0.38949999999999996,
+              0.4105000000000001
+            ],
+            "accepted_clock_counts_by_phase": [
+              3355,
+              3299,
+              3229,
+              3380,
+              3271,
+              3182,
+              3290,
+              3224,
+              3344
+            ],
+            "joint_zero_counts_by_phase": [
+              2333,
+              281,
+              2,
+              0,
+              0,
+              0,
+              0,
+              34,
+              1325
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.126,
+            "fisher_standard_error_radians": 0.005296540526794422,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.136,
+              -0.11550000000000005
+            ],
+            "accepted_clock_counts_by_phase": [
+              3327,
+              3266,
+              3324,
+              3228,
+              3222,
+              3347,
+              3202,
+              3264,
+              3303
+            ],
+            "joint_zero_counts_by_phase": [
+              1890,
+              1726,
+              121,
+              1,
+              0,
+              0,
+              0,
+              0,
+              129
+            ]
+          }
+        },
+        "alpha_estimate": 0.48910746262878413,
+        "shot_only_standard_error": 0.006044642770486447,
+        "bridge_aware_standard_error": 0.10489753835045801,
+        "clock_postselection_rate": 0.20011619285300927,
+        "mean_absolute_joint_probability_error": 0.0011760209304747483,
+        "clock_success_counts": [
+          [
+            [
+              821,
+              843,
+              848,
+              802,
+              816,
+              819,
+              785,
+              798,
+              834
+            ],
+            [
+              802,
+              811,
+              821,
+              742,
+              823,
+              797,
+              806,
+              830,
+              814
+            ],
+            [
+              849,
+              801,
+              816,
+              856,
+              804,
+              827,
+              848,
+              829,
+              819
+            ],
+            [
+              854,
+              808,
+              829,
+              812,
+              824,
+              819,
+              842,
+              808,
+              811
+            ]
+          ],
+          [
+            [
+              822,
+              820,
+              779,
+              822,
+              811,
+              782,
+              817,
+              810,
+              840
+            ],
+            [
+              818,
+              827,
+              819,
+              858,
+              834,
+              776,
+              793,
+              827,
+              817
+            ],
+            [
+              846,
+              851,
+              797,
+              875,
+              833,
+              827,
+              849,
+              800,
+              839
+            ],
+            [
+              869,
+              801,
+              834,
+              825,
+              793,
+              797,
+              831,
+              787,
+              848
+            ]
+          ],
+          [
+            [
+              785,
+              844,
+              860,
+              786,
+              774,
+              854,
+              834,
+              829,
+              854
+            ],
+            [
+              827,
+              827,
+              839,
+              812,
+              763,
+              841,
+              783,
+              816,
+              822
+            ],
+            [
+              860,
+              761,
+              823,
+              772,
+              841,
+              807,
+              787,
+              805,
+              780
+            ],
+            [
+              855,
+              834,
+              802,
+              858,
+              844,
+              845,
+              798,
+              814,
+              847
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              467,
+              474,
+              41,
+              0,
+              0,
+              0,
+              0,
+              0,
+              28
+            ],
+            [
+              458,
+              489,
+              42,
+              0,
+              0,
+              0,
+              0,
+              0,
+              39
+            ],
+            [
+              449,
+              440,
+              32,
+              0,
+              0,
+              0,
+              0,
+              0,
+              25
+            ],
+            [
+              475,
+              461,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0,
+              37
+            ]
+          ],
+          [
+            [
+              591,
+              74,
+              0,
+              0,
+              0,
+              0,
+              0,
+              7,
+              336
+            ],
+            [
+              578,
+              71,
+              1,
+              0,
+              0,
+              0,
+              0,
+              10,
+              334
+            ],
+            [
+              568,
+              64,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              335
+            ],
+            [
+              596,
+              72,
+              1,
+              0,
+              0,
+              0,
+              0,
+              12,
+              320
+            ]
+          ],
+          [
+            [
+              428,
+              457,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0,
+              35
+            ],
+            [
+              478,
+              436,
+              39,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32
+            ],
+            [
+              491,
+              399,
+              28,
+              1,
+              0,
+              0,
+              0,
+              0,
+              32
+            ],
+            [
+              493,
+              434,
+              26,
+              0,
+              0,
+              0,
+              0,
+              0,
+              30
+            ]
+          ]
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "block": 7,
+        "true_phases": {
+          "anchor_before": -0.11396733993538337,
+          "science": 0.3987148368944309,
+          "anchor_after": -0.0948143254485393
+        },
+        "true_bridge_residual": 0.16636576215178805,
+        "fitted_phases": {
+          "anchor_before": {
+            "estimate_radians": -0.10950000000000004,
+            "fisher_standard_error_radians": 0.00530837084690912,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.11950000000000005,
+              -0.09899999999999998
+            ],
+            "accepted_clock_counts_by_phase": [
+              3248,
+              3302,
+              3388,
+              3236,
+              3394,
+              3275,
+              3266,
+              3226,
+              3316
+            ],
+            "joint_zero_counts_by_phase": [
+              1913,
+              1712,
+              116,
+              0,
+              0,
+              0,
+              0,
+              0,
+              148
+            ]
+          },
+          "science": {
+            "estimate_radians": 0.3985000000000001,
+            "fisher_standard_error_radians": 0.0055799755929182866,
+            "profile_likelihood_95pct_interval_radians": [
+              0.3879999999999999,
+              0.4095
+            ],
+            "accepted_clock_counts_by_phase": [
+              3233,
+              3376,
+              3320,
+              3306,
+              3289,
+              3321,
+              3249,
+              3212,
+              3251
+            ],
+            "joint_zero_counts_by_phase": [
+              2208,
+              335,
+              1,
+              0,
+              0,
+              0,
+              0,
+              38,
+              1298
+            ]
+          },
+          "anchor_after": {
+            "estimate_radians": -0.09799999999999998,
+            "fisher_standard_error_radians": 0.0052920055058573445,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.10799999999999998,
+              -0.08800000000000008
+            ],
+            "accepted_clock_counts_by_phase": [
+              3272,
+              3363,
+              3339,
+              3199,
+              3369,
+              3296,
+              3250,
+              3192,
+              3363
+            ],
+            "joint_zero_counts_by_phase": [
+              1984,
+              1748,
+              106,
+              0,
+              0,
+              0,
+              0,
+              1,
+              168
+            ]
+          }
+        },
+        "alpha_estimate": 0.4657356308926282,
+        "shot_only_standard_error": 0.00608564706238613,
+        "bridge_aware_standard_error": 0.10489990917980312,
+        "clock_postselection_rate": 0.20085313585069445,
+        "mean_absolute_joint_probability_error": 0.0012610032758298406,
+        "clock_success_counts": [
+          [
+            [
+              801,
+              798,
+              806,
+              757,
+              859,
+              872,
+              831,
+              822,
+              836
+            ],
+            [
+              822,
+              843,
+              916,
+              839,
+              864,
+              815,
+              790,
+              807,
+              848
+            ],
+            [
+              833,
+              837,
+              841,
+              820,
+              840,
+              791,
+              822,
+              762,
+              827
+            ],
+            [
+              792,
+              824,
+              825,
+              820,
+              831,
+              797,
+              823,
+              835,
+              805
+            ]
+          ],
+          [
+            [
+              838,
+              859,
+              840,
+              833,
+              869,
+              860,
+              806,
+              848,
+              803
+            ],
+            [
+              802,
+              812,
+              828,
+              841,
+              787,
+              819,
+              833,
+              786,
+              809
+            ],
+            [
+              772,
+              846,
+              826,
+              786,
+              814,
+              822,
+              820,
+              773,
+              824
+            ],
+            [
+              821,
+              859,
+              826,
+              846,
+              819,
+              820,
+              790,
+              805,
+              815
+            ]
+          ],
+          [
+            [
+              795,
+              815,
+              821,
+              818,
+              835,
+              827,
+              819,
+              789,
+              795
+            ],
+            [
+              830,
+              832,
+              890,
+              781,
+              840,
+              827,
+              817,
+              785,
+              841
+            ],
+            [
+              811,
+              824,
+              800,
+              798,
+              821,
+              824,
+              820,
+              824,
+              855
+            ],
+            [
+              836,
+              892,
+              828,
+              802,
+              873,
+              818,
+              794,
+              794,
+              872
+            ]
+          ]
+        ],
+        "joint_zero_counts": [
+          [
+            [
+              456,
+              403,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              31
+            ],
+            [
+              474,
+              462,
+              40,
+              0,
+              0,
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              522,
+              425,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              37
+            ],
+            [
+              461,
+              422,
+              23,
+              0,
+              0,
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          [
+            [
+              587,
+              78,
+              0,
+              0,
+              0,
+              0,
+              0,
+              14,
+              327
+            ],
+            [
+              555,
+              81,
+              1,
+              0,
+              0,
+              0,
+              0,
+              4,
+              307
+            ],
+            [
+              523,
+              86,
+              0,
+              0,
+              0,
+              0,
+              0,
+              9,
+              343
+            ],
+            [
+              543,
+              90,
+              0,
+              0,
+              0,
+              0,
+              0,
+              11,
+              321
+            ]
+          ],
+          [
+            [
+              465,
+              415,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              41
+            ],
+            [
+              519,
+              452,
+              31,
+              0,
+              0,
+              0,
+              0,
+              0,
+              45
+            ],
+            [
+              498,
+              420,
+              18,
+              0,
+              0,
+              0,
+              0,
+              1,
+              47
+            ],
+            [
+              502,
+              461,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0,
+              35
+            ]
+          ]
+        ]
+      }
+    ],
+    "summaries": [
+      {
+        "gap_over_correlation": 0.05,
+        "blocks": 8,
+        "combined_alpha_mean": 0.2954402120210986,
+        "shot_only_95pct_interval": [
+          0.29052809621720005,
+          0.30035232782499716
+        ],
+        "bridge_aware_95pct_interval": [
+          0.2762156171099007,
+          0.3146648069322965
+        ]
+      },
+      {
+        "gap_over_correlation": 1.0,
+        "blocks": 8,
+        "combined_alpha_mean": 0.3744985766480001,
+        "shot_only_95pct_interval": [
+          0.37018701123302605,
+          0.3788101420629742
+        ],
+        "bridge_aware_95pct_interval": [
+          0.30180110906168733,
+          0.4471960442343129
+        ]
+      }
+    ]
+  }
+}

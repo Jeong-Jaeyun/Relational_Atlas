@@ -1,0 +1,3002 @@
+{
+  "identity": "P_joint=2^(-clock_bits)|cos(e/2)^2 A0+sin(e/2)^2 A_sr|^2 with clock phase absorbed into initial amplitudes",
+  "parameters": {
+    "dimensions": [
+      2,
+      3,
+      4
+    ],
+    "betas": [
+      0.0,
+      0.45,
+      1.2
+    ],
+    "reference_betas": [
+      0.0,
+      0.15,
+      0.8
+    ],
+    "angles": [
+      1.0,
+      1.5707963267948966
+    ],
+    "bias": 1.25,
+    "shifts": [
+      0.0,
+      0.6
+    ]
+  },
+  "baseline": {
+    "2": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.001339337035818384,
+            0.0016358290265042915
+          ],
+          "maximum_absolute_joint_difference": 0.0016358290265042915
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0014013424104917106,
+            0.0007238224493105738
+          ],
+          "maximum_absolute_joint_difference": 0.0014013424104917106
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    },
+    "3": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0014421688575454205,
+            0.00023270946337626837,
+            0.00023270946337626645
+          ],
+          "maximum_absolute_joint_difference": 0.0014421688575454205
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0003876167517154793,
+            0.0003876167517154793,
+            -0.00013949133533488705
+          ],
+          "maximum_absolute_joint_difference": 0.0003876167517154793
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0006978119628689052,
+            0.00036043807231057206,
+            -0.0006038760436649148
+          ],
+          "maximum_absolute_joint_difference": 0.0006978119628689052
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    },
+    "4": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.0005918896530655757,
+            -6.043497139955006e-05,
+            -6.043497139955006e-05,
+            -6.043497139954747e-05
+          ],
+          "maximum_absolute_joint_difference": 0.0005918896530655757
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            1.335265090920977e-18,
+            1.335265090920977e-18,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 1.335265090920977e-18
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00016952580638112186,
+            0.00016952580638111944,
+            -0.0001272381186436725,
+            -0.00012723811864367402
+          ],
+          "maximum_absolute_joint_difference": 0.00016952580638112186
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.0003200870523437775,
+            0.0001653349171129099,
+            -0.00017775424176164517,
+            -0.00017775424176164745
+          ],
+          "maximum_absolute_joint_difference": 0.0003200870523437775
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    }
+  },
+  "predicted_path_counts_n2_to_n6": {
+    "2": {
+      "same_support": 3,
+      "conjugate_partner": 0,
+      "different_pair_same_sign": 0,
+      "different_pair_opposite_sign": 2
+    },
+    "3": {
+      "same_support": 7,
+      "conjugate_partner": 0,
+      "different_pair_same_sign": 2,
+      "different_pair_opposite_sign": 2
+    },
+    "4": {
+      "same_support": 19,
+      "conjugate_partner": 0,
+      "different_pair_same_sign": 4,
+      "different_pair_opposite_sign": 6
+    },
+    "5": {
+      "same_support": 51,
+      "conjugate_partner": 0,
+      "different_pair_same_sign": 12,
+      "different_pair_opposite_sign": 14
+    },
+    "6": {
+      "same_support": 141,
+      "conjugate_partner": 0,
+      "different_pair_same_sign": 32,
+      "different_pair_opposite_sign": 38
+    }
+  },
+  "maximum_absolute_probability_contrast_error_vs_Aer": 1.0237036912608133e-15,
+  "exact_n3_angle_law": {
+    "same_support": {
+      "cross_coefficient_C": [
+        0.004073515444648243,
+        0.0006573126725014928,
+        0.0006573126725014999
+      ],
+      "transfer_squared_coefficient_D": [
+        -9.738875152533074e-08,
+        -6.344953267528369e-08,
+        -6.344953268048786e-08
+      ],
+      "direct_block_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_absolute_direct_block_difference": 0.0
+    },
+    "conjugate_partner": {
+      "cross_coefficient_C": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "transfer_squared_coefficient_D": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direct_block_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_absolute_direct_block_difference": 0.0
+    },
+    "different_pair_same_sign": {
+      "cross_coefficient_C": [
+        0.0010948504477406923,
+        0.0010948504477406923,
+        -0.0003940015167512272
+      ],
+      "transfer_squared_coefficient_D": [
+        -9.422580509404898e-09,
+        -9.422580509404898e-09,
+        -6.340076821917128e-09
+      ],
+      "direct_block_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_absolute_direct_block_difference": 0.0
+    },
+    "different_pair_opposite_sign": {
+      "cross_coefficient_C": [
+        0.001971018405464972,
+        0.0010180836338676484,
+        -0.001705685929630648
+      ],
+      "transfer_squared_coefficient_D": [
+        -1.7169061095846218e-08,
+        -1.7169061095025585e-08,
+        -1.155237317402752e-08
+      ],
+      "direct_block_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_absolute_direct_block_difference": 0.0
+    }
+  },
+  "maximum_absolute_angle_law_error_vs_Aer": 1.1557595158695477e-16,
+  "robustness": [
+    {
+      "n": 2,
+      "beta": 0.0,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -3.987557587691997e-18,
+            1.925140159920646e-18
+          ],
+          "maximum_absolute_joint_difference": 3.987557587691997e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -6.181228275571676e-18,
+            -6.181228275571676e-18
+          ],
+          "maximum_absolute_joint_difference": 6.181228275571676e-18
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.0,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.0005208458898088692,
+            0.0031185442847369753
+          ],
+          "maximum_absolute_joint_difference": 0.0031185442847369753
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0012131273022368554,
+            0.0012131273022368554
+          ],
+          "maximum_absolute_joint_difference": 0.0012131273022368554
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.0,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -4.3383760774997886e-18,
+            -6.370567457854407e-18
+          ],
+          "maximum_absolute_joint_difference": 6.370567457854407e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.5359816108577415e-17,
+            -8.421222551068623e-18
+          ],
+          "maximum_absolute_joint_difference": 1.5359816108577415e-17
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.0,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.0008163064575108262,
+            0.0029597297358854887
+          ],
+          "maximum_absolute_joint_difference": 0.0029597297358854887
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.001083958944681944,
+            0.0014978162107481484
+          ],
+          "maximum_absolute_joint_difference": 0.0014978162107481484
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.0,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            4.61516521836098e-18,
+            -4.894586014161316e-18
+          ],
+          "maximum_absolute_joint_difference": 4.894586014161316e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.0637740593910071e-17,
+            7.922054517823467e-18
+          ],
+          "maximum_absolute_joint_difference": 1.0637740593910071e-17
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.0,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.002158418913531655,
+            0.001715631648438951
+          ],
+          "maximum_absolute_joint_difference": 0.002158418913531655
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0002756220695050934,
+            0.0026816053045105757
+          ],
+          "maximum_absolute_joint_difference": 0.0026816053045105757
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.45,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -1.4768743634672115e-17,
+            -1.6726481803655668e-17
+          ],
+          "maximum_absolute_joint_difference": 1.6726481803655668e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -9.785088910889588e-18,
+            -6.966552228406004e-20
+          ],
+          "maximum_absolute_joint_difference": 9.785088910889588e-18
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.45,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.0014548271264051232,
+            0.002472104811041808
+          ],
+          "maximum_absolute_joint_difference": 0.002472104811041808
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.00208283472003403,
+            0.0007435895892823277
+          ],
+          "maximum_absolute_joint_difference": 0.00208283472003403
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.45,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -8.855287350483728e-18,
+            -7.666874358048136e-18
+          ],
+          "maximum_absolute_joint_difference": 8.855287350483728e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -7.512598959874498e-18,
+            -8.205793940774032e-18
+          ],
+          "maximum_absolute_joint_difference": 8.205793940774032e-18
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.45,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.0018915050949432199,
+            0.002310230697332027
+          ],
+          "maximum_absolute_joint_difference": 0.002310230697332027
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.001979074723118159,
+            0.0010222248489439706
+          ],
+          "maximum_absolute_joint_difference": 0.001979074723118159
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.45,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -1.2655809578943871e-17,
+            2.168968429644615e-18
+          ],
+          "maximum_absolute_joint_difference": 1.2655809578943871e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.4413149510627897e-17,
+            -2.9648834210354277e-18
+          ],
+          "maximum_absolute_joint_difference": 1.4413149510627897e-17
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 0.45,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.003862743418967003,
+            0.0010229192744563736
+          ],
+          "maximum_absolute_joint_difference": 0.003862743418967003
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0010618339351513132,
+            0.0023141710555653937
+          ],
+          "maximum_absolute_joint_difference": 0.0023141710555653937
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 1.2,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -9.6693644038582e-18,
+            -1.0611452573646047e-17
+          ],
+          "maximum_absolute_joint_difference": 1.0611452573646047e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -9.94840614859835e-18,
+            -1.2721522539055052e-17
+          ],
+          "maximum_absolute_joint_difference": 1.2721522539055052e-17
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 1.2,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.002758027178026848,
+            0.0008440818909166846
+          ],
+          "maximum_absolute_joint_difference": 0.002758027178026848
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.003144401316912414,
+            -0.0002193693334544438
+          ],
+          "maximum_absolute_joint_difference": 0.003144401316912414
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 1.2,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -1.1192000602686709e-17,
+            -1.2992901759908862e-17
+          ],
+          "maximum_absolute_joint_difference": 1.2992901759908862e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.6003872363696888e-17,
+            -1.5307672663377253e-17
+          ],
+          "maximum_absolute_joint_difference": 1.6003872363696888e-17
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 1.2,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.003387220333977935,
+            0.0006475275204463555
+          ],
+          "maximum_absolute_joint_difference": 0.003387220333977935
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0031353658518634767,
+            -4.808684115835105e-05
+          ],
+          "maximum_absolute_joint_difference": 0.0031353658518634767
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 1.2,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            -2.1987260718160206e-17,
+            -3.3811255391945063e-17
+          ],
+          "maximum_absolute_joint_difference": 3.3811255391945063e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.411312439420148e-18,
+            -5.226695394499468e-18
+          ],
+          "maximum_absolute_joint_difference": 5.226695394499468e-18
+        }
+      }
+    },
+    {
+      "n": 2,
+      "beta": 1.2,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 3,
+          "axis_pooled_joint_difference": [
+            0.00620545690504183,
+            -0.0006376546837800405
+          ],
+          "maximum_absolute_joint_difference": 0.00620545690504183
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0023392635268397787,
+            0.0009493532618182623
+          ],
+          "maximum_absolute_joint_difference": 0.0023392635268397787
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.0,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -1.4312433025627677e-17,
+            -8.229374004445152e-18,
+            -9.964097480421959e-18
+          ],
+          "maximum_absolute_joint_difference": 1.4312433025627677e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.3004451950039236e-18,
+            -1.3004451950039236e-18,
+            6.111890765474175e-19
+          ],
+          "maximum_absolute_joint_difference": 1.3004451950039236e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.3004451950039236e-18,
+            -1.3004451950039236e-18,
+            -6.150121221734704e-18
+          ],
+          "maximum_absolute_joint_difference": 6.150121221734704e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.0,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0014145834329885778,
+            0.0006227478599767685,
+            0.0006227478599767668
+          ],
+          "maximum_absolute_joint_difference": 0.0014145834329885778
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0005822929408149825,
+            0.0005822929408149825,
+            -0.00020955161692563215
+          ],
+          "maximum_absolute_joint_difference": 0.0005822929408149825
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0005822929408149825,
+            0.0005822929408149825,
+            -0.0006645587654220752
+          ],
+          "maximum_absolute_joint_difference": 0.0006645587654220752
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.0,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -1.0100668167848028e-17,
+            -1.467582110230379e-17,
+            -1.467582110230379e-17
+          ],
+          "maximum_absolute_joint_difference": 1.467582110230379e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -3.529218450731703e-18,
+            -3.529218450731703e-18,
+            -4.436877014676147e-18
+          ],
+          "maximum_absolute_joint_difference": 4.436877014676147e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -2.4518614200841682e-18,
+            -6.172380668152235e-18,
+            -5.227000192244993e-18
+          ],
+          "maximum_absolute_joint_difference": 6.172380668152235e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.0,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0015447312693694917,
+            0.0005624698463294941,
+            0.0005624698463294941
+          ],
+          "maximum_absolute_joint_difference": 0.0015447312693694917
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0005756369987620441,
+            0.0005756369987620441,
+            -0.00020715621018501832
+          ],
+          "maximum_absolute_joint_difference": 0.0005756369987620441
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.000522477196365035,
+            0.0007219541182252127,
+            -0.0007101219333841739
+          ],
+          "maximum_absolute_joint_difference": 0.0007219541182252127
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.0,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -6.84152297062869e-18,
+            -1.094156404326515e-17,
+            -9.206840567288343e-18
+          ],
+          "maximum_absolute_joint_difference": 1.094156404326515e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -2.7683046304982407e-18,
+            -2.7683046304982407e-18,
+            -4.93118032277303e-19
+          ],
+          "maximum_absolute_joint_difference": 2.7683046304982407e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -4.202668194656541e-18,
+            -1.683053719661118e-18,
+            -1.7171363132588957e-18
+          ],
+          "maximum_absolute_joint_difference": 4.202668194656541e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.0,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0020863929083252677,
+            0.00017735510303457076,
+            0.0001773551030345725
+          ],
+          "maximum_absolute_joint_difference": 0.0020863929083252677
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0004791662152061513,
+            0.0004791662152061513,
+            -0.00017243850602950418
+          ],
+          "maximum_absolute_joint_difference": 0.0004791662152061513
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.00014406415275064537,
+            0.001401503744770588,
+            -0.0008819626883446286
+          ],
+          "maximum_absolute_joint_difference": 0.001401503744770588
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -1.38105903620194e-17,
+            -1.7897105500721567e-17,
+            -1.356029681077955e-17
+          ],
+          "maximum_absolute_joint_difference": 1.7897105500721567e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -5.806107166848669e-19,
+            -5.806107166848669e-19,
+            3.6816258095059065e-19
+          ],
+          "maximum_absolute_joint_difference": 5.806107166848669e-19
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -6.6232017174345914e-18,
+            -1.129393856888803e-18,
+            -2.512852428484084e-18
+          ],
+          "maximum_absolute_joint_difference": 6.6232017174345914e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0018140646459059112,
+            0.0004069278108982865,
+            0.0004069278108982917
+          ],
+          "maximum_absolute_joint_difference": 0.0018140646459059112
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0005460848326767974,
+            0.0005460848326767974,
+            -0.00019652094895777789
+          ],
+          "maximum_absolute_joint_difference": 0.0005460848326767974
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.001033526936081454,
+            0.0003689879883417977,
+            -0.0008003309942977716
+          ],
+          "maximum_absolute_joint_difference": 0.001033526936081454
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -1.6782804961345639e-18,
+            -3.409669513857799e-18,
+            2.414045012635768e-18
+          ],
+          "maximum_absolute_joint_difference": 3.409669513857799e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -3.4301148475742582e-18,
+            -3.4301148475742582e-18,
+            -1.381253935127835e-18
+          ],
+          "maximum_absolute_joint_difference": 3.4301148475742582e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -6.815694986183905e-18,
+            -7.799191522961055e-18,
+            -6.051722731590493e-18
+          ],
+          "maximum_absolute_joint_difference": 7.799191522961055e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.002036733375136252,
+            0.00032864047386757967,
+            0.0003286404738675903
+          ],
+          "maximum_absolute_joint_difference": 0.002036733375136252
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0005474228682252172,
+            0.0005474228682252172,
+            -0.00019700234339481903
+          ],
+          "maximum_absolute_joint_difference": 0.0005474228682252172
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0009855049104672082,
+            0.0005090375246685467,
+            -0.0008528458529086189
+          ],
+          "maximum_absolute_joint_difference": 0.0009855049104672082
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -2.1863215412826912e-18,
+            -6.771056374777741e-18,
+            -1.2842588540696567e-17
+          ],
+          "maximum_absolute_joint_difference": 1.2842588540696567e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -3.480328155217137e-18,
+            -3.480328155217137e-18,
+            -3.53455576106718e-18
+          ],
+          "maximum_absolute_joint_difference": 3.53455576106718e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            3.4484449829481384e-18,
+            -2.8821075478388457e-18,
+            -1.301687481111945e-17
+          ],
+          "maximum_absolute_joint_difference": 1.301687481111945e-17
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.003093593148981976,
+            -0.00017154763446390557,
+            -0.00017154763446391338
+          ],
+          "maximum_absolute_joint_difference": 0.003093593148981976
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0004878898915544541,
+            0.0004878898915544541,
+            -0.00017557753660994984
+          ],
+          "maximum_absolute_joint_difference": 0.0004878898915544541
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.000582182950240934,
+            0.0012687945966285887,
+            -0.0010562423878983057
+          ],
+          "maximum_absolute_joint_difference": 0.0012687945966285887
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -3.6830382788852766e-18,
+            -1.3131301274582707e-17,
+            -1.13965777986059e-17
+          ],
+          "maximum_absolute_joint_difference": 1.3131301274582707e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.23249338719778e-18,
+            -1.23249338719778e-18,
+            2.496676610437758e-18
+          ],
+          "maximum_absolute_joint_difference": 2.496676610437758e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.876281860531183e-18,
+            -1.846305931175238e-18,
+            -7.728063360346096e-18
+          ],
+          "maximum_absolute_joint_difference": 7.728063360346096e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0022459968186472863,
+            -9.410676996080446e-05,
+            -9.410676996080446e-05
+          ],
+          "maximum_absolute_joint_difference": 0.0022459968186472863
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0003698089559996337,
+            0.0003698089559996337,
+            -0.00013308363679821527
+          ],
+          "maximum_absolute_joint_difference": 0.0003698089559996337
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0017174153502694464,
+            -0.00011980027301691604,
+            -0.0009116623157798357
+          ],
+          "maximum_absolute_joint_difference": 0.0017174153502694464
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -3.8328168117647544e-18,
+            -6.955106608668887e-18,
+            -6.955106608668887e-18
+          ],
+          "maximum_absolute_joint_difference": 6.955106608668887e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            5.3940671467783216e-21,
+            5.3940671467783216e-21,
+            5.142052664472361e-19
+          ],
+          "maximum_absolute_joint_difference": 5.142052664472361e-19
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -1.5133872698390834e-18,
+            -5.139971590556462e-18,
+            -1.0152783426777356e-17
+          ],
+          "maximum_absolute_joint_difference": 1.0152783426777356e-17
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0026352206595681273,
+            -0.00021374999081747793,
+            -0.00021374999081747793
+          ],
+          "maximum_absolute_joint_difference": 0.0026352206595681273
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0003809600849908368,
+            0.0003809600849908368,
+            -0.00013709650959860956
+          ],
+          "maximum_absolute_joint_difference": 0.0003809600849908368
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.001734020006575648,
+            -2.657929418155743e-05,
+            -0.0009743334442716534
+          ],
+          "maximum_absolute_joint_difference": 0.001734020006575648
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -1.1624019734044507e-17,
+            -1.4340555173404336e-17,
+            -6.534299531508705e-18
+          ],
+          "maximum_absolute_joint_difference": 1.4340555173404336e-17
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            5.02538912167947e-18,
+            1.0001353810246456e-19,
+            3.0028174545694972e-18
+          ],
+          "maximum_absolute_joint_difference": 5.02538912167947e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -2.903236628817022e-18,
+            -6.582521503859294e-19,
+            -5.783543520342355e-18
+          ],
+          "maximum_absolute_joint_difference": 5.783543520342355e-18
+        }
+      }
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.004767072721782607,
+            -0.0009853558039824846,
+            -0.0009853558039824742
+          ],
+          "maximum_absolute_joint_difference": 0.004767072721782607
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0003824605401623963,
+            0.00038246054016238975,
+            -0.00013763607752978138
+          ],
+          "maximum_absolute_joint_difference": 0.0003824605401623963
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0015086971054820164,
+            0.000612290939466569,
+            -0.0012103203210535364
+          ],
+          "maximum_absolute_joint_difference": 0.0015086971054820164
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.0,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -6.0340098797917345e-18,
+            -5.2917441131472535e-18,
+            -4.014794887775437e-18,
+            -3.1474331497870336e-18
+          ],
+          "maximum_absolute_joint_difference": 6.0340098797917345e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            -3.854941057726238e-19,
+            0.0,
+            7.709882115452476e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 7.709882115452476e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -4.120771913674566e-20,
+            2.2984282398463045e-19,
+            1.800806333660799e-18,
+            4.455536180539188e-19
+          ],
+          "maximum_absolute_joint_difference": 1.800806333660799e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -1.2425920466982605e-18,
+            -1.2425920466982605e-18,
+            -3.241114623312312e-19,
+            -1.0830529830710843e-18
+          ],
+          "maximum_absolute_joint_difference": 1.2425920466982605e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.0,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.00041473786444286027,
+            8.488103987217047e-05,
+            8.488103987217182e-05,
+            8.488103987217356e-05
+          ],
+          "maximum_absolute_joint_difference": 0.00041473786444286027
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            -2.587068025671181e-19,
+            0.0,
+            6.676325454604885e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 6.676325454604885e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.0002000210255788666,
+            0.0002000210255788668,
+            -0.00015012602854494713,
+            -0.00015012602854494843
+          ],
+          "maximum_absolute_joint_difference": 0.0002000210255788668
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.000300032033294795,
+            0.000300032033294795,
+            -0.00018611576439594543,
+            -0.00018611576439594613
+          ],
+          "maximum_absolute_joint_difference": 0.000300032033294795
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.0,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -5.553918867560392e-18,
+            -4.136803424533583e-18,
+            -1.3901579209036386e-18,
+            1.5181850218685653e-19
+          ],
+          "maximum_absolute_joint_difference": 5.553918867560392e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            -3.854941057726238e-19,
+            -3.854941057726238e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 3.854941057726238e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -1.6749116330020106e-18,
+            -2.759113805487515e-18,
+            -9.644630290536972e-19,
+            3.727196503450917e-19
+          ],
+          "maximum_absolute_joint_difference": 2.759113805487515e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -3.1528033998648135e-19,
+            -2.4012896184085767e-18,
+            -2.9193894462581977e-19,
+            -1.8954207277996655e-19
+          ],
+          "maximum_absolute_joint_difference": 2.4012896184085767e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.0,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.000515982808615608,
+            4.432850999747772e-05,
+            4.432850999748152e-05,
+            4.4328509997483473e-05
+          ],
+          "maximum_absolute_joint_difference": 0.000515982808615608
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            2.3014591037688717e-19,
+            -2.587068025671181e-19,
+            -2.587068025671181e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 2.587068025671181e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00021155431586415626,
+            0.0002115543158641548,
+            -0.00015878234852158735,
+            -0.00015878234852158575
+          ],
+          "maximum_absolute_joint_difference": 0.00021155431586415626
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.00026128111155437325,
+            0.0003610333322878344,
+            -0.00020131323454768173,
+            -0.00020131323454768168
+          ],
+          "maximum_absolute_joint_difference": 0.0003610333322878344
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.0,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -6.019728102512633e-18,
+            -6.658568436311189e-18,
+            -4.4901640913401805e-18,
+            -3.3095883924115205e-18
+          ],
+          "maximum_absolute_joint_difference": 6.658568436311189e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -1.572537690477337e-18,
+            -1.572537690477337e-18,
+            2.733409570026811e-19,
+            2.733409570026811e-19
+          ],
+          "maximum_absolute_joint_difference": 1.572537690477337e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -1.0471854184542729e-20,
+            -3.538371221108205e-18,
+            -1.1473139415825028e-18,
+            -1.1473139415825028e-18
+          ],
+          "maximum_absolute_joint_difference": 3.538371221108205e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.0,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.00084658530306194,
+            -0.00012597684715928757,
+            -0.0001259768471592854,
+            -0.0001259768471592838
+          ],
+          "maximum_absolute_joint_difference": 0.00084658530306194
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00021278644861042072,
+            0.00021278644861042072,
+            -0.00015970714205697792,
+            -0.00015970714205697792
+          ],
+          "maximum_absolute_joint_difference": 0.00021278644861042072
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            6.07393492152875e-05,
+            0.0005908345687204808,
+            -0.0002513133472997256,
+            -0.0002513133472997256
+          ],
+          "maximum_absolute_joint_difference": 0.0005908345687204808
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -4.972835725078765e-18,
+            -5.967064529866649e-18,
+            -3.268605789458282e-18,
+            -4.569648396440887e-18
+          ],
+          "maximum_absolute_joint_difference": 5.967064529866649e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            3.854941057726238e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 3.854941057726238e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -1.2605696314665367e-18,
+            6.247374795777015e-19,
+            2.811668325391845e-18,
+            2.2153571305248175e-18
+          ],
+          "maximum_absolute_joint_difference": 2.811668325391845e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -1.9949557573704105e-18,
+            -4.350143613101951e-18,
+            6.610593841873637e-19,
+            9.86320035933015e-19
+          ],
+          "maximum_absolute_joint_difference": 4.350143613101951e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.0006984935497886994,
+            -3.9268579739227576e-05,
+            -3.926857973922465e-05,
+            -3.926857973922595e-05
+          ],
+          "maximum_absolute_joint_difference": 0.0006984935497886994
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            2.5870974365374053e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 2.5870974365374053e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00022244314297091696,
+            0.00022244314297091908,
+            -0.00016695497005309208,
+            -0.00016695497005309246
+          ],
+          "maximum_absolute_joint_difference": 0.00022244314297091908
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.00047893782362920653,
+            0.0001709938908277559,
+            -0.00022854366192082262,
+            -0.0002285436619208224
+          ],
+          "maximum_absolute_joint_difference": 0.00047893782362920653
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -5.173427089178144e-18,
+            -1.1290394022793892e-18,
+            -1.1290394022793892e-18,
+            -5.3935679473890395e-18
+          ],
+          "maximum_absolute_joint_difference": 5.3935679473890395e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            1.1564823173178713e-18,
+            1.1564823173178713e-18,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 1.1564823173178713e-18
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            9.119317565247156e-19,
+            8.27604920886954e-19,
+            9.406577837794403e-19,
+            -1.6674507755884676e-18
+          ],
+          "maximum_absolute_joint_difference": 1.6674507755884676e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -1.0566590976731218e-18,
+            -2.3293758812083e-18,
+            -2.707058045353999e-20,
+            1.6715128231070836e-18
+          ],
+          "maximum_absolute_joint_difference": 2.3293758812083e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.0008359209405788441,
+            -8.53487982178086e-05,
+            -8.53487982178086e-05,
+            -8.534879821781283e-05
+          ],
+          "maximum_absolute_joint_difference": 0.0008359209405788441
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            1.0014488181907327e-18,
+            1.0014488181907327e-18,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 1.0014488181907327e-18
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00023941895788020945,
+            0.00023941895788020948,
+            -0.00017969619358404901,
+            -0.000179696193584052
+          ],
+          "maximum_absolute_joint_difference": 0.00023941895788020948
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.00045205459326784356,
+            0.00023350079469680636,
+            -0.00025103924440206786,
+            -0.0002510392444020652
+          ],
+          "maximum_absolute_joint_difference": 0.00045205459326784356
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -1.8580543933372276e-18,
+            -5.078364047538957e-19,
+            -7.246768392509966e-19,
+            -1.3992915243530882e-18
+          ],
+          "maximum_absolute_joint_difference": 1.8580543933372276e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -7.403100698868302e-19,
+            -4.1504941814117884e-19,
+            1.1508121549346314e-18,
+            1.1508121549346314e-18
+          ],
+          "maximum_absolute_joint_difference": 1.1508121549346314e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -8.638469041940053e-19,
+            -3.5678810329256145e-18,
+            -7.732208421862944e-19,
+            -3.937500818163678e-19
+          ],
+          "maximum_absolute_joint_difference": 3.5678810329256145e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 0.45,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.0013657297357620485,
+            -0.00029913788241274324,
+            -0.00029913788241274324,
+            -0.0002991378824127443
+          ],
+          "maximum_absolute_joint_difference": 0.0013657297357620485
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00026011121287616786,
+            0.0002601112128761682,
+            -0.00019522685896174646,
+            -0.00019522685896174646
+          ],
+          "maximum_absolute_joint_difference": 0.0002601112128761682
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.00024412104761483528,
+            0.0005320215890954595,
+            -0.00033242301644738245,
+            -0.0003324230164473821
+          ],
+          "maximum_absolute_joint_difference": 0.0005320215890954595
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "reference_beta": 0.0,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -2.525225483020774e-18,
+            -6.234358852643954e-18,
+            -6.234358852643954e-18,
+            -1.5361494385401016e-18
+          ],
+          "maximum_absolute_joint_difference": 6.234358852643954e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            3.854941057726238e-19,
+            3.854941057726238e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 3.854941057726238e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -8.452581765530832e-19,
+            -5.742076334317071e-19,
+            1.2238319925277897e-18,
+            1.0340966123428264e-18
+          ],
+          "maximum_absolute_joint_difference": 1.2238319925277897e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            4.1488305742977544e-19,
+            -2.378415827317724e-18,
+            4.1244269115413745e-19,
+            3.2971930784210894e-20
+          ],
+          "maximum_absolute_joint_difference": 2.378415827317724e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "reference_beta": 0.0,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.000897061170594599,
+            -0.0001909235932710592,
+            -0.0001909235932710592,
+            -0.00019092359327105255
+          ],
+          "maximum_absolute_joint_difference": 0.000897061170594599
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            2.5870974365374053e-19,
+            2.5870974365374053e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 2.5870974365374053e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00017617988391163325,
+            0.00017617988391163347,
+            -0.00013223206966293024,
+            -0.00013223206966293035
+          ],
+          "maximum_absolute_joint_difference": 0.00017617988391163347
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.0006555240054460057,
+            -4.572048503526406e-05,
+            -0.00025840300254973553,
+            -0.00025840300254973574
+          ],
+          "maximum_absolute_joint_difference": 0.0006555240054460057
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "reference_beta": 0.15,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -2.7318731194642563e-18,
+            -3.3918001801516703e-19,
+            -9.897013215064697e-19,
+            -6.001124696550579e-18
+          ],
+          "maximum_absolute_joint_difference": 6.001124696550579e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            3.854941057726238e-19,
+            3.854941057726238e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 3.854941057726238e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -2.6304132046640653e-19,
+            4.959002002734466e-19,
+            3.496552523287731e-19,
+            -2.981550804115346e-20
+          ],
+          "maximum_absolute_joint_difference": 4.959002002734466e-19
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -3.2265080151805786e-18,
+            -2.617898258221929e-19,
+            3.01919108336551e-19,
+            -2.334154340910034e-20
+          ],
+          "maximum_absolute_joint_difference": 3.2265080151805786e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "reference_beta": 0.15,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.0010915418839936213,
+            -0.00025166346667360683,
+            -0.0002516634666736075,
+            -0.00025166346667361333
+          ],
+          "maximum_absolute_joint_difference": 0.0010915418839936213
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            2.5870974365374053e-19,
+            2.5870974365374053e-19,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 2.5870974365374053e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.00019542393945353058,
+            0.00019542393945353112,
+            -0.00014667574143543288,
+            -0.00014667574143543315
+          ],
+          "maximum_absolute_joint_difference": 0.00019542393945353112
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.0006753495703451415,
+            -1.0345197627913227e-05,
+            -0.0002907537394223513,
+            -0.0002907537394223515
+          ],
+          "maximum_absolute_joint_difference": 0.0006753495703451415
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "reference_beta": 0.8,
+      "label_distribution": "uniform",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            -5.626993416704237e-18,
+            -4.1376595549192125e-19,
+            -8.47446824486123e-19,
+            2.597906745856702e-18
+          ],
+          "maximum_absolute_joint_difference": 5.626993416704237e-18
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            -1.77328777460149e-18,
+            -2.532229295341343e-18,
+            4.353817046897683e-19,
+            4.353817046897683e-19
+          ],
+          "maximum_absolute_joint_difference": 2.532229295341343e-18
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            -1.5243311246612783e-18,
+            -3.8493427497126523e-19,
+            -8.08658152991773e-19,
+            -8.08658152991773e-19
+          ],
+          "maximum_absolute_joint_difference": 1.5243311246612783e-18
+        }
+      }
+    },
+    {
+      "n": 4,
+      "beta": 1.2,
+      "reference_beta": 0.8,
+      "label_distribution": "skewed",
+      "largest_single_flip_amplitude": 0.0,
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 19,
+          "axis_pooled_joint_difference": [
+            0.0020829321761211155,
+            -0.000594284367166851,
+            -0.0005942843671668514,
+            -0.0005942843671668468
+          ],
+          "maximum_absolute_joint_difference": 0.0020829321761211155
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 4,
+          "axis_pooled_joint_difference": [
+            0.0002430196800554128,
+            0.00024301968005541183,
+            -0.00018239891886681267,
+            -0.00018239891886681267
+          ],
+          "maximum_absolute_joint_difference": 0.0002430196800554128
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 6,
+          "axis_pooled_joint_difference": [
+            0.0006090591055887433,
+            0.0002471861537219914,
+            -0.0004173325935121588,
+            -0.0004173325935121588
+          ],
+          "maximum_absolute_joint_difference": 0.0006090591055887433
+        }
+      }
+    }
+  ],
+  "analytic_extension_without_Aer": {
+    "5": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 51,
+          "axis_pooled_joint_difference": [
+            0.0007806085520964436,
+            -0.00022733585087994935,
+            -0.00022733585087994935,
+            -0.00022733585087995152,
+            -0.00022733585087995195
+          ],
+          "maximum_absolute_joint_difference": 0.0007806085520964436
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 12,
+          "axis_pooled_joint_difference": [
+            0.00024506645481658885,
+            0.00024506645481658685,
+            -0.0001706171775828168,
+            -0.0001706171775828174,
+            -0.00017061717758281761
+          ],
+          "maximum_absolute_joint_difference": 0.00024506645481658885
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 14,
+          "axis_pooled_joint_difference": [
+            0.00040761228762952346,
+            0.00021054318110511422,
+            -0.00022923639835820651,
+            -0.00022923639835820651,
+            -0.0002292363983582064
+          ],
+          "maximum_absolute_joint_difference": 0.00040761228762952346
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    },
+    "6": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 141,
+          "axis_pooled_joint_difference": [
+            0.0007343093333392115,
+            -0.0003082395794085013,
+            -0.00030823957940850195,
+            -0.00030823957940850216,
+            -0.00030823957940849826,
+            -0.0003082395794084989
+          ],
+          "maximum_absolute_joint_difference": 0.0007343093333392115
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            3.199422621826027e-19,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 3.199422621826027e-19
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 32,
+          "axis_pooled_joint_difference": [
+            0.00024140431172081105,
+            0.0002414043117208105,
+            -0.00016966828204205566,
+            -0.0001696682820420562,
+            -0.0001696682820420551,
+            -0.00016966828204205658
+          ],
+          "maximum_absolute_joint_difference": 0.00024140431172081105
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 38,
+          "axis_pooled_joint_difference": [
+            0.00038561909706577287,
+            0.0001991838711205159,
+            -0.00020964656229037872,
+            -0.00020964656229037904,
+            -0.0002096465622903779,
+            -0.00020964656229037948
+          ],
+          "maximum_absolute_joint_difference": 0.00038561909706577287
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    }
+  },
+  "clock_tau_scan": {
+    "0.00": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.002036733375136252,
+            0.00032864047386757967,
+            0.0003286404738675903
+          ],
+          "maximum_absolute_joint_difference": 0.002036733375136252
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0005474228682252172,
+            0.0005474228682252172,
+            -0.00019700234339481903
+          ],
+          "maximum_absolute_joint_difference": 0.0005474228682252172
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0009855049104672082,
+            0.0005090375246685467,
+            -0.0008528458529086189
+          ],
+          "maximum_absolute_joint_difference": 0.0009855049104672082
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    },
+    "0.25": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0006770810111114952,
+            0.0012699794183782401,
+            0.0012699794183782412
+          ],
+          "maximum_absolute_joint_difference": 0.0012699794183782412
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.00040813711180786964,
+            0.00040813711180786964,
+            9.705561913715516e-05
+          ],
+          "maximum_absolute_joint_difference": 0.00040813711180786964
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0009349449662280421,
+            0.0016265480860490282,
+            0.0010895533332447257
+          ],
+          "maximum_absolute_joint_difference": 0.0016265480860490282
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    },
+    "0.50": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            -0.00016986179758936076,
+            -0.00026326068868151614,
+            -0.00026326068868151744
+          ],
+          "maximum_absolute_joint_difference": 0.00026326068868151744
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.00011195468417433983,
+            0.00011195468417433983,
+            -0.00022462737322715621
+          ],
+          "maximum_absolute_joint_difference": 0.00022462737322715621
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            -0.001001728691619636,
+            -0.00045603317222874255,
+            -0.0010960604193109222
+          ],
+          "maximum_absolute_joint_difference": 0.0010960604193109222
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    },
+    "1.00": {
+      "rows": {
+        "same_support": {
+          "allowed_transfer_paths": 7,
+          "axis_pooled_joint_difference": [
+            0.0011656375902051432,
+            0.00132307038715073,
+            0.0013230703871507244
+          ],
+          "maximum_absolute_joint_difference": 0.00132307038715073
+        },
+        "conjugate_partner": {
+          "allowed_transfer_paths": 0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0
+        },
+        "different_pair_same_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0004968504418241522,
+            0.0004968504418241524,
+            8.460318471894395e-05
+          ],
+          "maximum_absolute_joint_difference": 0.0004968504418241524
+        },
+        "different_pair_opposite_sign": {
+          "allowed_transfer_paths": 2,
+          "axis_pooled_joint_difference": [
+            0.0013048598097231212,
+            0.0017380202544845826,
+            0.0010185125843588082
+          ],
+          "maximum_absolute_joint_difference": 0.0017380202544845826
+        }
+      },
+      "largest_single_flip_amplitude": 0.0
+    }
+  },
+  "uniform_clock_control_tau_half_pi": {
+    "same_support": {
+      "allowed_transfer_paths": 7,
+      "axis_pooled_joint_difference": [
+        -4.8996987116157806e-18,
+        2.50496721501801e-20,
+        -9.507322830867738e-19
+      ],
+      "maximum_absolute_joint_difference": 4.8996987116157806e-18
+    },
+    "conjugate_partner": {
+      "allowed_transfer_paths": 0,
+      "axis_pooled_joint_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_absolute_joint_difference": 0.0
+    },
+    "different_pair_same_sign": {
+      "allowed_transfer_paths": 2,
+      "axis_pooled_joint_difference": [
+        -1.126174884111444e-18,
+        -1.126174884111444e-18,
+        -1.4610803629007007e-18
+      ],
+      "maximum_absolute_joint_difference": 1.4610803629007007e-18
+    },
+    "different_pair_opposite_sign": {
+      "allowed_transfer_paths": 2,
+      "axis_pooled_joint_difference": [
+        -1.7088454623783094e-18,
+        -1.8380661603273022e-18,
+        1.6106528077017303e-18
+      ],
+      "maximum_absolute_joint_difference": 1.8380661603273022e-18
+    }
+  }
+}

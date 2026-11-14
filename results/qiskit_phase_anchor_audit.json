@@ -1,0 +1,833 @@
+{
+  "question": "Does a recorded phase label still recover the common direction when its global zero drifts?",
+  "resource_assumption": "An independent known-phase anchor run shares the detector phase frame within each block.",
+  "parameters": {
+    "alpha_true": 0.3,
+    "block_offsets": [
+      -0.15,
+      0.35
+    ],
+    "bias": 0.8,
+    "phase_count": 9,
+    "shots_per_setting": 4096,
+    "seed": 20261005,
+    "workers": 6,
+    "replicates": 5
+  },
+  "exact": {
+    "unrestricted_profiled_scan": [
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.0,
+        "profiled_theta_eigenvalues": [
+          2.0816681711721685e-17,
+          0.0859030527707191,
+          0.08590305277071911,
+          0.08590305277071911
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": 2.4232761281817045e-16,
+        "common_direction_information": 1.734723475976807e-17,
+        "joint_null_residual_for_theta_plus_offset_trade": 6.798699777552591e-17
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.001,
+        "profiled_theta_eigenvalues": [
+          0.00027784375915426707,
+          0.0859030527707191,
+          0.08590305277071911,
+          0.08590305277071912
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": 0.0032343874890668933,
+        "common_direction_information": 0.00027784375915427054,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.0007891488491651468
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.01,
+        "profiled_theta_eigenvalues": [
+          0.002753679236766466,
+          0.0859030527707191,
+          0.08590305277071911,
+          0.08590305277071916
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 4,
+        "smallest_to_max_eigenvalue_ratio": 0.03205566214411745,
+        "common_direction_information": 0.002753679236766466,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.007891488491650517
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.1,
+        "profiled_theta_eigenvalues": [
+          0.025283782083037564,
+          0.0859030527707191,
+          0.0859030527707191,
+          0.08590305277071911
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 4,
+        "smallest_to_max_eigenvalue_ratio": 0.29432926150507877,
+        "common_direction_information": 0.025283782083037564,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.07891488491650525
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.3,
+        "profiled_theta_eigenvalues": [
+          0.06418190836463387,
+          0.0859030527707191,
+          0.08590305277071912,
+          0.08590305277071915
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 4,
+        "smallest_to_max_eigenvalue_ratio": 0.747143509974431,
+        "common_direction_information": 0.0641819083646338,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.23674465474951592
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 1.0,
+        "profiled_theta_eigenvalues": [
+          0.08590305277071908,
+          0.0859030527707191,
+          0.08590305277071918,
+          0.13906080145670652
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 4,
+        "smallest_to_max_eigenvalue_ratio": 0.6177373628719023,
+        "common_direction_information": 0.13906080145670657,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.7891488491650529
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 3.0,
+        "profiled_theta_eigenvalues": [
+          0.08590305277071911,
+          0.08590305277071912,
+          0.08590305277071913,
+          0.20859120218505986
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 4,
+        "smallest_to_max_eigenvalue_ratio": 0.4118249085812682,
+        "common_direction_information": 0.20859120218505983,
+        "joint_null_residual_for_theta_plus_offset_trade": 2.3674465474951587
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 10.0,
+        "profiled_theta_eigenvalues": [
+          0.08590305277071908,
+          0.08590305277071911,
+          0.08590305277071912,
+          0.25283782083037554
+        ],
+        "profiled_rank_tol_1e_minus_8": 4,
+        "rank_at_1pct_of_max": 4,
+        "smallest_to_max_eigenvalue_ratio": 0.33975554957954623,
+        "common_direction_information": 0.25283782083037554,
+        "joint_null_residual_for_theta_plus_offset_trade": 7.89148849165053
+      }
+    ],
+    "P_zero_profiled_scan": [
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.0,
+        "profiled_theta_eigenvalues": [
+          -8.326672684688674e-17,
+          0.8663729622824496,
+          0.8663729622824499,
+          0.86637296228245
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -9.610956305413949e-17,
+        "common_direction_information": -1.3877787807814457e-17,
+        "joint_null_residual_for_theta_plus_offset_trade": 8.326672684688674e-17
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.001,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.000789148849165071
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.01,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.007891488491650547
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.1,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.0789148849165053
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 0.3,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.2367446547495159
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 1.0,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 0.7891488491650528
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 3.0,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 2.3674465474951587
+      },
+      {
+        "calibration_to_science_shot_ratio_per_setting": 10.0,
+        "profiled_theta_eigenvalues": [
+          -5.134781488891365e-16,
+          0.8663729622824493,
+          0.8663729622824496,
+          0.8663729622824496
+        ],
+        "profiled_rank_tol_1e_minus_8": 3,
+        "rank_at_1pct_of_max": 3,
+        "smallest_to_max_eigenvalue_ratio": -5.926756388338622e-16,
+        "common_direction_information": -6.036837696399289e-16,
+        "joint_null_residual_for_theta_plus_offset_trade": 7.89148849165053
+      }
+    ],
+    "calibration_ratio_for_apparent_rank4_at_1pct": 0.0030982563580437272,
+    "unrecorded_within_block_jitter_scan": [
+      {
+        "unrecorded_phase_jitter_sigma_radians": 0.0,
+        "labeled_cfi_eigenvalues": [
+          0.08825230848570707,
+          0.08825230848570709,
+          0.08825230848570709,
+          0.27630147266333793
+        ],
+        "common_direction_information": 0.27630147266333793,
+        "relative_direction_information": 0.08825230848570709,
+        "common_to_relative_ratio": 3.1308129770688815
+      },
+      {
+        "unrecorded_phase_jitter_sigma_radians": 0.05,
+        "labeled_cfi_eigenvalues": [
+          0.08743690425702244,
+          0.08743690425702244,
+          0.08743690425702247,
+          0.271136135930586
+        ],
+        "common_direction_information": 0.27113613593058594,
+        "relative_direction_information": 0.08743690425702244,
+        "common_to_relative_ratio": 3.1009347624382504
+      },
+      {
+        "unrecorded_phase_jitter_sigma_radians": 0.1,
+        "labeled_cfi_eigenvalues": [
+          0.08519931302827088,
+          0.08519931302827091,
+          0.08519931302827095,
+          0.256773019648908
+        ],
+        "common_direction_information": 0.256773019648908,
+        "relative_direction_information": 0.08519931302827088,
+        "common_to_relative_ratio": 3.013792136606846
+      },
+      {
+        "unrecorded_phase_jitter_sigma_radians": 0.2,
+        "labeled_cfi_eigenvalues": [
+          0.078243747673774,
+          0.078243747673774,
+          0.07824374767377405,
+          0.2118619195302472
+        ],
+        "common_direction_information": 0.21186191953024716,
+        "relative_direction_information": 0.07824374767377403,
+        "common_to_relative_ratio": 2.707716920891555
+      },
+      {
+        "unrecorded_phase_jitter_sigma_radians": 0.4,
+        "labeled_cfi_eigenvalues": [
+          0.0644659071770147,
+          0.06446590717701474,
+          0.06446590717701477,
+          0.12437851436575348
+        ],
+        "common_direction_information": 0.12437851436575342,
+        "relative_direction_information": 0.06446590717701474,
+        "common_to_relative_ratio": 1.9293688681713064
+      },
+      {
+        "unrecorded_phase_jitter_sigma_radians": 0.8,
+        "labeled_cfi_eigenvalues": [
+          0.045694960707927494,
+          0.05113637527780284,
+          0.05113637527780285,
+          0.051136375277802855
+        ],
+        "common_direction_information": 0.0456949607079275,
+        "relative_direction_information": 0.05113637527780285,
+        "common_to_relative_ratio": 0.8935901393027099
+      }
+    ]
+  },
+  "shots": {
+    "shots_per_setting": 4096,
+    "full_state_circuit_metadata": {
+      "circuits": 144,
+      "transpiled_depth": 992,
+      "mean_absolute_probability_error": 0.0021712145156395847
+    },
+    "P_zero_circuit_metadata": {
+      "circuits": 72,
+      "transpiled_depth": 992,
+      "mean_absolute_probability_error": 0.005744570855930624
+    },
+    "full_state_raw_counts_axes": [
+      "block",
+      "run_type_0_science_1_anchor",
+      "reference_axis",
+      "phase_label"
+    ],
+    "full_state_raw_success_counts": [
+      [
+        [
+          [
+            3067,
+            1134,
+            20,
+            0,
+            0,
+            0,
+            0,
+            4,
+            730
+          ],
+          [
+            3059,
+            1069,
+            18,
+            0,
+            0,
+            0,
+            0,
+            7,
+            695
+          ],
+          [
+            3072,
+            1080,
+            21,
+            0,
+            0,
+            0,
+            0,
+            8,
+            662
+          ],
+          [
+            3088,
+            1080,
+            16,
+            0,
+            0,
+            0,
+            0,
+            7,
+            664
+          ]
+        ],
+        [
+          [
+            2200,
+            2269,
+            157,
+            0,
+            0,
+            0,
+            0,
+            0,
+            135
+          ],
+          [
+            2268,
+            2269,
+            201,
+            0,
+            0,
+            0,
+            0,
+            0,
+            142
+          ],
+          [
+            2253,
+            2294,
+            164,
+            0,
+            0,
+            0,
+            0,
+            0,
+            145
+          ],
+          [
+            2210,
+            2323,
+            157,
+            0,
+            0,
+            0,
+            0,
+            0,
+            164
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            1958,
+            77,
+            0,
+            0,
+            0,
+            0,
+            0,
+            280,
+            2612
+          ],
+          [
+            1834,
+            91,
+            0,
+            0,
+            0,
+            0,
+            1,
+            307,
+            2649
+          ],
+          [
+            1917,
+            83,
+            0,
+            0,
+            0,
+            0,
+            0,
+            268,
+            2614
+          ],
+          [
+            1884,
+            79,
+            0,
+            0,
+            0,
+            0,
+            0,
+            283,
+            2617
+          ]
+        ],
+        [
+          [
+            2888,
+            515,
+            4,
+            0,
+            0,
+            0,
+            0,
+            35,
+            1481
+          ],
+          [
+            2963,
+            501,
+            0,
+            0,
+            0,
+            0,
+            0,
+            30,
+            1401
+          ],
+          [
+            2890,
+            496,
+            3,
+            0,
+            0,
+            0,
+            0,
+            37,
+            1418
+          ],
+          [
+            2973,
+            543,
+            0,
+            0,
+            0,
+            0,
+            0,
+            42,
+            1390
+          ]
+        ]
+      ]
+    ],
+    "P_zero_science_raw_success_counts": [
+      [
+        [
+          2917,
+          2882,
+          2929,
+          2901,
+          2870,
+          2895,
+          2886,
+          2944,
+          2868
+        ],
+        [
+          2895,
+          2882,
+          2882,
+          2870,
+          2901,
+          2919,
+          2863,
+          2860,
+          2845
+        ],
+        [
+          2893,
+          2846,
+          2902,
+          2883,
+          2839,
+          2895,
+          2889,
+          2868,
+          2873
+        ],
+        [
+          2885,
+          2884,
+          2870,
+          2899,
+          2871,
+          2920,
+          2846,
+          2854,
+          2861
+        ]
+      ],
+      [
+        [
+          2896,
+          2887,
+          2927,
+          2876,
+          2926,
+          2920,
+          2894,
+          2824,
+          2905
+        ],
+        [
+          2937,
+          2904,
+          2859,
+          2878,
+          2911,
+          2835,
+          2923,
+          2927,
+          2835
+        ],
+        [
+          2902,
+          2904,
+          2874,
+          2879,
+          2862,
+          2838,
+          2898,
+          2983,
+          2887
+        ],
+        [
+          2877,
+          2880,
+          2825,
+          2870,
+          2940,
+          2916,
+          2888,
+          2860,
+          2879
+        ]
+      ]
+    ],
+    "block_fits": [
+      {
+        "block": 0,
+        "true_offset_radians": -0.15,
+        "science_sum_alpha_plus_offset": {
+          "estimated_common_phase_radians": 0.14800000000000002,
+          "profile_likelihood_95pct_interval_radians": [
+            0.14300000000000002,
+            0.15300000000000002
+          ],
+          "fisher_standard_error_radians": 0.002708994806369768,
+          "successes_by_phase_label": [
+            12286,
+            4363,
+            75,
+            0,
+            0,
+            0,
+            0,
+            26,
+            2751
+          ],
+          "trials_per_phase_label": 16384
+        },
+        "known_phase_anchor_offset": {
+          "estimated_common_phase_radians": -0.14950000000000008,
+          "profile_likelihood_95pct_interval_radians": [
+            -0.15400000000000003,
+            -0.14550000000000007
+          ],
+          "fisher_standard_error_radians": 0.0023759606601672844,
+          "successes_by_phase_label": [
+            8931,
+            9155,
+            679,
+            0,
+            0,
+            0,
+            0,
+            0,
+            586
+          ],
+          "trials_per_phase_label": 16384
+        },
+        "naive_alpha_if_offset_set_to_zero": 0.14800000000000002,
+        "calibrated_alpha_estimate_radians": 0.2975000000000001,
+        "calibrated_alpha_standard_error_radians": 0.0036033098561740334
+      },
+      {
+        "block": 1,
+        "true_offset_radians": 0.35,
+        "science_sum_alpha_plus_offset": {
+          "estimated_common_phase_radians": 0.6515,
+          "profile_likelihood_95pct_interval_radians": [
+            0.647,
+            0.6559999999999999
+          ],
+          "fisher_standard_error_radians": 0.0024224233683389734,
+          "successes_by_phase_label": [
+            7593,
+            330,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1138,
+            10492
+          ],
+          "trials_per_phase_label": 16384
+        },
+        "known_phase_anchor_offset": {
+          "estimated_common_phase_radians": 0.3480000000000001,
+          "profile_likelihood_95pct_interval_radians": [
+            0.3434999999999999,
+            0.353
+          ],
+          "fisher_standard_error_radians": 0.002577287989648569,
+          "successes_by_phase_label": [
+            11714,
+            2055,
+            7,
+            0,
+            0,
+            0,
+            0,
+            144,
+            5690
+          ],
+          "trials_per_phase_label": 16384
+        },
+        "naive_alpha_if_offset_set_to_zero": 0.6515,
+        "calibrated_alpha_estimate_radians": 0.3034999999999999,
+        "calibrated_alpha_standard_error_radians": 0.0035370253543142013
+      }
+    ],
+    "combined_calibrated_alpha_estimate_radians": 0.3005556938476351,
+    "combined_alpha_standard_error_radians": 0.0025241634140580212,
+    "combined_approximate_95pct_interval_radians": [
+      0.29560833355608135,
+      0.3055030541391888
+    ],
+    "P_zero_block_change_tests": {
+      "labeled": {
+        "g_statistic": 41.34253119594779,
+        "permutation_pvalue": 0.2448775612193903,
+        "null_95pct_statistic": 50.53685359407163,
+        "permutations": 2000
+      },
+      "erased": {
+        "g_statistic": 2.030367511933221,
+        "permutation_pvalue": 0.7461269365317341,
+        "null_95pct_statistic": 9.575832100530633,
+        "permutations": 2000
+      }
+    }
+  },
+  "replication_scan": [
+    {
+      "seed": 20261005,
+      "combined_calibrated_alpha": 0.3005556938476351,
+      "approximate_95pct_interval": [
+        0.29560833355608135,
+        0.3055030541391888
+      ],
+      "true_alpha_inside_interval": true,
+      "naive_block_estimates": [
+        0.14800000000000002,
+        0.6515
+      ],
+      "calibrated_block_estimates": [
+        0.2975000000000001,
+        0.3034999999999999
+      ],
+      "P_zero_labeled_pvalue": 0.2448775612193903
+    },
+    {
+      "seed": 20261006,
+      "combined_calibrated_alpha": 0.3010663802509539,
+      "approximate_95pct_interval": [
+        0.2961183357752703,
+        0.3060144247266375
+      ],
+      "true_alpha_inside_interval": true,
+      "naive_block_estimates": [
+        0.14949999999999997,
+        0.6539999999999999
+      ],
+      "calibrated_block_estimates": [
+        0.2975,
+        0.3045
+      ],
+      "P_zero_labeled_pvalue": 0.2928535732133933
+    },
+    {
+      "seed": 20261007,
+      "combined_calibrated_alpha": 0.29802846716414283,
+      "approximate_95pct_interval": [
+        0.29308624694499014,
+        0.3029706873832955
+      ],
+      "true_alpha_inside_interval": true,
+      "naive_block_estimates": [
+        0.14449999999999996,
+        0.6505000000000001
+      ],
+      "calibrated_block_estimates": [
+        0.2965,
+        0.2995000000000001
+      ],
+      "P_zero_labeled_pvalue": 0.27786106946526734
+    },
+    {
+      "seed": 20261008,
+      "combined_calibrated_alpha": 0.3022036899656311,
+      "approximate_95pct_interval": [
+        0.29725502247256735,
+        0.3071523574586948
+      ],
+      "true_alpha_inside_interval": true,
+      "naive_block_estimates": [
+        0.15349999999999997,
+        0.6485000000000001
+      ],
+      "calibrated_block_estimates": [
+        0.3045,
+        0.30000000000000004
+      ],
+      "P_zero_labeled_pvalue": 0.3743128435782109
+    },
+    {
+      "seed": 20261009,
+      "combined_calibrated_alpha": 0.3007835714510983,
+      "approximate_95pct_interval": [
+        0.2958376775314496,
+        0.30572946537074697
+      ],
+      "true_alpha_inside_interval": true,
+      "naive_block_estimates": [
+        0.14800000000000002,
+        0.653
+      ],
+      "calibrated_block_estimates": [
+        0.29900000000000004,
+        0.3025
+      ],
+      "P_zero_labeled_pvalue": 0.735632183908046
+    }
+  ]
+}

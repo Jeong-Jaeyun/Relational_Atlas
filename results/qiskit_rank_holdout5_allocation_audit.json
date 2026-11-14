@@ -1,0 +1,66 @@
+{
+  "source": "D:\\RELATIONAL_ATLAS_I01_20261002\\results\\qiskit_rank_holdout5_random_labels.json",
+  "caveat": "Post-hoc exact-model design and Aer-count quality audit; not an independent physical test.",
+  "aer_standardized_count_mean": -0.11080631426761331,
+  "aer_standardized_count_variance": 0.9644233550157321,
+  "aer_exact_binomial_null_panels": 5000,
+  "aer_null_mean_95pct_interval": [
+    -0.12134171202617348,
+    0.12107430363346064
+  ],
+  "aer_null_variance_95pct_interval": [
+    0.7953304612829757,
+    1.1729552805081687
+  ],
+  "random_allocation_panels_per_case": 20000,
+  "rows": [
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "panels": 20000,
+      "mean_theoretical_random_to_fixed_variance_ratio": 1.3548566714143206,
+      "mean_empirical_to_fixed_variance_ratio": 1.3586007840039285,
+      "mean_empirical_to_random_variance_ratio": 1.0027634750365877,
+      "correct_random_design_rejections_at_0_point_05": 983,
+      "naive_fixed_design_rejections_at_0_point_05": 2488,
+      "correct_random_design_rejections_at_0_point_00625": 104,
+      "naive_fixed_design_rejections_at_0_point_00625": 530
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "panels": 20000,
+      "mean_theoretical_random_to_fixed_variance_ratio": 1.1601989778736166,
+      "mean_empirical_to_fixed_variance_ratio": 1.1528329055649709,
+      "mean_empirical_to_random_variance_ratio": 0.9936510267211697,
+      "correct_random_design_rejections_at_0_point_05": 1048,
+      "naive_fixed_design_rejections_at_0_point_05": 1641,
+      "correct_random_design_rejections_at_0_point_00625": 118,
+      "naive_fixed_design_rejections_at_0_point_00625": 279
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "panels": 20000,
+      "mean_theoretical_random_to_fixed_variance_ratio": 1.0,
+      "mean_empirical_to_fixed_variance_ratio": 0.9982441583400344,
+      "mean_empirical_to_random_variance_ratio": 0.9982441583400344,
+      "correct_random_design_rejections_at_0_point_05": 988,
+      "naive_fixed_design_rejections_at_0_point_05": 988,
+      "correct_random_design_rejections_at_0_point_00625": 108,
+      "naive_fixed_design_rejections_at_0_point_00625": 108
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "panels": 20000,
+      "mean_theoretical_random_to_fixed_variance_ratio": 1.0,
+      "mean_empirical_to_fixed_variance_ratio": 0.9977626667268572,
+      "mean_empirical_to_random_variance_ratio": 0.9977626667268572,
+      "correct_random_design_rejections_at_0_point_05": 982,
+      "naive_fixed_design_rejections_at_0_point_05": 982,
+      "correct_random_design_rejections_at_0_point_00625": 126,
+      "naive_fixed_design_rejections_at_0_point_00625": 126
+    }
+  ]
+}

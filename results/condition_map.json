@@ -1,0 +1,2650 @@
+{
+  "model": "T^n Fourier modes with symmetric collective-momentum penalty and an energy-matched finite clock",
+  "beta": 0.35,
+  "interpretation_boundary": "Exact gauge, low-energy state support, and detector restriction are different claims.",
+  "exact_sectors": {
+    "n4_cutoff1": {
+      "full_basis_size": 81,
+      "gauge_basis_size": 19,
+      "gauge_qfi": {
+        "rank": 3,
+        "eigenvalues": [
+          -0.0,
+          2.818218338,
+          2.818218338,
+          2.818218338
+        ],
+        "smallest_eigenvector": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "unrestricted_qfi": {
+        "rank": 4,
+        "eigenvalues": [
+          2.33981923,
+          2.33981923,
+          2.33981923,
+          2.33981923
+        ],
+        "smallest_eigenvector": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "n4_cutoff2": {
+      "full_basis_size": 625,
+      "gauge_basis_size": 85,
+      "gauge_qfi": {
+        "rank": 3,
+        "eigenvalues": [
+          -0.0,
+          5.073331634,
+          5.073331634,
+          5.073331634
+        ],
+        "smallest_eigenvector": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "unrestricted_qfi": {
+        "rank": 4,
+        "eigenvalues": [
+          4.660906391,
+          4.660906391,
+          4.660906391,
+          4.660906391
+        ],
+        "smallest_eigenvector": [
+          0.0,
+          0.80958,
+          -0.586214,
+          -0.030542
+        ]
+      }
+    },
+    "n4_cutoff3": {
+      "full_basis_size": 2401,
+      "gauge_basis_size": 231,
+      "gauge_qfi": {
+        "rank": 3,
+        "eigenvalues": [
+          -0.0,
+          5.667380232,
+          5.667380232,
+          5.667380232
+        ],
+        "smallest_eigenvector": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "unrestricted_qfi": {
+        "rank": 4,
+        "eigenvalues": [
+          5.559717312,
+          5.559717312,
+          5.559717312,
+          5.559717312
+        ],
+        "smallest_eigenvector": [
+          0.0,
+          0.707076,
+          0.636867,
+          -0.307318
+        ]
+      }
+    },
+    "n5_cutoff1": {
+      "full_basis_size": 243,
+      "gauge_basis_size": 51,
+      "gauge_qfi": {
+        "rank": 4,
+        "eigenvalues": [
+          -0.0,
+          2.698095287,
+          2.698095287,
+          2.698095287,
+          2.698095287
+        ],
+        "smallest_eigenvector": [
+          0.447214,
+          0.447214,
+          0.447214,
+          0.447214,
+          0.447214
+        ]
+      },
+      "unrestricted_qfi": {
+        "rank": 5,
+        "eigenvalues": [
+          2.33981923,
+          2.33981923,
+          2.33981923,
+          2.33981923,
+          2.33981923
+        ],
+        "smallest_eigenvector": [
+          -0.0,
+          0.799002,
+          -0.599251,
+          -0.049938,
+          -0.0
+        ]
+      }
+    },
+    "n6_cutoff1": {
+      "full_basis_size": 729,
+      "gauge_basis_size": 141,
+      "gauge_qfi": {
+        "rank": 5,
+        "eigenvalues": [
+          -0.0,
+          2.629766834,
+          2.629766834,
+          2.629766834,
+          2.629766834,
+          2.629766834
+        ],
+        "smallest_eigenvector": [
+          0.408248,
+          0.408248,
+          0.408248,
+          0.408248,
+          0.408248,
+          0.408248
+        ]
+      },
+      "unrestricted_qfi": {
+        "rank": 6,
+        "eigenvalues": [
+          2.33981923,
+          2.33981923,
+          2.33981923,
+          2.33981923,
+          2.33981923,
+          2.33981923
+        ],
+        "smallest_eigenvector": [
+          -0.0,
+          0.077359,
+          0.557968,
+          -0.796358,
+          0.206824,
+          0.07567
+        ]
+      }
+    },
+    "axis_4_explicit_control": {
+      "rank": 3,
+      "eigenvalues": [
+        0.0,
+        2.33981923,
+        2.33981923,
+        2.33981923
+      ],
+      "smallest_eigenvector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "hard_gap": {
+    "hamiltonian": "H_lambda=sum_i p_i^2+lambda*(sum_i p_i)^2",
+    "first_relative_excitation_energy": 2.0,
+    "first_nonzero_charge_energy_formula": "1+lambda",
+    "scan": {
+      "0.0": [
+        {
+          "energy_limit": 0.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.0,
+          "basis_size": 9,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.888888889,
+              0.888888889,
+              0.888888889,
+              0.888888889
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.5,
+          "basis_size": 9,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.888888889,
+              0.888888889,
+              0.888888889,
+              0.888888889
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.0,
+          "basis_size": 33,
+          "charged_modes": 20,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              1.696969697,
+              1.696969697,
+              1.696969697,
+              1.696969697
+            ],
+            "smallest_eigenvector": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.5,
+          "basis_size": 33,
+          "charged_modes": 20,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              1.696969697,
+              1.696969697,
+              1.696969697,
+              1.696969697
+            ],
+            "smallest_eigenvector": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 3.0,
+          "basis_size": 65,
+          "charged_modes": 52,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              2.338461538,
+              2.338461538,
+              2.338461538,
+              2.338461538
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.0,
+          "basis_size": 89,
+          "charged_modes": 70,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              2.786516854,
+              2.786516854,
+              2.786516854,
+              2.786516854
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.9,
+          "basis_size": 89,
+          "charged_modes": 70,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              2.786516854,
+              2.786516854,
+              2.786516854,
+              2.786516854
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 5.0,
+          "basis_size": 137,
+          "charged_modes": 118,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              3.562043796,
+              3.562043796,
+              3.562043796,
+              3.562043796
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 6.0,
+          "basis_size": 233,
+          "charged_modes": 190,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              4.566523605,
+              4.566523605,
+              4.566523605,
+              4.566523605
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 8.0,
+          "basis_size": 321,
+          "charged_modes": 266,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              5.308411215,
+              5.308411215,
+              5.308411215,
+              5.308411215
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "1.0": [
+        {
+          "energy_limit": 0.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.0,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.0,
+          "basis_size": 21,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.380952381,
+              1.904761905,
+              1.904761905,
+              1.904761905
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.5,
+          "basis_size": 21,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.380952381,
+              1.904761905,
+              1.904761905,
+              1.904761905
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 3.0,
+          "basis_size": 21,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.380952381,
+              1.904761905,
+              1.904761905,
+              1.904761905
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.0,
+          "basis_size": 51,
+          "charged_modes": 32,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.62745098,
+              3.137254902,
+              3.137254902,
+              3.137254902
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.9,
+          "basis_size": 51,
+          "charged_modes": 32,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.62745098,
+              3.137254902,
+              3.137254902,
+              3.137254902
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 5.0,
+          "basis_size": 51,
+          "charged_modes": 32,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.62745098,
+              3.137254902,
+              3.137254902,
+              3.137254902
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 6.0,
+          "basis_size": 111,
+          "charged_modes": 68,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.936936937,
+              4.684684685,
+              4.684684685,
+              4.684684685
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 8.0,
+          "basis_size": 171,
+          "charged_modes": 116,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              1.169590643,
+              5.847953216,
+              5.847953216,
+              5.847953216
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        }
+      ],
+      "2.0": [
+        {
+          "energy_limit": 0.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.0,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.0,
+          "basis_size": 13,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              -0.0,
+              2.461538462,
+              2.461538462,
+              2.461538462
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.5,
+          "basis_size": 13,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              -0.0,
+              2.461538462,
+              2.461538462,
+              2.461538462
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 3.0,
+          "basis_size": 21,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.380952381,
+              1.904761905,
+              1.904761905,
+              1.904761905
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.0,
+          "basis_size": 27,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.296296296,
+              2.666666667,
+              2.666666667,
+              2.666666667
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.9,
+          "basis_size": 27,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.296296296,
+              2.666666667,
+              2.666666667,
+              2.666666667
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 5.0,
+          "basis_size": 51,
+          "charged_modes": 32,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.62745098,
+              3.137254902,
+              3.137254902,
+              3.137254902
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 6.0,
+          "basis_size": 75,
+          "charged_modes": 32,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.426666667,
+              4.693333333,
+              4.693333333,
+              4.693333333
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 8.0,
+          "basis_size": 111,
+          "charged_modes": 56,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.504504505,
+              5.693693694,
+              5.693693694,
+              5.693693694
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        }
+      ],
+      "4.0": [
+        {
+          "energy_limit": 0.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.0,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 1.5,
+          "basis_size": 1,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "smallest_eigenvector": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.0,
+          "basis_size": 13,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              -0.0,
+              2.461538462,
+              2.461538462,
+              2.461538462
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 2.5,
+          "basis_size": 13,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              -0.0,
+              2.461538462,
+              2.461538462,
+              2.461538462
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 3.0,
+          "basis_size": 13,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              -0.0,
+              2.461538462,
+              2.461538462,
+              2.461538462
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.0,
+          "basis_size": 19,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              0.0,
+              3.368421053,
+              3.368421053,
+              3.368421053
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 4.9,
+          "basis_size": 19,
+          "charged_modes": 0,
+          "qfi": {
+            "rank": 3,
+            "eigenvalues": [
+              0.0,
+              3.368421053,
+              3.368421053,
+              3.368421053
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 5.0,
+          "basis_size": 27,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.296296296,
+              2.666666667,
+              2.666666667,
+              2.666666667
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 6.0,
+          "basis_size": 51,
+          "charged_modes": 8,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.156862745,
+              5.176470588,
+              5.176470588,
+              5.176470588
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "energy_limit": 8.0,
+          "basis_size": 87,
+          "charged_modes": 32,
+          "qfi": {
+            "rank": 4,
+            "eigenvalues": [
+              0.367816092,
+              5.517241379,
+              5.517241379,
+              5.517241379
+            ],
+            "smallest_eigenvector": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "soft_gap": [
+    {
+      "lambda": 0.0,
+      "qfi_eigenvalues": [
+        4.660906391,
+        4.660906391,
+        4.660906391,
+        4.660906391
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.999999999999999,
+      "charged_weight": 0.8189017125820846
+    },
+    {
+      "lambda": 0.5,
+      "qfi_eigenvalues": [
+        1.805562673,
+        4.911865013,
+        4.911865013,
+        4.911865013
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.3675920792948714,
+      "charged_weight": 0.7038948255938461
+    },
+    {
+      "lambda": 1.0,
+      "qfi_eigenvalues": [
+        1.109237979,
+        4.973887381,
+        4.973887381,
+        4.973887381
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.22301228280752333,
+      "charged_weight": 0.6215774159318874
+    },
+    {
+      "lambda": 2.0,
+      "qfi_eigenvalues": [
+        0.62487842,
+        5.017214546,
+        5.017214546,
+        5.017214546
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.12454688039932243,
+      "charged_weight": 0.4955319826446356
+    },
+    {
+      "lambda": 4.0,
+      "qfi_eigenvalues": [
+        0.321334203,
+        5.044448634,
+        5.044448634,
+        5.044448634
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.06370056001286326,
+      "charged_weight": 0.31107524369532613
+    },
+    {
+      "lambda": 8.0,
+      "qfi_eigenvalues": [
+        0.099264781,
+        5.064407924,
+        5.064407924,
+        5.064407924
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.019600471139619106,
+      "charged_weight": 0.09921525096761707
+    },
+    {
+      "lambda": 16.0,
+      "qfi_eigenvalues": [
+        0.00665215,
+        5.072733617,
+        5.072733617,
+        5.072733617
+      ],
+      "common_to_relative_eigenvalue_ratio": 0.0013113540152154507,
+      "charged_weight": 0.006652148850134159
+    },
+    {
+      "lambda": 32.0,
+      "qfi_eigenvalues": [
+        2.4763e-05,
+        5.073329408,
+        5.073329408,
+        5.073329408
+      ],
+      "common_to_relative_eigenvalue_ratio": 4.880987223161449e-06,
+      "charged_weight": 2.4762856018085433e-05
+    }
+  ],
+  "symmetric_branch_selection": {
+    "activation_potential": "V(s)=a*m+b*m*(m-1)/2, m=sum_i s_i",
+    "parameters": {
+      "a": -2.5,
+      "b": 1.0,
+      "inactive_excitation_penalty": 4.0
+    },
+    "three_active_axis_condition": "b>0 and -3*b<a<-2*b for n>=4",
+    "within_branch_low_energy_window": "1<=E_probe<1+inactive_excitation_penalty",
+    "interpretation_warning": "The parameter ratio is tuned to select 3. The orientation must additionally be conditioned or locked for longer than the observation time; V alone supplies no switching barrier. The branch-resolved average has rank n.",
+    "by_n": {
+      "n4": {
+        "energy_by_active_count": [
+          -0.0,
+          -2.5,
+          -4.0,
+          -4.5,
+          -4.0
+        ],
+        "ground_active_counts": [
+          3
+        ],
+        "degenerate_three_axis_branches": 4,
+        "one_branch_qfi": {
+          "rank": 3,
+          "eigenvalues": [
+            0.0,
+            2.33981923,
+            2.33981923,
+            2.33981923
+          ],
+          "smallest_eigenvector": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "branch_resolved_average_qfi": {
+          "rank": 4,
+          "eigenvalues": [
+            1.754864423,
+            1.754864423,
+            1.754864423,
+            1.754864423
+          ],
+          "smallest_eigenvector": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "branch_probability_scan": [
+          {
+            "selection_inverse_temperature": 0.0,
+            "probability_of_three_active_axes": 0.25,
+            "probabilities_by_active_count": [
+              0.0625,
+              0.25,
+              0.375,
+              0.25,
+              0.0625
+            ]
+          },
+          {
+            "selection_inverse_temperature": 2.0,
+            "probability_of_three_active_axes": 0.6016356620409291,
+            "probabilities_by_active_count": [
+              1.8561934796007705e-05,
+              0.011019341528526174,
+              0.3319940867106416,
+              0.6016356620409291,
+              0.055332347785106935
+            ]
+          },
+          {
+            "selection_inverse_temperature": 5.0,
+            "probability_of_three_active_axes": 0.8743596372597013,
+            "probabilities_by_active_count": [
+              3.698318134745519e-11,
+              3.9695866118742175e-05,
+              0.10765771443188286,
+              0.8743596372597013,
+              0.01794295240531381
+            ]
+          },
+          {
+            "selection_inverse_temperature": 10.0,
+            "probability_of_three_active_axes": 0.9883460076839359,
+            "probabilities_by_active_count": [
+              7.0728970275177e-21,
+              2.0371329539604313e-09,
+              0.009989134524798115,
+              0.9883460076839359,
+              0.0016648557541330193
+            ]
+          }
+        ]
+      },
+      "n5": {
+        "energy_by_active_count": [
+          -0.0,
+          -2.5,
+          -4.0,
+          -4.5,
+          -4.0,
+          -2.5
+        ],
+        "ground_active_counts": [
+          3
+        ],
+        "degenerate_three_axis_branches": 10,
+        "one_branch_qfi": {
+          "rank": 3,
+          "eigenvalues": [
+            0.0,
+            0.0,
+            2.33981923,
+            2.33981923,
+            2.33981923
+          ],
+          "smallest_eigenvector": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        "branch_resolved_average_qfi": {
+          "rank": 5,
+          "eigenvalues": [
+            1.403891538,
+            1.403891538,
+            1.403891538,
+            1.403891538,
+            1.403891538
+          ],
+          "smallest_eigenvector": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "branch_probability_scan": [
+          {
+            "selection_inverse_temperature": 0.0,
+            "probability_of_three_active_axes": 0.3125,
+            "probabilities_by_active_count": [
+              0.03125,
+              0.15625,
+              0.3125,
+              0.3125,
+              0.15625,
+              0.03125
+            ]
+          },
+          {
+            "selection_inverse_temperature": 2.0,
+            "probability_of_three_active_axes": 0.6398685920522623,
+            "probabilities_by_active_count": [
+              7.896605758638918e-06,
+              0.005859801034136001,
+              0.2353945000673439,
+              0.6398685920522623,
+              0.11769725003367194,
+              0.0011719602068272002
+            ]
+          },
+          {
+            "selection_inverse_temperature": 5.0,
+            "probability_of_three_active_axes": 0.8903492691134205,
+            "probabilities_by_active_count": [
+              1.506380078814896e-11,
+              2.021089714091451e-05,
+              0.07308431852996443,
+              0.8903492691134205,
+              0.036542159264982214,
+              4.042179428182902e-06
+            ]
+          },
+          {
+            "selection_inverse_temperature": 10.0,
+            "probability_of_three_active_axes": 0.9899942060411219,
+            "probabilities_by_active_count": [
+              2.833876809428956e-21,
+              1.0202650719874211e-09,
+              0.006670528489706777,
+              0.9899942060411219,
+              0.0033352642448533885,
+              2.0405301439748422e-10
+            ]
+          }
+        ]
+      },
+      "n6": {
+        "energy_by_active_count": [
+          -0.0,
+          -2.5,
+          -4.0,
+          -4.5,
+          -4.0,
+          -2.5,
+          0.0
+        ],
+        "ground_active_counts": [
+          3
+        ],
+        "degenerate_three_axis_branches": 20,
+        "one_branch_qfi": {
+          "rank": 3,
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0,
+            2.33981923,
+            2.33981923,
+            2.33981923
+          ],
+          "smallest_eigenvector": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "branch_resolved_average_qfi": {
+          "rank": 6,
+          "eigenvalues": [
+            1.169909615,
+            1.169909615,
+            1.169909615,
+            1.169909615,
+            1.169909615,
+            1.169909615
+          ],
+          "smallest_eigenvector": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "branch_probability_scan": [
+          {
+            "selection_inverse_temperature": 0.0,
+            "probability_of_three_active_axes": 0.3125,
+            "probabilities_by_active_count": [
+              0.015625,
+              0.09375,
+              0.234375,
+              0.3125,
+              0.234375,
+              0.09375,
+              0.015625
+            ]
+          },
+          {
+            "selection_inverse_temperature": 2.0,
+            "probability_of_three_active_axes": 0.6398685920522623,
+            "probabilities_by_active_count": [
+              3.948302879319459e-06,
+              0.003515880620481601,
+              0.1765458750505079,
+              0.6398685920522623,
+              0.1765458750505079,
+              0.003515880620481601,
+              3.948302879319459e-06
+            ]
+          },
+          {
+            "selection_inverse_temperature": 5.0,
+            "probability_of_three_active_axes": 0.8903492691134205,
+            "probabilities_by_active_count": [
+              7.53190039407448e-12,
+              1.2126538284548705e-05,
+              0.054813238897473325,
+              0.8903492691134205,
+              0.054813238897473325,
+              1.2126538284548705e-05,
+              7.53190039407448e-12
+            ]
+          },
+          {
+            "selection_inverse_temperature": 10.0,
+            "probability_of_three_active_axes": 0.9899942060411219,
+            "probabilities_by_active_count": [
+              1.416938404714478e-21,
+              6.121590431924526e-10,
+              0.005002896367280083,
+              0.9899942060411219,
+              0.005002896367280083,
+              6.121590431924526e-10,
+              1.416938404714478e-21
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "orbits_topology": {
+    "quotient_map_B": [
+      [
+        1,
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        0,
+        1,
+        -1
+      ]
+    ],
+    "B_rank": 3,
+    "diagonal_shift_invariance_max_error": 8.881784197001252e-16,
+    "kernel": "q -> q + alpha*(1,1,1,1) modulo 2pi",
+    "exact_quotient": "T^4 / diagonal U(1) is T^3 via (q1-q4,q2-q4,q3-q4)",
+    "flow_modes": {
+      "closed_diagonal_integer": {
+        "flow_vector": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "invariant_fourier_modes_cutoff2": 85,
+        "invariant_qfi_rank": 3
+      },
+      "partly_irrational": {
+        "flow_vector": [
+          1.0,
+          1.4142135623730951,
+          0.0,
+          0.0
+        ],
+        "invariant_fourier_modes_cutoff2": 25,
+        "invariant_qfi_rank": 2
+      },
+      "fully_rationally_independent": {
+        "flow_vector": [
+          1.0,
+          1.4142135623730951,
+          1.7320508075688772,
+          2.449489742783178
+        ],
+        "invariant_fourier_modes_cutoff2": 1,
+        "invariant_qfi_rank": 0
+      }
+    }
+  },
+  "clock": {
+    "clock_constraint_residual": 0.0,
+    "clock_energy_levels": 7,
+    "conditional_state_fidelity_at_pi_over_2": 0.2472167179200891,
+    "conditional_state_fidelity_at_pi": 0.9999999999999998,
+    "unrestricted_state_fidelity_at_pi": 4.835330647069737e-13,
+    "physical_relative_detector_rank_at_tau0": 3,
+    "unrestricted_relative_detector_rank_at_tau0": 3,
+    "unrestricted_augmented_detector_rank_at_tau0": 4,
+    "physical_augmented_detector_rank_at_tau0": 3,
+    "clock_blur_at_tau0": [
+      {
+        "clock_sigma": 0.0,
+        "pair_coherence_at_tau0": 0.7901837568265269,
+        "fisher_eigenvalues_at_tau0": [
+          -0.0,
+          0.302600561,
+          0.302600561,
+          0.302600561
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "clock_sigma": 0.2,
+        "pair_coherence_at_tau0": 0.6823299686851371,
+        "fisher_eigenvalues_at_tau0": [
+          0.0,
+          0.202279438,
+          0.202279438,
+          0.202279438
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "clock_sigma": 0.6,
+        "pair_coherence_at_tau0": 0.37818630631909655,
+        "fisher_eigenvalues_at_tau0": [
+          0.0,
+          0.051346903,
+          0.051346903,
+          0.051346903
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "clock_sigma": 1.2,
+        "pair_coherence_at_tau0": 0.22109995724786718,
+        "fisher_eigenvalues_at_tau0": [
+          0.0,
+          0.016703337,
+          0.016703337,
+          0.016703337
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3
+      }
+    ],
+    "trajectory": [
+      {
+        "tau": 0.0,
+        "relative_coherence_real": 0.7901837568265269,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          -0.0,
+          0.302600561,
+          0.302600561,
+          0.302600561
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.262351779,
+          0.262351779,
+          0.262351779
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.139573401,
+          0.139573401,
+          0.139573401
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 0.09817477042468103,
+        "relative_coherence_real": 0.7594576910444295,
+        "relative_coherence_imag": -6.938893903907228e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          0.270173436,
+          0.270173436,
+          0.270173436
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.224111262,
+          0.224111262,
+          0.224111262
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.11899511,
+          0.11899511,
+          0.11899511
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 0.19634954084936207,
+        "relative_coherence_real": 0.6729954835064522,
+        "relative_coherence_imag": 1.3877787807814457e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          0.195173607,
+          0.195173607,
+          0.195173607
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.142378372,
+          0.142378372,
+          0.142378372
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.074942029,
+          0.074942029,
+          0.074942029
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 0.2945243112740431,
+        "relative_coherence_real": 0.5465031355330501,
+        "relative_coherence_imag": -1.3877787807814457e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          0.117031937,
+          0.117031937,
+          0.117031937
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.070872194,
+          0.070872194,
+          0.070872194
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.0365611,
+          0.0365611,
+          0.0365611
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 0.39269908169872414,
+        "relative_coherence_real": 0.40177152449312087,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          -0.0,
+          0.058530819,
+          0.058530819,
+          0.058530819
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.030256063,
+          0.030256063,
+          0.030256063
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.015298998,
+          0.015298998,
+          0.015298998
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 0.4908738521234052,
+        "relative_coherence_real": 0.26143819082713393,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          0.0,
+          0.023589479,
+          0.023589479,
+          0.023589479
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.011874168,
+          0.011874168,
+          0.011874168
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.006125724,
+          0.006125724,
+          0.006125724
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 0.5890486225480862,
+        "relative_coherence_real": 0.14390192321636378,
+        "relative_coherence_imag": 1.3877787807814457e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          0.006974804,
+          0.006974804,
+          0.006974804
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.00364983,
+          0.00364983,
+          0.00364983
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.001979631,
+          0.001979631,
+          0.001979631
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 0.6872233929727672,
+        "relative_coherence_real": 0.059771982424125326,
+        "relative_coherence_imag": 1.3877787807814457e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          0.001193028,
+          0.001193028,
+          0.001193028
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.000596572,
+          0.000596572,
+          0.000596572
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.000617491,
+          0.000617491,
+          0.000617491
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 0.7853981633974483,
+        "relative_coherence_real": 0.010712467321972681,
+        "relative_coherence_imag": -1.3877787807814457e-17,
+        "fisher_eigenvalues": [
+          -0.0,
+          3.8255e-05,
+          3.8255e-05,
+          3.8255e-05
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          7.9255e-05,
+          7.9255e-05,
+          7.9255e-05
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.001867413,
+          0.001867413,
+          0.001867413
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 0.8835729338221293,
+        "relative_coherence_real": -0.009220433593330824,
+        "relative_coherence_imag": -1.0408340855860843e-17,
+        "fisher_eigenvalues": [
+          -0.0,
+          2.834e-05,
+          2.834e-05,
+          2.834e-05
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          1.4228e-05,
+          1.4228e-05,
+          1.4228e-05
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.004868243,
+          0.004868243,
+          0.004868243
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 0.9817477042468103,
+        "relative_coherence_real": -0.010404794801554505,
+        "relative_coherence_imag": -1.0408340855860843e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          3.6089e-05,
+          3.6089e-05,
+          3.6089e-05
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.000180472,
+          0.000180472,
+          0.000180472
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.007811422,
+          0.007811422,
+          0.007811422
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 1.0799224746714913,
+        "relative_coherence_real": -0.0038042300192592145,
+        "relative_coherence_imag": -6.938893903907228e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          4.824e-06,
+          4.824e-06,
+          4.824e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          8.1841e-05,
+          8.1841e-05,
+          8.1841e-05
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.008264944,
+          0.008264944,
+          0.008264944
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 1.1780972450961724,
+        "relative_coherence_real": 0.0022918140882135334,
+        "relative_coherence_imag": 1.734723475976807e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          1.751e-06,
+          1.751e-06,
+          1.751e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.000991529,
+          0.000991529,
+          0.000991529
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.006451136,
+          0.006451136,
+          0.006451136
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 1.2762720155208536,
+        "relative_coherence_real": 0.003989580821744072,
+        "relative_coherence_imag": 1.734723475976807e-18,
+        "fisher_eigenvalues": [
+          0.0,
+          5.306e-06,
+          5.306e-06,
+          5.306e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.012358879,
+          0.012358879,
+          0.012358879
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.008897939,
+          0.008897939,
+          0.008897939
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 1.3744467859455345,
+        "relative_coherence_real": 0.0016340652414072523,
+        "relative_coherence_imag": 1.734723475976807e-18,
+        "fisher_eigenvalues": [
+          0.0,
+          8.9e-07,
+          8.9e-07,
+          8.9e-07
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.044792013,
+          0.044792013,
+          0.044792013
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.023021983,
+          0.023021983,
+          0.023021983
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 1.4726215563702154,
+        "relative_coherence_real": -0.001882562712555224,
+        "relative_coherence_imag": 1.734723475976807e-18,
+        "fisher_eigenvalues": [
+          0.0,
+          1.181e-06,
+          1.181e-06,
+          1.181e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.089025135,
+          0.089025135,
+          0.089025135
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.04464603,
+          0.04464603,
+          0.04464603
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 1.5707963267948966,
+        "relative_coherence_real": -0.003482014307803309,
+        "relative_coherence_imag": 3.851859888774472e-34,
+        "fisher_eigenvalues": [
+          -0.0,
+          4.041e-06,
+          4.041e-06,
+          4.041e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.111053519,
+          0.111053519,
+          0.111053519
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.055730441,
+          0.055730441,
+          0.055730441
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 1.6689710972195777,
+        "relative_coherence_real": -0.0018825627125551962,
+        "relative_coherence_imag": -1.734723475976807e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          1.181e-06,
+          1.181e-06,
+          1.181e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.089025135,
+          0.089025135,
+          0.089025135
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.04464603,
+          0.04464603,
+          0.04464603
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 1.7671458676442586,
+        "relative_coherence_real": 0.0016340652414072558,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          -0.0,
+          8.9e-07,
+          8.9e-07,
+          8.9e-07
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.044792013,
+          0.044792013,
+          0.044792013
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.023021983,
+          0.023021983,
+          0.023021983
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 1.8653206380689396,
+        "relative_coherence_real": 0.003989580821744089,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          0.0,
+          5.306e-06,
+          5.306e-06,
+          5.306e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.012358879,
+          0.012358879,
+          0.012358879
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.008897939,
+          0.008897939,
+          0.008897939
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 1.9634954084936207,
+        "relative_coherence_real": 0.0022918140882134987,
+        "relative_coherence_imag": 1.734723475976807e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          1.751e-06,
+          1.751e-06,
+          1.751e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.000991529,
+          0.000991529,
+          0.000991529
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.006451136,
+          0.006451136,
+          0.006451136
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.061670178918302,
+        "relative_coherence_real": -0.003804230019259204,
+        "relative_coherence_imag": -3.469446951953614e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          4.824e-06,
+          4.824e-06,
+          4.824e-06
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          8.1841e-05,
+          8.1841e-05,
+          8.1841e-05
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.008264944,
+          0.008264944,
+          0.008264944
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.1598449493429825,
+        "relative_coherence_real": -0.01040479480155447,
+        "relative_coherence_imag": 3.469446951953614e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          3.6089e-05,
+          3.6089e-05,
+          3.6089e-05
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.000180472,
+          0.000180472,
+          0.000180472
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.007811422,
+          0.007811422,
+          0.007811422
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.2580197197676637,
+        "relative_coherence_real": -0.009220433593330869,
+        "relative_coherence_imag": 6.938893903907228e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          2.834e-05,
+          2.834e-05,
+          2.834e-05
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          1.4228e-05,
+          1.4228e-05,
+          1.4228e-05
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.004868243,
+          0.004868243,
+          0.004868243
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.356194490192345,
+        "relative_coherence_real": 0.010712467321972653,
+        "relative_coherence_imag": 6.938893903907228e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          3.8255e-05,
+          3.8255e-05,
+          3.8255e-05
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          7.9255e-05,
+          7.9255e-05,
+          7.9255e-05
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.001867413,
+          0.001867413,
+          0.001867413
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.454369260617026,
+        "relative_coherence_real": 0.059771982424125354,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          0.0,
+          0.001193028,
+          0.001193028,
+          0.001193028
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.000596572,
+          0.000596572,
+          0.000596572
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.000617491,
+          0.000617491,
+          0.000617491
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.552544031041707,
+        "relative_coherence_real": 0.14390192321636386,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          0.0,
+          0.006974804,
+          0.006974804,
+          0.006974804
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 0,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.00364983,
+          0.00364983,
+          0.00364983
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 0,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.001979631,
+          0.001979631,
+          0.001979631
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.650718801466388,
+        "relative_coherence_real": 0.2614381908271336,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          -0.0,
+          0.023589479,
+          0.023589479,
+          0.023589479
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.011874168,
+          0.011874168,
+          0.011874168
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.006125724,
+          0.006125724,
+          0.006125724
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 0
+      },
+      {
+        "tau": 2.748893571891069,
+        "relative_coherence_real": 0.4017715244931207,
+        "relative_coherence_imag": -2.7755575615628914e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          0.058530819,
+          0.058530819,
+          0.058530819
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.030256063,
+          0.030256063,
+          0.030256063
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.015298998,
+          0.015298998,
+          0.015298998
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 2.84706834231575,
+        "relative_coherence_real": 0.54650313553305,
+        "relative_coherence_imag": 1.3877787807814457e-17,
+        "fisher_eigenvalues": [
+          0.0,
+          0.117031937,
+          0.117031937,
+          0.117031937
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.070872194,
+          0.070872194,
+          0.070872194
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.0365611,
+          0.0365611,
+          0.0365611
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 2.945243112740431,
+        "relative_coherence_real": 0.6729954835064518,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          0.0,
+          0.195173607,
+          0.195173607,
+          0.195173607
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.142378372,
+          0.142378372,
+          0.142378372
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.074942029,
+          0.074942029,
+          0.074942029
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 3.043417883165112,
+        "relative_coherence_real": 0.7594576910444295,
+        "relative_coherence_imag": 3.469446951953614e-18,
+        "fisher_eigenvalues": [
+          -0.0,
+          0.270173436,
+          0.270173436,
+          0.270173436
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.224111262,
+          0.224111262,
+          0.224111262
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.11899511,
+          0.11899511,
+          0.11899511
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      },
+      {
+        "tau": 3.141592653589793,
+        "relative_coherence_real": 0.7901837568265269,
+        "relative_coherence_imag": 0.0,
+        "fisher_eigenvalues": [
+          -0.0,
+          0.302600561,
+          0.302600561,
+          0.302600561
+        ],
+        "fisher_rank_at_per_shot_threshold_0p01": 3,
+        "two_harmonic_fisher_eigenvalues": [
+          0.0,
+          0.262351779,
+          0.262351779,
+          0.262351779
+        ],
+        "two_harmonic_rank_at_per_shot_threshold_0p01": 3,
+        "four_harmonic_fisher_eigenvalues": [
+          -0.0,
+          0.139573401,
+          0.139573401,
+          0.139573401
+        ],
+        "four_harmonic_rank_at_per_shot_threshold_0p01": 3
+      }
+    ]
+  },
+  "clock_sensitivity": [
+    {
+      "cutoff": 1,
+      "beta": 0.2,
+      "physical_basis_size": 19,
+      "relative_coherence_at_tau0": 0.5548629686648457,
+      "relative_coherence_at_pi_over_2": -0.09807888211210847,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.12129621411298613,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 0.003221985932651214,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.013625775529873436,
+      "conditional_fidelity_at_pi": 0.9999999999999998
+    },
+    {
+      "cutoff": 1,
+      "beta": 0.35,
+      "physical_basis_size": 19,
+      "relative_coherence_at_tau0": 0.5682773571192653,
+      "relative_coherence_at_pi_over_2": -0.09750259893353302,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.1283750499186434,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 0.003184053946181424,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.010827130099136502,
+      "conditional_fidelity_at_pi": 1.0
+    },
+    {
+      "cutoff": 1,
+      "beta": 0.8,
+      "physical_basis_size": 19,
+      "relative_coherence_at_tau0": 0.5642020219149145,
+      "relative_coherence_at_pi_over_2": -0.1237803773300287,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.12619311792912208,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 0.005146621125637246,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.006566970824821857,
+      "conditional_fidelity_at_pi": 1.0
+    },
+    {
+      "cutoff": 2,
+      "beta": 0.2,
+      "physical_basis_size": 85,
+      "relative_coherence_at_tau0": 0.7874439554084729,
+      "relative_coherence_at_pi_over_2": -0.012869232930712574,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.2995645076374338,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 5.521029062730968e-05,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.1422585389378923,
+      "conditional_fidelity_at_pi": 0.9999999999999996
+    },
+    {
+      "cutoff": 2,
+      "beta": 0.35,
+      "physical_basis_size": 85,
+      "relative_coherence_at_tau0": 0.7901837568265269,
+      "relative_coherence_at_pi_over_2": -0.003482014307803309,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.3026005613474106,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 4.0414990470055885e-06,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.1110535188307959,
+      "conditional_fidelity_at_pi": 0.9999999999999998
+    },
+    {
+      "cutoff": 2,
+      "beta": 0.8,
+      "physical_basis_size": 85,
+      "relative_coherence_at_tau0": 0.6679275753502504,
+      "relative_coherence_at_pi_over_2": -0.06105267517024332,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.19140445262326458,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 0.001244796326868871,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.02661634500837064,
+      "conditional_fidelity_at_pi": 1.0000000000000004
+    },
+    {
+      "cutoff": 3,
+      "beta": 0.2,
+      "physical_basis_size": 231,
+      "relative_coherence_at_tau0": 0.8779158790204586,
+      "relative_coherence_at_pi_over_2": -0.0011004080895005066,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.41799346213796884,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 4.0363289885852004e-07,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.29941870658931824,
+      "conditional_fidelity_at_pi": 1.0
+    },
+    {
+      "cutoff": 3,
+      "beta": 0.35,
+      "physical_basis_size": 231,
+      "relative_coherence_at_tau0": 0.835932820103286,
+      "relative_coherence_at_pi_over_2": -0.0014800504133842835,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.3580156344686272,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 7.301838751381809e-07,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.178135685070663,
+      "conditional_fidelity_at_pi": 1.0
+    },
+    {
+      "cutoff": 3,
+      "beta": 0.8,
+      "physical_basis_size": 231,
+      "relative_coherence_at_tau0": 0.6697797219254281,
+      "relative_coherence_at_pi_over_2": -0.06130331867648372,
+      "fisher_nonzero_eigenvalue_at_tau0": 0.19277482094854198,
+      "fisher_nonzero_eigenvalue_at_pi_over_2": 0.00125505727366283,
+      "two_harmonic_eigenvalue_at_pi_over_2": 0.028358782970825582,
+      "conditional_fidelity_at_pi": 0.9999999999999998
+    }
+  ],
+  "spectral_count": {
+    "energy_thresholds": [
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50
+    ],
+    "unrestricted_counts": [
+      569,
+      761,
+      1065,
+      1281,
+      1737,
+      2041,
+      2585,
+      2873,
+      3457,
+      3969,
+      4785,
+      5065,
+      5881,
+      6577,
+      7361,
+      7953,
+      9057,
+      9697,
+      10897,
+      11377,
+      12577
+    ],
+    "diagonal_gauge_counts": [
+      79,
+      87,
+      135,
+      141,
+      177,
+      201,
+      225,
+      249,
+      321,
+      321,
+      369,
+      381,
+      429,
+      459,
+      531,
+      555,
+      603,
+      627,
+      675,
+      683,
+      767
+    ],
+    "finite_range_log_count_slope_unrestricted": 1.9472920177210735,
+    "finite_range_log_count_slope_gauge": 1.4354253393579728,
+    "expected_asymptotic_slopes_for_T4_and_T3": [
+      2.0,
+      1.5
+    ],
+    "warning": "Finite-range fit of free-laplacian mode counts; not a measured cosmological spectral dimension."
+  }
+}

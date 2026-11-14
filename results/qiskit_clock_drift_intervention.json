@@ -1,0 +1,2402 @@
+{
+  "question": "Can midpoint science phase be distinguished from untracked intra-block curvature?",
+  "physical_limit": "Energy-matched clock, P=0 state and known-phase anchor are prepared by construction.",
+  "parameters": {
+    "alpha_true": 0.3,
+    "beta_0": -0.15,
+    "beta_1": 0.5,
+    "curvature_true": 0.22,
+    "segment_phases": {
+      "science_mid": 0.62,
+      "anchor_start": -0.15,
+      "anchor_end": 0.35,
+      "anchor_mid": 0.32,
+      "P_zero_science_curved": 0.62,
+      "P_zero_science_affine": 0.4
+    },
+    "shots_per_circuit": 4096,
+    "workers": 6,
+    "seed": 20261007
+  },
+  "exact": {
+    "unrestricted": [
+      {
+        "tau_over_pi": 0.0,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              0.08185169890475028,
+              0.08185169890475037,
+              0.08185169890475037,
+              0.19237054403672277
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.19237054403672282
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 0.19237054403672282,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -9.020562075079397e-17,
+              0.08185169890475033,
+              0.08185169890475036,
+              0.0818516989047504
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -1.0061396160665481e-16
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -1.0061396160665481e-16,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              0.08185169890475033,
+              0.08185169890475039,
+              0.08185169890475039,
+              0.13415410950613196
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.134154109506132
+          },
+          "joint_rank_tol_1e_minus_8": 7,
+          "common_direction_information": 0.134154109506132,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 0.25,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              0.026333919582024173,
+              0.026333919582024183,
+              0.026333919582024207,
+              0.07444458473323884
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.07444458473323884
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 0.07444458473323884,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              8.565197162635197e-18,
+              0.026333919582024173,
+              0.026333919582024183,
+              0.0263339195820242
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": 7.37257477290143e-18
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 7.37257477290143e-18,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              0.02633391958202417,
+              0.026333919582024183,
+              0.026333919582024204,
+              0.054352714728356545
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.054352714728356524
+          },
+          "joint_rank_tol_1e_minus_8": 7,
+          "common_direction_information": 0.054352714728356524,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 0.5,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              0.004868656910320469,
+              0.004868656910320472,
+              0.004868656910320473,
+              0.0122965981276918
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.012296598127691797
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 0.012296598127691797,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -4.987329993433405e-18,
+              0.004868656910320467,
+              0.004868656910320471,
+              0.0048686569103204725
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.553649124439119e-18
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -4.553649124439119e-18,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              0.00486865691032047,
+              0.004868656910320471,
+              0.0048686569103204725,
+              0.009222400168632877
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.009222400168632879
+          },
+          "joint_rank_tol_1e_minus_8": 7,
+          "common_direction_information": 0.009222400168632879,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 0.75,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              0.027223964143518704,
+              0.02722396414351871,
+              0.027223964143518728,
+              0.06941441757715894
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.06941441757715892
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 0.06941441757715892,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -7.806255641895632e-18,
+              0.027223964143518707,
+              0.027223964143518707,
+              0.02722396414351871
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -1.0842021724855044e-17
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -1.0842021724855044e-17,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              0.027223964143518697,
+              0.027223964143518707,
+              0.02722396414351871,
+              0.053470752306137015
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.05347075230613703
+          },
+          "joint_rank_tol_1e_minus_8": 7,
+          "common_direction_information": 0.05347075230613703,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 1.0,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              0.10007888114728775,
+              0.10007888114728775,
+              0.1000788811472878,
+              0.1583389356443448
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.15833893564434487
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 0.15833893564434487,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -5.030698080332823e-17,
+              0.10007888114728772,
+              0.1000788811472878,
+              0.1000788811472878
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -6.418476861114186e-17
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -6.418476861114186e-17,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              0.10007888114728772,
+              0.10007888114728777,
+              0.10007888114728779,
+              0.12798497890863392
+            ],
+            "rank_tol_1e_minus_8": 4,
+            "rank_at_1pct_of_max": 4,
+            "common_direction_information": 0.12798497890863392
+          },
+          "joint_rank_tol_1e_minus_8": 7,
+          "common_direction_information": 0.12798497890863392,
+          "nuisance_parameters": 3
+        }
+      }
+    ],
+    "P_zero": [
+      {
+        "tau_over_pi": 0.0,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -5.273559366969494e-16,
+              0.8663729622824494,
+              0.8663729622824496,
+              0.8663729622824501
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.579669976578771e-16
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -4.579669976578771e-16,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -5.273559366969494e-16,
+              0.8663729622824494,
+              0.8663729622824496,
+              0.8663729622824501
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.579669976578771e-16
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -4.579669976578771e-16,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              -5.273559366969494e-16,
+              0.8663729622824494,
+              0.8663729622824496,
+              0.8663729622824501
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.579669976578771e-16
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -4.579669976578771e-16,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 0.25,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -1.0408340855860843e-17,
+              0.17897143100774868,
+              0.1789714310077487,
+              0.1789714310077488
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": 8.673617379884035e-18
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": 8.673617379884035e-18,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -1.0408340855860843e-17,
+              0.17897143100774868,
+              0.1789714310077487,
+              0.1789714310077488
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": 8.673617379884035e-18
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": 8.673617379884035e-18,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              -1.0408340855860843e-17,
+              0.17897143100774868,
+              0.1789714310077487,
+              0.1789714310077488
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": 8.673617379884035e-18
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": 8.673617379884035e-18,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 0.5,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -6.071532165918825e-18,
+              0.0331635522939786,
+              0.0331635522939786,
+              0.03316355229397862
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -1.2576745200831851e-17
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -1.2576745200831851e-17,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -6.071532165918825e-18,
+              0.0331635522939786,
+              0.0331635522939786,
+              0.03316355229397862
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -1.2576745200831851e-17
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -1.2576745200831851e-17,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              -6.071532165918825e-18,
+              0.0331635522939786,
+              0.0331635522939786,
+              0.03316355229397862
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -1.2576745200831851e-17
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -1.2576745200831851e-17,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 0.75,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              6.938893903907228e-18,
+              0.1789714310077486,
+              0.17897143100774862,
+              0.17897143100774868
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -2.6020852139652106e-17
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -2.6020852139652106e-17,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              6.938893903907228e-18,
+              0.1789714310077486,
+              0.17897143100774862,
+              0.17897143100774868
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -2.6020852139652106e-17
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -2.6020852139652106e-17,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              6.938893903907228e-18,
+              0.1789714310077486,
+              0.17897143100774862,
+              0.17897143100774868
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -2.6020852139652106e-17
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -2.6020852139652106e-17,
+          "nuisance_parameters": 3
+        }
+      },
+      {
+        "tau_over_pi": 1.0,
+        "affine_assumption_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -4.440892098500626e-16,
+              0.8663729622824494,
+              0.8663729622824494,
+              0.8663729622824495
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.371503159461554e-16
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -4.371503159461554e-16,
+          "nuisance_parameters": 2
+        },
+        "curvature_allowed_endpoint_anchors": {
+          "profiled": {
+            "eigenvalues": [
+              -4.440892098500626e-16,
+              0.8663729622824494,
+              0.8663729622824494,
+              0.8663729622824495
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.371503159461554e-16
+          },
+          "joint_rank_tol_1e_minus_8": 5,
+          "common_direction_information": -4.371503159461554e-16,
+          "nuisance_parameters": 3
+        },
+        "curvature_allowed_midpoint_anchor": {
+          "profiled": {
+            "eigenvalues": [
+              -4.440892098500626e-16,
+              0.8663729622824494,
+              0.8663729622824494,
+              0.8663729622824495
+            ],
+            "rank_tol_1e_minus_8": 3,
+            "rank_at_1pct_of_max": 3,
+            "common_direction_information": -4.371503159461554e-16
+          },
+          "joint_rank_tol_1e_minus_8": 6,
+          "common_direction_information": -4.371503159461554e-16,
+          "nuisance_parameters": 3
+        }
+      }
+    ]
+  },
+  "shots": {
+    "shots_per_circuit": 4096,
+    "full_metadata": {
+      "circuits": 288,
+      "transpiled_depth": 4570,
+      "transpiled_size": 4614,
+      "mean_absolute_joint_probability_error": 0.0008434045867889602,
+      "overall_clock_postselection_rate": 0.19993506537543404
+    },
+    "P_zero_metadata": {
+      "circuits": 144,
+      "transpiled_depth": 4562,
+      "transpiled_size": 4607,
+      "mean_absolute_joint_probability_error": 0.0029207792153868295,
+      "overall_clock_postselection_rate": 0.2003326416015625
+    },
+    "full_segment_map": {
+      "0": "science_mid",
+      "1": "anchor_start",
+      "2": "anchor_end",
+      "3": "anchor_mid"
+    },
+    "full_clock_success_counts": [
+      [
+        [
+          [
+            [
+              806,
+              859,
+              873,
+              789,
+              830,
+              824,
+              814,
+              837,
+              829
+            ],
+            [
+              826,
+              844,
+              780,
+              819,
+              785,
+              804,
+              855,
+              803,
+              783
+            ],
+            [
+              768,
+              840,
+              804,
+              806,
+              839,
+              799,
+              875,
+              806,
+              807
+            ],
+            [
+              785,
+              814,
+              836,
+              835,
+              805,
+              837,
+              825,
+              822,
+              817
+            ]
+          ],
+          [
+            [
+              826,
+              834,
+              829,
+              851,
+              809,
+              838,
+              805,
+              824,
+              789
+            ],
+            [
+              797,
+              824,
+              804,
+              849,
+              820,
+              771,
+              837,
+              753,
+              809
+            ],
+            [
+              872,
+              810,
+              770,
+              817,
+              813,
+              802,
+              851,
+              818,
+              810
+            ],
+            [
+              752,
+              833,
+              779,
+              794,
+              841,
+              837,
+              848,
+              809,
+              821
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              820,
+              836,
+              790,
+              806,
+              814,
+              841,
+              848,
+              785,
+              779
+            ],
+            [
+              832,
+              827,
+              822,
+              807,
+              791,
+              840,
+              843,
+              774,
+              818
+            ],
+            [
+              794,
+              807,
+              767,
+              818,
+              838,
+              797,
+              828,
+              812,
+              857
+            ],
+            [
+              770,
+              804,
+              777,
+              795,
+              835,
+              796,
+              836,
+              820,
+              818
+            ]
+          ],
+          [
+            [
+              790,
+              812,
+              847,
+              820,
+              775,
+              811,
+              843,
+              803,
+              844
+            ],
+            [
+              820,
+              809,
+              760,
+              805,
+              865,
+              808,
+              830,
+              845,
+              835
+            ],
+            [
+              806,
+              782,
+              825,
+              804,
+              767,
+              845,
+              818,
+              815,
+              823
+            ],
+            [
+              838,
+              834,
+              816,
+              856,
+              806,
+              818,
+              770,
+              797,
+              823
+            ]
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            [
+              847,
+              822,
+              800,
+              838,
+              822,
+              850,
+              797,
+              796,
+              831
+            ],
+            [
+              829,
+              807,
+              862,
+              813,
+              794,
+              823,
+              870,
+              822,
+              810
+            ],
+            [
+              804,
+              832,
+              819,
+              812,
+              809,
+              832,
+              851,
+              789,
+              859
+            ],
+            [
+              767,
+              833,
+              776,
+              799,
+              828,
+              783,
+              819,
+              789,
+              818
+            ]
+          ],
+          [
+            [
+              809,
+              805,
+              838,
+              820,
+              796,
+              756,
+              819,
+              800,
+              759
+            ],
+            [
+              855,
+              818,
+              788,
+              819,
+              814,
+              795,
+              811,
+              812,
+              823
+            ],
+            [
+              846,
+              814,
+              782,
+              810,
+              812,
+              807,
+              828,
+              805,
+              812
+            ],
+            [
+              826,
+              835,
+              819,
+              776,
+              843,
+              862,
+              795,
+              857,
+              832
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              850,
+              787,
+              809,
+              849,
+              817,
+              831,
+              831,
+              816,
+              844
+            ],
+            [
+              851,
+              834,
+              808,
+              849,
+              850,
+              823,
+              817,
+              865,
+              879
+            ],
+            [
+              833,
+              844,
+              821,
+              838,
+              787,
+              781,
+              839,
+              803,
+              866
+            ],
+            [
+              799,
+              799,
+              791,
+              852,
+              860,
+              867,
+              835,
+              894,
+              791
+            ]
+          ],
+          [
+            [
+              801,
+              865,
+              821,
+              824,
+              830,
+              841,
+              823,
+              801,
+              862
+            ],
+            [
+              853,
+              839,
+              830,
+              774,
+              852,
+              827,
+              824,
+              829,
+              802
+            ],
+            [
+              755,
+              819,
+              836,
+              825,
+              840,
+              883,
+              840,
+              824,
+              811
+            ],
+            [
+              819,
+              814,
+              815,
+              848,
+              841,
+              795,
+              831,
+              846,
+              820
+            ]
+          ]
+        ]
+      ]
+    ],
+    "full_joint_zero_counts": [
+      [
+        [
+          [
+            [
+              411,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              38,
+              523
+            ],
+            [
+              390,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              40,
+              501
+            ],
+            [
+              383,
+              25,
+              0,
+              0,
+              0,
+              0,
+              0,
+              46,
+              515
+            ],
+            [
+              405,
+              20,
+              0,
+              0,
+              0,
+              0,
+              0,
+              50,
+              478
+            ]
+          ],
+          [
+            [
+              472,
+              466,
+              39,
+              0,
+              0,
+              0,
+              0,
+              0,
+              27
+            ],
+            [
+              433,
+              441,
+              39,
+              0,
+              0,
+              0,
+              0,
+              0,
+              28
+            ],
+            [
+              496,
+              442,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0,
+              25
+            ],
+            [
+              413,
+              468,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0,
+              29
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              580,
+              109,
+              1,
+              0,
+              0,
+              0,
+              0,
+              5,
+              246
+            ],
+            [
+              612,
+              87,
+              1,
+              0,
+              0,
+              0,
+              0,
+              5,
+              294
+            ],
+            [
+              572,
+              101,
+              1,
+              0,
+              0,
+              0,
+              0,
+              3,
+              283
+            ],
+            [
+              560,
+              104,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              291
+            ]
+          ],
+          [
+            [
+              587,
+              117,
+              1,
+              0,
+              0,
+              0,
+              0,
+              7,
+              275
+            ],
+            [
+              588,
+              106,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              283
+            ],
+            [
+              595,
+              107,
+              1,
+              0,
+              0,
+              0,
+              0,
+              6,
+              262
+            ],
+            [
+              616,
+              120,
+              1,
+              0,
+              0,
+              0,
+              0,
+              6,
+              247
+            ]
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            [
+              32,
+              4,
+              0,
+              20,
+              47,
+              5,
+              2,
+              5,
+              37
+            ],
+            [
+              21,
+              2,
+              6,
+              16,
+              39,
+              12,
+              3,
+              0,
+              35
+            ],
+            [
+              26,
+              1,
+              0,
+              13,
+              40,
+              10,
+              3,
+              7,
+              22
+            ],
+            [
+              25,
+              3,
+              3,
+              14,
+              35,
+              9,
+              2,
+              4,
+              38
+            ]
+          ],
+          [
+            [
+              34,
+              34,
+              1,
+              1,
+              10,
+              52,
+              15,
+              0,
+              8
+            ],
+            [
+              35,
+              24,
+              4,
+              0,
+              11,
+              37,
+              10,
+              1,
+              4
+            ],
+            [
+              34,
+              32,
+              1,
+              0,
+              7,
+              31,
+              19,
+              1,
+              8
+            ],
+            [
+              40,
+              32,
+              1,
+              2,
+              15,
+              41,
+              14,
+              2,
+              4
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              45,
+              5,
+              3,
+              10,
+              44,
+              23,
+              1,
+              1,
+              30
+            ],
+            [
+              45,
+              10,
+              0,
+              7,
+              30,
+              24,
+              1,
+              2,
+              20
+            ],
+            [
+              37,
+              8,
+              1,
+              8,
+              26,
+              26,
+              2,
+              3,
+              26
+            ],
+            [
+              40,
+              7,
+              1,
+              7,
+              37,
+              14,
+              2,
+              3,
+              24
+            ]
+          ],
+          [
+            [
+              37,
+              11,
+              2,
+              2,
+              31,
+              23,
+              4,
+              2,
+              19
+            ],
+            [
+              40,
+              10,
+              1,
+              7,
+              35,
+              23,
+              0,
+              3,
+              17
+            ],
+            [
+              34,
+              9,
+              2,
+              4,
+              35,
+              22,
+              5,
+              5,
+              19
+            ],
+            [
+              31,
+              9,
+              1,
+              9,
+              36,
+              17,
+              1,
+              5,
+              17
+            ]
+          ]
+        ]
+      ]
+    ],
+    "P_zero_clock_success_counts": [
+      [
+        [
+          [
+            [
+              807,
+              794,
+              798,
+              824,
+              842,
+              817,
+              807,
+              835,
+              823
+            ],
+            [
+              794,
+              816,
+              831,
+              785,
+              826,
+              794,
+              817,
+              822,
+              819
+            ],
+            [
+              842,
+              745,
+              815,
+              787,
+              785,
+              824,
+              849,
+              808,
+              832
+            ],
+            [
+              820,
+              791,
+              813,
+              804,
+              873,
+              821,
+              829,
+              809,
+              769
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              780,
+              814,
+              862,
+              827,
+              866,
+              812,
+              809,
+              802,
+              806
+            ],
+            [
+              827,
+              804,
+              784,
+              832,
+              812,
+              807,
+              802,
+              802,
+              840
+            ],
+            [
+              831,
+              863,
+              824,
+              802,
+              830,
+              812,
+              812,
+              813,
+              820
+            ],
+            [
+              791,
+              800,
+              857,
+              826,
+              841,
+              836,
+              776,
+              820,
+              773
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            [
+              818,
+              836,
+              787,
+              824,
+              903,
+              842,
+              812,
+              795,
+              808
+            ],
+            [
+              827,
+              813,
+              793,
+              830,
+              853,
+              882,
+              841,
+              831,
+              797
+            ],
+            [
+              807,
+              815,
+              836,
+              836,
+              819,
+              851,
+              799,
+              793,
+              828
+            ],
+            [
+              829,
+              803,
+              812,
+              804,
+              811,
+              831,
+              845,
+              845,
+              825
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              848,
+              832,
+              836,
+              832,
+              804,
+              774,
+              857,
+              849,
+              820
+            ],
+            [
+              855,
+              838,
+              841,
+              840,
+              821,
+              850,
+              849,
+              790,
+              827
+            ],
+            [
+              825,
+              861,
+              829,
+              819,
+              842,
+              858,
+              810,
+              808,
+              768
+            ],
+            [
+              818,
+              849,
+              834,
+              806,
+              809,
+              852,
+              811,
+              825,
+              811
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ]
+      ]
+    ],
+    "P_zero_joint_zero_counts": [
+      [
+        [
+          [
+            [
+              570,
+              539,
+              582,
+              589,
+              604,
+              581,
+              563,
+              603,
+              574
+            ],
+            [
+              564,
+              583,
+              593,
+              549,
+              585,
+              554,
+              595,
+              565,
+              577
+            ],
+            [
+              611,
+              518,
+              555,
+              535,
+              552,
+              580,
+              602,
+              579,
+              595
+            ],
+            [
+              556,
+              566,
+              560,
+              588,
+              612,
+              573,
+              618,
+              586,
+              546
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              562,
+              574,
+              607,
+              594,
+              581,
+              578,
+              567,
+              554,
+              605
+            ],
+            [
+              577,
+              576,
+              559,
+              598,
+              565,
+              564,
+              579,
+              563,
+              581
+            ],
+            [
+              572,
+              614,
+              585,
+              565,
+              583,
+              569,
+              569,
+              581,
+              600
+            ],
+            [
+              568,
+              573,
+              593,
+              553,
+              590,
+              566,
+              546,
+              566,
+              546
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            [
+              92,
+              100,
+              84,
+              95,
+              112,
+              105,
+              108,
+              96,
+              100
+            ],
+            [
+              96,
+              118,
+              89,
+              119,
+              100,
+              101,
+              125,
+              111,
+              95
+            ],
+            [
+              97,
+              101,
+              102,
+              95,
+              114,
+              94,
+              99,
+              101,
+              104
+            ],
+            [
+              117,
+              105,
+              109,
+              122,
+              109,
+              100,
+              96,
+              113,
+              127
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              119,
+              102,
+              115,
+              94,
+              104,
+              103,
+              111,
+              103,
+              105
+            ],
+            [
+              116,
+              105,
+              113,
+              98,
+              113,
+              85,
+              103,
+              110,
+              87
+            ],
+            [
+              96,
+              116,
+              103,
+              121,
+              110,
+              116,
+              99,
+              99,
+              94
+            ],
+            [
+              109,
+              113,
+              114,
+              98,
+              104,
+              104,
+              91,
+              108,
+              96
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ]
+      ]
+    ],
+    "tau_results": [
+      {
+        "tau_over_pi": 0.0,
+        "segment_fits": {
+          "science_mid": {
+            "estimate_radians": 0.617,
+            "fisher_standard_error_radians": 0.0053890371097489835,
+            "profile_likelihood_95pct_interval_radians": [
+              0.607,
+              0.6275
+            ],
+            "accepted_clock_counts_by_phase": [
+              3185,
+              3357,
+              3293,
+              3249,
+              3259,
+              3264,
+              3369,
+              3268,
+              3236
+            ],
+            "joint_zero_counts_by_phase": [
+              1589,
+              94,
+              0,
+              0,
+              0,
+              0,
+              0,
+              174,
+              2017
+            ]
+          },
+          "anchor_start": {
+            "estimate_radians": -0.14400000000000002,
+            "fisher_standard_error_radians": 0.0053311803228612235,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.15450000000000008,
+              -0.134
+            ],
+            "accepted_clock_counts_by_phase": [
+              3247,
+              3301,
+              3182,
+              3311,
+              3283,
+              3248,
+              3341,
+              3204,
+              3229
+            ],
+            "joint_zero_counts_by_phase": [
+              1814,
+              1817,
+              139,
+              0,
+              0,
+              0,
+              0,
+              0,
+              109
+            ]
+          },
+          "anchor_end": {
+            "estimate_radians": 0.3420000000000001,
+            "fisher_standard_error_radians": 0.005801617357268107,
+            "profile_likelihood_95pct_interval_radians": [
+              0.3305,
+              0.353
+            ],
+            "accepted_clock_counts_by_phase": [
+              3216,
+              3274,
+              3156,
+              3226,
+              3278,
+              3274,
+              3355,
+              3191,
+              3272
+            ],
+            "joint_zero_counts_by_phase": [
+              2324,
+              401,
+              3,
+              0,
+              0,
+              0,
+              0,
+              21,
+              1114
+            ]
+          },
+          "anchor_mid": {
+            "estimate_radians": 0.3194999999999999,
+            "fisher_standard_error_radians": 0.00586681664871448,
+            "profile_likelihood_95pct_interval_radians": [
+              0.3085,
+              0.33099999999999996
+            ],
+            "accepted_clock_counts_by_phase": [
+              3254,
+              3237,
+              3248,
+              3285,
+              3213,
+              3282,
+              3261,
+              3260,
+              3325
+            ],
+            "joint_zero_counts_by_phase": [
+              2386,
+              450,
+              4,
+              0,
+              0,
+              0,
+              0,
+              21,
+              1067
+            ]
+          }
+        },
+        "endpoint_affine_alpha_estimate": {
+          "estimate_radians": 0.518,
+          "fisher_standard_error_radians": 0.00667546124765967,
+          "approximate_95pct_interval_radians": [
+            0.5049160959545871,
+            0.531083904045413
+          ]
+        },
+        "midpoint_corrected_alpha_estimate": {
+          "estimate_radians": 0.2975000000000001,
+          "fisher_standard_error_radians": 0.007966257500224625,
+          "approximate_95pct_interval_radians": [
+            0.28188613529955986,
+            0.31311386470044034
+          ]
+        },
+        "measured_curvature": {
+          "estimate_radians": 0.22049999999999986,
+          "fisher_standard_error_radians": 0.00706679556010981,
+          "approximate_95pct_interval_radians": [
+            0.20664908070218463,
+            0.2343509192978151
+          ],
+          "gaussian_two_sided_pvalue_vs_zero": 9.927964887949625e-214
+        },
+        "P_zero_curved_vs_affine_labeled": {
+          "g_statistic": 34.20912597802433,
+          "permutation_pvalue": 0.5567216391804098,
+          "null_95pct_statistic": 50.77584807137207,
+          "permutations": 2000
+        }
+      },
+      {
+        "tau_over_pi": 0.5,
+        "segment_fits": {
+          "science_mid": {
+            "estimate_radians": 0.605,
+            "fisher_standard_error_radians": 0.021466718153835725,
+            "profile_likelihood_95pct_interval_radians": [
+              0.562,
+              0.6479999999999999
+            ],
+            "accepted_clock_counts_by_phase": [
+              3247,
+              3294,
+              3257,
+              3262,
+              3253,
+              3288,
+              3337,
+              3196,
+              3318
+            ],
+            "joint_zero_counts_by_phase": [
+              104,
+              10,
+              9,
+              63,
+              161,
+              36,
+              10,
+              16,
+              132
+            ]
+          },
+          "anchor_start": {
+            "estimate_radians": -0.15400000000000003,
+            "fisher_standard_error_radians": 0.02146237126807026,
+            "profile_likelihood_95pct_interval_radians": [
+              -0.1945,
+              -0.11350000000000005
+            ],
+            "accepted_clock_counts_by_phase": [
+              3336,
+              3272,
+              3227,
+              3225,
+              3265,
+              3220,
+              3253,
+              3274,
+              3226
+            ],
+            "joint_zero_counts_by_phase": [
+              143,
+              122,
+              7,
+              3,
+              43,
+              161,
+              58,
+              4,
+              24
+            ]
+          },
+          "anchor_end": {
+            "estimate_radians": 0.357,
+            "fisher_standard_error_radians": 0.021266415737913,
+            "profile_likelihood_95pct_interval_radians": [
+              0.3154999999999999,
+              0.3979999999999999
+            ],
+            "accepted_clock_counts_by_phase": [
+              3333,
+              3264,
+              3229,
+              3388,
+              3314,
+              3302,
+              3322,
+              3378,
+              3380
+            ],
+            "joint_zero_counts_by_phase": [
+              167,
+              30,
+              5,
+              32,
+              137,
+              87,
+              6,
+              9,
+              100
+            ]
+          },
+          "anchor_mid": {
+            "estimate_radians": 0.30899999999999994,
+            "fisher_standard_error_radians": 0.021297167268262213,
+            "profile_likelihood_95pct_interval_radians": [
+              0.2649999999999999,
+              0.35250000000000004
+            ],
+            "accepted_clock_counts_by_phase": [
+              3228,
+              3337,
+              3302,
+              3271,
+              3363,
+              3346,
+              3318,
+              3300,
+              3295
+            ],
+            "joint_zero_counts_by_phase": [
+              142,
+              39,
+              6,
+              22,
+              137,
+              85,
+              10,
+              15,
+              72
+            ]
+          }
+        },
+        "endpoint_affine_alpha_estimate": {
+          "estimate_radians": 0.5035000000000001,
+          "fisher_standard_error_radians": 0.02624963700687651,
+          "approximate_95pct_interval_radians": [
+            0.4520507114665221,
+            0.554949288533478
+          ]
+        },
+        "midpoint_corrected_alpha_estimate": {
+          "estimate_radians": 0.29600000000000004,
+          "fisher_standard_error_radians": 0.03023887104289047,
+          "approximate_95pct_interval_radians": [
+            0.23673181275593472,
+            0.35526818724406534
+          ]
+        },
+        "measured_curvature": {
+          "estimate_radians": 0.20749999999999996,
+          "fisher_standard_error_radians": 0.026111162140910155,
+          "approximate_95pct_interval_radians": [
+            0.15632212220381606,
+            0.25867787779618384
+          ],
+          "gaussian_two_sided_pvalue_vs_zero": 1.9140187280471876e-15
+        },
+        "P_zero_curved_vs_affine_labeled": {
+          "g_statistic": 37.392622697518604,
+          "permutation_pvalue": 0.41579210394802596,
+          "null_95pct_statistic": 51.19130470694094,
+          "permutations": 2000
+        }
+      }
+    ]
+  }
+}

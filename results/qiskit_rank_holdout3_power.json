@@ -1,0 +1,197 @@
+{
+  "caveat": "Power pilot based only on exact protocol-2 model; no Aer shots observed.",
+  "rows": [
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "label_distribution": "uniform",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 1.3877787807814457e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 1.2585361852632765e-28
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "label_distribution": "uniform",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 8.326672684688674e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 6.10390049852689e-27
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "label_distribution": "uniform",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 4.163336342344337e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 1.1956093760001125e-27
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "label_distribution": "skewed",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 0.0025720964504643007,
+      "approx_noncentrality_at_8192_shots_per_label": 5.213929550899637
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "label_distribution": "skewed",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 0.0029000443306173296,
+      "approx_noncentrality_at_8192_shots_per_label": 6.6282660480507625
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "label_distribution": "skewed",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 0.001686689958265708,
+      "approx_noncentrality_at_8192_shots_per_label": 2.242132001874517
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "label_distribution": "uniform",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 2.0816681711721685e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 2.640954557091549e-28
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "label_distribution": "uniform",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 4.85722573273506e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 2.1919922823859855e-27
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "label_distribution": "uniform",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 1.3877787807814457e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 1.0563818228366197e-28
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "label_distribution": "skewed",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 0.0006075741420196873,
+      "approx_noncentrality_at_8192_shots_per_label": 0.7909273263042246
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "label_distribution": "skewed",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 0.0004967491069032756,
+      "approx_noncentrality_at_8192_shots_per_label": 0.5287035249580966
+    },
+    {
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "label_distribution": "skewed",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 0.0014107061963731932,
+      "approx_noncentrality_at_8192_shots_per_label": 4.263940775379907
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "label_distribution": "uniform",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 5.551115123125783e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 1.0913206904824803e-27
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "label_distribution": "uniform",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 5.551115123125783e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 3.6377356349416007e-28
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "label_distribution": "uniform",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 0.0,
+      "approx_noncentrality_at_8192_shots_per_label": 0.0
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "label_distribution": "skewed",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 5.551115123125783e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 1.09132069048248e-27
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "label_distribution": "skewed",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 5.551115123125783e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 3.6377356349416003e-28
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "label_distribution": "skewed",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 0.0,
+      "approx_noncentrality_at_8192_shots_per_label": 0.0
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "label_distribution": "uniform",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 1.3877787807814457e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 2.066504824934256e-28
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "label_distribution": "uniform",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 4.163336342344337e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 1.8598543424408305e-27
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "label_distribution": "uniform",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 0.0,
+      "approx_noncentrality_at_8192_shots_per_label": 0.0
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "label_distribution": "skewed",
+      "common_shift": 0.23,
+      "max_erased_probability_difference": 0.0,
+      "approx_noncentrality_at_8192_shots_per_label": 0.0
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "label_distribution": "skewed",
+      "common_shift": 0.6,
+      "max_erased_probability_difference": 2.7755575615628914e-17,
+      "approx_noncentrality_at_8192_shots_per_label": 8.266019299737025e-28
+    },
+    {
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "label_distribution": "skewed",
+      "common_shift": 1.0,
+      "max_erased_probability_difference": 0.0,
+      "approx_noncentrality_at_8192_shots_per_label": 0.0
+    }
+  ]
+}

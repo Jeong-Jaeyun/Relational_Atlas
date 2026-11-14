@@ -1,0 +1,77 @@
+{
+  "cases": [
+    {
+      "n": 3,
+      "beta": 0.45,
+      "physical_P_zero": false,
+      "spectrum": "nonlinear",
+      "detector": "mismatched",
+      "tau_over_pi": 0.5,
+      "phase_label_index": 1,
+      "analytic_probability": 0.007513095105509256,
+      "statevector_probability": 0.007513095105509494,
+      "statevector_absolute_error": 2.38524477946811e-16,
+      "aer_density_matrix_probability": 0.0075130951055092455,
+      "aer_density_matrix_absolute_error": 1.0408340855860843e-17,
+      "maximum_transpiled_depth": 329
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "physical_P_zero": false,
+      "spectrum": "charge_coupled",
+      "detector": "mixed",
+      "tau_over_pi": 0.5,
+      "phase_label_index": 2,
+      "analytic_probability": 0.04517900574212067,
+      "statevector_probability": 0.045179005742121775,
+      "statevector_absolute_error": 1.1032841307212493e-15,
+      "aer_density_matrix_probability": 0.04517900574212093,
+      "aer_density_matrix_absolute_error": 2.5673907444456745e-16,
+      "maximum_transpiled_depth": 337
+    },
+    {
+      "n": 3,
+      "beta": 0.45,
+      "physical_P_zero": true,
+      "spectrum": "nonlinear",
+      "detector": "mixed",
+      "tau_over_pi": 0.0,
+      "phase_label_index": 3,
+      "analytic_probability": 0.4262348190621897,
+      "statevector_probability": 0.42623481906219,
+      "statevector_absolute_error": 3.3306690738754696e-16,
+      "aer_density_matrix_probability": 0.42623481906219274,
+      "aer_density_matrix_absolute_error": 3.0531133177191805e-15,
+      "maximum_transpiled_depth": 282
+    },
+    {
+      "n": 3,
+      "beta": 1.2,
+      "physical_P_zero": false,
+      "spectrum": "nonlinear",
+      "detector": "twirled",
+      "tau_over_pi": 0.5,
+      "phase_label_index": 2,
+      "analytic_probability": 0.08430514199852944,
+      "statevector_probability": 0.08430514199853187,
+      "statevector_absolute_error": 2.42861286636753e-15
+    }
+  ],
+  "skewed_pooling": {
+    "label_weights": [
+      0.19285714285714287,
+      0.17403163295007953,
+      0.13173109615932715,
+      0.0978086994620219,
+      0.0978086994620219,
+      0.13173109615932713,
+      0.17403163295007953
+    ],
+    "analytic_erased_probability": 0.049002774369414616,
+    "circuit_erased_probability": 0.04900277436941599,
+    "maximum_label_probability_error": 4.718447854656915e-15
+  },
+  "maximum_statevector_absolute_error": 2.42861286636753e-15,
+  "maximum_aer_density_matrix_absolute_error": 3.0531133177191805e-15
+}

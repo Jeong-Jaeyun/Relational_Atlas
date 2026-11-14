@@ -1,0 +1,71 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref,microtype}
+\setlength{\parskip}{0.3em}
+\setlength{\parindent}{0pt}
+\title{I01 Research Note: Endpoint and Intermediate Charge Paths}
+\author{Cutoff-two and invalid-code phase interventions, stages 24--25}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\section*{Result}
+The cutoff-one support rule extends to a specified cutoff-two one-hot circuit, including the first opening of the other-axis/same-sign transfer class at $n=3$. But a second intervention exposes a sharper boundary: the endpoint path count is unchanged when the phase action on temporary invalid codewords is changed, while the same-bit return probability changes. Different-axis returns are protected because every contributing two-flip path passes through a valid intermediate codeword. Thus the experimentally relevant object has \emph{two layers}: endpoint connectivity selects which transfer amplitudes can exist; the intermediate phase law controls the magnitude of some allowed amplitudes. Neither layer selects three physical spatial dimensions.
+
+\section*{Finite-support proposition}
+Let $S$ be the support of prepared and return states, and $V\supseteq S$ the set of physical codewords in a larger computational basis. For involutive basis permutations $X_a,X_b$, suppose $S\cap X_aS=S\cap X_bS=\varnothing$. For diagonal $U$, define
+\[
+\Gamma_{ab}=\{x\in S:X_bX_ax\in S\},\qquad
+\Gamma_{ab}^{\mathrm{inv}}=\{x\in\Gamma_{ab}:X_ax\notin V\}.
+\]
+Expanding the two pulses $R_a(\epsilon)=\cos(\epsilon/2)I-i\sin(\epsilon/2)X_a$ and $R_b(-\epsilon)=\cos(\epsilon/2)I+i\sin(\epsilon/2)X_b$, the odd terms vanish by the disjointness hypothesis. The exact transfer amplitude is
+\begin{equation}\label{eq:path}
+A_{ab}(U)=\sum_{x\in\Gamma_{ab}} r^*_{X_bX_ax}\,w_x\,U_{X_ax}.
+\end{equation}
+For two diagonal gates $U,U'$ that agree on every physical word in $V$,
+\begin{equation}\label{eq:intermediate}
+A_{ab}(U)-A_{ab}(U')=
+\sum_{x\in\Gamma_{ab}^{\mathrm{inv}}}
+ r^*_{X_bX_ax}\,w_x\,[U_{X_ax}-U'_{X_ax}].
+\end{equation}
+The direct amplitude is the same for $U,U'$ because $S\subseteq V$. Therefore $\Gamma_{ab}^{\mathrm{inv}}=\varnothing$ is a sufficient condition for \emph{complete return-probability invariance} under arbitrary changes of the phase gate outside the physical code. Conversely, $\Gamma_{ab}^{\mathrm{inv}}\neq\varnothing$ permits, but does not guarantee, sensitivity: its terms can cancel. This proposition is an elementary finite-support calculation, not a claim of priority over general symmetry-selection results.
+
+\section*{Stage 24: cutoff-two predictions and independent Aer test}
+Each axis has five physical values $-2,-1,0,1,2$ in a four-bit one-hot register (0 is all-zero). Pulses toggle the $+1$ bit on axis 0 and a specified return bit. The diagonal science gate uses the additive bit charge on every computational word, including invalid multi-hot words. The input and return have exactly $P=0$ support with positive thermal amplitudes. With $T_m^{(K)}(q)=[z^q](\sum_{j=-K}^{K}z^j)^m$, the predicted class counts are $T_n^{(K)}(0)$, $0$, $2T_{n-2}^{(K)}(-1)$, and $2T_{n-2}^{(K)}(0)$. Encoded-graph enumeration, performed independently of the coefficient calculation, gave:
+\begin{center}
+\small
+\begin{tabular}{@{}c c r r r r@{}}\toprule
+$K$ & $n$ & same bit & conjugate & other/same sign & other/opposite sign\\\midrule
+1 & 2 & 3 & 0 & 0 & 2\\
+1 & 3 & 7 & 0 & 2 & 2\\
+1 & 4 & 19 & 0 & 4 & 6\\
+2 & 2 & 5 & 0 & 0 & 2\\
+2 & 3 & 19 & 0 & 2 & 2\\
+2 & 4 & 85 & 0 & 8 & 10\\\bottomrule
+\end{tabular}
+\end{center}
+All odd-flip return-path counts were zero. The $n=3$ same-sign opening survives the cutoff change, while the $n=4$ same-sign count grows from 4 to 8. At $K=2,n=3$, with the frozen $\beta=0.45$, $\beta_r=0.15$, $\tau=\pi/2$, $\epsilon=0.83$, two common-phase blocks, seven skewed labels and three biased axes, the sparse amplitude prediction matched 168 independently evolved Aer return probabilities to a maximum absolute difference $4.77\times10^{-18}$ (prespecified limit $10^{-11}$). The conjugate pooled contrast was exactly zero in sparse arithmetic. The three allowed classes were nonzero on this grid, but positivity was not a preregistered implication of their path counts.
+
+\section*{Stage 25: changing only invalid-word phases}
+Gate A retains additive local bit charge on multi-hot words; gate B sets each invalid local word's phase charge to zero, while agreeing with A on every physical local codeword. The full 42-setting-per-class sparse grid obeyed the prespecified pattern:
+\begin{center}
+\small
+\begin{tabular}{@{}l r r@{}}\toprule
+Class & $K=1$ max pointwise change & $K=2$ max pointwise change\\\midrule
+Same bit & $0$ & $3.4211169\times10^{-4}$\\
+Conjugate & $0$ & $0$\\
+Other axis, same sign & $0$ & $0$\\
+Other axis, opposite sign & $0$ & $0$\\\bottomrule
+\end{tabular}
+\end{center}
+The same-bit axis-pooled contrast also changed, by at most $2.440\times10^{-6}$; this magnitude and sign were \emph{not} preregistered. The $K=1$ equality follows because its only two-hot local word has additive charge $+1-1=0$. At $K=2$, closed different-axis paths have a physical intermediate, so Eq.~\eqref{eq:intermediate} predicts exact invariance. A source flip on a non-$+1$ occupied local word can instead form a multi-hot intermediate and return through the same bit, allowing the observed change. Twenty-four independent Aer spot checks across classes, extensions, and fixed settings agreed with the sparse predictions to $5.21\times10^{-18}$ maximum absolute error (limit $10^{-11}$).
+
+\section*{Claim boundary and next experiment}
+This is a tested \emph{circuit-and-encoding-dependent} two-layer selection rule. The graph count is a necessary structural condition for transfer; it is not a quantitative signal-strength law by itself. The exact angle identity remains valid under both phase extensions because the odd-flip condition is unchanged, but its coefficients can depend on the invalid-word phase action. The clock width changes from two bits at $K=1,n=3$ to four at $K=2,n=3$, so raw joint contrast magnitudes across cutoffs also include a different clock-zero acceptance factor. No finite-shot detectability, noise robustness, or dimensional preference was tested in stages 24--25.
+
+The next decisive test should replace bit-flip access by a finite-level operation acting entirely within the physical local code and preregister its path predictions, or replace the return projector by a specified second effect. This will determine which portion of the observed fingerprint survives changes to the encoding-dependent intermediate paths.
+
+\section*{Reproducibility}
+The two prediction records are the stage-24 and stage-25 protocol files under \texttt{notes/}. Code modules 24 and 25 are under \texttt{src/relational\_atlas\_i01/holdout/}; their exact and Aer results are in matching JSON files under \texttt{results/}. Both experiments run through \texttt{scripts/run.py} in the \texttt{quantum} environment with six workers. The full-grid and spot-check distinction is retained in the JSON. Exact filenames and commands are linked from \texttt{RESEARCH\_STATUS.md}.
+\end{document}

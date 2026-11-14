@@ -1,0 +1,702 @@
+{
+  "model": "Two independent affine string worldsheets; equal-time local spatial separation",
+  "seed": 20261002,
+  "parameter_box": [
+    -0.5,
+    0.5
+  ],
+  "random_ensemble": "A_ij iid N(0,1); spatial offset b_i iid N(0,sigma^2)",
+  "validity_boundary": "Local kinematic encounter only; no torus winding, interactions, expansion, gravity, or dimensional dynamics.",
+  "projection_identity": "P(encounter)=P(z_hat in box)*CDF_chi_(d-3)(radius/sigma), for d>=3 and isotropic Gaussian b",
+  "primary_scan": {
+    "3": {
+      "dimension": 3,
+      "offset_sigma": 0.35,
+      "trials": 150000,
+      "interior_count": 58624,
+      "interior_probability": 0.39082666666666666,
+      "largest_observed_residual": 3.753994142779667e-07,
+      "codimension": 0,
+      "small_radius_log_slope": 1.5196427759519052e-16,
+      "encounter_scan": [
+        {
+          "encounter_radius": 0.005,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        },
+        {
+          "encounter_radius": 0.01,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        },
+        {
+          "encounter_radius": 0.02,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        },
+        {
+          "encounter_radius": 0.04,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        },
+        {
+          "encounter_radius": 0.08,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        },
+        {
+          "encounter_radius": 0.16,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        },
+        {
+          "encounter_radius": 0.32,
+          "gaussian_orthogonal_ball_probability": 1.0,
+          "rao_blackwell_encounter_probability": 0.39082666666666666,
+          "direct_mc_encounter_count": 58624,
+          "direct_mc_encounter_probability": 0.39082666666666666
+        }
+      ]
+    },
+    "4": {
+      "dimension": 4,
+      "offset_sigma": 0.35,
+      "trials": 150000,
+      "interior_count": 97408,
+      "interior_probability": 0.6493866666666667,
+      "largest_observed_residual": 1.5448195498141253,
+      "codimension": 1,
+      "small_radius_log_slope": 0.9996320506655496,
+      "encounter_scan": [
+        {
+          "encounter_radius": 0.005,
+          "gaussian_orthogonal_ball_probability": 0.01139796318147129,
+          "rao_blackwell_encounter_probability": 0.007401685317205036,
+          "direct_mc_encounter_count": 1126,
+          "direct_mc_encounter_probability": 0.007506666666666667
+        },
+        {
+          "encounter_radius": 0.01,
+          "gaussian_orthogonal_ball_probability": 0.02279360052490151,
+          "rao_blackwell_encounter_probability": 0.014801860266197375,
+          "direct_mc_encounter_count": 2180,
+          "direct_mc_encounter_probability": 0.014533333333333334
+        },
+        {
+          "encounter_radius": 0.02,
+          "gaussian_orthogonal_ball_probability": 0.04556860288631906,
+          "rao_blackwell_encounter_probability": 0.02959164313300378,
+          "direct_mc_encounter_count": 4487,
+          "direct_mc_encounter_probability": 0.029913333333333333
+        },
+        {
+          "encounter_radius": 0.04,
+          "gaussian_orthogonal_ball_probability": 0.09098869335394921,
+          "rao_blackwell_encounter_probability": 0.059086844281476564,
+          "direct_mc_encounter_count": 8902,
+          "direct_mc_encounter_probability": 0.059346666666666666
+        },
+        {
+          "encounter_radius": 0.08,
+          "gaussian_orthogonal_ball_probability": 0.18079796659881653,
+          "rao_blackwell_encounter_probability": 0.1174077888697168,
+          "direct_mc_encounter_count": 17619,
+          "direct_mc_encounter_probability": 0.11746
+        },
+        {
+          "encounter_radius": 0.16,
+          "gaussian_orthogonal_ball_probability": 0.35243163236894454,
+          "rao_blackwell_encounter_probability": 0.228864402971961,
+          "direct_mc_encounter_count": 34300,
+          "direct_mc_encounter_probability": 0.22866666666666666
+        },
+        {
+          "encounter_radius": 0.32,
+          "gaussian_orthogonal_ball_probability": 0.639433264902528,
+          "rao_blackwell_encounter_probability": 0.41523943645083633,
+          "direct_mc_encounter_count": 62352,
+          "direct_mc_encounter_probability": 0.41568
+        }
+      ]
+    },
+    "5": {
+      "dimension": 5,
+      "offset_sigma": 0.35,
+      "trials": 150000,
+      "interior_count": 119911,
+      "interior_probability": 0.7994066666666667,
+      "largest_observed_residual": 1.769921571693442,
+      "codimension": 2,
+      "small_radius_log_slope": 1.9994480281295803,
+      "encounter_scan": [
+        {
+          "encounter_radius": 0.005,
+          "gaussian_orthogonal_ball_probability": 0.00010203561033950831,
+          "rao_blackwell_encounter_probability": 8.156794714280521e-05,
+          "direct_mc_encounter_count": 11,
+          "direct_mc_encounter_probability": 7.333333333333333e-05
+        },
+        {
+          "encounter_radius": 0.01,
+          "gaussian_orthogonal_ball_probability": 0.00040807997801253965,
+          "rao_blackwell_encounter_probability": 0.00032622185495641097,
+          "direct_mc_encounter_count": 41,
+          "direct_mc_encounter_probability": 0.00027333333333333333
+        },
+        {
+          "encounter_radius": 0.02,
+          "gaussian_orthogonal_ball_probability": 0.0016313210082407404,
+          "rao_blackwell_encounter_probability": 0.0013040888894610362,
+          "direct_mc_encounter_count": 203,
+          "direct_mc_encounter_probability": 0.0013533333333333333
+        },
+        {
+          "encounter_radius": 0.04,
+          "gaussian_orthogonal_ball_probability": 0.006509334141628951,
+          "rao_blackwell_encounter_probability": 0.005203605108379128,
+          "direct_mc_encounter_count": 832,
+          "direct_mc_encounter_probability": 0.005546666666666667
+        },
+        {
+          "encounter_radius": 0.08,
+          "gaussian_orthogonal_ball_probability": 0.02578420942458229,
+          "rao_blackwell_encounter_probability": 0.02061206890874058,
+          "direct_mc_encounter_count": 3102,
+          "direct_mc_encounter_probability": 0.02068
+        },
+        {
+          "encounter_radius": 0.16,
+          "gaussian_orthogonal_ball_probability": 0.09921601096665547,
+          "rao_blackwell_encounter_probability": 0.0793139406068175,
+          "direct_mc_encounter_count": 12059,
+          "direct_mc_encounter_probability": 0.08039333333333333
+        },
+        {
+          "encounter_radius": 0.32,
+          "gaussian_orthogonal_ball_probability": 0.34161089909906805,
+          "rao_blackwell_encounter_probability": 0.273086030145789,
+          "direct_mc_encounter_count": 41051,
+          "direct_mc_encounter_probability": 0.2736733333333333
+        }
+      ]
+    },
+    "6": {
+      "dimension": 6,
+      "offset_sigma": 0.35,
+      "trials": 150000,
+      "interior_count": 133098,
+      "interior_probability": 0.88732,
+      "largest_observed_residual": 1.96844911578063,
+      "codimension": 3,
+      "small_radius_log_slope": 2.999337603661409,
+      "encounter_scan": [
+        {
+          "encounter_radius": 0.005,
+          "gaussian_orthogonal_ball_probability": 7.753505466549266e-07,
+          "rao_blackwell_encounter_probability": 6.879840470578495e-07,
+          "direct_mc_encounter_count": 0,
+          "direct_mc_encounter_probability": 0.0
+        },
+        {
+          "encounter_radius": 0.01,
+          "gaussian_orthogonal_ball_probability": 6.201665220472355e-06,
+          "rao_blackwell_encounter_probability": 5.50286158342953e-06,
+          "direct_mc_encounter_count": 2,
+          "direct_mc_encounter_probability": 1.3333333333333333e-05
+        },
+        {
+          "encounter_radius": 0.02,
+          "gaussian_orthogonal_ball_probability": 4.95768887946664e-05,
+          "rao_blackwell_encounter_probability": 4.399056496528339e-05,
+          "direct_mc_encounter_count": 12,
+          "direct_mc_encounter_probability": 8e-05
+        },
+        {
+          "encounter_radius": 0.04,
+          "gaussian_orthogonal_ball_probability": 0.00039545180078888074,
+          "rao_blackwell_encounter_probability": 0.00035089229187598963,
+          "direct_mc_encounter_count": 68,
+          "direct_mc_encounter_probability": 0.0004533333333333333
+        },
+        {
+          "encounter_radius": 0.08,
+          "gaussian_orthogonal_ball_probability": 0.003126712155277434,
+          "rao_blackwell_encounter_probability": 0.002774394229620773,
+          "direct_mc_encounter_count": 420,
+          "direct_mc_encounter_probability": 0.0028
+        },
+        {
+          "encounter_radius": 0.16,
+          "gaussian_orthogonal_ball_probability": 0.023873169526373906,
+          "rao_blackwell_encounter_probability": 0.021183140784142095,
+          "direct_mc_encounter_count": 3004,
+          "direct_mc_encounter_probability": 0.02002666666666667
+        },
+        {
+          "encounter_radius": 0.32,
+          "gaussian_orthogonal_ball_probability": 0.15914206617362883,
+          "rao_blackwell_encounter_probability": 0.14120993815718433,
+          "direct_mc_encounter_count": 21356,
+          "direct_mc_encounter_probability": 0.14237333333333332
+        }
+      ]
+    }
+  },
+  "offset_sensitivity": {
+    "0.25": {
+      "3": {
+        "dimension": 3,
+        "offset_sigma": 0.25,
+        "trials": 60000,
+        "interior_count": 31378,
+        "interior_probability": 0.5229666666666667,
+        "largest_observed_residual": 2.583714465574654e-07,
+        "codimension": 0,
+        "small_radius_log_slope": 8.288960596101302e-17,
+        "encounter_scan": [
+          {
+            "encounter_radius": 0.005,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          },
+          {
+            "encounter_radius": 0.01,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          },
+          {
+            "encounter_radius": 0.02,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          },
+          {
+            "encounter_radius": 0.04,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          },
+          {
+            "encounter_radius": 0.08,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          },
+          {
+            "encounter_radius": 0.16,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          },
+          {
+            "encounter_radius": 0.32,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.5229666666666667,
+            "direct_mc_encounter_count": 31378,
+            "direct_mc_encounter_probability": 0.5229666666666667
+          }
+        ]
+      },
+      "4": {
+        "dimension": 4,
+        "offset_sigma": 0.25,
+        "trials": 60000,
+        "interior_count": 47158,
+        "interior_probability": 0.7859666666666667,
+        "largest_observed_residual": 1.0750326858545165,
+        "codimension": 1,
+        "small_radius_log_slope": 0.9992789794237283,
+        "encounter_scan": [
+          {
+            "encounter_radius": 0.005,
+            "gaussian_orthogonal_ball_probability": 0.01595662743380394,
+            "rao_blackwell_encounter_probability": 0.012541377275388772,
+            "direct_mc_encounter_count": 764,
+            "direct_mc_encounter_probability": 0.012733333333333333
+          },
+          {
+            "encounter_radius": 0.01,
+            "gaussian_orthogonal_ball_probability": 0.031906873705661525,
+            "rao_blackwell_encounter_probability": 0.025077739170193104,
+            "direct_mc_encounter_count": 1487,
+            "direct_mc_encounter_probability": 0.024783333333333334
+          },
+          {
+            "encounter_radius": 0.02,
+            "gaussian_orthogonal_ball_probability": 0.06376274402797477,
+            "rao_blackwell_encounter_probability": 0.05011539138118724,
+            "direct_mc_encounter_count": 3012,
+            "direct_mc_encounter_probability": 0.0502
+          },
+          {
+            "encounter_radius": 0.04,
+            "gaussian_orthogonal_ball_probability": 0.12711892578286568,
+            "rao_blackwell_encounter_probability": 0.09991123836780634,
+            "direct_mc_encounter_count": 6087,
+            "direct_mc_encounter_probability": 0.10145
+          },
+          {
+            "encounter_radius": 0.08,
+            "gaussian_orthogonal_ball_probability": 0.25103166944664,
+            "rao_blackwell_encounter_probability": 0.19730252446274418,
+            "direct_mc_encounter_count": 12029,
+            "direct_mc_encounter_probability": 0.20048333333333335
+          },
+          {
+            "encounter_radius": 0.16,
+            "gaussian_orthogonal_ball_probability": 0.47782740061427703,
+            "rao_blackwell_encounter_probability": 0.37555640930280126,
+            "direct_mc_encounter_count": 22657,
+            "direct_mc_encounter_probability": 0.37761666666666666
+          },
+          {
+            "encounter_radius": 0.32,
+            "gaussian_orthogonal_ball_probability": 0.7994548640911159,
+            "rao_blackwell_encounter_probability": 0.6283448746801474,
+            "direct_mc_encounter_count": 37758,
+            "direct_mc_encounter_probability": 0.6293
+          }
+        ]
+      },
+      "5": {
+        "dimension": 5,
+        "offset_sigma": 0.25,
+        "trials": 60000,
+        "interior_count": 54394,
+        "interior_probability": 0.9065666666666666,
+        "largest_observed_residual": 1.216704108050533,
+        "codimension": 2,
+        "small_radius_log_slope": 1.9989182852920067,
+        "encounter_scan": [
+          {
+            "encounter_radius": 0.005,
+            "gaussian_orthogonal_ball_probability": 0.0001999800013332666,
+            "rao_blackwell_encounter_probability": 0.00018129520320869506,
+            "direct_mc_encounter_count": 12,
+            "direct_mc_encounter_probability": 0.0002
+          },
+          {
+            "encounter_radius": 0.01,
+            "gaussian_orthogonal_ball_probability": 0.0007996800853162696,
+            "rao_blackwell_encounter_probability": 0.0007249633093448861,
+            "direct_mc_encounter_count": 45,
+            "direct_mc_encounter_probability": 0.00075
+          },
+          {
+            "encounter_radius": 0.02,
+            "gaussian_orthogonal_ball_probability": 0.0031948854569670638,
+            "rao_blackwell_encounter_probability": 0.002896376659104441,
+            "direct_mc_encounter_count": 177,
+            "direct_mc_encounter_probability": 0.00295
+          },
+          {
+            "encounter_radius": 0.04,
+            "gaussian_orthogonal_ball_probability": 0.012718428409709472,
+            "rao_blackwell_encounter_probability": 0.011530103248628949,
+            "direct_mc_encounter_count": 708,
+            "direct_mc_encounter_probability": 0.0118
+          },
+          {
+            "encounter_radius": 0.08,
+            "gaussian_orthogonal_ball_probability": 0.04991136619737311,
+            "rao_blackwell_encounter_probability": 0.04524798088233188,
+            "direct_mc_encounter_count": 2732,
+            "direct_mc_encounter_probability": 0.045533333333333335
+          },
+          {
+            "encounter_radius": 0.16,
+            "gaussian_orthogonal_ball_probability": 0.18518973783127063,
+            "rao_blackwell_encounter_probability": 0.1678868433265689,
+            "direct_mc_encounter_count": 10158,
+            "direct_mc_encounter_probability": 0.1693
+          },
+          {
+            "encounter_radius": 0.32,
+            "gaussian_orthogonal_ball_probability": 0.5592158591946755,
+            "rao_blackwell_encounter_probability": 0.506966457417253,
+            "direct_mc_encounter_count": 30348,
+            "direct_mc_encounter_probability": 0.5058
+          }
+        ]
+      }
+    },
+    "0.5": {
+      "3": {
+        "dimension": 3,
+        "offset_sigma": 0.5,
+        "trials": 60000,
+        "interior_count": 14957,
+        "interior_probability": 0.24928333333333333,
+        "largest_observed_residual": 9.400214304009232e-08,
+        "codimension": 0,
+        "small_radius_log_slope": -5.5259737307342006e-17,
+        "encounter_scan": [
+          {
+            "encounter_radius": 0.005,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          },
+          {
+            "encounter_radius": 0.01,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          },
+          {
+            "encounter_radius": 0.02,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          },
+          {
+            "encounter_radius": 0.04,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          },
+          {
+            "encounter_radius": 0.08,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          },
+          {
+            "encounter_radius": 0.16,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          },
+          {
+            "encounter_radius": 0.32,
+            "gaussian_orthogonal_ball_probability": 1.0,
+            "rao_blackwell_encounter_probability": 0.24928333333333333,
+            "direct_mc_encounter_count": 14957,
+            "direct_mc_encounter_probability": 0.24928333333333333
+          }
+        ]
+      },
+      "4": {
+        "dimension": 4,
+        "offset_sigma": 0.5,
+        "trials": 60000,
+        "interior_count": 27676,
+        "interior_probability": 0.46126666666666666,
+        "largest_observed_residual": 2.1180867794459397,
+        "codimension": 1,
+        "small_radius_log_slope": 0.9998196835570284,
+        "encounter_scan": [
+          {
+            "encounter_radius": 0.005,
+            "gaussian_orthogonal_ball_probability": 0.007978712629263208,
+            "rao_blackwell_encounter_probability": 0.0036803141787914756,
+            "direct_mc_encounter_count": 218,
+            "direct_mc_encounter_probability": 0.0036333333333333335
+          },
+          {
+            "encounter_radius": 0.01,
+            "gaussian_orthogonal_ball_probability": 0.01595662743380394,
+            "rao_blackwell_encounter_probability": 0.007360260347632631,
+            "direct_mc_encounter_count": 425,
+            "direct_mc_encounter_probability": 0.007083333333333333
+          },
+          {
+            "encounter_radius": 0.02,
+            "gaussian_orthogonal_ball_probability": 0.031906873705661525,
+            "rao_blackwell_encounter_probability": 0.014717577277964806,
+            "direct_mc_encounter_count": 845,
+            "direct_mc_encounter_probability": 0.014083333333333333
+          },
+          {
+            "encounter_radius": 0.04,
+            "gaussian_orthogonal_ball_probability": 0.06376274402797477,
+            "rao_blackwell_encounter_probability": 0.02941162839530383,
+            "direct_mc_encounter_count": 1749,
+            "direct_mc_encounter_probability": 0.02915
+          },
+          {
+            "encounter_radius": 0.08,
+            "gaussian_orthogonal_ball_probability": 0.12711892578286568,
+            "rao_blackwell_encounter_probability": 0.05863572316610984,
+            "direct_mc_encounter_count": 3510,
+            "direct_mc_encounter_probability": 0.0585
+          },
+          {
+            "encounter_radius": 0.16,
+            "gaussian_orthogonal_ball_probability": 0.25103166944664,
+            "rao_blackwell_encounter_probability": 0.11579254139342014,
+            "direct_mc_encounter_count": 6926,
+            "direct_mc_encounter_probability": 0.11543333333333333
+          },
+          {
+            "encounter_radius": 0.32,
+            "gaussian_orthogonal_ball_probability": 0.47782740061427703,
+            "rao_blackwell_encounter_probability": 0.2204058523233455,
+            "direct_mc_encounter_count": 13221,
+            "direct_mc_encounter_probability": 0.22035
+          }
+        ]
+      },
+      "5": {
+        "dimension": 5,
+        "offset_sigma": 0.5,
+        "trials": 60000,
+        "interior_count": 37130,
+        "interior_probability": 0.6188333333333333,
+        "largest_observed_residual": 2.299822661596326,
+        "codimension": 2,
+        "small_radius_log_slope": 1.9997295138406295,
+        "encounter_scan": [
+          {
+            "encounter_radius": 0.005,
+            "gaussian_orthogonal_ball_probability": 4.999875002083312e-05,
+            "rao_blackwell_encounter_probability": 3.094089313789223e-05,
+            "direct_mc_encounter_count": 1,
+            "direct_mc_encounter_probability": 1.6666666666666667e-05
+          },
+          {
+            "encounter_radius": 0.01,
+            "gaussian_orthogonal_ball_probability": 0.0001999800013332666,
+            "rao_blackwell_encounter_probability": 0.00012375429082506982,
+            "direct_mc_encounter_count": 5,
+            "direct_mc_encounter_probability": 8.333333333333333e-05
+          },
+          {
+            "encounter_radius": 0.02,
+            "gaussian_orthogonal_ball_probability": 0.0007996800853162696,
+            "rao_blackwell_encounter_probability": 0.0004948686927965514,
+            "direct_mc_encounter_count": 33,
+            "direct_mc_encounter_probability": 0.00055
+          },
+          {
+            "encounter_radius": 0.04,
+            "gaussian_orthogonal_ball_probability": 0.0031948854569670638,
+            "rao_blackwell_encounter_probability": 0.001977101616953118,
+            "direct_mc_encounter_count": 126,
+            "direct_mc_encounter_probability": 0.0021
+          },
+          {
+            "encounter_radius": 0.08,
+            "gaussian_orthogonal_ball_probability": 0.012718428409709472,
+            "rao_blackwell_encounter_probability": 0.007870587447541879,
+            "direct_mc_encounter_count": 429,
+            "direct_mc_encounter_probability": 0.00715
+          },
+          {
+            "encounter_radius": 0.16,
+            "gaussian_orthogonal_ball_probability": 0.04991136619737311,
+            "rao_blackwell_encounter_probability": 0.03088681711514106,
+            "direct_mc_encounter_count": 1771,
+            "direct_mc_encounter_probability": 0.029516666666666667
+          },
+          {
+            "encounter_radius": 0.32,
+            "gaussian_orthogonal_ball_probability": 0.18518973783127063,
+            "rao_blackwell_encounter_probability": 0.1146015827612513,
+            "direct_mc_encounter_count": 6722,
+            "direct_mc_encounter_probability": 0.11203333333333333
+          }
+        ]
+      }
+    }
+  },
+  "conditional_stage_window": [
+    {
+      "encounter_radius": 0.005,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.007401685317205036,
+      "rate_ratio_three_to_four": 52.80238890434853,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 14.234665639313027,
+      "optimal_attempt_count": 10.197149297920191,
+      "maximum_conditional_three_stop_probability": 0.9100665723167627
+    },
+    {
+      "encounter_radius": 0.01,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.014801860266197375,
+      "rate_ratio_three_to_four": 26.403888405782848,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 7.118059065753739,
+      "optimal_attempt_count": 8.470980100159986,
+      "maximum_conditional_three_stop_probability": 0.8499651823301901
+    },
+    {
+      "encounter_radius": 0.02,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.02959164313300378,
+      "rate_ratio_three_to_four": 13.207332384688526,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 3.5604820990936092,
+      "optimal_attempt_count": 6.79011547264482,
+      "maximum_conditional_three_stop_probability": 0.7603954049705453
+    },
+    {
+      "encounter_radius": 0.04,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.059086844281476564,
+      "rate_ratio_three_to_four": 6.614444745176362,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 1.783146772163229,
+      "optimal_attempt_count": 5.194238881063484,
+      "maximum_conditional_three_stop_probability": 0.6390948526698895
+    },
+    {
+      "encounter_radius": 0.08,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.1174077888697168,
+      "rate_ratio_three_to_four": 3.3287967555572737,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 0.8973894889949853,
+      "optimal_attempt_count": 3.7492058316844505,
+      "maximum_conditional_three_stop_probability": 0.495164781182234
+    },
+    {
+      "encounter_radius": 0.16,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.228864402971961,
+      "rate_ratio_three_to_four": 1.7076778284063172,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 0.46036218079197916,
+      "optimal_attempt_count": 2.548678129259282,
+      "maximum_conditional_three_stop_probability": 0.3519526520807611
+    },
+    {
+      "encounter_radius": 0.32,
+      "stage_three_probability_per_attempt": 0.39082666666666666,
+      "stage_four_probability_per_attempt": 0.41523943645083633,
+      "rate_ratio_three_to_four": 0.9412079690868665,
+      "attempts_for_90_percent_stage_three_success": 5.891576213651522,
+      "attempts_for_10_percent_stage_four_success": 0.25373436723248416,
+      "optimal_attempt_count": 1.6971985290441904,
+      "maximum_conditional_three_stop_probability": 0.23963331941431787
+    }
+  ],
+  "stage_model_warning": "Assumes Poisson-distributed independent opportunities with mean M at each stage, that contacts enable winding annihilation and growth, and that stage 3 is reached. None is derived from encounter geometry."
+}

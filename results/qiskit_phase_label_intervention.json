@@ -1,0 +1,359 @@
+{
+  "design": "Balanced nine-phase intervention on the same return-count dataset, with label-used versus label-erased analysis",
+  "assumption": "An external, calibrated classical record identifies each applied phase t; no phase estimation from the quantum system itself is assumed.",
+  "parameters": {
+    "n": 4,
+    "bias": 0.8,
+    "common_displacement": 0.3,
+    "phase_samples": [
+      0.0,
+      0.6981317007977318,
+      1.3962634015954636,
+      2.0943951023931953,
+      2.792526803190927,
+      3.490658503988659,
+      4.1887902047863905,
+      4.886921905584122,
+      5.585053606381854
+    ],
+    "shots_per_phase_circuit": 4096,
+    "seed": 20261004
+  },
+  "exact": {
+    "unrestricted": {
+      "label_kept_joint_cfi": {
+        "eigenvalues": [
+          0.08825230848570707,
+          0.08825230848570709,
+          0.08825230848570709,
+          0.27630147266333793
+        ],
+        "rank_tol_1e_minus_8": 4,
+        "smallest_mode_common_alignment_abs": 1.6653345369377348e-16,
+        "common_direction_information": 0.27630147266333793
+      },
+      "label_erased_marginal_cfi": {
+        "eigenvalues": [
+          1.3877787807814457e-17,
+          0.04318867714129945,
+          0.04318867714129946,
+          0.04318867714129947
+        ],
+        "rank_tol_1e_minus_8": 3,
+        "smallest_mode_common_alignment_abs": 1.0,
+        "common_direction_information": 4.336808689942018e-18
+      },
+      "data_processing_difference_min_eigenvalue": 0.0450636313444076,
+      "erased_probability_max_change_under_common_displacement": 8.326672684688674e-17,
+      "minimum_labeled_return_probability": 7.395450929655699e-08
+    },
+    "P_zero": {
+      "label_kept_joint_cfi": {
+        "eigenvalues": [
+          -6.661338147750946e-16,
+          0.8663729622824496,
+          0.8663729622824501,
+          0.8663729622824504
+        ],
+        "rank_tol_1e_minus_8": 3,
+        "smallest_mode_common_alignment_abs": 1.0000000000000004,
+        "common_direction_information": -4.440892098500626e-16
+      },
+      "label_erased_marginal_cfi": {
+        "eigenvalues": [
+          1.1102230246251536e-16,
+          0.8663729622824496,
+          0.8663729622824499,
+          0.86637296228245
+        ],
+        "rank_tol_1e_minus_8": 3,
+        "smallest_mode_common_alignment_abs": 1.0,
+        "common_direction_information": -3.469446951953614e-17
+      },
+      "data_processing_difference_min_eigenvalue": -7.306645458458095e-16,
+      "erased_probability_max_change_under_common_displacement": 0.0,
+      "minimum_labeled_return_probability": 0.7051548554752003
+    }
+  },
+  "shot_intervention": {
+    "unrestricted": {
+      "same_raw_success_counts_for_both_analyses": [
+        [
+          [
+            2791,
+            1711,
+            68,
+            0,
+            0,
+            0,
+            0,
+            0,
+            333
+          ],
+          [
+            2756,
+            1703,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            343
+          ],
+          [
+            2769,
+            1775,
+            71,
+            0,
+            0,
+            0,
+            0,
+            0,
+            353
+          ],
+          [
+            2770,
+            1726,
+            67,
+            0,
+            0,
+            0,
+            0,
+            1,
+            370
+          ]
+        ],
+        [
+          [
+            2981,
+            596,
+            4,
+            0,
+            0,
+            0,
+            0,
+            18,
+            1207
+          ],
+          [
+            3029,
+            626,
+            2,
+            0,
+            0,
+            0,
+            0,
+            24,
+            1212
+          ],
+          [
+            3041,
+            641,
+            1,
+            0,
+            0,
+            0,
+            0,
+            20,
+            1211
+          ],
+          [
+            3004,
+            626,
+            8,
+            0,
+            0,
+            0,
+            0,
+            18,
+            1229
+          ]
+        ]
+      ],
+      "count_array_axes": [
+        "common_displacement_index",
+        "reference_axis_i",
+        "phase_label_t"
+      ],
+      "labeled_test": {
+        "g_statistic": 6018.622602539544,
+        "permutation_pvalue": 0.0004997501249375312,
+        "null_95pct_statistic": 31.48941434337083,
+        "permutations": 2000
+      },
+      "erased_test": {
+        "g_statistic": 1.8524765388335354,
+        "permutation_pvalue": 0.7551224387806097,
+        "null_95pct_statistic": 9.228492051541677,
+        "permutations": 2000
+      },
+      "shots_per_phase_circuit": 4096,
+      "circuits": 72,
+      "mean_absolute_probability_error": 0.0016981118206757107,
+      "transpiled_depth": 992
+    },
+    "P_zero": {
+      "same_raw_success_counts_for_both_analyses": [
+        [
+          [
+            2906,
+            2959,
+            2861,
+            2871,
+            2900,
+            2915,
+            2892,
+            2886,
+            2883
+          ],
+          [
+            2920,
+            2887,
+            2893,
+            2902,
+            2871,
+            2857,
+            2850,
+            2904,
+            2883
+          ],
+          [
+            2901,
+            2862,
+            2871,
+            2852,
+            2894,
+            2908,
+            2911,
+            2905,
+            2824
+          ],
+          [
+            2937,
+            2915,
+            2806,
+            2832,
+            2866,
+            2871,
+            2893,
+            2882,
+            2867
+          ]
+        ],
+        [
+          [
+            2850,
+            2919,
+            2888,
+            2927,
+            2904,
+            2883,
+            2874,
+            2933,
+            2851
+          ],
+          [
+            2933,
+            2876,
+            2895,
+            2905,
+            2892,
+            2860,
+            2883,
+            2896,
+            2923
+          ],
+          [
+            2906,
+            2896,
+            2905,
+            2855,
+            2890,
+            2912,
+            2908,
+            2890,
+            2889
+          ],
+          [
+            2842,
+            2875,
+            2881,
+            2954,
+            2903,
+            2909,
+            2928,
+            2885,
+            2871
+          ]
+        ]
+      ],
+      "count_array_axes": [
+        "common_displacement_index",
+        "reference_axis_i",
+        "phase_label_t"
+      ],
+      "labeled_test": {
+        "g_statistic": 34.450899802698515,
+        "permutation_pvalue": 0.5497251374312844,
+        "null_95pct_statistic": 51.11665631503593,
+        "permutations": 2000
+      },
+      "erased_test": {
+        "g_statistic": 3.801436772906875,
+        "permutation_pvalue": 0.4142928535732134,
+        "null_95pct_statistic": 9.367870885345345,
+        "permutations": 2000
+      },
+      "shots_per_phase_circuit": 4096,
+      "circuits": 72,
+      "mean_absolute_probability_error": 0.005378262911788861,
+      "transpiled_depth": 992
+    }
+  },
+  "partial_loss_scaling": {
+    "resource_models": {
+      "unflagged": "Detector type is not recorded: p_eta=(1-eta)*p_reference+eta*p_twirl",
+      "flagged": "Availability flag is recorded: F=(1-eta)*F_reference+eta*F_twirl"
+    },
+    "rows": [
+      {
+        "retained_reference_fraction_epsilon": 0.1,
+        "unflagged_common_eigenvalue": 0.007848717902355626,
+        "flagged_common_eigenvalue": 0.05445537991153179
+      },
+      {
+        "retained_reference_fraction_epsilon": 0.05,
+        "unflagged_common_eigenvalue": 0.0022228643154071463,
+        "flagged_common_eigenvalue": 0.027227689955765882
+      },
+      {
+        "retained_reference_fraction_epsilon": 0.02,
+        "unflagged_common_eigenvalue": 0.0003887069978089899,
+        "flagged_common_eigenvalue": 0.010891075982306358
+      },
+      {
+        "retained_reference_fraction_epsilon": 0.01,
+        "unflagged_common_eigenvalue": 0.00010038311928951393,
+        "flagged_common_eigenvalue": 0.005445537991153182
+      },
+      {
+        "retained_reference_fraction_epsilon": 0.005,
+        "unflagged_common_eigenvalue": 2.5521606158423506e-05,
+        "flagged_common_eigenvalue": 0.002722768995576594
+      },
+      {
+        "retained_reference_fraction_epsilon": 0.002,
+        "unflagged_common_eigenvalue": 4.125711639990648e-06,
+        "flagged_common_eigenvalue": 0.0010891075982306393
+      },
+      {
+        "retained_reference_fraction_epsilon": 0.001,
+        "unflagged_common_eigenvalue": 1.0350085427202754e-06,
+        "flagged_common_eigenvalue": 0.0005445537991153287
+      }
+    ],
+    "last_four_loglog_slope_unflagged": 1.9869967536132642,
+    "last_four_loglog_slope_flagged": 0.9999999999999933
+  }
+}

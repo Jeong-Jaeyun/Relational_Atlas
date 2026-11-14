@@ -1,0 +1,427 @@
+{
+  "model": "V(m)/b=-r*m+m*(m-1)/2, r=-a/b, b>0",
+  "zero_temperature_three_axis_interval": "2<r<3 (finite width 1); no singled-out axis",
+  "branch_count": {
+    "4": 4,
+    "6": 20,
+    "9": 84,
+    "20": 1140,
+    "50": 19600
+  },
+  "thermal_count_distribution": "P(m)=C(n,m)*exp(-beta*V(m))/Z",
+  "dynamics": "Continuous-time Metropolis single-site attempts, rate 1 per site",
+  "exit_formula_at_r_2p5": "mean first exit time from m=3 = exp(beta/2)/n",
+  "warning": "First exit from m=3 is not the orientation-switching time or a cosmological lifetime. The activation potential does not derive r from microscopic physics.",
+  "center_scan": [
+    {
+      "n": 4,
+      "selection_inverse_temperature": 2.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.6016356620409294,
+      "mean_time_to_leave_three": 0.6795704571147613,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.513973097428428,
+      "inverse_temperature_for_100_site_attempt_exit_time": 11.982929094215963
+    },
+    {
+      "n": 4,
+      "selection_inverse_temperature": 5.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.8743596372597012,
+      "mean_time_to_leave_three": 3.0456234901758683,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.513973097428428,
+      "inverse_temperature_for_100_site_attempt_exit_time": 11.982929094215963
+    },
+    {
+      "n": 4,
+      "selection_inverse_temperature": 10.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9883460076839355,
+      "mean_time_to_leave_three": 37.10328977564415,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.513973097428428,
+      "inverse_temperature_for_100_site_attempt_exit_time": 11.982929094215963
+    },
+    {
+      "n": 4,
+      "selection_inverse_temperature": 20.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9999205564346907,
+      "mean_time_to_leave_three": 5506.616448701679,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.513973097428428,
+      "inverse_temperature_for_100_site_attempt_exit_time": 11.982929094215963
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 2.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.6398685920522625,
+      "mean_time_to_leave_three": 0.45304697140984085,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.205704339834099,
+      "inverse_temperature_for_100_site_attempt_exit_time": 12.793859310432293
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 5.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.8903492691134206,
+      "mean_time_to_leave_three": 2.0304156601172454,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.205704339834099,
+      "inverse_temperature_for_100_site_attempt_exit_time": 12.793859310432293
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 10.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9899942060411238,
+      "mean_time_to_leave_three": 24.735526517096105,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.205704339834099,
+      "inverse_temperature_for_100_site_attempt_exit_time": 12.793859310432293
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 20.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9999319047426394,
+      "mean_time_to_leave_three": 3671.077632467786,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.205704339834099,
+      "inverse_temperature_for_100_site_attempt_exit_time": 12.793859310432293
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 2.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.5750290567824349,
+      "mean_time_to_leave_three": 0.3020313142732272,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.708326773416137,
+      "inverse_temperature_for_100_site_attempt_exit_time": 13.604789526648622
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 5.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.8632747613558549,
+      "mean_time_to_leave_three": 1.3536104400781637,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.708326773416137,
+      "inverse_temperature_for_100_site_attempt_exit_time": 13.604789526648622
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 10.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9871720785235057,
+      "mean_time_to_leave_three": 16.4903510113974,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.708326773416137,
+      "inverse_temperature_for_100_site_attempt_exit_time": 13.604789526648622
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 20.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9999124506581578,
+      "mean_time_to_leave_three": 2447.3850883118575,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 5.708326773416137,
+      "inverse_temperature_for_100_site_attempt_exit_time": 13.604789526648622
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 2.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.3474129885545388,
+      "mean_time_to_leave_three": 0.13591409142295224,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 7.365317845277293,
+      "inverse_temperature_for_100_site_attempt_exit_time": 15.201804919084164
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 5.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.7335894292088099,
+      "mean_time_to_leave_three": 0.6091246980351737,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 7.365317845277293,
+      "inverse_temperature_for_100_site_attempt_exit_time": 15.201804919084164
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 10.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9711007279522144,
+      "mean_time_to_leave_three": 7.42065795512883,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 7.365317845277293,
+      "inverse_temperature_for_100_site_attempt_exit_time": 15.201804919084164
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 20.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9997995238423016,
+      "mean_time_to_leave_three": 1101.3232897403357,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 7.365317845277293,
+      "inverse_temperature_for_100_site_attempt_exit_time": 15.201804919084164
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 2.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.1346588872848549,
+      "mean_time_to_leave_three": 0.0543656365691809,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 9.332780972403977,
+      "inverse_temperature_for_100_site_attempt_exit_time": 17.034386382832476
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 5.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.5064478325686077,
+      "mean_time_to_leave_three": 0.24364987921406944,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 9.332780972403977,
+      "inverse_temperature_for_100_site_attempt_exit_time": 17.034386382832476
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 10.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.9262756621067627,
+      "mean_time_to_leave_three": 2.9682631820515324,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 9.332780972403977,
+      "inverse_temperature_for_100_site_attempt_exit_time": 17.034386382832476
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 20.0,
+      "ratio": 2.5,
+      "probability_three_active": 0.999464000778921,
+      "mean_time_to_leave_three": 440.52931589613434,
+      "inverse_temperature_for_90_percent_three_at_ratio_2p5": 9.332780972403977,
+      "inverse_temperature_for_100_site_attempt_exit_time": 17.034386382832476
+    }
+  ],
+  "thermal_basin_scan": [
+    {
+      "n": 4,
+      "selection_inverse_temperature": 5.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.5885,
+        2.77
+      ],
+      "finite_temperature_interval_width": 0.18150000000000022,
+      "maximum_probability_of_three": 0.9086441865930761,
+      "ratio_of_maximum": 2.6790000000000003
+    },
+    {
+      "n": 4,
+      "selection_inverse_temperature": 10.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.2605,
+        2.9185
+      ],
+      "finite_temperature_interval_width": 0.6579999999999999,
+      "maximum_probability_of_three": 0.9918152730051818,
+      "ratio_of_maximum": 2.5895
+    },
+    {
+      "n": 4,
+      "selection_inverse_temperature": 20.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.1305,
+        2.959
+      ],
+      "finite_temperature_interval_width": 0.8285,
+      "maximum_probability_of_three": 0.9999443992885002,
+      "ratio_of_maximum": 2.545
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 5.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": null,
+      "finite_temperature_interval_width": 0.0,
+      "maximum_probability_of_three": 0.8903492691134206,
+      "ratio_of_maximum": 2.5
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 10.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.1915,
+        2.8085
+      ],
+      "finite_temperature_interval_width": 0.617,
+      "maximum_probability_of_three": 0.9899942060411238,
+      "ratio_of_maximum": 2.5
+    },
+    {
+      "n": 6,
+      "selection_inverse_temperature": 20.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.0955,
+        2.9045
+      ],
+      "finite_temperature_interval_width": 0.8090000000000002,
+      "maximum_probability_of_three": 0.9999319047426394,
+      "ratio_of_maximum": 2.5
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 5.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": null,
+      "finite_temperature_interval_width": 0.0,
+      "maximum_probability_of_three": 0.8836534260120653,
+      "ratio_of_maximum": 2.3745
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 10.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.1355,
+        2.739
+      ],
+      "finite_temperature_interval_width": 0.6034999999999999,
+      "maximum_probability_of_three": 0.9893107305739275,
+      "ratio_of_maximum": 2.4375
+    },
+    {
+      "n": 9,
+      "selection_inverse_temperature": 20.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.0675,
+        2.8695
+      ],
+      "finite_temperature_interval_width": 0.802,
+      "maximum_probability_of_three": 0.9999272029735005,
+      "ratio_of_maximum": 2.4685
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 5.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": null,
+      "finite_temperature_interval_width": 0.0,
+      "maximum_probability_of_three": 0.8785692608995449,
+      "ratio_of_maximum": 2.176
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 10.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.041,
+        2.635
+      ],
+      "finite_temperature_interval_width": 0.5939999999999999,
+      "maximum_probability_of_three": 0.9887855313538387,
+      "ratio_of_maximum": 2.338
+    },
+    {
+      "n": 20,
+      "selection_inverse_temperature": 20.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.0205,
+        2.8175
+      ],
+      "finite_temperature_interval_width": 0.7969999999999997,
+      "maximum_probability_of_three": 0.9999235863536684,
+      "ratio_of_maximum": 2.419
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 5.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": null,
+      "finite_temperature_interval_width": 0.0,
+      "maximum_probability_of_three": 0.8758706221773362,
+      "ratio_of_maximum": 2.0
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 10.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.0,
+        2.5335
+      ],
+      "finite_temperature_interval_width": 0.5335000000000001,
+      "maximum_probability_of_three": 0.9885835604550255,
+      "ratio_of_maximum": 2.238
+    },
+    {
+      "n": 50,
+      "selection_inverse_temperature": 20.0,
+      "probability_threshold": 0.9,
+      "ground_state_ratio_interval": [
+        2.0,
+        3.0
+      ],
+      "finite_temperature_interval_reaching_threshold": [
+        2.0,
+        2.7665
+      ],
+      "finite_temperature_interval_width": 0.7665000000000002,
+      "maximum_probability_of_three": 0.9999221943717236,
+      "ratio_of_maximum": 2.3689999999999998
+    }
+  ]
+}

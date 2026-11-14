@@ -1,0 +1,8 @@
+# Versions in the conda `quantum` environment used for the stored results.
+# Recreate with Python 3.12, then install this file and the local package.
+numpy==2.5.0
+scipy==1.18.0
+matplotlib==3.11.0
+qiskit==2.4.2
+qiskit-aer==0.17.2
+

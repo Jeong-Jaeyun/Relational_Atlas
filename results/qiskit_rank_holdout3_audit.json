@@ -1,0 +1,171 @@
+{
+  "source": "D:\\RELATIONAL_ATLAS_I01_20261002\\results\\qiskit_rank_holdout3_shots.json",
+  "caveat": "Reweighting and this calibration audit were added after observing the eight preregistered shot tests; diagnostic only.",
+  "exact_binomial_panels": 5000,
+  "standardized_count_mean": -0.027055053084081827,
+  "standardized_count_variance": 0.8710787016725053,
+  "null_mean_95pct_interval": [
+    -0.10771375903240565,
+    0.10737655397393032
+  ],
+  "null_variance_95pct_interval": [
+    0.8208278979167216,
+    1.2092131212812536
+  ],
+  "mean_two_sided_tail": 0.6102,
+  "variance_upper_tail": 0.8986,
+  "reweighted_uniform_target": [
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "exact_uniform_target_max_difference": 8.326672684688674e-17,
+      "observed_uniform_target_max_difference": 0.0006975446428571429,
+      "per_axis_difference": [
+        0.0006975446428571429,
+        0.000457763671875,
+        -0.0005580357142857143
+      ],
+      "per_axis_standard_error": [
+        0.0007375972010746278,
+        0.0007365995384701665,
+        0.0007367548862550182
+      ],
+      "exploratory_chi_square_df3": 1.8542433841527655,
+      "exploratory_asymptotic_pvalue": 0.6032026968915298
+    },
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "exact_uniform_target_max_difference": 4.634189857252328e-17,
+      "observed_uniform_target_max_difference": 0.0002964564732142857,
+      "per_axis_difference": [
+        -0.0002964564732142857,
+        -0.00012642996651785715,
+        0.000274658203125
+      ],
+      "per_axis_standard_error": [
+        0.0006322701773725715,
+        0.0006323445660024155,
+        0.0006339233635653275
+      ],
+      "exploratory_chi_square_df3": 0.44754078022035315,
+      "exploratory_asymptotic_pvalue": 0.9302557011310302
+    },
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "exact_uniform_target_max_difference": 0.0,
+      "observed_uniform_target_max_difference": 0.0010899135044642857,
+      "per_axis_difference": [
+        0.0003574916294642857,
+        0.0006888253348214286,
+        -0.0010899135044642857
+      ],
+      "per_axis_standard_error": [
+        0.001454590896154171,
+        0.0014552070966347504,
+        0.0014541760524359902
+      ],
+      "exploratory_chi_square_df3": 0.8462230971893614,
+      "exploratory_asymptotic_pvalue": 0.8383820776850601
+    },
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "exact_uniform_target_max_difference": 0.0,
+      "observed_uniform_target_max_difference": 0.0009634835379464286,
+      "per_axis_difference": [
+        0.00046212332589285713,
+        0.0009634835379464286,
+        0.00030517578125
+      ],
+      "per_axis_standard_error": [
+        0.0008343942309117621,
+        0.0008353995190566356,
+        0.0008386831357319444
+      ],
+      "exploratory_chi_square_df3": 1.7692955231071175,
+      "exploratory_asymptotic_pvalue": 0.6216392572937374
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "exact_uniform_target_max_difference": 8.326672684688674e-17,
+      "observed_uniform_target_max_difference": 0.0004463555136319678,
+      "per_axis_difference": [
+        -0.0004463555136319678,
+        0.00024856613920516094,
+        5.8516153664311954e-05
+      ],
+      "per_axis_standard_error": [
+        0.0006497103484182944,
+        0.0006495520878239226,
+        0.0006496258724396015
+      ],
+      "exploratory_chi_square_df3": 0.6265310718122364,
+      "exploratory_asymptotic_pvalue": 0.8903327284462218
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "exact_uniform_target_max_difference": 4.634189857252328e-17,
+      "observed_uniform_target_max_difference": 0.0011035369060835086,
+      "per_axis_difference": [
+        -0.0011035369060835086,
+        -0.000755205628435992,
+        -0.00029571570792397584
+      ],
+      "per_axis_standard_error": [
+        0.0007388730012825735,
+        0.000733362333048872,
+        0.0007379135757991426
+      ],
+      "exploratory_chi_square_df3": 3.4517184041162583,
+      "exploratory_asymptotic_pvalue": 0.32707828104795805
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "exact_uniform_target_max_difference": 0.0,
+      "observed_uniform_target_max_difference": 0.0017015280268025043,
+      "per_axis_difference": [
+        0.0017015280268025043,
+        0.0004416568428721893,
+        0.0014266308680241052
+      ],
+      "per_axis_standard_error": [
+        0.0015032020208706211,
+        0.0015037253724364149,
+        0.0015035819778826647
+      ],
+      "exploratory_chi_square_df3": 2.267805261840588,
+      "exploratory_asymptotic_pvalue": 0.5187166056040551
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "exact_uniform_target_max_difference": 0.0,
+      "observed_uniform_target_max_difference": 0.0006070628167617906,
+      "per_axis_difference": [
+        -1.595227720076396e-05,
+        -0.0006070628167617906,
+        -0.00022844259029053404
+      ],
+      "per_axis_standard_error": [
+        0.0008659061813396478,
+        0.0008647835558539534,
+        0.0008658222087928191
+      ],
+      "exploratory_chi_square_df3": 0.5627326715152472,
+      "exploratory_asymptotic_pvalue": 0.9049083010322112
+    }
+  ]
+}

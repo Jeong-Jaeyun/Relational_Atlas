@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
+\usepackage{microtype}
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\newcommand{\T}{\mathcal T}
+
+\title{A quantitative claim for the I01 follow-up\\
+\large Charge-sector path fingerprints in a constrained phase interferometer}
+\author{Working research record}
+\date{6 October 2026}
+
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+
+\section*{Decision in one sentence}
+Our working contribution is an \emph{observable-level quantitative prediction}, within a specified cutoff-one, $P=0$ return circuit: the support pair fixes the allowed two-flip paths, the pulse angle fixes the contrast through an exact two-term law, and selected local noise channels break the nominal null by calculable, location-dependent amounts. This is neither a derivation of three preferred spatial dimensions nor a demonstrated practical fault-localization protocol.
+
+\section*{Defined experiment and exact predictions}
+For each of $n$ momentum axes, $k_i\in\{-1,0,1\}$ is encoded on two qubits. Both prepared and returned system states have support on $S_n=\{\boldsymbol k:\sum_i k_i=0\}$. A source pulse $R_x^{(a)}(\epsilon)$ precedes the diagonal scientific phase layer $U(\boldsymbol\theta)$; a return pulse $R_x^{(b)}(-\epsilon)$ follows it. The energy-correlated clock is projected onto its zero outcome, and its phase is included in the prepared amplitudes $|w_\tau\rangle$. Let $|r\rangle$ denote the return reference and $c_n=\lceil\log_2(n+1)\rceil$ the clock-qubit count. Define
+\begin{equation}
+ A_0=\langle r|U(\boldsymbol\theta)|w_\tau\rangle,
+ \qquad A_{ab}=\langle r|X_b U(\boldsymbol\theta)X_a|w_\tau\rangle.
+\end{equation}
+One bit flip cannot connect two $P=0$ support states, so the odd-flip terms vanish \emph{for this encoding and preparation/return support}. The joint return probability is exactly
+\begin{equation}\label{eq:amp}
+ p_{ab}(\boldsymbol\theta,\epsilon,\tau)
+ =2^{-c_n}\left|\cos^2\!\frac{\epsilon}{2}\,A_0
+       +\sin^2\!\frac{\epsilon}{2}\,A_{ab}\right|^2.
+\end{equation}
+For the axis-pooled difference $\Delta_i$ between the two fixed common-phase-shift blocks, set $C_i$ to the block difference of $2^{-c_n}\operatorname{Re}(A_0^*A_{ab})$ and $D_i$ to that of $2^{-c_n}|A_{ab}|^2$. Since the direct term is common-phase invariant,
+\begin{equation}\label{eq:angle}
+ \Delta_i(\epsilon)=\tfrac12\sin^2\!\epsilon\,C_i
+                      +\sin^4\!\frac{\epsilon}{2}\,D_i.
+\end{equation}
+The second term predicts the small $\epsilon=\pi$ residual: a one-term $\sin^2\epsilon$ fit would incorrectly force it to zero. The identity reproduces 36 independent Aer angle conditions with maximum absolute contrast discrepancy $1.16\times10^{-16}$ and the stage-15 $n=2,3,4$ contrasts within $1.03\times10^{-15}$.
+
+Write $\T_m(q)=[z^q](z^{-1}+1+z)^m$. The count of initial $P=0$ basis states whose two-flip path reaches the return support is:
+\begin{center}
+\small
+\begin{tabular}{@{}l l r r r r r@{}}
+\toprule
+Source--return class & Count & $n=2$ & $3$ & $4$ & $5$ & $6$\\
+\midrule
+Same qubit & $\T_n(0)$ & 3 & 7 & 19 & 51 & 141\\
+Conjugate bit, same axis & $0$ & 0 & 0 & 0 & 0 & 0\\
+Other axis, same sign & $2\T_{n-2}(-1)$ & 0 & 2 & 4 & 12 & 32\\
+Other axis, opposite sign & $2\T_{n-2}(0)$ & 2 & 2 & 6 & 14 & 38\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus three axes are only the \emph{first opening} of the other-axis/same-sign class, not a selected or stable dimension. A nonzero path count is necessary, not sufficient, for a nonzero measured contrast: phase cancellation and weighting matter. On the frozen skewed phase-label grid, allowed classes are positive for the tested $n=3,4$ preparations/reference weights; uniform labels erase the contrast. The calibrated nonuniform label allocation is therefore an explicit measurement resource.
+
+\section*{Independent observation and noise boundary}
+At $n=3$ and $\epsilon=\pi/2$, an independently sampled Aer four-test family (22,020,096 circuit preparations; family threshold $0.0125$) detected the same-qubit and other-axis/opposite-sign contrasts ($p=0.00010$ each), but not the conjugate null ($p=0.84162$). The other-axis/same-sign class was positive in exact probability yet missed that family threshold ($p=0.02640$). A separately prespecified doubled-budget, single-test replication detected it ($p=0.00010$). The families are not pooled.
+
+For separately applied local channels at rate $p=0.03$, exact Aer density-matrix contrasts are:
+\begin{center}
+\small
+\begin{tabular}{@{}l r r r@{}}
+\toprule
+Channel & Conjugate class & Weakest positive class & $\Lambda_{\rm conjugate}$\\
+\midrule
+Ideal & $2.35\times10^{-17}$ & $5.474\times10^{-4}$ & $\simeq0$\\
+Preparation amplitude damping & $7.213\times10^{-6}$ & $5.287\times10^{-4}$ & $0.00208$\\
+System phase damping & $2.56\times10^{-17}$ & $5.164\times10^{-4}$ & $\simeq0$\\
+Symmetric readout flips & $1.651\times10^{-5}$ & $4.397\times10^{-4}$ & $0.00677$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $\Lambda$ is an approximate noncentrality at the stage-17 preparation budget, \emph{not} a detection probability. Preparation damping acts after preparation on all eight qubits, phase damping after the scientific phase layer on six system qubits, and symmetric readout flips on all eight measured bits. At $p=0.001$, damping only the clock, source $q_0$, or return $q_1$ leaves the conjugate contrast below $2.5\times10^{-17}$; damping the four other system qubits produces $2.477\times10^{-7}$, close to $2.476\times10^{-7}$ for all eight. A first-order ideal-output calculation identifies the one-bit $q_1$ outcome as dominant for readout leakage. These are \emph{mechanism and location dependencies in exact contrasts}, not evidence that location can be inferred reliably at the tested shot budget.
+
+\section*{Position relative to prior work}
+Reference-frame loss, superselection sectors, and relational encodings are established background, not our novelty claim \cite{bartlett}. Imperfect references and their consequences for estimation precision are studied by \v{S}afr\'anek, Ahmadi, and Fuentes \cite{safranek}. Marvian analyzes the realizable unitaries of local circuits with Abelian symmetry \cite{marvian}; our pulses deliberately access different support sectors, and we predict a particular return \emph{observable}, not a general theorem on symmetric-circuit reachability. Murphy and Brown show that coherent-error orientation can strongly affect algorithm success \cite{murphy}; our additional claim is the explicit four-class support-count and angle-response formula in this circuit, not that orientation dependence is new. Verified phase estimation uses a return-state test to mitigate noise \cite{obrien}; here the return probability itself is the measured contrast, with a predicted structural null and its channel-specific leakage. Symmetry verification has also been experimentally used for error mitigation \cite{sagastizabal}; we do not claim to introduce symmetry postselection.
+
+\newpage
+\section*{Bounded contribution}
+The defensible comparison is therefore narrow: \emph{for this declared preparation, two-pulse intervention, clock projection, phase-label distribution, and return measurement, Eqs.~\eqref{eq:amp}--\eqref{eq:angle} and the support counts make quantitative, falsifiable predictions for the access classes and their local-noise null leakage.} The reviewed papers establish important surrounding principles and different target tasks. Their scope does not by itself establish or refute this particular observable-level calculation. We have not established priority over every possible publication, a model-independent theorem, universal dimensional selection, or a usable error-location classifier.
+
+\section*{Next discriminating checks}
+The next theoretical step is to state a charge-graph result whose hypotheses recover the above counts and odd-flip cancellation, then test a different momentum cutoff and return POVM against predictions made \emph{before} simulation. A noisy-shot study should preregister an inference loss and budget, because the exact null leakages above are presently much smaller than the stage-17 finite-shot resolving power. A failure under changed cutoff or detector would delimit this circuit-specific result rather than erase the verified equations for the present setting.
+
+\section*{Reproducibility}
+The derivation and tests are in \texttt{src/relational\_atlas\_i01/holdout/}; matched stage-19--23 JSON outputs are in \texttt{results/}. The independent finite-shot counts are in stage-17 and stage-18 results. The project regression command is \texttt{python scripts/test.py}. Numerical values above are from the frozen results through stage 23, not from a new run.
+
+\begin{thebibliography}{9}\small
+\bibitem{bartlett} S. D. Bartlett, T. Rudolph, and R. W. Spekkens, ``Reference frames, superselection rules, and quantum information,'' \emph{Rev. Mod. Phys.} \textbf{79}, 555 (2007). \url{https://doi.org/10.1103/RevModPhys.79.555}.
+\bibitem{safranek} D. \v{S}afr\'anek, M. Ahmadi, and I. Fuentes, ``Quantum parameter estimation with imperfect reference frames,'' \emph{New J. Phys.} \textbf{17}, 033012 (2015). \url{https://doi.org/10.1088/1367-2630/17/3/033012}.
+\bibitem{marvian} I. Marvian, ``Theory of Quantum Circuits with Abelian Symmetries,'' \emph{Phys. Rev. Research} \textbf{6}, 043292 (2024). \url{https://doi.org/10.1103/PhysRevResearch.6.043292}.
+\bibitem{murphy} D. C. Murphy and K. R. Brown, ``Controlling error orientation to improve quantum algorithm success rates,'' \emph{Phys. Rev. A} \textbf{99}, 032318 (2019). \url{https://doi.org/10.1103/PhysRevA.99.032318}.
+\bibitem{obrien} T. E. O'Brien \emph{et al.}, ``Error mitigation via verified phase estimation,'' \emph{PRX Quantum} \textbf{2}, 020317 (2021). \url{https://doi.org/10.1103/PRXQuantum.2.020317}.
+\bibitem{sagastizabal} R. Sagastizabal \emph{et al.}, ``Experimental error mitigation via symmetry verification in a variational quantum eigensolver,'' \emph{Phys. Rev. A} \textbf{100}, 010302 (2019). \url{https://doi.org/10.1103/PhysRevA.100.010302}.
+\end{thebibliography}
+\end{document}

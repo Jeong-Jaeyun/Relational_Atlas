@@ -1,0 +1,827 @@
+{
+  "protocol": "notes/prevalidation_protocol9_2026-10-04.tex",
+  "parameters": {
+    "n": 3,
+    "phase_labels": 7,
+    "workers": 6,
+    "fault_qubit": 0,
+    "paired_angles_radians": [
+      0.01,
+      0.03,
+      0.1
+    ],
+    "all_axes_explicitly_evaluated": true,
+    "operation": "Rx(angle) immediately after preparation, then Rx(-angle) after the scientific phase layer and before reference projection.",
+    "conditions": [
+      {
+        "label_distribution": "skewed",
+        "physical_P_zero": false,
+        "tau_over_pi": 0.0,
+        "role": "strong_signal"
+      },
+      {
+        "label_distribution": "skewed",
+        "physical_P_zero": false,
+        "tau_over_pi": 0.5,
+        "role": "weak_signal"
+      },
+      {
+        "label_distribution": "uniform",
+        "physical_P_zero": false,
+        "tau_over_pi": 0.0,
+        "role": "distribution_null_tau_0"
+      },
+      {
+        "label_distribution": "uniform",
+        "physical_P_zero": false,
+        "tau_over_pi": 0.5,
+        "role": "distribution_null_tau_half_pi"
+      },
+      {
+        "label_distribution": "skewed",
+        "physical_P_zero": true,
+        "tau_over_pi": 0.0,
+        "role": "constraint_null_tau_0"
+      },
+      {
+        "label_distribution": "skewed",
+        "physical_P_zero": true,
+        "tau_over_pi": 0.5,
+        "role": "constraint_null_tau_half_pi"
+      }
+    ],
+    "predeclared_negligible_leakage_ratio": 0.1
+  },
+  "circuit_checks": {
+    "fault_qubit": 0,
+    "first_rotation": 0.01,
+    "second_rotation": -0.01,
+    "rotation_indices": [
+      503,
+      511
+    ],
+    "barrier_indices": [
+      502,
+      510
+    ]
+  },
+  "scenarios": [
+    {
+      "intervention_angle": 0.0,
+      "rows": [
+        {
+          "role": "strong_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            0.0007249509500632315,
+            0.0007249509500632315,
+            0.000724950950063228
+          ],
+          "maximum_absolute_joint_difference": 0.0007249509500632315,
+          "pooled_joint_probability_first": [
+            0.031172093570842996,
+            0.031172093570842996,
+            0.031172093570843
+          ],
+          "pooled_joint_probability_second": [
+            0.03189704452090623,
+            0.03189704452090623,
+            0.03189704452090623
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 23.68347625934529
+        },
+        {
+          "role": "weak_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -0.00012418786119140768,
+            -0.0001241878611914094,
+            -0.0001241878611914042
+          ],
+          "maximum_absolute_joint_difference": 0.0001241878611914094,
+          "pooled_joint_probability_first": [
+            0.010475424328243662,
+            0.010475424328243662,
+            0.010475424328243658
+          ],
+          "pooled_joint_probability_second": [
+            0.010351236467052254,
+            0.010351236467052253,
+            0.010351236467052254
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 2.0597477447982233
+        },
+        {
+          "role": "distribution_null_tau_0",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            -1.734723475976807e-17,
+            -2.0816681711721685e-17,
+            -2.0816681711721685e-17
+          ],
+          "maximum_absolute_joint_difference": 2.0816681711721685e-17,
+          "pooled_joint_probability_first": [
+            0.024300310204831508,
+            0.024300310204831508,
+            0.02430031020483151
+          ],
+          "pooled_joint_probability_second": [
+            0.02430031020483149,
+            0.024300310204831487,
+            0.02430031020483149
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 2.2591352047633557e-26
+        },
+        {
+          "role": "distribution_null_tau_half_pi",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            8.673617379884035e-18,
+            5.204170427930421e-18,
+            1.0408340855860843e-17
+          ],
+          "maximum_absolute_joint_difference": 1.0408340855860843e-17,
+          "pooled_joint_probability_first": [
+            0.013833743729326338,
+            0.013833743729326338,
+            0.013833743729326334
+          ],
+          "pooled_joint_probability_second": [
+            0.013833743729326347,
+            0.013833743729326343,
+            0.013833743729326345
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 7.08347977204636e-27
+        },
+        {
+          "role": "constraint_null_tau_0",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0,
+          "pooled_joint_probability_first": [
+            0.1039013051563271,
+            0.1039013051563271,
+            0.1039013051563271
+          ],
+          "pooled_joint_probability_second": [
+            0.1039013051563271,
+            0.1039013051563271,
+            0.1039013051563271
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 0.0
+        },
+        {
+          "role": "constraint_null_tau_half_pi",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 0.0,
+          "pooled_joint_probability_first": [
+            0.02197231093104289,
+            0.02197231093104289,
+            0.02197231093104289
+          ],
+          "pooled_joint_probability_second": [
+            0.02197231093104289,
+            0.02197231093104289,
+            0.02197231093104289
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 0.0
+        }
+      ],
+      "summary": {
+        "strong_signal_scale": 0.0007249509500632315,
+        "weak_signal_scale": 0.0001241878611914094,
+        "maximum_null_scale": 2.0816681711721685e-17,
+        "maximum_null_to_strong_ratio": 2.871460711915202e-14,
+        "strong_signal_fraction_of_ideal": 1.0,
+        "weak_signal_fraction_of_ideal": 1.0,
+        "classification": "all_four_nulls_numerically_preserved",
+        "predeclared_negligible_leakage_ratio": 0.1
+      }
+    },
+    {
+      "intervention_angle": 0.01,
+      "rows": [
+        {
+          "role": "strong_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            0.0007254522126482824,
+            0.0007257966608953566,
+            0.0007257966608953739
+          ],
+          "maximum_absolute_joint_difference": 0.0007257966608953739,
+          "pooled_joint_probability_first": [
+            0.031155301836628638,
+            0.0311799106836911,
+            0.031179910683691178
+          ],
+          "pooled_joint_probability_second": [
+            0.03188075404927692,
+            0.031905707344586455,
+            0.03190570734458655
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            5.551115123125783e-17,
+            5.551115123125783e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 23.731271022407668
+        },
+        {
+          "role": "weak_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -0.00011900538743699583,
+            -0.00011974591876180544,
+            -0.00011974591876181759
+          ],
+          "maximum_absolute_joint_difference": 0.00011974591876181759,
+          "pooled_joint_probability_first": [
+            0.010529091160286117,
+            0.010448154479948221,
+            0.010448154479948353
+          ],
+          "pooled_joint_probability_second": [
+            0.010410085772849121,
+            0.010328408561186416,
+            0.010328408561186535
+          ],
+          "axis_pooled_clock_difference": [
+            -2.7755575615628914e-17,
+            5.551115123125783e-17,
+            2.7755575615628914e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 1.9068600252981682
+        },
+        {
+          "role": "distribution_null_tau_0",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            -3.469446951953614e-18,
+            3.469446951953614e-18,
+            -3.469446951953614e-18
+          ],
+          "maximum_absolute_joint_difference": 3.469446951953614e-18,
+          "pooled_joint_probability_first": [
+            0.024287634462936962,
+            0.024306794915071064,
+            0.02430679491507114
+          ],
+          "pooled_joint_probability_second": [
+            0.02428763446293696,
+            0.024306794915071067,
+            0.024306794915071137
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            5.551115123125783e-17,
+            1.1102230246251565e-16
+          ],
+          "maximum_absolute_clock_difference": 1.1102230246251565e-16,
+          "stage6_budget_approx_noncentrality": 6.986989593510339e-28
+        },
+        {
+          "role": "distribution_null_tau_half_pi",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            1.3877787807814457e-17,
+            1.0408340855860843e-17,
+            8.673617379884035e-18
+          ],
+          "maximum_absolute_joint_difference": 1.3877787807814457e-17,
+          "pooled_joint_probability_first": [
+            0.013918591152955831,
+            0.013792700807127151,
+            0.013792700807127257
+          ],
+          "pooled_joint_probability_second": [
+            0.013918591152955845,
+            0.013792700807127162,
+            0.013792700807127266
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            -2.7755575615628914e-17,
+            2.7755575615628914e-17
+          ],
+          "maximum_absolute_clock_difference": 2.7755575615628914e-17,
+          "stage6_budget_approx_noncentrality": 1.2628255929307528e-26
+        },
+        {
+          "role": "constraint_null_tau_0",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            2.0366898299817304e-07,
+            3.286453806317091e-08,
+            3.2864538104804275e-08
+          ],
+          "maximum_absolute_joint_difference": 2.0366898299817304e-07,
+          "pooled_joint_probability_first": [
+            0.10389704115383183,
+            0.10389701934716193,
+            0.10389701934716214
+          ],
+          "pooled_joint_probability_second": [
+            0.10389724482281483,
+            0.1038970522117,
+            0.10389705221170024
+          ],
+          "axis_pooled_clock_difference": [
+            -5.551115123125783e-17,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 2.1503705814311855e-07
+        },
+        {
+          "role": "constraint_null_tau_half_pi",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -1.6984424418969857e-08,
+            -2.632497234089648e-08,
+            -2.6324972337427033e-08
+          ],
+          "maximum_absolute_joint_difference": 2.632497234089648e-08,
+          "pooled_joint_probability_first": [
+            0.021971575003109547,
+            0.02197140459673609,
+            0.0219714045967362
+          ],
+          "pooled_joint_probability_second": [
+            0.02197155801868513,
+            0.02197137827176375,
+            0.02197137827176386
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 0.0,
+          "stage6_budget_approx_noncentrality": 3.574768939728604e-08
+        }
+      ],
+      "summary": {
+        "strong_signal_scale": 0.0007257966608953739,
+        "weak_signal_scale": 0.00011974591876181759,
+        "maximum_null_scale": 2.0366898299817304e-07,
+        "maximum_null_to_strong_ratio": 0.0002806143841264277,
+        "strong_signal_fraction_of_ideal": 1.0011665766243478,
+        "weak_signal_fraction_of_ideal": 0.964232072386322,
+        "classification": "null_leakage_below_predeclared_tenth_of_strong_signal",
+        "predeclared_negligible_leakage_ratio": 0.1
+      }
+    },
+    {
+      "intervention_angle": 0.03,
+      "rows": [
+        {
+          "role": "strong_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            0.00072638096560005,
+            0.000727526669682569,
+            0.000727526669682569
+          ],
+          "maximum_absolute_joint_difference": 0.000727526669682569,
+          "pooled_joint_probability_first": [
+            0.031123039610002505,
+            0.031195999588456643,
+            0.031195999588456733
+          ],
+          "pooled_joint_probability_second": [
+            0.031849420575602555,
+            0.03192352625813921,
+            0.0319235262581393
+          ],
+          "axis_pooled_clock_difference": [
+            1.1102230246251565e-16,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 1.1102230246251565e-16,
+          "stage6_budget_approx_noncentrality": 23.826537354752528
+        },
+        {
+          "role": "weak_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -0.0001083640647860408,
+            -0.00011092008958634055,
+            -0.00011092008958635269
+          ],
+          "maximum_absolute_joint_difference": 0.00011092008958635269,
+          "pooled_joint_probability_first": [
+            0.010634583019150526,
+            0.01039149056806939,
+            0.010391490568069523
+          ],
+          "pooled_joint_probability_second": [
+            0.010526218954364485,
+            0.01028057047848305,
+            0.01028057047848317
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            2.7755575615628914e-17,
+            8.326672684688674e-17
+          ],
+          "maximum_absolute_clock_difference": 8.326672684688674e-17,
+          "stage6_budget_approx_noncentrality": 1.61813227929867
+        },
+        {
+          "role": "distribution_null_tau_0",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            -6.938893903907228e-18,
+            3.469446951953614e-18,
+            -1.734723475976807e-17
+          ],
+          "maximum_absolute_joint_difference": 1.734723475976807e-17,
+          "pooled_joint_probability_first": [
+            0.0242632753822375,
+            0.024320147777601706,
+            0.024320147777601785
+          ],
+          "pooled_joint_probability_second": [
+            0.024263275382237492,
+            0.02432014777760171,
+            0.024320147777601768
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            5.551115123125783e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 6.983586366446674e-27
+        },
+        {
+          "role": "distribution_null_tau_half_pi",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            3.469446951953614e-18,
+            1.214306433183765e-17,
+            8.673617379884035e-18
+          ],
+          "maximum_absolute_joint_difference": 1.214306433183765e-17,
+          "pooled_joint_probability_first": [
+            0.014085727909397454,
+            0.013707469236848872,
+            0.013707469236848981
+          ],
+          "pooled_joint_probability_second": [
+            0.014085727909397458,
+            0.013707469236848884,
+            0.01370746923684899
+          ],
+          "axis_pooled_clock_difference": [
+            -2.7755575615628914e-17,
+            2.7755575615628914e-17,
+            5.551115123125783e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 7.95389576575719e-27
+        },
+        {
+          "role": "constraint_null_tau_0",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            1.832532086548655e-06,
+            2.9570197285222477e-07,
+            2.95701972838347e-07
+          ],
+          "maximum_absolute_joint_difference": 1.832532086548655e-06,
+          "pooled_joint_probability_first": [
+            0.1038629396538014,
+            0.10386274169130129,
+            0.10386274169130147
+          ],
+          "pooled_joint_probability_second": [
+            0.10386477218588795,
+            0.10386303739327414,
+            0.10386303739327431
+          ],
+          "axis_pooled_clock_difference": [
+            -5.551115123125783e-17,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 1.741365291498323e-05
+        },
+        {
+          "role": "constraint_null_tau_half_pi",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -1.5281906332043071e-07,
+            -2.3686157785487993e-07,
+            -2.368615778514105e-07
+          ],
+          "maximum_absolute_joint_difference": 2.3686157785487993e-07,
+          "pooled_joint_probability_first": [
+            0.021965691221362278,
+            0.021964155678820367,
+            0.021964155678820464
+          ],
+          "pooled_joint_probability_second": [
+            0.021965538402298958,
+            0.021963918817242512,
+            0.021963918817242613
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            -5.551115123125783e-17,
+            0.0
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 2.8949350255343117e-06
+        }
+      ],
+      "summary": {
+        "strong_signal_scale": 0.000727526669682569,
+        "weak_signal_scale": 0.00011092008958635269,
+        "maximum_null_scale": 1.832532086548655e-06,
+        "maximum_null_to_strong_ratio": 0.0025188521093642063,
+        "strong_signal_fraction_of_ideal": 1.0035529570919424,
+        "weak_signal_fraction_of_ideal": 0.8931636999158296,
+        "classification": "null_leakage_below_predeclared_tenth_of_strong_signal",
+        "predeclared_negligible_leakage_ratio": 0.1
+      }
+    },
+    {
+      "intervention_angle": 0.1,
+      "rows": [
+        {
+          "role": "strong_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            0.0007288693330165935,
+            0.0007339844612699598,
+            0.0007339844612699667
+          ],
+          "maximum_absolute_joint_difference": 0.0007339844612699667,
+          "pooled_joint_probability_first": [
+            0.03102396776058964,
+            0.03125705946318467,
+            0.03125705946318475
+          ],
+          "pooled_joint_probability_second": [
+            0.03175283709360623,
+            0.03199104392445463,
+            0.03199104392445472
+          ],
+          "axis_pooled_clock_difference": [
+            5.551115123125783e-17,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "maximum_absolute_clock_difference": 1.1102230246251565e-16,
+          "stage6_budget_approx_noncentrality": 24.156632912531848
+        },
+        {
+          "role": "weak_signal",
+          "label_distribution": "skewed",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -6.840643373884e-05,
+            -8.079180356053428e-05,
+            -8.079180356054122e-05
+          ],
+          "maximum_absolute_joint_difference": 8.079180356054122e-05,
+          "pooled_joint_probability_first": [
+            0.010983033367091496,
+            0.010172289562164486,
+            0.010172289562164621
+          ],
+          "pooled_joint_probability_second": [
+            0.010914626933352656,
+            0.010091497758603952,
+            0.01009149775860408
+          ],
+          "axis_pooled_clock_difference": [
+            2.7755575615628914e-17,
+            1.3877787807814457e-16,
+            2.7755575615628914e-17
+          ],
+          "maximum_absolute_clock_difference": 1.3877787807814457e-16,
+          "stage6_budget_approx_noncentrality": 0.7953751826337757
+        },
+        {
+          "role": "distribution_null_tau_0",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            -1.0408340855860843e-17,
+            -1.734723475976807e-17,
+            -2.42861286636753e-17
+          ],
+          "maximum_absolute_joint_difference": 2.42861286636753e-17,
+          "pooled_joint_probability_first": [
+            0.024188414711598494,
+            0.024370891064890272,
+            0.02437089106489035
+          ],
+          "pooled_joint_probability_second": [
+            0.024188414711598483,
+            0.024370891064890255,
+            0.024370891064890324
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            0.0,
+            -5.551115123125783e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 1.9291529379091868e-26
+        },
+        {
+          "role": "distribution_null_tau_half_pi",
+          "label_distribution": "uniform",
+          "physical_P_zero": false,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            5.204170427930421e-18,
+            0.0,
+            0.0
+          ],
+          "maximum_absolute_joint_difference": 5.204170427930421e-18,
+          "pooled_joint_probability_first": [
+            0.014641600284007138,
+            0.013378125014340565,
+            0.013378125014340677
+          ],
+          "pooled_joint_probability_second": [
+            0.014641600284007144,
+            0.013378125014340565,
+            0.013378125014340677
+          ],
+          "axis_pooled_clock_difference": [
+            2.7755575615628914e-17,
+            8.326672684688674e-17,
+            2.7755575615628914e-17
+          ],
+          "maximum_absolute_clock_difference": 8.326672684688674e-17,
+          "stage6_budget_approx_noncentrality": 8.611885008388679e-28
+        },
+        {
+          "role": "constraint_null_tau_0",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.0,
+          "axis_pooled_joint_difference": [
+            2.029977514944603e-05,
+            3.2756223519447847e-06,
+            3.275622351917029e-06
+          ],
+          "maximum_absolute_joint_difference": 2.029977514944603e-05,
+          "pooled_joint_probability_first": [
+            0.10347634963195249,
+            0.10347393523412744,
+            0.10347393523412762
+          ],
+          "pooled_joint_probability_second": [
+            0.10349664940710193,
+            0.10347721085647939,
+            0.10347721085647954
+          ],
+          "axis_pooled_clock_difference": [
+            0.0,
+            5.551115123125783e-17,
+            -5.551115123125783e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 0.0021437241282891866
+        },
+        {
+          "role": "constraint_null_tau_half_pi",
+          "label_distribution": "skewed",
+          "physical_P_zero": true,
+          "tau_over_pi": 0.5,
+          "axis_pooled_joint_difference": [
+            -1.6928452310771558e-06,
+            -2.6238214486905276e-06,
+            -2.6238214487044054e-06
+          ],
+          "maximum_absolute_joint_difference": 2.6238214487044054e-06,
+          "pooled_joint_probability_first": [
+            0.021899218189111853,
+            0.02188191874987947,
+            0.02188191874987957
+          ],
+          "pooled_joint_probability_second": [
+            0.021897525343880776,
+            0.02187929492843078,
+            0.021879294928430864
+          ],
+          "axis_pooled_clock_difference": [
+            -5.551115123125783e-17,
+            0.0,
+            -5.551115123125783e-17
+          ],
+          "maximum_absolute_clock_difference": 5.551115123125783e-17,
+          "stage6_budget_approx_noncentrality": 0.0003565166655065326
+        }
+      ],
+      "summary": {
+        "strong_signal_scale": 0.0007339844612699667,
+        "weak_signal_scale": 8.079180356054122e-05,
+        "maximum_null_scale": 2.029977514944603e-05,
+        "maximum_null_to_strong_ratio": 0.027656954909266906,
+        "strong_signal_fraction_of_ideal": 1.0124608584980093,
+        "weak_signal_fraction_of_ideal": 0.650561196444294,
+        "classification": "null_leakage_below_predeclared_tenth_of_strong_signal",
+        "predeclared_negligible_leakage_ratio": 0.1
+      }
+    }
+  ],
+  "caveat": "This is a deliberately coherent two-sided intervention, not a single passive error channel or calibrated processor noise. It tests whether a reference can recombine amplitudes from sectors that the P=0 projector otherwise filters out."
+}

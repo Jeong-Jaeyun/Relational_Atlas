@@ -1,0 +1,727 @@
+{
+  "protocol": "notes/prevalidation_protocol16_2026-10-04.tex",
+  "scenarios": [
+    [
+      "same_support",
+      0.1,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      0.1,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      0.1,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      0.1,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      0.2,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      0.2,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      0.2,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      0.2,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      0.5,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      0.5,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      0.5,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      0.5,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      0.8,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      0.8,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      0.8,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      0.8,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      1.0,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      1.0,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      1.0,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      1.0,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      1.2,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      1.2,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      1.2,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      1.2,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      1.5707963267948966,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      1.5707963267948966,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      1.5707963267948966,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      1.5707963267948966,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      2.0,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      2.0,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      2.0,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      2.0,
+      0,
+      3
+    ],
+    [
+      "same_support",
+      3.141592653589793,
+      0,
+      0
+    ],
+    [
+      "conjugate_partner",
+      3.141592653589793,
+      0,
+      1
+    ],
+    [
+      "different_pair_same_sign",
+      3.141592653589793,
+      0,
+      2
+    ],
+    [
+      "different_pair_opposite_sign",
+      3.141592653589793,
+      0,
+      3
+    ]
+  ],
+  "rows": [
+    {
+      "support_class": "same_support",
+      "angle_radians": 0.1,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.009966711079379185,
+      "axis_pooled_joint_difference": [
+        2.029977514947395e-05,
+        3.27562235191915e-06,
+        3.275622351914174e-06
+      ],
+      "maximum_absolute_joint_difference": 2.029977514947395e-05,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 0.1,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.009966711079379185,
+      "axis_pooled_joint_difference": [
+        -8.3390091145419e-18,
+        -1.9310687382680228e-18,
+        1.787163890764854e-18
+      ],
+      "maximum_absolute_joint_difference": 8.3390091145419e-18,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 0.1,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.009966711079379185,
+      "axis_pooled_joint_difference": [
+        5.4560289850593105e-06,
+        5.456028985104823e-06,
+        -1.963449680733244e-06
+      ],
+      "maximum_absolute_joint_difference": 5.456028985104823e-06,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 0.1,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.009966711079379185,
+      "axis_pooled_joint_difference": [
+        9.822285382570935e-06,
+        5.073472609560516e-06,
+        -8.500039498466375e-06
+      ],
+      "maximum_absolute_joint_difference": 9.822285382570935e-06,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 0.2,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.039469502998557456,
+      "axis_pooled_joint_difference": [
+        8.038980535450538e-05,
+        1.2971895946413964e-05,
+        1.2971895946398425e-05
+      ],
+      "maximum_absolute_joint_difference": 8.038980535450538e-05,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 0.2,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.039469502998557456,
+      "axis_pooled_joint_difference": [
+        5.874733135977301e-18,
+        -2.993511239362098e-17,
+        -2.6736171463608363e-17
+      ],
+      "maximum_absolute_joint_difference": 2.993511239362098e-17,
+      "maximum_clock_acceptance_error": 4.718447854656915e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 0.2,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.039469502998557456,
+      "axis_pooled_joint_difference": [
+        2.1606600579064192e-05,
+        2.1606600579074844e-05,
+        -7.775522653218472e-06
+      ],
+      "maximum_absolute_joint_difference": 2.1606600579074844e-05,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 0.2,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.039469502998557456,
+      "axis_pooled_joint_difference": [
+        3.88975567268452e-05,
+        2.0091625814384307e-05,
+        -3.366128910462186e-05
+      ],
+      "maximum_absolute_joint_difference": 3.88975567268452e-05,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 0.5,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.22984884706593015,
+      "axis_pooled_joint_difference": [
+        0.00046814604936117656,
+        7.554104225408706e-05,
+        7.554104225407643e-05
+      ],
+      "maximum_absolute_joint_difference": 0.00046814604936117656,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 0.5,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.22984884706593015,
+      "axis_pooled_joint_difference": [
+        -3.4615271938967865e-17,
+        -4.3637972772239085e-17,
+        -1.713742772385085e-17
+      ],
+      "maximum_absolute_joint_difference": 4.3637972772239085e-17,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 0.5,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.22984884706593015,
+      "axis_pooled_joint_difference": [
+        0.00012582502125967033,
+        0.00012582502125970145,
+        -4.528042093687925e-05
+      ],
+      "maximum_absolute_joint_difference": 0.00012582502125970145,
+      "maximum_clock_acceptance_error": 4.551914400963142e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 0.5,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.22984884706593015,
+      "axis_pooled_joint_difference": [
+        0.00022651808969694813,
+        0.00011700261040654465,
+        -0.00019602501547215262
+      ],
+      "maximum_absolute_joint_difference": 0.00022651808969694813,
+      "maximum_clock_acceptance_error": 4.551914400963142e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 0.8,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.5145997611506444,
+      "axis_pooled_joint_difference": [
+        0.0010481127978094235,
+        0.00016912501300516108,
+        0.00016912501300512495
+      ],
+      "maximum_absolute_joint_difference": 0.0010481127978094235,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 0.8,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.5145997611506444,
+      "axis_pooled_joint_difference": [
+        -1.666780845695171e-17,
+        -3.930142121729891e-17,
+        -3.924842115574213e-17
+      ],
+      "maximum_absolute_joint_difference": 3.930142121729891e-17,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 0.8,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.5145997611506444,
+      "axis_pooled_joint_difference": [
+        0.00028170467276317007,
+        0.00028170467276327995,
+        -0.00010137668900746694
+      ],
+      "maximum_absolute_joint_difference": 0.00028170467276327995,
+      "maximum_clock_acceptance_error": 4.718447854656915e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 0.8,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.5145997611506444,
+      "axis_pooled_joint_difference": [
+        0.0005071424055060729,
+        0.0002619524025779827,
+        -0.0004388730516594729
+      ],
+      "maximum_absolute_joint_difference": 0.0005071424055060729,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 1.0,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.7080734182735712,
+      "axis_pooled_joint_difference": [
+        0.0014421688575455426,
+        0.00023270946337636164,
+        0.00023270946337634323
+      ],
+      "maximum_absolute_joint_difference": 0.0014421688575455426,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 1.0,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.7080734182735712,
+      "axis_pooled_joint_difference": [
+        -3.319626486849175e-17,
+        -5.4177618860512686e-17,
+        -2.33361812133296e-17
+      ],
+      "maximum_absolute_joint_difference": 5.4177618860512686e-17,
+      "maximum_clock_acceptance_error": 4.551914400963142e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 1.0,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.7080734182735712,
+      "axis_pooled_joint_difference": [
+        0.0003876167517154801,
+        0.0003876167517155071,
+        -0.0001394913353349387
+      ],
+      "maximum_absolute_joint_difference": 0.0003876167517155071,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 1.0,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.7080734182735712,
+      "axis_pooled_joint_difference": [
+        0.0006978119628689262,
+        0.0003604380723105415,
+        -0.0006038760436648974
+      ],
+      "maximum_absolute_joint_difference": 0.0006978119628689262,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 1.2,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.8686968577706227,
+      "axis_pooled_joint_difference": [
+        0.0017693151341576193,
+        0.0002854962771386834,
+        0.00028549627713862096
+      ],
+      "maximum_absolute_joint_difference": 0.0017693151341576193,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 1.2,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.8686968577706227,
+      "axis_pooled_joint_difference": [
+        -4.964751271433073e-17,
+        -3.923765173684133e-17,
+        -4.064653978871543e-18
+      ],
+      "maximum_absolute_joint_difference": 4.964751271433073e-17,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 1.2,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.8686968577706227,
+      "axis_pooled_joint_difference": [
+        0.0004755456140643822,
+        0.0004755456140644004,
+        -0.0001711345842285586
+      ],
+      "maximum_absolute_joint_difference": 0.0004755456140644004,
+      "maximum_clock_acceptance_error": 4.718447854656915e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 1.2,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.8686968577706227,
+      "axis_pooled_joint_difference": [
+        0.0008561070025357915,
+        0.00044220128166225605,
+        -0.0007408631779698775
+      ],
+      "maximum_absolute_joint_difference": 0.0008561070025357915,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 1.5707963267948966,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 1.0,
+      "axis_pooled_joint_difference": [
+        0.002036733375136256,
+        0.0003286404738676039,
+        0.0003286404738675481
+      ],
+      "maximum_absolute_joint_difference": 0.002036733375136256,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 1.5707963267948966,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 1.0,
+      "axis_pooled_joint_difference": [
+        -3.265059036200277e-17,
+        -1.7068780241152394e-17,
+        -1.2023602435098108e-17
+      ],
+      "maximum_absolute_joint_difference": 3.265059036200277e-17,
+      "maximum_clock_acceptance_error": 4.6074255521944e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 1.5707963267948966,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 1.0,
+      "axis_pooled_joint_difference": [
+        0.0005474228682252055,
+        0.0005474228682252365,
+        -0.00019700234339485663
+      ],
+      "maximum_absolute_joint_difference": 0.0005474228682252365,
+      "maximum_clock_acceptance_error": 4.718447854656915e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 1.5707963267948966,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 1.0,
+      "axis_pooled_joint_difference": [
+        0.000985504910467218,
+        0.000509037524668528,
+        -0.0008528458529086531
+      ],
+      "maximum_absolute_joint_difference": 0.000985504910467218,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 2.0,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 0.826821810431806,
+      "axis_pooled_joint_difference": [
+        0.0016839868797827403,
+        0.0002717084153856348,
+        0.0002717084153855713
+      ],
+      "maximum_absolute_joint_difference": 0.0016839868797827403,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 2.0,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 0.826821810431806,
+      "axis_pooled_joint_difference": [
+        -1.2392475830134635e-17,
+        -9.121389625119057e-18,
+        -9.432689358823356e-18
+      ],
+      "maximum_absolute_joint_difference": 1.2392475830134635e-17,
+      "maximum_clock_acceptance_error": 4.551914400963142e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 2.0,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 0.826821810431806,
+      "axis_pooled_joint_difference": [
+        0.00045261839049648623,
+        0.0004526183904964994,
+        -0.00016288770240801008
+      ],
+      "maximum_absolute_joint_difference": 0.0004526183904964994,
+      "maximum_clock_acceptance_error": 4.773959005888173e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 2.0,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 0.826821810431806,
+      "axis_pooled_joint_difference": [
+        0.0008148318951832409,
+        0.00042087826864546044,
+        -0.000705154956172531
+      ],
+      "maximum_absolute_joint_difference": 0.0008148318951832409,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    },
+    {
+      "support_class": "same_support",
+      "angle_radians": 3.141592653589793,
+      "source_qubit": 0,
+      "return_qubit": 0,
+      "sin_squared": 1.4997597826618576e-32,
+      "axis_pooled_joint_difference": [
+        -9.738875154633326e-08,
+        -6.344953264669727e-08,
+        -6.344953268329857e-08
+      ],
+      "maximum_absolute_joint_difference": 9.738875154633326e-08,
+      "maximum_clock_acceptance_error": 4.718447854656915e-15
+    },
+    {
+      "support_class": "conjugate_partner",
+      "angle_radians": 3.141592653589793,
+      "source_qubit": 0,
+      "return_qubit": 1,
+      "sin_squared": 1.4997597826618576e-32,
+      "axis_pooled_joint_difference": [
+        -1.055041692483382e-32,
+        -1.7995034029648385e-33,
+        -1.7779893437629923e-32
+      ],
+      "maximum_absolute_joint_difference": 1.7779893437629923e-32,
+      "maximum_clock_acceptance_error": 4.551914400963142e-15
+    },
+    {
+      "support_class": "different_pair_same_sign",
+      "angle_radians": 3.141592653589793,
+      "source_qubit": 0,
+      "return_qubit": 2,
+      "sin_squared": 1.4997597826618576e-32,
+      "axis_pooled_joint_difference": [
+        -9.422580507450712e-09,
+        -9.4225805122955e-09,
+        -6.340076824320179e-09
+      ],
+      "maximum_absolute_joint_difference": 9.4225805122955e-09,
+      "maximum_clock_acceptance_error": 4.773959005888173e-15
+    },
+    {
+      "support_class": "different_pair_opposite_sign",
+      "angle_radians": 3.141592653589793,
+      "source_qubit": 0,
+      "return_qubit": 3,
+      "sin_squared": 1.4997597826618576e-32,
+      "axis_pooled_joint_difference": [
+        -1.71690610962131e-08,
+        -1.7169061094469968e-08,
+        -1.1552373171109438e-08
+      ],
+      "maximum_absolute_joint_difference": 1.71690610962131e-08,
+      "maximum_clock_acceptance_error": 4.6629367034256575e-15
+    }
+  ]
+}

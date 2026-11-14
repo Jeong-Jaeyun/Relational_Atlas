@@ -1,0 +1,23 @@
+{
+  "source": "D:\\RELATIONAL_ATLAS_I01_20261002\\results\\qiskit_clock_alias_audit.json",
+  "seed_count": 36,
+  "shots_per_circuit": 4096,
+  "standardized_difference_definition": "(arm_true-arm_absent)/sqrt(2*N*p*(1-p)) per tau, axis, label",
+  "observed_mean_standardized_difference": 0.020527586763697286,
+  "observed_variance_standardized_difference": 1.035893695626116,
+  "exact_binomial_null_panels": 5000,
+  "null_variance_95pct_interval": [
+    0.945746632948046,
+    1.0539588639320516
+  ],
+  "null_mean_95pct_interval": [
+    -0.03919407655911634,
+    0.03710972998187809
+  ],
+  "empirical_upper_tail_for_variance": 0.0998,
+  "empirical_two_sided_tail_for_mean": 0.2914,
+  "nominal_p_below_0_point_05": 6,
+  "number_of_p_tests": 72,
+  "binomial_tail_for_nominal_positives_if_independent": 0.15085938463005755,
+  "caveat": "The binomial tail assumes independent tests; it is descriptive, not a diagnosis of an Aer defect."
+}

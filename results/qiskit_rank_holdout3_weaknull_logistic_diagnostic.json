@@ -1,0 +1,279 @@
+{
+  "protocol": "notes/prevalidation_protocol4b_2026-10-04.tex",
+  "familywise_tests": 8,
+  "familywise_bonferroni_threshold": 0.00625,
+  "rows": [
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "exact_axis_pooled_differences": [
+        -5.968683584705682e-17,
+        -6.761700030866509e-17,
+        -8.05035175587785e-17
+      ],
+      "exact_max_pooled_probability_difference": 8.05035175587785e-17,
+      "test": {
+        "axis_differences": [
+          0.0006975446428571369,
+          0.00045776367187499306,
+          -0.0005580357142857158
+        ],
+        "axis_standard_errors": [
+          0.0007375972010746276,
+          0.0007365995384701665,
+          0.0007367548862550181
+        ],
+        "wald_chi_square_df3": 1.8542433841527421,
+        "logit_null_shifts": [
+          0.005588078166287702,
+          0.0036771941108474926,
+          -0.004481247759200835
+        ],
+        "fitted_null_max_weighted_difference": 5.6661406357429665e-18,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.6027397260273972,
+        "chi_square_df3_pvalue_crosscheck": 0.6032026968915347
+      }
+    },
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "exact_axis_pooled_differences": [
+        3.095536837509538e-17,
+        2.2281750995211348e-17,
+        4.9293873692564487e-17
+      ],
+      "exact_max_pooled_probability_difference": 4.9293873692564487e-17,
+      "test": {
+        "axis_differences": [
+          -0.0002964564732142852,
+          -0.00012642996651785805,
+          0.00027465820312499767
+        ],
+        "axis_standard_errors": [
+          0.0006322701773725715,
+          0.0006323445660024155,
+          0.0006339233635653274
+        ],
+        "wald_chi_square_df3": 0.44754078022034977,
+        "logit_null_shifts": [
+          -0.0032318411686097503,
+          -0.0013780118461378388,
+          0.0029789615089088617
+        ],
+        "fitted_null_max_weighted_difference": 6.96220133000253e-18,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.9286071392860714,
+        "chi_square_df3_pvalue_crosscheck": 0.9302557011310308
+      }
+    },
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "exact_axis_pooled_differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_max_pooled_probability_difference": 0.0,
+      "test": {
+        "axis_differences": [
+          0.0003574916294642857,
+          0.0006888253348214285,
+          -0.0010899135044642855
+        ],
+        "axis_standard_errors": [
+          0.001454590896154171,
+          0.0014552070966347501,
+          0.00145417605243599
+        ],
+        "wald_chi_square_df3": 0.8462230971893612,
+        "logit_null_shifts": [
+          0.0007365836626125055,
+          0.0014180690068708868,
+          -0.0022469617551645615
+        ],
+        "fitted_null_max_weighted_difference": 2.3823479625018534e-17,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.8426157384261573,
+        "chi_square_df3_pvalue_crosscheck": 0.8383820776850602
+      }
+    },
+    {
+      "label_distribution": "uniform",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "exact_axis_pooled_differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_max_pooled_probability_difference": 0.0,
+      "test": {
+        "axis_differences": [
+          0.00046212332589285713,
+          0.0009634835379464286,
+          0.00030517578125
+        ],
+        "axis_standard_errors": [
+          0.000834394230911762,
+          0.0008353995190566356,
+          0.0008386831357319444
+        ],
+        "wald_chi_square_df3": 1.7692955231071177,
+        "logit_null_shifts": [
+          0.0028933316932986397,
+          0.0060178459005697515,
+          0.0018912008817386639
+        ],
+        "fitted_null_max_weighted_difference": 4.759767109488533e-17,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.6258374162583742,
+        "chi_square_df3_pvalue_crosscheck": 0.6216392572937374
+      }
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.0,
+      "exact_axis_pooled_differences": [
+        0.0028993127865560037,
+        0.002899312786555994,
+        0.0028993127865559864
+      ],
+      "exact_max_pooled_probability_difference": 0.0028993127865560037,
+      "test": {
+        "axis_differences": [
+          0.002306256975446442,
+          0.0031694684709821404,
+          0.002899169921875
+        ],
+        "axis_standard_errors": [
+          0.0008358386994832104,
+          0.0008356188460771522,
+          0.0008358589737157387
+        ],
+        "wald_chi_square_df3": 34.03023297430758,
+        "logit_null_shifts": [
+          0.014386873910895326,
+          0.01978023977929394,
+          0.018083511920782135
+        ],
+        "fitted_null_max_weighted_difference": 8.509828007991764e-18,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 9.999000099990002e-05,
+        "chi_square_df3_pvalue_crosscheck": 1.9522847179947252e-07
+      }
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": false,
+      "tau_over_pi": 0.5,
+      "exact_axis_pooled_differences": [
+        -0.0004967589256702281,
+        -0.0004967589256702363,
+        -0.0004967589256702164
+      ],
+      "exact_max_pooled_probability_difference": 0.0004967589256702363,
+      "test": {
+        "axis_differences": [
+          -0.0012686593191964298,
+          -0.001124790736607146,
+          -0.0008108956473214259
+        ],
+        "axis_standard_errors": [
+          0.0005551849521527769,
+          0.0005499927691423298,
+          0.000555496802990429
+        ],
+        "wald_chi_square_df3": 11.535089192330734,
+        "logit_null_shifts": [
+          -0.01793276235642227,
+          -0.01620189489204349,
+          -0.011450647421922144
+        ],
+        "fitted_null_max_weighted_difference": 1.0322721846657435e-17,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.0103989601039896,
+        "chi_square_df3_pvalue_crosscheck": 0.009157909777887597
+      }
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.0,
+      "exact_axis_pooled_differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_max_pooled_probability_difference": 0.0,
+      "test": {
+        "axis_differences": [
+          0.0015825544084821562,
+          0.00024414062499999545,
+          0.0014256068638392831
+        ],
+        "axis_standard_errors": [
+          0.001455129969836097,
+          0.0014555610173304916,
+          0.0014552462559296701
+        ],
+        "wald_chi_square_df3": 2.17062006884711,
+        "logit_null_shifts": [
+          0.0032583022323569855,
+          0.000502350090674647,
+          0.002934703381159337
+        ],
+        "fitted_null_max_weighted_difference": 1.404475234302764e-17,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.5414458554144586,
+        "chi_square_df3_pvalue_crosscheck": 0.5377584609235468
+      }
+    },
+    {
+      "label_distribution": "skewed",
+      "physical_P_zero": true,
+      "tau_over_pi": 0.5,
+      "exact_axis_pooled_differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_max_pooled_probability_difference": 0.0,
+      "test": {
+        "axis_differences": [
+          -3.487723214285756e-05,
+          -0.0007542201450892856,
+          -0.00039672851562500043
+        ],
+        "axis_standard_errors": [
+          0.0008373986204420569,
+          0.0008370279991140403,
+          0.0008383422704858279
+        ],
+        "wald_chi_square_df3": 1.0376067847408657,
+        "logit_null_shifts": [
+          -0.00021680417041225475,
+          -0.0046925096592189686,
+          -0.002460593169079095
+        ],
+        "fitted_null_max_weighted_difference": 4.0980427276084925e-17,
+        "weak_null_bootstraps": 10000,
+        "weak_null_bootstrap_pvalue": 0.7925207479252074,
+        "chi_square_df3_pvalue_crosscheck": 0.7921532685772825
+      }
+    }
+  ],
+  "detections": [
+    [
+      "skewed",
+      false,
+      0.0
+    ]
+  ],
+  "caveat": "Post-hoc analysis of previously observed Aer counts; diagnostic only."
+}
