@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 13 protocol:\\Support universality of paired transverse leakage}
+\date{2026-10-04}
+\maketitle
+
+\section*{Question}
+Stage 12 found leakage only for a paired transverse operation with the same qubit
+support, but it used qubit zero for the positive example. This protocol asks whether
+the rule holds for every system qubit and whether it fails for every alternative
+return support from qubit zero.
+
+\section*{Frozen conditions}
+At $\epsilon=1$ rad, evaluate paired inverse $R_x$ on each same-support pair
+$(q,q)$ for $q=0,\ldots,5$, then the five cross-support controls $(0,q)$ for
+$q=1,\ldots,5$. Each row evaluates all blocks, axes, labels, physical conditions,
+and both frozen clock phases exactly with workers 6. The position remains directly
+after preparation and directly after the science phase layer.
+
+\section*{Decision discipline}
+This is an exact-Aer mechanism map, not a significance experiment. The principal
+outcome is the range of $P=0$, $\tau=0$ constraint contrasts over same supports and
+the maximum over cross supports. A later finite-shot study must predeclare a new
+sampling criterion after these results are fixed.
+
+\section*{Reproduction}
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout13\_support\_atlas.py}
+\end{document}

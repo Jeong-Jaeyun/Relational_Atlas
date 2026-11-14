@@ -1,0 +1,50 @@
+% Frozen after the additive projection failed on old counts, before new Aer.
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 4b 사전 정정: 경계 보존 합산-null bootstrap}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{수정 경위}
+선검증 4의 가법적 null 투영을 기존 raw counts에 적용한 결과,
+일부 표지의 추정 성공확률이 $[0,1]$ 밖으로 나갔다.
+원래 프로토콜의 중단 규칙에 따라 새 Aer seed는 실행하지 않았다.
+구 프로토콜과 실패 코드는 남겨 두고, 아래의 경계 보존 투영을
+\emph{새 Aer 실행 전에} 고정한다. 기존 raw counts의 재분석은
+사후 진단으로만 보고한다.
+
+\section{회로·표본·검정 가족}
+회로, $n=3$, $L=7$, $\beta=0.45$, $\beta_r=0.15$,
+$E=E_0+0.37E_0^2/3$, $\tau=0,\pi/2$, 공통 위상
+$0\to0.60$ rad, 균일/비균일 표지 배분, 비제약/$P=0$ 상태,
+표지별 shots 및 총 336회로는 선검증 3과 같다. CPU workers 6,
+독립 Aer seed 20261020이다. 가족은 여덟 약한 합산 null 검정이고
+Bonferroni 문턱은 $0.00625$다. 일차 통계량은 선검증 4의
+표지 가중 차이 $\hat\Delta_i$, 이항 분산 $\hat V_i$ 및
+$T=\sum_i\hat\Delta_i^2/\hat V_i$를 그대로 사용한다.
+
+\section{경계 보존 null 생성}
+축·표지·블록의 성공확률 초기 추정은 Jeffreys 보정
+$r_{b,it}=(c_{b,it}+1/2)/(N_t+1)$을 쓴다.
+$\operatorname{logit}r=\log[r/(1-r)]$로 두고 각 축에 공통
+실수 $u_i$를 찾아
+\begin{equation}
+\sum_t a_t\left[
+\operatorname{logistic}(\operatorname{logit}r_{1,it}-u_i)-
+\operatorname{logistic}(\operatorname{logit}r_{0,it}+u_i)
+\right]=0
+\end{equation}
+을 만족시킨다. 이 식의 좌변은 $u_i$에 대해 단조 감소하고
+양 끝에서 부호가 달라 이분법으로 푼다.
+그 결과를 $p'_{0,it},p'_{1,it}$로 사용하면 모든 확률은 $(0,1)$에
+있고 가중 합 차이는 수치 오차에서 0이다.
+독립 이항표본 10000패널마다 $T^*$를 다시 계산하고
+$(1+\#\{T^*\ge T\})/10001$을 주 $p$값으로 쓴다.
+$\chi^2_3$ 꼬리확률은 별도 교차 점검으로 기록한다.
+기존 raw counts의 사후 재분석과 새 seed의 사전 검정 결과를
+서로 섞지 않는다. QPU 및 발전연구 주제 선정은 보류한다.
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 1: 위상 표지와 유한 시계 아래 관측 rank의 경계}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{판정}
+이 실험은 새로운 일반 이론의 확증이 아니다. 실험 전에 고정한
+\texttt{prevalidation\_protocol\_2026-10-04.tex}의 격자 안에서는
+충분한 위상 표지($L=2n+1$)를 보존하면 비제약 상태의 관측 Fisher rank가 $n$,
+표지를 지우면 $n-1$이라는 개입 패턴이 유지됐다. 그러나 짧은 격자
+($L=2n-1$)에서는 표지를 지워도 공통 위상 정보가 남는 반례가 나왔다.
+따라서 ``표지 삭제는 언제나 한 차원을 지운다''는 명제는 \emph{기각}하고,
+``충분한 표지 해상도와 이 검출기족에서만''이라는 조건부 명제로 남긴다.
+이는 공간 차원의 동역학적 선택이나 세 방향의 특권성을 뜻하지 않는다.
+
+\section{사전 고정한 설계}
+$k_i\in\{-1,0,1\}$, $E(k)=\sum_i k_i^2$,
+$w_k\propto e^{-\beta E(k)}$에서 $P=\sum_i k_i=0$인 상태와 비제약 상태를
+따로 준비했다. 축 $i$의 복귀 검출기 바이어스 $b$, 기록된 공통 위상
+$\phi_t=2\pi t/L$, 시계 위상 $\tau$를 사용했다. 사전 고정 격자는
+\begin{equation}
+n=3,4,5,6;\quad \beta=0.45,1.20;\quad b=0.55,1.25;\quad
+\tau/\pi=0,1/2;\quad L=2n-1,2n+1.
+\end{equation}
+128개의 상태--조건 행을 계산하고, 각 행에서 같은 표본의 표지 보존/삭제를
+비교했다. 조건부 복귀 확률은
+\begin{equation}
+q_i(t;\boldsymbol\theta,\tau)
+=\left|\sum_k w_k\exp\!\left[i\left(E(k)\tau+
+\sum_j k_j(\theta_j+\phi_t-b\delta_{ij})\right)\right]\right|^2
+\end{equation}
+이다. 표지 보존은 $q_i(t)$별 Bernoulli 정보를 합치고, 표지 삭제는
+$\bar q_i=L^{-1}\sum_t q_i(t)$만 사용한다. 보존/삭제는 새로운 물리 제약의
+삽입이 아니라 기록의 사용 여부를 바꾼 분석 개입이다.
+
+\section{정확 확률과 회로 대조}
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+조건 & 상태 QFI rank & 표지 보존 CFI rank & 표지 삭제 CFI rank \\
+\midrule
+비제약, $L=2n+1$ & $n$ & $n$ & $n-1$ \\
+$P=0$, $L=2n+1$ & $n-1$ & $n-1$ & $n-1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+사전 격자의 충분한 표지 64행에서 이 패턴을 벗어난 행은 0개였다.
+상태 QFI의 $n/(n-1)$ 패턴은 전체 128행에서 실패 0개였다.
+이 행들은 동일한 상태를 다른 측정 조건에서 반복 사용한 결정론적 격자이며,
+64회 또는 128회의 독립 통계 시행으로 해석하지 않는다.
+확률 미분의 독립 중앙차분 대조 최대 오차는 $3.38\times10^{-11}$이었다.
+선택한 $n=3,4$ 회로 네 개의 Statevector와 수식의 결합확률 최대 차이는
+$6.52\times10^{-14}$, $n=3$ 두 회로의 Aer density-matrix 대조 최대 차이는
+$3.13\times10^{-15}$였다. 이것은 구현 검증이지 가족 전체의 독립 증명은 아니다.
+
+짧은 표지 $L=2n-1$인 비제약 32행 중 16행에서, 표지 삭제 뒤에도 공통 위상
+$0\to0.23$ rad 이동이 확률을 $10^{-10}$보다 크게 바꿨다. 16행 모두
+$\tau=0$이고 $\tau=\pi/2$의 나머지 16행은 이 기준 아래 0이었다.
+예컨대 $n=3,\beta=0.45,b=1.25,L=5,\tau=0$의 삭제 CFI rank는 3,
+최대 확률 이동은 $0.00827$이다. 동일한 조건의 $\tau=\pi/2$에서는 삭제
+rank가 2이고 공통 이동은 수치 정밀도에서 0이다.
+짧은 격자에서는 허용된 전하 차이 $|P-P'|\le2n$ 중
+$|P-P'|=2n-1$ 조화가 평균 후에도 살아남을 수 있다.
+$\tau=\pi/2$에서의 소거는 이 에너지 스펙트럼의 간섭 특성으로 관찰됐으며,
+다른 스펙트럼에 대한 정리가 아니다.
+또한 $n=6,\beta=1.20,L=11,\tau=0$ 두 바이어스에서는
+공통방향 정보가 약 $2\times10^{-12}$로 양수인데 상대 고유값
+$10^{-8}$ 기준의 운영적 rank는 5다. 정확한 식별 가능성과 유한 감도
+판정은 구분해야 한다.
+
+\section{Aer 유한 샷에서의 오판 점검}
+$n=3,\beta=0.45,b=1.25$, $L=5,7$, $\tau=0,\pi/2$의 비제약 및
+$P=0$ 회로를 각 4096 shots로 실행했다. 각 상태 144회로, 합계 288회로다.
+시계 후선택률은 비제약 0.25005, $P=0$ 0.24967로 설계값 $1/4$에 가까웠다.
+공통 위상 블록 $0\to0.23$ rad의 2000회 재배분 검정 16개에서,
+비제약/표지 보존 네 개의 $p$값은 $0.00050,0.00050,0.00150,0.00300$이었다.
+비제약/표지 삭제 네 개는 $0.11294,0.78261,0.03548,0.03598$이었다.
+마지막 둘은 정확 모형에서 공통방향 정보가 0인 $\tau=\pi/2$의
+명목 5\% 거짓 양성이다. $P=0$ 여덟 검정 중 하나도 명목
+$p=0.04748$이었으나 정확 모형은 공통 위상에 불변이다.
+16개를 하나의 가족으로 본 Bonferroni 문턱 $0.003125$에서는
+보존/비제약 네 개만 남고, 삭제 및 $P=0$은 모두 0개다.
+\textbf{이 다중검정 보정은 raw $p$값을 본 뒤 추가한 탐색적 진단이며
+사전 등록된 확증 검정으로 제시하지 않는다.}
+반대로 $L=5,\tau=0$의 삭제 상태는 정확하게 rank 3이지만 이 샷 예산의
+검정은 검출하지 못했다($p=0.11294$). 영과 작은 양수의 구분은 예산에
+민감하다.
+
+\section{$P=0$ 품질 감사와 다음 게이트}
+기존 기준점 에일리어싱 실험의 $P=0$ 대조군은 정확하게 공통 위상에
+불변인데, 초기 32개 Aer 검정에서 명목 5\% 양성이 5개였다.
+서로 다른 seed 20개를 추가해 40개 검정 중 양성은 1개였고,
+전체는 72개 중 6개였다. 전체 양성 수의 독립 5\% 이항 상측확률은
+0.151이다. 추가 실행이 초기 결과를 본 뒤 결정됐으므로 이 전체값은
+확증적 $p$값이 아니라 품질 감사의 기술량이다.
+36 seed의 raw-count 차이 표준화 평균은 0.0205, 분산은 1.0359였다.
+정확 이항확률로 생성한 5000개 대응 패널의 95\% 분산 범위
+$[0.9457,1.0540]$, 평균 범위 $[-0.0392,0.0371]$ 안에 들었다.
+분산 상측 꼬리비율은 0.0998이다. 초기의 높은 명목 양성 빈도가
+추가 seed에서 반복되지 않았으므로 Aer의 체계적 이상이나 물리 신호의
+근거로 취급하지 않는다. 원자료와 계산은
+\texttt{../results/qiskit\_clock\_alias\_audit.json} 및
+\texttt{../results/qiskit\_pzero\_sampling\_audit.json}에 있다.
+
+현재 통과한 것은 \emph{설계된 상태족, $E=\sum k_i^2$,
+복귀 검출기, 두 시계 위상, 유한 표지 격자} 안의 개입 식별이다.
+더 넓은 ``유한 위상 기준과 시계 아래 관측 차원의 식별 가능성''으로
+승격하기 전에는 최소한 다른 검출 POVM과 에너지 스펙트럼,
+표지 확률의 불균형, 기준 위상 법칙의 오가정, 위상 기준 자체의 오차에서
+같은 판별이 유지되는지 보아야 한다. $P=0$의 정확 null과 Aer 검정력도
+계속 분리해 평가한다. QPU 실험은 이 구조 확인 뒤로 보류한다.
+
+\paragraph{재현 자료.}
+사전 프로토콜: \texttt{prevalidation\_protocol\_2026-10-04.tex}.
+정확 격자: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout\_grid.py}와
+\texttt{../results/qiskit\_rank\_holdout\_grid.json}.
+회로 대조: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout\_circuit.py}와
+\texttt{../results/qiskit\_rank\_holdout\_circuit.json}.
+유한 샷: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout\_shots.py}와
+\texttt{../results/qiskit\_rank\_holdout\_shots.json}.
+
+\end{document}

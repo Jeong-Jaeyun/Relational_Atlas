@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 10 result:\\Exact boundary for paired-coherence observability}
+\date{2026-10-04}
+\maketitle
+
+\section*{Frozen design screen}
+Stage 9 showed the leakage mechanism but not an experimentally useful amplitude.
+Before any finite-shot run, this exact Aer scan fixed two screens: structural
+separation $D_0/D_{\mathrm{strong}}\geq0.1$ and approximate finite-shot constraint
+noncentrality $\Lambda_C\geq10$ under the stage-6 allocation.
+
+\section*{Exact Aer boundary}
+Structural separation first exceeds $0.1$ at $\epsilon=0.2$ radians:
+$D_0=8.04\times10^{-5}$, $D_{\mathrm{strong}}=7.44\times10^{-4}$, ratio $0.108$.
+This point has only $\Lambda_C=0.034$, and is deliberately below finite-shot reach.
+The detection screen is crossed first at $\epsilon=1.0$ radians, where
+$D_0=1.442\times10^{-3}$, $D_{\mathrm{strong}}=8.767\times10^{-4}$, ratio $1.645$,
+and $\Lambda_C=14.54$.
+
+\section*{Interpretation}
+There are two distinct thresholds: a smaller amplitude makes null leakage visible
+in exact probabilities; a larger amplitude is needed for this finite-shot decision
+procedure. This distinction fixed, rather than tuned after observing, the two
+amplitudes used in stage 11.
+
+\section*{Reproduction}
+Implementation: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout10\_coherence\_boundary.py}.\\
+Exact output: \texttt{../results/qiskit\_rank\_holdout10\_coherence\_boundary.json}.
+\end{document}

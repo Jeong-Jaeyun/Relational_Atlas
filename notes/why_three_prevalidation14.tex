@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 prevalidation 14 result:\\Complete paired-support transfer selection pattern}
+\date{2026-10-04}
+\maketitle
+
+\section*{Exact matrix summary}
+The full source-to-return matrix is symmetric to $1.6\times10^{-16}$. Its entries
+fall into four exact-Aer classes:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+support relationship & maximum $P=0$, $\tau=0$ contrast\\
+\midrule
+same support & $1.4421688575454\times10^{-3}$\\
+conjugate partner in the same momentum pair & at most $1.6\times10^{-16}$\\
+different momentum pair, matching sign bit & $3.876167517154\times10^{-4}$\\
+different momentum pair, opposite sign bit & $6.978119628691\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The three conjugate pairs are $(0,1)$, $(2,3)$, and $(4,5)$. All six diagonal
+entries agree to numerical precision; all twelve entries in each off-pair class do
+as well.
+
+\section*{Interpretation}
+The paired transverse intervention obeys an encoding-level transfer pattern, not a
+same-qubit rule. Return to the conjugate partner cancels the constraint contrast,
+whereas transfer to another momentum pair remains observable and depends on the
+relative sign-bit class. This explains both the stage-12 zero q0-to-q1 control and
+the stage-13 counterexamples without changing any sampling criterion after the fact.
+
+\section*{Scope}
+The matrix is exact Aer evidence for this deliberately constructed $n=3$ circuit.
+It motivates testing the selection pattern under a changed number of momentum pairs;
+it does not establish a general physical selection law.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout14\_transfer\_matrix.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout14\_transfer\_matrix.json}.
+\end{document}

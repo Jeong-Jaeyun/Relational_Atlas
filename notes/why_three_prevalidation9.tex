@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 9 result:\\Paired coherent reference access produces constraint leakage}
+\date{2026-10-04}
+\maketitle
+
+\section*{Question and intervention}
+The stage-8 one-sided $R_x(\epsilon)$ fault leaked amplitude out of the reference
+sector but did not make the $P=0$ pooled constraint non-null. This experiment used a
+matched reference intervention: $R_x(\epsilon)$ immediately after preparation and
+$R_x(-\epsilon)$ immediately after the scientific phase layer, both on qubit zero.
+It asks whether coherent access on both sides of the phase layer permits
+recombination into the reference sector.
+
+\section*{Exact Aer result}
+For the skewed allocation and $P=0$, $\tau=0$, the maximum pooled joint-probability
+difference is $2.04\times10^{-7}$, $1.83\times10^{-6}$, and $2.03\times10^{-5}$ at
+$\epsilon=0.01,0.03,0.10$ radians. The approximately quadratic growth occurs while
+the unrestricted distributional null remains at numerical zero. Thus the effect is
+not a generic label-allocation artefact: it requires matched coherent reference
+access and appears in the previously exact constraint.
+
+\section*{Interpretation}
+Leaving a sector is insufficient. A later coherent operation must return amplitude
+so that the all-zero event can interfere with it. At $\epsilon=0.10$, finite-shot
+noncentrality is only $2.14\times10^{-3}$, so this is a mechanism confirmation, not
+a finite-shot detection claim.
+
+\section*{Reproduction}
+Implementation: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout9\_paired\_coherence.py}.\\
+Exact output: \texttt{../results/qiskit\_rank\_holdout9\_paired\_coherence.json}.
+\end{document}

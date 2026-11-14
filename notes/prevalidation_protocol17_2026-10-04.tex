@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 17 protocol:\\Finite-shot confirmation of paired support-transfer classes}
+\date{2026-10-04}
+\maketitle
+
+\section*{Frozen family}
+At $n=3$, $\epsilon=\pi/2$, skewed largest-remainder labels, $P=0$, $\tau=0$,
+workers 6, 131072 shots per uniform label, Aer seed 20261117, and 10000 bounded
+weak-null bootstraps, test four source-return rows: same support $(0,0)$; conjugate
+partner $(0,1)$; different-pair same-sign $(0,2)$; and different-pair opposite-sign
+$(0,3)$. The familywise Bonferroni threshold is $0.0125$.
+
+\section*{Pre-execution expectations}
+Exact Aer predicts approximate noncentralities 33.80, numerical zero, 9.90, and
+27.61 in this order at the frozen budget. Thus the three nonzero classes are
+predeclared positives, with the same-sign class close to the design screen; the
+conjugate partner is the exact-null control. Exact probabilities are reported but
+do not replace the finite-shot decision.
+
+\section*{Resources and integrity}
+The total is $4\times2\times3\times7\times131072=22{,}020{,}096$ preparations.
+Each completed raw table is checkpointed. Every table must satisfy joint-all-zero
+count $\leq$ clock-acceptance count before analysis.
+
+\section*{Reproduction}
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout17\_transfer\_shots.py}
+\end{document}

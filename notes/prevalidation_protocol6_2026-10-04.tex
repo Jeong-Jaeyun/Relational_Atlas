@@ -1,0 +1,55 @@
+% Frozen before the stage-6 Aer shot run. Compile with xelatex.
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 6 사전 프로토콜: 명시적 시계 레지스터와 후선택 비용}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{질문과 회로}
+앞선 선검증 3--5는 계에 에너지 위상을 직접 가했다. 이번에는 별도의
+2-qubit 시계 레지스터를 두고 동일한 현상과 검정 결과가 유지되는지
+검사한다. $n=3$의 계는 6 qubit이고 $E_0(k)=\sum_i k_i^2\in
+\{0,1,2,3\}$를 시계에 기록한
+$\sum_k\sqrt{w_k}|k\rangle|E_0(k)\rangle$을 준비한다.
+시계 레지스터의 대각 게이트는
+$\exp[i\tau(E_0+0.37E_0^2/3)]$이고, 계에는 상대 위상
+$\exp(i k\cdot\theta)$를 건다. 시계에 $H^{\otimes2}$를 적용하고
+시계 결과 $00$을 후선택한다. 계의 기준 상태는
+$v_k\propto\exp(-0.15 E_0(k))$이며 기준 상태의 역준비 뒤
+계 결과도 $0^6$인지 측정한다. 따라서 시계 수락 확률은
+$1/4$, 두 결과의 동시확률은 직접 위상 회로의 반환확률
+$p(\theta,\tau)/4$라는 것이 사전 예측이다. 이것은 에너지와
+얽힌 \emph{설계된} 시계 및 후선택의 구현 검증이지 자율 시계
+동역학의 입증은 아니다.
+
+\section{고정 조건과 분석}
+기존 선검증 4b와 동일하게 $L=7$, $\beta=0.45$, 검출 축 바이어스
+1.25 rad, 공통 과학 위상 $0\to0.60$ rad, $\tau=0,\pi/2$,
+비제약/$P=0$ 상태, 균일/비균일 표지 배분을 사용한다. 각 표지의
+기준 샷은 131072개이며 비균일 경우 같은 총 샷을
+$a_t=[1+0.35\cos(2\pi t/7)]/7$에 따라 결정적으로 배분한다.
+총 336회로, 총 44,040,192 준비를 예상한다. CPU workers 6,
+Aer seed 20261027, 약한 pooled-null bootstrap seed 20261028,
+bootstrap 10000회다.
+
+검정 입력은 후선택으로 줄어든 표본 수가 아니라 \emph{전체 준비 수}와
+시계/계 동시 성공수다. 선검증 4b의 범위 보존 logit-projection
+약한 pooled-null bootstrap을 그대로 쓰며 여덟 대조의 Bonferroni
+문턱은 $0.05/8=0.00625$다. 비균일ㆍ비제약ㆍ$\tau=0$만
+가족 문턱에서 검출될 것으로 예상하고, 비균일ㆍ비제약ㆍ
+$\tau=\pi/2$의 비검출은 낮은 검정력으로 해석한다. 정확 모형의
+공통 위상 Fisher rank는 동시 성공 측정에서도 비제약ㆍ비균일
+표지 삭제 시 3, 나머지 표지 삭제 시 2이며 표지 보존 시
+비제약 3, $P=0$ 2여야 한다.
+
+샷 이전에는 독립적인 Statevector 및 Aer density-matrix로
+시계 수락과 동시확률을 점검한다. 시계 수락률을 전 회로에서
+별도로 저장하며 총 준비에 대한 유효 수락률도 보고한다.
+정확 모형의 사전 pilot은 비균일ㆍ비제약 조건의 근사 비중심도를
+$\tau=0,\pi/2$에서 약 23.95/2.05로 예측한다.
+검출되지 않는 사례를 구조적 영이라고 단정하지 않는다.
+\end{document}

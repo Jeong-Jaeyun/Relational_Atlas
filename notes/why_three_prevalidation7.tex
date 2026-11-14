@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 선검증 7 결과:\\
+국소 오류 아래의 명시적 시계 contrast}
+\date{2026-10-04}
+\maketitle
+
+\section*{결론}
+선검증 6의 두 정확 영은 준비 amplitude damping, 과학 위상 뒤 phase damping,
+그리고 대칭 bit 읽기 오류를 각각 단독으로 넣은 Aer density-matrix sweep에서
+유지됐다. 각 오류 확률 $p=0.001,0.01,0.03$와 이상 기준점, 총 열 가지
+scenario를 계산했다. 네 영 대조군의 최대 pooled contrast는 모든 scenario에서
+$5.6\times10^{-17}$ 이하였고, 강한 비균일ㆍ비제약ㆍ$\tau=0$ signal은
+감쇠했지만 사라지지 않았다.
+
+따라서 이 특정한 phase-covariant 또는 label-independent 오류 계열에서 관찰된
+rank 3 패턴은 오류가 만든 작은 양수로 설명되지 않는다. 그러나 이는 모든 잡음에
+대한 보장이 아니다. 특히 준비 단계의 coherent symmetry-breaking 오류와
+표지 의존적인 측정/수락 오류는 아직 이 결론의 범위 밖이다.
+
+\section*{정확 Aer 효과량}
+표의 $D_S,D_W$는 각각 강한/약한 비제약 signal의 축별 pooled joint-probability
+차이의 최대 절댓값이다. $\Lambda$는 선검증 6의 shot 배분을 대입한 근사
+noncentrality다.
+
+\begin{center}
+\begin{tabular}{llrrrr}
+\toprule
+오류 & $p$ & $D_S$ & $\Lambda_S$ & $D_W$ & $\Lambda_W$\\
+\midrule
+이상 & 0 & 0.000724951 & 23.683 & 0.000124188 & 2.060\\
+준비 damping & 0.03 & 0.000676581 & 21.076 & 0.000115032 & 1.751\\
+위상 damping & 0.03 & 0.000691471 & 21.914 & 0.000121063 & 1.965\\
+대칭 읽기 오류 & 0.03 & 0.000615371 & 17.293 & 0.000230711 & 5.116\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+준비 damping과 phase damping은 두 signal을 각각 대략 $7\%$와 $5\%$ 이하로
+감쇠시켰다($p=0.03$). 반면 대칭 읽기 오류는 강한 signal을 약 $15\%$ 줄이면서
+약한 $\tau=\pi/2$ signal을 약 $86\%$ 키웠다. 이는 phase 정보가 늘었다는 뜻이
+아니다. all-zero 측정 사건이 읽기 flip 뒤에는 원래의 all-zero 확률 하나가 아니라
+모든 bit-string 확률의 가중합
+\[
+ p_{\mathrm{obs}}(0^8)
+ =\sum_x p(x)\,p^{|x|}(1-p)^{8-|x|}
+\]
+이 되기 때문이다. 약한 contrast의 hamming-weight별 부호와 크기가 강한 contrast와
+같지 않아, 읽기 채널이 두 contrast를 다르게 재가중한다.
+
+\section*{축 대칭의 경계}
+준비/phase 채널을 각 qubit에 동일하게 적용한 경우, 세 축의 명시적 교차검사
+오차는 각각 $3.82\times10^{-17}$, $3.56\times10^{-17}$이었다. 따라서 이 두
+경우에는 한 축의 density-matrix 결과를 세 축으로 확장했다. 대칭 읽기 오류에서는
+특정 labelㆍshift에서 관측 all-zero 확률의 축간 차이가 $5.19\times10^{-5}$로
+나왔다. 이는 회수 확률만의 대칭을 전체 출력 bit-string 분포의 대칭으로
+확장할 수 없음을 보인다. 그래서 읽기 오류의 세 축은 모두 명시적으로 계산했다.
+그럼에도 사전 지정된 네 pooled null은 영으로 남았다.
+
+\section*{해석과 다음 게이트}
+이번 결과가 지지하는 범위는 좁고 구체적이다. 상태 준비 뒤의 phase-covariant
+incoherent loss, 위상 층 뒤 dephasing, 그리고 label-independent 대칭 readout
+오류는 이 회로에서 두 exact-null 원인을 거짓 signal로 바꾸지 않았다. 하지만
+효과량과 유한-shots 검정력은 달라진다. 특히 원래 약했던 $\tau=\pi/2$ contrast는
+읽기 오류 아래에서 더 커질 수 있으므로, 단일 event의 크기만으로 정보를
+해석해서는 안 된다.
+
+다음 사전 검증은 $U(1)$ 대칭을 깨는 coherent 준비 오류와 label-dependent
+수락/측정 오류를 각각 분리해야 한다. 그 실험에서 null leakage가 나타난다면
+오류의 존재 자체보다 어느 대칭과 어느 표지 가정이 깨졌는지가 식별 조건이 된다.
+이 단계만으로 자발적 차원 선택, 일반적 시계 이론, 또는 후속 연구 주제를
+확정하지 않는다.
+
+\section*{재현 자료}
+사전 프로토콜은 \texttt{prevalidation\_protocol7\_2026-10-04.tex}, 구현은
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout7\_noise\_stress.py},
+회귀 검사는 \texttt{../tests/test\_qiskit\_rank\_holdout7\_noise\_stress.py},
+정확 output은 \texttt{../results/qiskit\_rank\_holdout7\_noise\_stress.json}에 둔다.
+\end{document}
+

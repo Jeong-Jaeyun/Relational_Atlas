@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 선검증 11 사전 프로토콜:\\
+paired coherence leakage의 finite-shot Aer 확인}
+\date{2026-10-04}
+\maketitle
+
+\section*{질문}
+선검증 10의 exact Aer boundary에서 paired coherence는 $\epsilon=0.2$ rad에서
+구조적 leakage 10\% screen을 넘고, $\epsilon=1.0$ rad에서 고정 stage-6 예산의
+constraint $\Lambda_C\ge10$ screen을 넘었다. 이번 단계는 이 두 지점의
+finite-shot 관측을 직접 비교한다.
+
+\section*{고정 실행}
+모든 case에서 $n=3$, $L=7$, paired
+$R_x(\epsilon)$--phase layer--$R_x(-\epsilon)$, workers 6, 균일 표지당
+131072 shots, Aer seed 20261104, 10000 bootstrap을 고정한다. 각 case는
+두 blockㆍ세 축ㆍ일곱 label, 42 circuits이고 다음 4-test family를 이룬다:
+\begin{enumerate}
+\item candidate constraint: $\epsilon=1.0$, 비균일, $P=0$, $\tau=0$;
+\item candidate distribution control: $\epsilon=1.0$, 균일, 비제약, $\tau=0$;
+\item candidate strong control: $\epsilon=1.0$, 비균일, 비제약, $\tau=0$;
+\item subthreshold constraint: $\epsilon=0.2$, 비균일, $P=0$, $\tau=0$.
+\end{enumerate}
+총 준비 수는 $4\times2\times3\times7\times131072=22{,}020{,}096$이다.
+
+각 case에서 선검증 6과 같은 boundary-preserving weak pooled-null bootstrap을
+적용하고 4-test Bonferroni 문턱 $0.0125$를 쓴다. exact Aer probability는
+별도로 재계산하여 raw counts의 target과 비교하지만, exact 값으로 $p$값을
+대체하지 않는다.
+
+\section*{사전 해석}
+candidate constraint와 candidate strong control이 검출되고 distribution control이
+검출되지 않으면, paired coherent reference가 $P=0$ contrast를 측정 가능하게
+만든다는 exact boundary와 일치한다. subthreshold constraint의 미검출은
+구조적 영과 finite-shot 식별 가능성을 구별하는 예상 결과다. 반대 결과는
+구조 지도 또는 통계 설계의 재점검 근거이지, 결과를 보고 threshold를 변경할
+근거가 아니다.
+
+\section*{재현 자료}
+구현은 \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout11\_paired\_shots.py},
+회귀 검사는 \texttt{../tests/test\_qiskit\_rank\_holdout11\_paired\_shots.py},
+출력은 \texttt{../results/qiskit\_rank\_holdout11\_paired\_shots.json}에 둔다.
+\end{document}
+

@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 prevalidation 11 result:\\Finite-shot confirmation of paired coherent constraint leakage}
+\date{2026-10-04}
+\maketitle
+
+\section*{Predeclared finite-shot family}
+The protocol fixed four tests, 131072 shots per uniform label, workers 6, Aer seed
+20261104, 10000 bounded weak-null bootstraps, and a familywise Bonferroni threshold
+$0.0125$. The total sampling budget was 22,020,096 circuit preparations. Exact
+probabilities were computed separately and did not substitute for the bootstrap
+decision.
+
+\begin{center}
+\begin{tabular}{llrr}
+\toprule
+case & expected role & $\chi^2_3$ & bootstrap $p$\\
+\midrule
+paired constraint, $\epsilon=1.0$ & positive & 15.136 & 0.00180\\
+uniform distribution control, $\epsilon=1.0$ & null & 1.328 & 0.72073\\
+skewed strong control, $\epsilon=1.0$ & positive & 38.975 & 0.00010\\
+paired constraint, $\epsilon=0.2$ & below power & 0.677 & 0.87751\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Conclusion}
+Both predeclared positives pass the familywise criterion; the exact-null uniform
+control and subthreshold condition do not. The paired $\epsilon=1.0$ constraint
+condition has observed pooled differences $(1.309,0.713,0.064)\times10^{-3}$ and
+is detected without treating the exact Aer prediction as data. The pattern confirms
+the mechanism and predicted power boundary for this toy circuit. It does
+\emph{not} establish spontaneous physical dimension selection or justify a general
+theory claim.
+
+\section*{Reproduction and integrity}
+All raw counts satisfy joint-all-zero count $\leq$ clock-acceptance count. The
+implementation checkpoints each finished case, so an analysis interruption does not
+require resampling completed work. Code:
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout11\_paired\_shots.py};
+output: \texttt{../results/qiskit\_rank\_holdout11\_paired\_shots.json}.
+\end{document}

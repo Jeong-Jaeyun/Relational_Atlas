@@ -1,0 +1,32 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 12 protocol:\\Exact atlas of paired-reference leakage conditions}
+\date{2026-10-04}
+\maketitle
+
+\section*{Question}
+Stages 9--11 show that one paired $R_x$ intervention can make a previously exact
+$P=0$ pooled null observable. This protocol asks which circuit features are
+necessary: two-sided placement, sector-mixing axis, same-qubit support, or inverse
+sign.
+
+\section*{Frozen exact-Aer conditions}
+At $\epsilon=1.0$ rad and workers 6, all two blocks, three axes, seven phase labels,
+both $\tau\in\{0,\pi/2\}$, and unrestricted/$P=0$ conditions are evaluated for six
+rows: one-sided $R_x$ on qubit zero; same-qubit paired inverse $R_x$; same-qubit
+paired inverse $R_y$; same-qubit paired inverse $R_z$; inverse $R_x$ from qubit zero
+to qubit one; and same-qubit equal-sign $R_x$. The first operation follows
+preparation; the second follows the science layer before reference projection.
+
+\section*{Decision discipline}
+This stage makes no finite-shot significance claim. It records full pooled contrast
+tables, especially the $P=0$, $\tau=0$ constraint row. A later sampling experiment
+may select a condition only after this complete map is observed and its sampling
+criterion is written down.
+
+\section*{Reproduction}
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout12\_intervention\_atlas.py}
+\end{document}

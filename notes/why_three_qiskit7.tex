@@ -1,0 +1,168 @@
+% Compile from this directory with: xelatex why_three_qiskit7.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{I01 Qiskit 실험 7: 확률적 위상 브리지와 기준점 사이의 불확실성 바닥}
+\author{RELATIONAL ATLAS --- 시간적 위상 기준의 비용 지도}
+\date{2026년 10월 4일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+앞선 결정론적 에일리어싱 실험은 기준점 사이의 드리프트가 숨을 수
+있음을 보였다. 이번에는 위상 영점의 시간 변동을 명시적인 확률적
+토이 모형으로 바꾸고, 과학 측정 전후의 기준점이 가까워져도 얼마의
+불확실성이 남는지 계산했다. 알려진 영평균 지수상관 공분산을 가정하면
+완벽하게 측정한 두 기준점 사이에서도 과학 시점의 위상에 양의 조건부
+분산이 남는다. 개별 블록의 미지 잔차를 자유 nuisance로 처리한 정확
+Fisher rank는 여전히 3이다. 반면 확률 법칙과 블록 독립성을 추가
+가정하면 여러 블록을 평균해 공통 과학 위상을 통계적으로 추정할 수
+있다. 이때 드리프트 분산을 빼고 샷 오차만으로 만든 95\% 구간은
+심하게 과소포괄된다. Aer 회로와 별도의 반복-ensemble 계산으로
+구조적 식별성과 확률적 추정 성능을 분리했다.
+\end{abstract}
+
+\section{기준점 사이의 확률적 위상 브리지}
+과학 측정은 시간 $t=0$, 알려진 위상의 기준 측정은 $t=-h,+h$에
+놓는다. 위상 드리프트 $\delta(t)$는 영평균, 분산 $\sigma^2$,
+공분산
+\begin{equation}
+ \operatorname{Cov}[\delta(t),\delta(s)]
+ =\sigma^2\exp(-|t-s|/\ell)
+ \label{eq:cov}
+\end{equation}
+인 가우스 과정이라고 \emph{가정}한다. 이는 실제 장치의 잡음 법칙을
+측정하거나 입증한 결과가 아니라, 상관시간 $\ell$에 대한 명시적
+반례/비용 모형이다. $r=e^{-h/\ell}$로 두면 두 기준점의 상관은
+$r^2$이고, 가우스 조건부 평균과 분산은
+\begin{align}
+ \mathbb E[\delta(0)\mid\delta(-h),\delta(+h)]
+ &=\frac{r}{1+r^2}\,[\delta(-h)+\delta(+h)],\\
+ v_{\rm bridge}
+ &=\operatorname{Var}[\delta(0)\mid\delta(-h),\delta(+h)]
+ =\sigma^2\frac{1-r^2}{1+r^2}
+ =\sigma^2\tanh(h/\ell).
+ \label{eq:bridge}
+\end{align}
+따라서 $h>0$이면 기준점 두 곳의 위상을 \emph{무한 shots로} 알아도
+중간 위상에는 불확실성이 남는다. 이 값은 기준 측정 자체의 샷
+오차를 무시한 낙관적인 하한이다. 본 실험은 $\sigma=0.120$ rad,
+$h/\ell=0.05$와 $1.0$을 사전에 정했다.
+
+\section{rank 3과 통계적 추정은 다른 질문}
+한 블록의 과학 확률은 $\alpha+\delta(0)$에 의존한다. 기준점
+$\delta(\pm h)$는 별도로 측정할 수 있어도 $\delta(0)$의
+\emph{실현값}을 자유 nuisance로 허용하면
+$(\alpha,\delta(0))\mapsto(\alpha+c,\delta(0)-c)$가 정확한
+불변 방향이다. 따라서 비제약 네 축의 nuisance-profiled Fisher
+rank는 $\tau=0,\pi/2$ 모두 3이다. 여러 블록을 더해도 각 블록에
+자유로운 미지 잔차를 허용하면 같은 null 방향이 남는다.
+
+식~\eqref{eq:cov}의 영평균 확률 법칙과 블록 간 독립성을 알고
+신뢰한다면 다른 추론 문제를 만들 수 있다. 블록마다 조건부 평균을
+뺀 과학 위상 추정의 오차는 브리지 잔차와 유한-shots 측정 오차의
+합이다. 두 성분의 분산을 각각 $v_{\rm bridge},v_{\rm shot}$으로
+두면 $B$개 독립 블록 평균의 근사 표준편차는
+\begin{equation}
+ \operatorname{SD}(\hat\alpha_B)
+ \simeq\sqrt{(v_{\rm bridge}+v_{\rm shot})/B}.
+ \label{eq:budget}
+\end{equation}
+이는 확률 \emph{가정}으로 얻은 평균 추정 가능성이지, 한 블록의
+정확 Fisher rank가 4로 변했다는 뜻이 아니다. 과학 시점 잔차에
+미지의 비영 평균을 별도로 허용하면 그 평균과 $\alpha$는 다시
+혼동된다.
+
+\section{정확 브리지 분산과 반복-ensemble 비용}
+과학 측정에는 기존 5준위 에너지 매칭 시계, 9개 위상 표지,
+$n=4$ 비제약 토이 상태를 쓴다. 각 위상 실행의 조건부 복귀
+확률 미분과 시계 후선택률 $1/5$로 유한-shots Fisher 오차를
+계산했다. 아래 반복-ensemble은 \emph{Aer 회로 반복이 아니다}.
+정확 가우스 브리지와 국소 Fisher의 가우스 샷 오차를 합쳐 조건당
+20,000개 독립 ensemble을 생성하고, 각각 $B=8$ 블록 평균의
+구간 포괄률을 평가했다. 목표 반폭 $0.02$ rad에 필요한 블록 수도
+식~\eqref{eq:budget}으로 계산했다.
+\begin{center}
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+$\tau/\pi$ & $h/\ell$ & 브리지 SD & 샷 SD & 샷만의 포괄률
+& 브리지 포함 포괄률 & 목표 블록 수 \\
+\midrule
+0 & 0.05 & 0.0268 & 0.0071 & 0.380 & 0.948 & 8 \\
+0 & 1.00 & 0.1047 & 0.0065 & 0.095 & 0.950 & 106 \\
+1/2 & 0.05 & 0.0268 & 0.0262 & 0.827 & 0.949 & 14 \\
+1/2 & 1.00 & 0.1047 & 0.0236 & 0.335 & 0.950 & 111 \\
+\bottomrule
+\end{tabular}
+\end{center}
+표의 SD는 블록당 rad 단위이고, 포괄률은 $B=8$의 근사 95\%
+구간에 대한 값이다. $\tau=\pi/2$의 짧은 간격에서 ``샷만''
+포괄률이 높아 보이는 이유는 시계 조건부 측정 자체가 약해 샷
+구간이 넓기 때문이다. 정밀도가 더 좋다는 뜻이 아니다. $h/\ell=1$
+에서는 드리프트가 샷 오차보다 커서 기준점 shots만 늘려도
+오차 바닥을 없앨 수 없다. 이 비용 지도는 $\sigma,\ell$과
+영평균 법칙을 \emph{정확히 안다는} 낙관적 계산이다.
+
+\section{Aer 회로의 8블록 대조}
+각 $h/\ell$에 독립 브리지 8블록을 사전 seed로 생성했다. 한
+블록은 앞 기준, 과학, 뒤 기준의 세 위상 실행이며 각 실행은
+검출 축 4개와 표지 9개, 즉 36회로다. $\tau=0$에서 총
+$2\times8\times3\times36=1728$개의 Aer statevector 회로를
+각각 4096 shots, 최대 CPU 병렬 6으로 실행했다. 각 세그먼트의
+위상을 표지별 raw counts로 적합하고 식~\eqref{eq:bridge}의
+조건부 평균을 뺐다.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$h/\ell$ & 8블록 평균 $\hat\alpha$ & 샷만의 근사 95\% 구간
+& 브리지 포함 근사 95\% 구간 \\
+\midrule
+0.05 & 0.2954 & $[0.2905,0.3004]$ & $[0.2762,0.3147]$ \\
+1.00 & 0.3745 & $[0.3702,0.3788]$ & $[0.3018,0.4472]$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+참값은 $\alpha=0.3000$ rad다. 넓은 간격의 선택된 단일 8블록
+표본은 브리지 포함 구간에서도 참값을 약 $0.0018$ rad 차이로
+놓쳤다. 사전 seed를 결과에 맞춰 바꾸지 않았다. 반복-ensemble의
+약 95\% 포괄률은 모든 개별 구간이 참값을 포함한다는 약속이
+아니다. 반면 샷만의 구간은 이 표본에서 현저히 과신한다.
+
+\section{$P=0$ 유한표본 대조군의 별도 품질 점검}
+실험 6의 $P=0$ Aer 대조군 16 seed$\times$2 시계 위상에서
+32개 명목 5\% 재배분 검정 중 5개가 양성이었다. 정확한 $P=0$
+확률은 공통 위상 변화에 불변이다. 원자료의 두 arm 차이를 각
+회로의 정확 이항분산으로 표준화하니 평균 $-0.0033$, 표본분산
+$1.0683$이었다. 정확 이항모형에서 만든 5000개 동형 패널의
+분산 95\% 범위는 $[0.9193,1.0843]$이고, 관측 분산의 상측 꼬리
+비율은 $0.0526$이었다. 평균 차이의 양측 꼬리 비율은 $0.916$이다.
+즉 명확한 방향성 편향은 보이지 않지만 변동성은 이 점검의
+상단에 가깝다. 32개 검정의 양성 수 자체는 독립 5\% 가정 아래
+상측 확률 약 $0.020$으로 다소 많다. 이 둘만으로 Aer 결함 또는
+물리 효과를 확정하지 않으며, 대조군 보정은 여전히 점검 사항이다.
+
+\section{판정과 다음 게이트}
+기준점 간격을 줄이면 확률적 드리프트의 불확실성은 줄지만,
+과학/기준 측정 시점이 분리된 한 한 블록의 미지 실현값은 정확히
+결정되지 않는다. 통계 법칙을 이용해 여러 블록을 평균할 수
+있지만 그 가정과 분산을 오차 예산에 포함해야 한다. 본 실험의
+가우스 지수상관, 블록 독립성, 완벽한 시계 및 기준 위상은 모두
+가정이다. 이 결과 역시 자발적 세 공간 차원 선택의 증거가 아니다.
+후속으로는 상관시간과 평균의 미지성, 비가우스 드리프트 및 기준
+측정 자체의 위상 오차를 분리해 검토해야 한다. QPU는 사용하지 않았다.
+
+\paragraph{재현성.} 회로/브리지 코드
+\texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_clock\_stochastic\_bridge.py}, 회귀 검사
+\texttt{../tests/test\_qiskit\_clock\_stochastic\_bridge.py}, 원자료
+\texttt{../results/qiskit\_clock\_stochastic\_bridge.json}.
+$P=0$ 진단 코드/원자료는
+\texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_pzero\_sampling\_audit.py}와
+\texttt{../results/qiskit\_pzero\_sampling\_audit.json}이다.
+시작 seed 20261010, Qiskit 2.4.2, Qiskit Aer 0.17.2.
+Windows Aer의 합성 \texttt{multiplexer} 접근 위반을 피하려고
+준비 회로를 $u3,cx$로 분해했다. TeX 엔진이 없어 PDF 렌더링은
+아직 검증하지 못했다.
+\end{document}

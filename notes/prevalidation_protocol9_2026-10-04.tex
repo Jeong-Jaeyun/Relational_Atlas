@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 선검증 9 사전 프로토콜:\\
+준비와 측정 양쪽의 coherent sector 재결합}
+\date{2026-10-04}
+\maketitle
+
+\section*{질문}
+선검증 8에서 단일 준비 $R_x$ pulse는 $P=0$ constraint null을 깨지 못했다.
+누출된 charge-sector amplitude가 원래 $P=0$ reference projection에 재결합하지
+않았기 때문이다. 이번 실험은 준비와 측정 양쪽에서 sector를 연결하면 이 보호가
+사라지는지 직접 검사한다.
+
+\section*{고정 회로와 intervention}
+선검증 6--8의 $n=3$, $L=7$, 명시적 2-qubit 시계, 두 block 공통 위상
+$0,0.6$ rad 및 여섯 contrast 행을 그대로 사용한다. system qubit 0에
+\[
+ R_x(\epsilon)\quad\hbox{(상관 상태 준비 직후)},\qquad
+ R_x(-\epsilon)\quad\hbox{(과학 위상층 직후, reference projection 직전)}
+\]
+를 삽입한다. 두 pulse 사이에는 시계 대각 위상과 과학 $R_z$ 위상층이 놓인다.
+따라서 $\epsilon=0$이면 선검증 6 회로가 정확히 복원되지만, $\epsilon\ne0$이면
+reference가 sector 밖 amplitude를 준비하고 다시 측정 event로 재결합시킬 수 있다.
+
+$\epsilon=0.01,0.03,0.10$ rad와 이상 기준점을 계산하며, 세 과학 축ㆍ두 blockㆍ
+일곱 label을 모두 Aer statevector로 명시 계산한다. 다른 오류나 label-dependent
+응답은 함께 넣지 않는다.
+
+\section*{판독 규칙}
+각 행의 pooled contrast, 네 null의 최대 $D_0$, 강한 비제약 signal $D_S$를
+선검증 7--8과 동일하게 기록한다. $D_0\le10^{-10}$이면 수치적 영 보존,
+$D_0/D_S\le0.1$이면 작은 leakage, $0.1<D_0/D_S\le1$이면 모호,
+$D_0/D_S>1$이면 signal과 혼동으로 판독한다. 이 규칙은 실제 장비 허용오차나
+유한-shots 유의성 판정이 아니다.
+
+\section*{해석 제한}
+반대 부호의 두 pulse는 수동 잡음의 일반 모형이 아니다. 이는 P=0 projection이
+phase-sector coherence를 걸러내는 이유와, 그것을 다시 접근 가능하게 하는
+coherent reference의 조건을 보여 주는 intervention이다. $P=0$ contrast가 생겨도
+그것은 상태공간 차원이 자발적으로 바뀌었다는 증거가 아니라 측정 자원이
+바뀌었다는 증거다.
+
+\section*{재현 자료}
+구현은 \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout9\_paired\_coherence.py},
+회귀 검사는 \texttt{../tests/test\_qiskit\_rank\_holdout9\_paired\_coherence.py},
+출력은 \texttt{../results/qiskit\_rank\_holdout9\_paired\_coherence.json}에 둔다.
+\end{document}
+

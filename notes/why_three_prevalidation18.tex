@@ -1,0 +1,30 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 18 result:\\Independent high-budget same-sign transfer replication}
+\date{2026-10-04}
+\maketitle
+
+\section*{Independent result}
+The different-pair same-sign source-return row $(0,2)$ was rerun with a new Aer
+seed, 262144 shots per uniform label, and one predeclared primary threshold 0.05.
+The exact target has $\Lambda=19.80$. The bounded weak-null bootstrap gives
+$\chi^2_3=37.51$ and $p=0.00010$, hence detects the contrast.
+
+\section*{Interpretation}
+The stage-17 $p=0.02640$ outcome was correctly identified as a borderline-power
+result, not a structural zero. This independent follow-up is not pooled with the
+prior four-test family. Together, the finite-shot evidence distinguishes all three
+nonzero transfer classes from the conjugate-partner null in the fixed toy circuit.
+
+\section*{Integrity}
+The 11,010,048-preparation raw table satisfies joint-all-zero count
+$\leq$ clock-acceptance count. Observed pooled differences have the exact predicted
+sign pattern.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout18\_same\_sign\_replication.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout18\_same\_sign\_replication.json}.
+\end{document}

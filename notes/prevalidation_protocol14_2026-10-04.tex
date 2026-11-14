@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 14 protocol:\\Full source-to-return support transfer matrix}
+\date{2026-10-04}
+\maketitle
+
+\section*{Question}
+Stage 13 disproved the provisional same-qubit necessity condition: returning from
+qubit zero to a different momentum pair produces leakage, whereas return to its
+conjugate partner does not. This protocol maps every source-to-return pair to
+identify the complete support selection pattern.
+
+\section*{Frozen exact-Aer map}
+For all $36$ ordered pairs $(q_s,q_r)$ with $q_s,q_r\in\{0,\ldots,5\}$, insert
+$R_x(+1)$ after preparation on $q_s$ and $R_x(-1)$ after the science phase layer
+on $q_r$. Evaluate every block, axis, label, unrestricted/$P=0$ condition, and
+$\tau\in\{0,\pi/2\}$ with workers 6. The primary matrix entry is the maximum
+axis-pooled contrast in the $P=0$, $\tau=0$ condition.
+
+\section*{Summary groups}
+Before execution, entries are partitioned only as diagonal same-support pairs,
+conjugate momentum-pair partners $(0,1)$, $(2,3)$, $(4,5)$, and all remaining
+off-pair entries. The report gives the min--max range of each group without fitting
+a physical law after observing the matrix.
+
+\section*{Reproduction}
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout14\_transfer\_matrix.py}
+\end{document}

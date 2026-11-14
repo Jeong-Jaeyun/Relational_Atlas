@@ -1,0 +1,69 @@
+% Frozen before running the holdout grid below. Compile with xelatex.
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 프로토콜: 관측 rank 개입의 적용 범위}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{목적과 보류할 주장}
+본 검증은 ``유한한 위상 기준과 시계 아래에서 관측 차원의 식별
+가능성''을 일반적인 결과로 주장하기 \emph{전}에 실시한다.
+이미 관찰한 $n=4$, 9표지, 특정 상태 가중치의 rank $4/3$
+패턴을 새로운 조건에 그대로 전이할 수 있는지, 어디에서 실패하는지
+사전에 고정한 격자로 검사한다. 세 공간 차원의 자발적 선택은
+검증 대상이나 결론이 아니다.
+
+\section{고정한 홀드아웃 격자}
+운동량 cutoff 1, $w_k\propto\exp(-\beta\sum_i k_i^2)$,
+검출 축 $i$의 바이어스 $b$, 공통 위상 표지
+$\phi_t=2\pi t/L$, 시계 에너지 $E(k)=\sum_i k_i^2$를 사용한다.
+사전에 정한 조합은
+\begin{equation}
+ n\in\{3,4,5,6\},\quad
+ \beta\in\{0.45,1.20\},\quad
+ b\in\{0.55,1.25\},\quad
+ \tau/\pi\in\{0,1/2\},\quad
+ L\in\{2n-1,2n+1\}.
+\end{equation}
+각 조합에서 비제약 상태와 준비된 $P=0$ 상태의 표지 보존/삭제
+고전 Fisher 행렬을 계산한다. 표지 삭제는 동일한 표본의
+$t$ 정보를 합치는 분석이며 추가 물리 제약이 아니다.
+
+\section{사전 기대와 판정 기준}
+충분한 위상 격자 $L=2n+1$에서는 이 cutoff의 가능한 전하차
+$|P-P'|\le2n$을 모두 평균하므로, 비제약 상태의 표지 삭제는
+공통 위상을 정확히 없애야 한다. 사전 기대는 다음과 같다.
+\begin{center}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+상태 & 표지 보존 & 표지 삭제, $L=2n+1$ \\
+\midrule
+비제약 & $n$ & $n-1$ \\
+$P=0$ & $n-1$ & $n-1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+짧은 격자 $L=2n-1$에는 전하차 에일리어싱이 가능하다.
+따라서 삭제 후 rank $n-1$이 깨지는지 숨기지 않고 경계 조건으로
+기록한다. 판정은 공통방향 정보
+$\boldsymbol1^T F\boldsymbol1/n$의 절댓값과 양의 고유값의
+상대 크기를 함께 보고, 단일 고정 임계값만으로 rank를 주장하지
+않는다. 수치적 정확 영은 별도 분석으로 검증한다.
+
+\section{독립 검증 경로와 실패 처리}
+모든 격자점의 해석적 확률/미분을 독립 중앙차분으로 교차 확인하고,
+선택된 $n=3,4$ 상태는 Qiskit 회로의 직접 상태벡터 및 별도 Aer
+계산 방법으로 확률을 비교한다. $P=0$ 공통 위상의 정확 불변성과
+Aer 유한 샷 검정은 다른 질문으로 분리한다. 앞서 32개 명목
+5\% 대조검정 중 5개가 양성이었던 현상은 독립 seed를 추가하고
+정확 이항 null과 비교하되, 작은 $p$값을 물리 신호라고 해석하지
+않는다. 불일치가 나오면 모형·회로·분석의 어느 경로에서 생겼는지
+먼저 추적하고, 격자를 결과에 맞춰 바꾸지 않는다.
+
+이 선검증이 끝나기 전에는 일반화된 ``관측 차원의 식별 가능성''을
+확립된 결과나 논문 제목으로 사용하지 않는다. QPU 실험도 보류한다.
+\end{document}

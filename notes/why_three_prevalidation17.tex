@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 prevalidation 17 result:\\Finite-shot paired support-transfer confirmation}
+\date{2026-10-04}
+\maketitle
+
+\section*{Predeclared four-test family}
+At $\epsilon=\pi/2$, 131072 shots per uniform label, 10000 bounded weak-null
+bootstraps, and Bonferroni threshold 0.0125, the results are:
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+class & expected $\Lambda$ & $\chi^2_3$ & bootstrap $p$\\
+\midrule
+same support & 33.80 & 32.26 & 0.00010\\
+conjugate partner & 0 & 0.85 & 0.84162\\
+different pair, same sign & 9.90 & 9.39 & 0.02640\\
+different pair, opposite sign & 27.61 & 46.73 & 0.00010\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Conclusion}
+The same-support and different-pair opposite-sign classes pass the familywise
+criterion, while the conjugate partner preserves the exact-null control. The
+different-pair same-sign class has the predicted intermediate effect size but does
+not pass the four-test threshold at this budget. This is a power boundary outcome,
+not an observed zero: its finite-shot contrast and $\chi^2_3$ are consistent with
+the pre-execution exact noncentrality estimate.
+
+\section*{Integrity and next step}
+All four raw count tables satisfy joint-all-zero count $\leq$ clock-acceptance count.
+The same-sign row needs an independent higher-budget replication before it can be
+called finite-shot detected. That replication is a new one-test experiment and must
+not be pooled into this four-test family.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout17\_transfer\_shots.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout17\_transfer\_shots.json}.
+\end{document}

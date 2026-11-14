@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 prevalidation 12 result:\\Selection rule for paired coherent constraint leakage}
+\date{2026-10-04}
+\maketitle
+
+\section*{Exact-Aer atlas}
+At $\epsilon=1$ rad, the $P=0$, $\tau=0$ constraint contrast has the following
+maximum pooled values:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+intervention & constraint contrast\\
+\midrule
+one-sided $R_x$ on qubit 0 & $5.6\times10^{-17}$\\
+same-qubit inverse $R_x$ & $1.44217\times10^{-3}$\\
+same-qubit inverse $R_y$ & $1.44217\times10^{-3}$\\
+same-qubit inverse $R_z$ & $2.8\times10^{-17}$\\
+$R_x$ inverse pair from qubit 0 to 1 & $4.9\times10^{-17}$\\
+same-qubit equal-sign $R_x$ & $1.44218\times10^{-3}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Selection rule within this six-row atlas}
+Within this initial atlas, leakage requires both a preparation-side and
+post-science-layer operation and a sector-mixing transverse axis ($X$ or $Y$).
+A diagonal $Z$ operation, one-sided operation, or the particular return operation
+from qubit zero to its conjugate partner qubit one leaves the constraint null exact.
+Changing the second transverse pulse from inverse to equal sign reverses the
+contrast orientation while preserving its magnitude to this precision.
+
+\section*{Scope}
+This is a circuit-level mechanism map. Its original same-qubit necessity inference
+was intentionally tested next and is not retained: stage 13 finds nonzero transfers
+from qubit zero to other momentum pairs. It remains a toy-model result, not evidence
+for physical dimension selection.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout12\_intervention\_atlas.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout12\_intervention\_atlas.json}.
+\end{document}

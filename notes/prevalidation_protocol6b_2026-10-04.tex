@@ -1,0 +1,39 @@
+% Frozen after stage-6 first seed and before the independent replication.
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 6b 사전 프로토콜: 명시적 시계 회로의 독립 반복}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{반복 이유와 제한}
+선검증 6의 사전 지정 양성 대조는 Bonferroni 문턱 0.00625를
+통과했지만 $p=0.00530$으로 경계에 가깝다. 균일 표지의 정확
+null 중 두 조건도 명목 $p<0.05$였다. 이 수치들을 확인한
+\emph{뒤에} 반복을 결정했으므로 본 결과와 독립 반복을 구별해
+보고한다. 이 프로토콜을 새 샷 실행 전에 고정한다.
+
+\section{고정 실행 및 판정}
+선검증 6의 회로, 물리 조건, 표지 배분, 표지당 기준 131072 샷,
+336회로, 약한 pooled-null 검정, 10000 bootstrap을 그대로 사용한다.
+두 번째 Aer seed는 20261029, bootstrap seed는 20261030이다.
+반복 자체에 대해 같은 여덟 검정의 $p$값과 Bonferroni 0.00625를
+모두 보고한다. 첫 실행과 반복의 raw 성공수/수락수를 셀별로
+합쳐 각 표지의 전체 준비 수를 두 배로 하는 여덟 검정도
+별도로 수행하며 합산 bootstrap seed는 20261031이다.
+\emph{주 판정}은 합산 가족에서 비균일ㆍ비제약ㆍ$\tau=0$이
+문턱을 통과하고 정확 null 여섯 조건이 통과하지 않는지이다.
+나머지 비균일ㆍ비제약ㆍ$\tau=\pi/2$는 약한 양성 대조이며
+검출 여부와 무관하게 확률 차이, 추정 표준오차, $p$값을 기록한다.
+두 번째 실행 단독 검출 여부도 빠짐없이 보고하되 그것만으로
+주 판정을 바꾸지 않는다. 균일 표지 두 조건의 첫 실행 명목
+$p$값은 사후 확인 대상으로 표시하고 합산 시 변화를 보고한다.
+
+첫 실행과 독립 반복의 회로별 동시 성공 및 시계 수락 빈도를
+정확 이항 확률과 비교한다. Pearson 잔차 전체 합은 모델 적합
+진단으로만 보고하고, 독립성에 대한 엄밀한 검정으로 해석하지
+않는다. seed, 문턱, 샷 수를 관측 결과에 맞춰 변경하지 않는다.
+\end{document}

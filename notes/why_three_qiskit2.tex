@@ -1,0 +1,153 @@
+% Compile from this directory with: xelatex why_three_qiskit2.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{I01 Qiskit 실험 2: 같은 측정 횟수에서 위상 표지만 개입하기}
+\author{RELATIONAL ATLAS --- 관측 rank의 출처 판별}
+\date{2026년 10월 2일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+제약 없는 $T^4$ Fourier 상태의 Fisher rank 3이 물리적 제약인지
+검출기의 위상 기준 손실인지 구분하기 위해, 동일한 Aer 측정 결과를
+위상 표지 $t$와 함께 분석하거나 표지 없이 합쳤다. 정확한 결합
+분포의 Fisher rank는 표지를 쓰면 4, 버리면 3이다. 반대로
+$P=0$ 상태는 표지를 써도 버려도 3이다. 공통 위상을 실제로
+$0$에서 $0.3$ rad로 바꾼 짝지은 회로 실험에서도 비제약 상태의
+표지별 검사는 차이를 검출했으나 표지를 합치면 검출하지 못했다.
+이는 보정 가능한 외부 위상 표지가 자원으로 주어진다는 조건부 결과다.
+\end{abstract}
+
+\section{개입 설계와 자원 가정}
+첫 회로 연구의 $n=4$, $k_i\in\{-1,0,1\}$, $\beta=0.35$,
+이진 복귀 검출기와 기준 편향 $b=0.8$을 유지한다.
+9개의 균형 위상 표본 $\phi_t=2\pi t/9$와
+공통 매개변수 $\alpha\in\{0,0.3\}$ rad를 사용한다.
+기준 검출기 $i$에서의 복귀 확률은
+\begin{equation}
+ p_{it}(\alpha)=\left|\sum_k w_k
+ e^{i k\cdot[(\alpha+\phi_t)\boldsymbol1-b\boldsymbol e_i]}\right|^2.
+\end{equation}
+비제약 상태와 $P=0$ 대조군 모두에 정확히 같은 $t$ 표본과
+$\alpha$ 두 조건을 적용한다. 각 $(\alpha,i,t)$ 회로를 4096번
+측정하여 각 상태별 72개, 총 144개 회로를 얻었다. 분석을 바꿀 때
+회로나 측정 횟수를 추가하지 않았다. 표지 사용 분석은 $(i,t)$별
+성공/실패 횟수를 유지하고, 표지 삭제 분석은 $i$별로 9개 $t$의
+횟수를 합쳤다. 원자료에는 두 분석에 공통인 성공 횟수 배열을
+그대로 저장했다.
+
+\emph{필요한 자원:} 회로가 가한 $t$를 식별하는 외부 고전 기록이
+있고, 그 위상이 검출기 편향과 미지의 $\alpha$에 대해 같은 안정된
+기준틀에서 보정되어 있어야 한다. 단순한 순번 표지만 알거나
+위상 영점이 알 수 없이 드리프트한다면 이 논증으로 공통 위상을
+복원할 수 없다. 이 실험은 위상 표지를 양자계 자체에서 추출하지
+않으며, 실기기 잡음도 포함하지 않는다. 회로의 각도 할당과 유한
+shots 실행은 Qiskit의 공식
+\href{https://quantum.cloud.ibm.com/docs/en/api/qiskit/2.4/qiskit.circuit.QuantumCircuit}{회로 API}와
+\href{https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html}{AerSimulator}
+기능을 사용했다.
+
+\section{정확 Fisher 정보: 표지로 회복되는 방향}
+$g_{it}=\nabla_{\boldsymbol\theta}p_{it}$를 $\boldsymbol\theta=0$에서
+평가하면, 표지를 보존한 결과 $Y=(t,y)$와 삭제한 결과 $Y=y$의
+고전 Fisher 행렬은 각각
+\begin{align}
+ F_{\rm keep}
+ &=\frac1{4\cdot9}\sum_{i,t}
+ \frac{g_{it}g_{it}^{\mathsf T}}{p_{it}(1-p_{it})},\\
+ F_{\rm erase}
+ &=\frac14\sum_i\frac{\bar g_i\bar g_i^{\mathsf T}}
+ {\bar p_i(1-\bar p_i)},
+ \quad \bar p_i=\frac19\sum_t p_{it},\quad
+ \bar g_i=\frac19\sum_t g_{it}.
+\end{align}
+위상을 알고 나서도 별도 보정 게이트를 가하지 않았다. 이 확률
+모형에서는 결과를 $t$별로 조건화하는 것만으로 네 번째 매개변수의
+정보가 남는다. 데이터 처리 부등식에 따라 $F_{\rm keep}-F_{\rm erase}$는
+양의 준정부호이며, 수치 계산에서도 확인했다.
+\begin{center}
+\begin{tabular}{@{}p{42mm}p{48mm}p{48mm}@{}}
+\toprule
+상태 & 표지 사용 CFI 고유값 & 표지 삭제 CFI 고유값 \\
+\midrule
+비제약 & $(0.08825)\times3,\;0.27630$ & $0,\;(0.04319)\times3$ \\
+$P=0$ & $0,\;(0.86637)\times3$ & $0,\;(0.86637)\times3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+따라서 표지를 알려 주는 개입으로 rank가 3에서 4로 복귀하는
+경우는 검출기 기준 손실이고, 복귀하지 않는 $P=0$ 대조군은
+준비된 상태 제약이다. 이는 emph{이 모형의 두 설명}을 구별하며
+실제 공간 차원의 존재를 판별하는 실험은 아니다.
+
+\section{같은 raw counts의 표지별/합산 검정}
+공통 위상 변화 $\alpha=0\to0.3$을 주고 두 조건의 이진 성공률이
+같은지 비교했다. 표지 사용 검정은 36개의 $(i,t)$ 층을,
+표지 삭제 검정은 네 개의 $i$ 층만 사용했다. 동일한 raw counts에
+대해 두 표본 Bernoulli 우도비 $G$를 계산하고, 각 층의 총 성공
+횟수를 고정한 2000회 초기하분포 재배분으로 영가설 값을 평가했다.
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+상태 & 표지 사용 $G$ & 재배분 $p$ & 표지 삭제 $G$ & 재배분 $p$ \\
+\midrule
+비제약 & 6018.62 & $\le 0.00050$ & 1.85 & 0.755 \\
+$P=0$ & 34.45 & 0.550 & 3.80 & 0.414 \\
+\bottomrule
+\end{tabular}
+\end{center}
+첫 $p$의 $0.00050$은 2000번 재배분의 해상도 한계이며 실제
+$p$가 정확히 그 값이라는 뜻이 아니다. 비제약 상태에서 표지를
+합친 평균 확률은 공통 위상 변화에 대해 정확히 불변이다. 유한
+shots의 표본 차이는 유의하지 않았다. $P=0$군에서는 표지를 써도
+공통 방향을 구분하지 못했다. 이 검정은 미분 추정이나 고유값
+임계에 기대지 않는 별도의 개입 확인이다.
+
+\section{부분 손실의 제곱 법칙과 표지 자원의 선형 법칙}
+첫 실험에서 사용한 $\eta$는 \emph{어떤 시행이 기준 유지인지조차
+기록되지 않는} 혼합의 손실 비율이었다. $\epsilon=1-\eta$라 두면
+\begin{equation}
+ p_\eta=\epsilon p_{\rm ref}+(1-\epsilon)\bar p,
+ \qquad
+ \partial_{\rm common}p_\eta
+ =\epsilon\,\partial_{\rm common}p_{\rm ref},
+\end{equation}
+왜냐하면 $\partial_{\rm common}\bar p=0$이기 때문이다.
+분모 $p_\eta(1-p_\eta)$가 유한하면 공통 방향 CFI는
+$F_{\rm common}=O(\epsilon^2)$다. 실제 최소 고유값의
+$\epsilon=0.01,0.005,0.002,0.001$ 로그--로그 기울기는
+$1.987$로 2에 접근한다.
+
+하지만 어느 시행에 기준이 있었는지 알려 주는 별도 flag가
+있다면, 그 flag를 보존한 결합 결과의 Fisher 정보는
+\begin{equation}
+ F_{\rm flagged}=\epsilon F_{\rm ref}+(1-\epsilon)F_{\rm erase}
+\end{equation}
+가 된다. 이때 공통 방향의 정보는 $O(\epsilon)$이고 동일 범위의
+수치 기울기는 $1.000$이다. 즉 제곱 법칙과 선형 법칙은 서로
+모순되지 않는다. 손실의 종류와 표지 사용 가능성이 다르다.
+여기서 선형 곡선은 정확 확률 계산이지 추가 Aer 샘플링은 아니다.
+
+\section{판정과 다음 게이트}
+이 개입은 관측 rank 3의 두 출처를 동일한 측정 데이터에서
+분리하는 데 성공했다. 표지를 지우거나 쓰는 정보 처리만으로
+비제약군의 rank가 변하고, 제약군은 변하지 않는다. 하지만
+$P=0$ 자체의 물리적 기원은 여전히 설명되지 않으며,
+$n=5,6$에서 단일 제약은 3이 아니라 4,5를 남긴다.
+따라서 I01의 자발적 공간 차원 선택은 계속 보류한다.
+다음 게이트는 표지 오보정, 위상 영점 드리프트, 유한 시계
+조건화를 함께 넣어 이 판별이 얼마나 견고한지 확인하는 것이다.
+
+\paragraph{재현성.}
+코드 \texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_phase\_label\_intervention.py},
+검사 \texttt{../tests/test\_qiskit\_phase\_label\_intervention.py},
+원자료 \texttt{../results/qiskit\_phase\_label\_intervention.json}.
+Qiskit 2.4.2, Qiskit Aer 0.17.2, seed 20261004,
+Aer 병렬 최대 6을 사용했다. 이 Windows 설치의 Aer
+\texttt{multiplexer} 조립 오류를 피하기 위해 회로를 $u3,cx$로
+분해했다. TeX 엔진 부재로 PDF 렌더링은 아직 확인하지 못했다.
+\end{document}

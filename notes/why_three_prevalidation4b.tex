@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 4b: 합산-null 재보정과 독립 Aer 재실행}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{판정과 정정 기록}
+발전연구 주제는 정하지 않았다. 선검증 3의 층별 재배분 $p$값은
+표지별 확률까지 같다는 강한 null을 사용했으므로, 표지 삭제 뒤의
+\emph{가중 합산 확률}이 같은가를 판정하는 확증 검정에서 철회했다.
+원래 raw counts와 구 코드는 보존했다. 새 데이터에서는
+합산-null Wald 통계량과 그 null에 맞춘 경계 보존 bootstrap을
+\texttt{prevalidation\_protocol4b\_2026-10-04.tex}에 먼저 고정하고
+독립 Aer seed 20261020을 실행했다. 8개 가족 검정 중 비균일
+표지/비제약/$\tau=0$ 하나만 Bonferroni 문턱 0.00625를 통과했다.
+이는 선택한 토이 회로에서 표지 빈도 오가정이 유한 샷 관측 결과를
+바꿀 수 있다는 재현이며 보편 이론이나 공간 차원 선택은 아니다.
+
+\section{왜 검정을 바꾸었는가}
+표지 $t$별 두 위상 블록 확률 $p_{0,it},p_{1,it}$은 서로 달라도,
+균일 가중 합은 같을 수 있다:
+\begin{equation}
+\Delta_i=\sum_t a_t(p_{1,it}-p_{0,it})=0,
+\qquad p_{1,it}-p_{0,it}\not\equiv0.
+\end{equation}
+선검증 3의 층별 재배분은 오른쪽도 0인 강한 null에서만 교환
+가능하다. 구 통계량의 null 분포를 이 문제에 그대로 적용하는 것은
+정당하지 않다. 특히 균일/비제약 대조군이 바로 이 약한 null의
+사례다. 검정이 보수적이거나 비슷한 숫자를 내더라도 논리상
+확증적 $p$값이 될 수 없으므로 철회했다.
+
+처음 고정한 선검증 4의 가법적 null 투영은 기존 raw counts의
+일부 낮은 확률을 $[0,1]$ 밖으로 보내 중단 규칙에 걸렸다.
+새 Aer는 실행하지 않은 상태에서 별도 4b 프로토콜을 작성했다.
+4b는 Jeffreys 보정 표지 성공률의 logit에 축별 같은 크기의
+반대 부호 이동을 주고, 가중 합 차이가 0인 지점을 이분법으로
+찾는다. 확률 경계를 유지하면서 표지별 두 블록 차이는 허용한다.
+기존 raw counts를 이 방법으로 다시 계산한 값은 사후 진단일
+뿐이고, 아래 주 판정은 새 seed의 결과다.
+
+\section{독립 재실행 결과}
+회로 설정은 선검증 3과 동일하다. $n=3$, 7표지,
+$\beta=0.45$, 기준 폭 $\beta_r=0.15$,
+$E=E_0+0.37E_0^2/3$, $\tau=0,\pi/2$, 공통 위상
+$0\to0.60$ rad, 균일/비균일 표지, 비제약/$P=0$ 상태의
+336회로를 각 조건의 원래 정수 shots 배분대로 실행했다.
+축별 $\hat\Delta_i$의 이항분산으로 표준화한 Wald 통계량을
+경계 보존 합산-null에서 생성한 10000개 이항 bootstrap 패널과
+비교했다. 주 $p$값의 최소 해상도는 $1/10001$이다.
+
+\begin{center}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+표지 분포/상태 & $\tau/\pi$ & 정확 최대 합산확률 차이 & 새 bootstrap $p$ \\
+\midrule
+균일/비제약 & 0 & $<10^{-15}$ & 0.16668 \\
+균일/비제약 & 1/2 & $<10^{-15}$ & 0.66373 \\
+균일/$P=0$ & 0 & 0 & 0.30947 \\
+균일/$P=0$ & 1/2 & 0 & 0.64284 \\
+비균일/비제약 & 0 & 0.002899 & 0.00010$^{*}$ \\
+비균일/비제약 & 1/2 & 0.000497 & 0.12249 \\
+비균일/$P=0$ & 0 & 0 & 0.81982 \\
+비균일/$P=0$ & 1/2 & 0 & 0.41146 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$^{*}$10000회 bootstrap에서 관측 통계량을 넘은 패널이 0개여서
+$(0+1)/10001$로 보고했다. 이는 Monte Carlo 해상도 바닥이며
+참 꼬리확률의 엄밀한 상한이 아니다.
+
+여덟 조건 모두에서 경계 보존 투영 뒤의 가중 합 차이는
+$10^{-16}$ 이하였고, bootstrap $p$와 별도 $\chi^2_3$
+근사 $p$는 비슷했다. 비균일/비제약/$\tau=\pi/2$의
+비검출은 정확한 영의 증거가 아니다. 사후 raw-count 감사에서
+336회로의 이항 표준화 평균 0.00224, 분산 0.88306은
+정확 이항패널 95\% 범위 평균 $[-0.10475,0.10907]$,
+분산 $[0.81689,1.21821]$ 안에 들었다.
+
+표지 기록을 사용해 비균일 raw counts를 균일 표지 목표로
+재가중한 사후 진단에서는 비제약 상태의 $\tau=0,\pi/2$
+비교가 각각 $p=0.317,0.623$이었다. 이는 표지와 배분을
+알고 있을 때 분석 목표를 바꾼 것이며, 표지를 실제로 잃은
+검출기의 정보 회복이 아니다.
+
+검정 방법을 추가로 사후 감사하기 위해 정확 이항확률에서
+조건당 200개 패널을 만들고 각 패널을 499회 null-bootstrap으로
+평가했다. 균일/비제약의 두 약한 null은 표지별 블록 확률 차이가
+최대 0.292/0.169나 되지만 합산 차이는 정확히 0이다.
+이 둘의 명목 5\% 양성은 각각 7/200, 7/200이었고,
+비균일/$P=0$ 강한 null은 9/200이었다. 가족 문턱
+0.00625의 양성은 각각 1/200, 3/200, 1/200이었다.
+비균일/비제약 $\tau=0$의 강한 양수는 197/200,
+$\tau=\pi/2$의 약한 양수는 9/200만 가족 문턱을 넘었다.
+이것은 선택한 정확 토이 모형 안에서 통계 절차의 1차 calibration과
+검정력 점검이며, 사후에 추가했으므로 새로운 물리 확증은 아니다.
+
+\section{남은 검증}
+현재 성립하는 범위는 선택된 cutoff 1의 상태족, 알려진 표지
+배분과 직접 에너지 위상 유니터리, 그리고 이 복귀 검출기다.
+이번에는 별도 시계 레지스터의 후선택을 구현하지 않았다.
+무작위 표지 배분의 블록별 변동, 배분 추정 오차, 기준 위상
+오차와 드리프트 법칙 오가정, 다른 cutoff에서의 약한-null
+calibration은 아직 확인하지 않았다. 이것들이 끝나기 전에는
+발전연구 주제를 고르지 않는다. QPU도 사용하지 않았다.
+
+\paragraph{재현 자료.}
+구 raw counts: \texttt{../results/qiskit\_rank\_holdout3\_shots.json}.
+구 통계 절차의 정정: \texttt{prevalidation\_protocol4\_2026-10-04.tex}와
+\texttt{prevalidation\_protocol4b\_2026-10-04.tex}.
+새 회로·검정 코드: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout4b\_weaknull.py}.
+새 raw counts와 주 검정:
+\texttt{../results/qiskit\_rank\_holdout4b\_weaknull.json}.
+새 사후 품질 감사:
+\texttt{../results/qiskit\_rank\_holdout4b\_audit.json}.
+약한-null 통계의 사후 정확-이항 calibration:
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout4b\_calibration.py},
+\texttt{../results/qiskit\_rank\_holdout4b\_calibration.json}.
+\end{document}

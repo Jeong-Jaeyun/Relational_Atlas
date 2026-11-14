@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 2: 검출 효과와 표지 분포를 바꾼 반증 실험}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{결론부터}
+발전연구의 주제는 선택하지 않았다. 선검증 1의 조건부 패턴은
+서로 다른 에너지 스펙트럼과 비투영 검출 효과에서도 유지됐지만,
+기록된 표지의 \emph{실제 표본 분포}가 균일하다는 전제를 버리면
+``표지 삭제 후 공통 위상 정보가 정확히 0''이라는 결론이 깨졌다.
+반대로 $P=0$ 상태와 전하 twirl 검출기는 표지 분포와 무관하게
+공통 위상 불변이었다. 이는 관측 rank가 상태, 검출 효과, 표지 설계의
+교차 결과라는 선검증이며 공간 차원 선택의 증거가 아니다.
+
+\section{사전 고정 설계와 식별 조건}
+실행 전에 \texttt{prevalidation\_protocol2\_2026-10-04.tex}에
+$n=3,4,5$, $\beta=0.45,1.20$, 세 검출 효과, 세 시계 스펙트럼,
+$\tau=0,\pi/2$, 두 표지 분포, 비제약/$P=0$ 상태를 고정했다.
+총 432행이며 독립된 432회 통계 실험이 아니라 결정론적 매개변수 격자다.
+표지는 $L=2n+1$개, 검출 바이어스는 1.25 rad다.
+원래 에너지 $E_0=\sum_i k_i^2$ 외에
+\begin{equation}
+E_{\rm nonlin}=E_0+0.37E_0^2/n,\qquad
+E_{\rm charge}=E_0+0.41P^2/n
+\end{equation}
+을 시계 위상에 넣었다. 상태 가중치 $w_k\propto e^{-\beta E_0}$는
+고정했으므로 상태 QFI 검사는 새 스펙트럼에 대해 독립된 새로운 상태
+시험이 아니다.
+
+복귀 기준 상태의 폭을 $\beta_r=0.15$로 바꾼 단일 프로젝터
+$M_{\rm mis}$, $\beta_r=0.15,1.80$ 프로젝터의 0.7/0.3 혼합
+$M_{\rm mix}$, 그리고 $M_{\rm mix}$의 총전하 twirl
+$M_{\rm twirl}$을 비교했다. 혼합은 하나의 프로젝터가 아닌 유효
+이진 POVM 효과다. 표지 분포는 균일 $1/L$ 또는
+\begin{equation}
+a_t=\frac{1+0.35\cos(2\pi t/L)}{L}
+\end{equation}
+이다. 두 분포 모두 표지값 자체는 같은 $2\pi t/L$을 쓴다.
+따라서 차이는 표지를 얼마나 자주 사용했는가와 그것을 지운 후
+어떤 혼합을 얻는가에만 있다.
+
+전하 $P$의 차이가 만드는 Fourier 조화는
+$|P-P'|\le2n$이다. 균일한 $L=2n+1$ 표지 삭제는 비영 조화를
+모두 소거한다. 이 주장은 $E(k)$의 형태에는 의존하지 않는다.
+그러나 위의 비균일 가중치는 $m\equiv\pm1\pmod L$ 조화를 남긴다.
+현재 cutoff에서는 $m=\pm1$뿐 아니라 $m=\pm2n$도 여기에 해당한다.
+$P=0$ 상태는 처음부터 공통 위상 조화가 없고,
+$M_{\rm twirl}$은 전하 사이 coherence를 검출하지 않으므로
+어느 표지 분포에서도 공통 위상에 불변이다.
+
+\section{정확 격자와 Qiskit 교차검증}
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+검사 & 대상 행 & 실패/양성 행 \\
+\midrule
+사전 보장된 삭제 후 불변성과 rank $n-1$ & 360 & 실패 0 \\
+표지 보존의 예상 rank & 432 & 실패 0 \\
+상태 QFI의 비제약/$P=0$ rank $n/(n-1)$ & 432 & 실패 0 \\
+비균일 표지, 비제약 coherent 효과의 잔여 반응 & 72 & 양성 72 \\
+비균일 표지, 비제약 coherent 효과의 삭제 rank $n$ & 72 & 양성 72 \\
+\bottomrule
+\end{tabular}
+\end{center}
+공통 위상을 $0\to0.23$ rad 옮긴 뒤 최대 확률 변화의
+$10^{-10}$ 판정선에서 보장된 불변성은 모두 유지됐다.
+비균일/coherent 72행의 잔여 확률 변화는
+$3.25\times10^{-7}$--$2.67\times10^{-3}$였으므로,
+정확히 양수여도 샷 예산에 따라 숨을 수 있다. Fisher rank는 최대
+고유값 대비 $10^{-8}$ 기준으로 보고했으며 공통방향 정보와
+이동 전후 확률도 원자료에 보존했다. 해석적 확률 미분의 중앙차분
+대조 최대 오차는 $1.71\times10^{-11}$이다.
+
+선택한 $n=3$ 조건 네 개의 별도 Qiskit Statevector 회로에서는
+시계 에너지 위상을 직접 대각 게이트로, 검출 효과를 역준비 회로와
+혼합으로 구현했다. $M_{\rm twirl}$은 $L$개 공통 위상의 회로
+확률 평균으로 계산해 전하-섹터 식과 교차 확인했다.
+수식과 Statevector 확률 최대 차이는 $2.43\times10^{-15}$,
+세 조건의 Aer density-matrix 최대 차이는 $3.05\times10^{-15}$였다.
+비균일 표지의 회로 확률을 실제 $a_t$로 다시 합친 대조의
+표지별 최대 차이는 $4.72\times10^{-15}$였다.
+이는 구현 경로의 대조이며 유한 샷 검정력이나 QPU 성능을
+보여주는 실험이 아니다.
+
+\section{검증 상태와 남은 게이트}
+현재 검증된 것은 cutoff 1의 특정 상태족에서 전하 Fourier 조화,
+검출 효과의 coherence, 표지 분포가 관측 Fisher rank에 미치는
+구조다. 확립된 발전연구의 주제는 아직 없다. 특히 이번 격자는
+이미 알려진 표지 분포를 정확히 사용했다. 분포의 추정 오차,
+기준 위상 자체의 오차, 드리프트 법칙의 오가정, cutoff 변경,
+유한 샷에서 작은 잔여 신호의 검정력은 여전히 검증 게이트다.
+공간방향의 실제 개수와 관측 rank를 분리한다는 기존 판정도 유지한다.
+QPU는 사용하지 않았다.
+
+\paragraph{재현 자료.}
+사전 프로토콜: \texttt{prevalidation\_protocol2\_2026-10-04.tex}.
+정확 격자: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout2\_grid.py},
+\texttt{../results/qiskit\_rank\_holdout2\_grid.json}.
+독립 회로: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout2\_circuit.py},
+\texttt{../results/qiskit\_rank\_holdout2\_circuit.json}.
+검증 테스트: \texttt{../tests/test\_qiskit\_rank\_holdout2\_grid.py},
+\texttt{../tests/test\_qiskit\_rank\_holdout2\_circuit.py}.
+\end{document}

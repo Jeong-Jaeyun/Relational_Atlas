@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 16 result:\\Leading angle law of paired support transfer}
+\date{2026-10-04}
+\maketitle
+
+\section*{Leading response}
+For the three nonzero $n=3$ classes, the contrast divided by $\sin^2\epsilon$
+over eight non-endpoint angles has relative spread $2.61\times10^{-5}$,
+$9.41\times10^{-6}$, and $9.52\times10^{-6}$ for same support, different-pair
+same-sign, and different-pair opposite-sign transfer. Their leading scales are
+approximately $2.0367\times10^{-3}$, $5.4742\times10^{-4}$, and
+$9.8550\times10^{-4}$, respectively. The conjugate-partner class stays at the
+numerical-zero scale throughout.
+
+\section*{Endpoint qualification}
+At $\epsilon=\pi$, a small but backend-independent residual remains:
+$9.74\times10^{-8}$ for same support, $9.42\times10^{-9}$ for different-pair
+same-sign, and $1.72\times10^{-8}$ for different-pair opposite-sign. An independent
+raw Qiskit statevector calculation agrees with Aer for the same-support endpoint to
+$7.6\times10^{-15}$ in probabilities, so this is not caused by the standard-gate
+decomposition used for Aer execution.
+
+\section*{Interpretation}
+The observed law is a dominant $\sin^2\epsilon$ transverse-interference response,
+not an exact one-term identity at the tested precision. The endpoint residual must
+be retained when making any closed-form claim. This motivates finite-shot testing of
+the support classes at $\epsilon=\pi/2$, where the leading contrasts are largest.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout16\_angle\_law.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout16\_angle\_law.json}.
+\end{document}

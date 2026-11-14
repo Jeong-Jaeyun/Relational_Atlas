@@ -1,0 +1,158 @@
+% Compile from this directory with: xelatex why_three_qiskit4.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{I01 Qiskit 실험 4: 유한 시계 아래 위상 표지와 기준 위상의 개입}
+\author{RELATIONAL ATLAS --- 조건부 차원 판별 실험}
+\date{2026년 10월 3일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+관측 Fisher rank 3의 출처를 구분했던 표지 보존/삭제와 위상 기준(anchor)
+개입을 이번에는 같은 유한 시계의 조건부 측정 아래 결합했다. 네 자유도의
+비제약 상태에서는 시계 위상 $\tau/\pi=0,1/4,1/2,3/4,1$ 모두에서 표지를
+유지하면 정확한 고전 Fisher rank 4, 표지를 삭제하거나 블록별 미지 위상
+영점을 보정하지 않으면 rank 3, 알려진 위상의 기준 측정을 추가하면 다시
+rank 4이다. $P=0$ 제약 대조군은 모든 경우 rank 3이다. 두 시계 위상에서
+수행한 432개의 Aer 유한-shots 회로도 이 구조에 맞는다. 그러나
+$\tau=\pi/2$에서는 정보의 크기가 현저히 작아져 같은 rank가 훨씬 많은
+측정 예산을 요구한다. 이 결과는 관측 차원의 출처와 조건부 측정의
+가시성을 분리하지만, 제약이나 공간 차원의 자발적 발생을 보이지는 않는다.
+\end{abstract}
+
+\section{시계와 과학계의 준비}
+과학계는 $n=4$, 각 운동량 $k_i\in\{-1,0,1\}$인 기존 토이 모형이다.
+비제약 상태와 $P=\sum_i k_i=0$ 제약 상태를 별도 준비한다. 에너지
+$E(k)=\sum_i k_i^2\in\{0,1,2,3,4\}$에 맞춘 5준위 시계를 3큐비트에
+부호화하고, 과학계 8큐비트와 함께
+\begin{equation}
+ |\Psi\rangle=\sum_k\sqrt{w_k}\,|k\rangle_S|E(k)\rangle_C
+\end{equation}
+를 \emph{준비한다}. 시계 위상 $\tau$를 가한 뒤 균일한 시계 상태에
+투영한다. 시계 결과가 성공할 확률은 두 상태 모두 $1/5$이다. 이
+조건부 과학계의 복귀 측정은
+\begin{equation}
+ p_{it}^{(b)}(\boldsymbol\theta,\delta_b;\tau)=
+ \left|\sum_k w_k\exp\!\left[iE(k)\tau+
+ i k\!\cdot\!\left(\boldsymbol\theta+
+ (\phi_t+\delta_b)\boldsymbol1-0.8\boldsymbol e_i\right)\right]\right|^2,
+ \qquad \phi_t=\frac{2\pi t}{9}.
+ \label{eq:conditional}
+\end{equation}
+시계 실패 표본도 원래 실험 예산에 포함된다. 따라서 아래 조건부 표본당
+Fisher 정보에 실제 준비 회로당 정보로 변환할 때는 $1/5$를 곱해야 한다.
+후선택 성공률이 미지 모수에 의존하지 않는 것은 이 준비 상태의 성질이다.
+
+\section{세 종류의 정보 소실을 구분하는 개입}
+표지를 보존하면 식~\eqref{eq:conditional}의 각 $t$를 별도 이진 분포로
+분석하고, 표지를 버리면 $\bar p_i=9^{-1}\sum_t p_{it}$만 분석한다.
+두 경우는 \emph{같은 회로 데이터}의 재분석이다. 위상 영점
+$\delta_0=-0.15$, $\delta_1=+0.35$ rad는 블록별로 미지의 nuisance
+모수로 취급한다. 과학 측정만 있으면
+\begin{equation}
+ (\boldsymbol\theta,\delta_0,\delta_1)
+ \mapsto(\boldsymbol\theta+c\boldsymbol1,\delta_0-c,\delta_1-c)
+\end{equation}
+가 모든 확률을 보존한다. 시계 위상 $\tau$가 알려져 있어도 이 정확한
+영점 혼동은 제거되지 않는다. 각 블록에 $\boldsymbol\theta=0$으로
+알려진 별도 기준 회로를 넣고 과학 회로와 같은 $\phi_t,\tau$를 사용하면
+$\delta_b$를 추정할 수 있다. 기준 상태의 \emph{알려진 위상}은 추가 자원이다.
+
+조건부 이진 Fisher 행렬을 모수 $(\boldsymbol\theta,\delta_0,\delta_1)$에
+대해 만든 뒤 $\delta_b$를 Schur 보수로 제거한다.
+\begin{equation}
+ F_{\theta|\delta}=F_{\theta\theta}-
+ F_{\theta\delta}F_{\delta\delta}^{+}F_{\delta\theta}.
+\end{equation}
+기준 회로 비율은 과학 회로와 동일하게 1로 고정했다. 아래 rank는
+$\lambda>10^{-8}$ 기준의 국소적이고 \emph{정확한 확률 모델}의 rank다.
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+과학계 & 표지 보존 & 표지 삭제 & 미지 영점, 기준 없음 & 미지 영점, 기준 있음 \\
+\midrule
+비제약 & 4 & 3 & 3 & 4 \\
+$P=0$ & 3 & 3 & 3 & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+이 표는 $\tau/\pi=0,1/4,1/2,3/4,1$의 다섯 지점에서 모두 같다.
+표지 삭제의 rank 3은 검출기 정보 손실, 기준 없음의 rank 3은 영점과
+과학 위상의 식별 불능, $P=0$의 rank 3은 \emph{준비한 물리 제약}이다.
+세 수치가 같아도 원인이 다르다.
+
+\section{시계 위상은 rank보다 정보량을 크게 바꾼다}
+비제약 상태에서 표지를 보존한 조건부 Fisher 행렬의 상대방향 세 고유값과
+공통방향 고유값은 $\tau=0$에서 각각 $0.08825$, $0.27630$이고,
+$\tau=\pi/2$에서 $0.004868$, $0.01844$이다. 공통방향 정보는 약
+15배 줄어든다. $P=0$ 대조군의 세 양의 고유값도 $0.86637$에서
+$0.03316$으로 약 26배 줄어든다. 즉 이 모형의 두 시계 위상 모두 정확
+rank를 보존하지만 측정 예산은 같지 않다. 이 다섯 점에서의 결과만으로
+모든 연속 $\tau$에서 양의 고유값이 결코 0이 되지 않는다고 주장하지 않는다.
+시계 후선택의 $1/5$ 비용은 두 위상에 공통이다.
+
+$0\le\tau\le\pi$의 201점 스캔에서는 비제약 표지 보존 rank가 모두 4,
+$P=0$의 rank가 모두 3이었다. 비제약의 공통방향 정보 최저값은
+$\tau/\pi=0.5$에서 $0.01844$, 최소 상대방향 고유값의 최저값은
+$\tau/\pi\simeq0.495$에서 $0.004866$이었다. $P=0$의 상대방향
+최저값도 $\tau/\pi=0.5$에서 $0.03316$이었다. 이 격자에서는
+정확한 영점을 찾지 못했지만, 유한 격자 탐색은 전 구간에 대한 해석적
+비영 정리가 아니다.
+
+\section{Aer 유한-shots 확인}
+$\tau=0,\pi/2$를 사전에 지정하고 각 위상에서 비제약 과학 72회로,
+비제약 기준 72회로, $P=0$ 과학 72회로를 실행했다. 총 432회로에
+회로당 4096 shots, Aer statevector 방법과 최대 6개의 병렬 실험/스레드를
+사용했다. 실제 시계 후선택률은 비제약 $0.19960$, $P=0$ $0.19910$으로
+목표 $0.2$와 근접하다. 기준 위상 보정 후 주입한 공통 과학 위상
+$\alpha=0.300$ rad의 결합 추정은 다음과 같다.
+\begin{center}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+$\tau/\pi$ & $\hat\alpha$ (rad) & 근사 95\% 구간 & 비제약 표지 보존
+& 비제약 표지 삭제 & $P=0$ 표지 보존 \\
+\midrule
+0 & 0.2956 & $[0.2846,0.3067]$ & $p\le0.00050$ & $p=0.891$ & $p=0.192$ \\
+1/2 & 0.3123 & $[0.2703,0.3544]$ & $p\le0.00050$ & $p=0.186$ & $p=0.275$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+표 안의 $p$는 두 블록의 공통 위상 차이를 2000회 조건부 재배분으로
+검정한 값이다. 표지를 삭제한 $P=0$의 $p$는 각각 $0.740,0.106$이다.
+비유의 결과 자체가 동등성 증명은 아니다. $P=0$의 정확한 불변성과
+비제약 표지 삭제의 rank 손실은 별도의 수학적 모델에서 확인했다.
+$\tau=\pi/2$의 추정 구간이 더 넓은 것도 앞 절의 정보량 감소와 일치한다.
+단일 난수 seed의 근사 구간이므로 반복 시행의 coverage를 입증하지 않는다.
+
+\section{판정, 한계, 다음 게이트}
+유한 시계 조건화는 이 다섯 지점에서 관측 rank 3의 원인 판별력을
+없애지 않았다. 반대로 위상 $\tau$가 만든 약한 정보는 구조적 rank와
+실용적 판정을 분리한다. 사용한 에너지 매칭, $P=0$ 선택, 완벽한 시계
+투영, 알려진 기준 위상은 모두 설계된 자원이다. 11큐비트 상태 준비가
+$u3,cx$로 분해되면 깊이가 약 4560이라 현재 형태를 그대로 저비용 QPU
+회로라고 볼 수 없다. 이 결과는 ``왜 세 공간 차원인가''의 답이 아니라
+그 질문에 대한 실험적 오인 가능성을 줄인 것이다. QPU 사용은 추가
+구조 검증 뒤로 보류한다.
+
+다음 단계는 연속 $\tau$에서 정보 암점과 재귀를 지도화하고, 기준 측정
+사이에 발생하는 미기록 위상 드리프트와 유한 시계 해상도/에너지 스펙트럼
+변화를 분리해 검토하는 것이다. 특히 보정 주기보다 빠른 드리프트가
+공통방향을 얼마나 약화시키는지 자원 비용과 함께 측정해야 한다.
+
+\paragraph{재현성.} 코드
+\texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_clock\_anchor\_intervention.py}, 회귀 검사
+\texttt{../tests/test\_qiskit\_clock\_anchor\_intervention.py}, 원자료
+\texttt{../results/qiskit\_clock\_anchor\_intervention.json}.
+시작 seed 20261006, Qiskit 2.4.2, Qiskit Aer 0.17.2.
+회로를 $u3,cx$ 게이트로 분해한 이유는 이 Windows 환경에서 합성
+\texttt{multiplexer}의 Aer 접근 위반을 회피하기 위해서다.
+시뮬레이터 옵션은
+\href{https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html}{AerSimulator 공식 문서},
+상태 준비 회로는
+\href{https://quantum.cloud.ibm.com/docs/en/api/qiskit/2.3/qiskit.circuit.library.StatePreparation}{StatePreparation 공식 문서}
+를 참조한다. 이 환경에는 TeX 엔진이 없어 PDF 렌더링 검증은 하지 못했다.
+\end{document}

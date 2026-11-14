@@ -1,0 +1,30 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 16 protocol:\\Angle law for paired support-transfer classes}
+\date{2026-10-04}
+\maketitle
+
+\section*{Question}
+Stages 14--15 map support and dimension dependence at one pulse angle. This protocol
+tests whether each of the four $n=3$ support classes has a common transverse
+amplitude dependence, including the expected periodic endpoint at $\epsilon=\pi$.
+
+\section*{Frozen exact-Aer grid}
+At $n=3$, use the stage-14 representatives $(0,0)$, $(0,1)$, $(0,2)$, and $(0,3)$,
+skewed largest-remainder label weights, all axes, both phase blocks, and
+$\epsilon\in\{0.1,0.2,0.5,0.8,1.0,1.2,\pi/2,2.0,\pi\}$. The operation remains
+$R_x(+\epsilon)$ after preparation and $R_x(-\epsilon)$ after the science phase
+layer.
+
+\section*{Recorded diagnostics}
+For every row record the maximum $P=0$ pooled contrast, its three axis components,
+clock-acceptance error, and $\sin^2\epsilon$. After all rows are completed, report
+the range of contrast divided by $\sin^2\epsilon$ away from the endpoint and the
+contrast at $\epsilon=\pi$. No finite-shot decision is made.
+
+\section*{Reproduction}
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout16\_angle\_law.py}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 13 result:\\Support scan rejects same-qubit necessity}
+\date{2026-10-04}
+\maketitle
+
+\section*{Same-support replication}
+Paired inverse $R_x$ on each of the six system qubits gives the same maximum
+$P=0$, $\tau=0$ contrast to numerical precision:
+$1.4421688575454\times10^{-3}$. The largest component lies on the matching
+science-phase axis for each two-qubit momentum encoding pair.
+
+\section*{Cross-support correction}
+The q0-to-q1 conjugate-partner control remains zero at $4.9\times10^{-17}$.
+However, q0-to-q2 and q0-to-q4 give $3.87617\times10^{-4}$, while q0-to-q3
+and q0-to-q5 give $6.97812\times10^{-4}$. Thus stage 12's provisional
+``same-qubit is necessary'' conclusion is rejected. The requirement is more
+structured than literal support equality.
+
+\section*{Next inference}
+The values separate according to the two-qubit momentum-pair encoding. This justifies
+the complete $6\times6$ source-to-return map in stage 14, rather than selecting one
+cross-support example for finite-shot confirmation.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout13\_support\_atlas.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout13\_support\_atlas.json}.
+\end{document}

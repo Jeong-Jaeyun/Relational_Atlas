@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 선검증 7 사전 프로토콜:\\
+명시적 시계 회로에서 국소 오류와 관측 contrast의 분리}
+\date{2026-10-04}
+\maketitle
+
+\section*{질문과 범위}
+선검증 6의 비균일 표지ㆍ비제약 $\tau=0$ contrast가 준비, 위상, 읽기 오류 아래에서도
+두 종류의 정확 영 대조군과 구별되는지 검사한다. 목적은 물리 프로세서의 잡음을
+추정하거나 하드웨어 성능을 예측하는 것이 아니다. Aer density-matrix에서 \emph{하나의}
+국소 오류 채널만 넣어, 구조적 영과 작은 양수가 언제 감쇠하거나 서로 혼동되는지
+조건부 지도를 만든다.
+
+\section*{고정 회로와 비교 행}
+선검증 6과 같은 $n=3$, $L=7$, $\beta=0.45$ 및 2-qubit 에너지-상관 시계를 사용한다.
+두 블록의 공통 위상은 $0$과 $0.6$ rad이고, 각 축에서 회수 확률과 시계 $00$의
+동시 확률을 기록한다. amplitude/phase 채널은 세 축의 순열 대칭을 각 scenario에서
+별도로 점검한 뒤 한 축만 Aer로 계산해 확장한다. 읽기 오류는 이상적인 all-zero 회수
+확률이 같아도 전체 bit-string 분포가 축에 따라 달라질 수 있으므로, 세 축을 모두 계산한다.
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+역할 & 표지 & 상태 & $\tau/\pi$\\
+\midrule
+강한 양수 & 비균일 & 비제약 & $0$\\
+약한 양수 & 비균일 & 비제약 & $1/2$\\
+분포 영 & 균일 & 비제약 & $0,1/2$\\
+제약 영 & 비균일 & $P=0$ & $0,1/2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+각 행에서 표지 가중치를 $w_l$이라 하면 주 효과량은
+\[
+ \Delta_a=\sum_lw_l\{p_{a,l}^{(0.6)}-p_{a,l}^{(0)}\}.
+\]
+균일ㆍ비제약 영은 표지를 버린 뒤의 평균에서 생기는 영이고, $P=0$ 영은
+상태 제약의 영이다. 따라서 두 원인을 같은 null로 합치지 않는다.
+검정력 비교에는 선검증 6의 표지별 shots와
+\[
+ \Lambda\simeq\sum_a\frac{N\Delta_a^2}{2\bar p_a(1-\bar p_a)}
+\]
+를 \emph{근사 지표}로만 기록한다. 이 단계에서 bootstrap $p$값이나 유한-shots
+확증 판정은 만들지 않는다.
+
+\section*{오류 모형과 sweep}
+이상 기준점과 다음 단일 오류 scenario를 고정한다:
+\begin{enumerate}
+\item 준비 오류: 상관 상태 준비 직후 모든 8 qubit에 amplitude-damping 채널
+  $\mathcal{A}_p$를 한 번 적용한다.
+\item 위상 오류: 과학 $R_z$ 층 직후 6 system qubit에 phase-damping 채널
+  $\mathcal{D}_p$를 한 번 적용한다.
+\item 읽기 오류: 이상 측정 후 각 qubit의 고전 bit에 독립 대칭
+  $0\leftrightarrow1$ flip 확률 $p$를 적용한다.
+\end{enumerate}
+각 오류 종류는 서로 섞지 않으며, $p=0.001,0.01,0.03$에서 계산한다.
+읽기 오류는 측정 뒤의 고전 채널이므로 완전한 Aer outcome 확률에 정확히 합성한다.
+나머지 두 채널은 회로의 해당 barrier 바로 뒤에 Aer quantum channel로 삽입한다.
+
+\section*{판독 규칙}
+각 scenario에서 네 영 행의 최대 규모를 $D_0$, 강한 양수의 규모를 $D_S$라고 둔다.
+$D_0\le10^{-10}$이면 수치적으로 영 보존, 그렇지 않으면 $D_0/D_S\le0.1$을
+강한 신호의 1/10 이하 leakage, $0.1<D_0/D_S\le1$을 모호 구간,
+$D_0/D_S>1$을 contrast 혼동으로 기록한다. 이는 물리적 오류율의 허용 한계가 아니라,
+후속 유한-shots 설계를 고르기 위한 사전 분류다.
+
+\section*{재현 자료}
+구현은 \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout7\_noise\_stress.py},
+회귀 검사는 \texttt{../tests/test\_qiskit\_rank\_holdout7\_noise\_stress.py},
+출력은 \texttt{../results/qiskit\_rank\_holdout7\_noise\_stress.json}에 둔다.
+\end{document}

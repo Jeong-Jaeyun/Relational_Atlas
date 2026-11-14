@@ -1,0 +1,240 @@
+% Compile from this directory with: xelatex why_three_qiskit1.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{I01 Qiskit 실험 1: 물리적 제약과 검출기 위상 기준 손실의 분리}
+\author{RELATIONAL ATLAS --- 회로 기반 조건 지도}
+\date{2026년 10월 2일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+$T^n$의 유한 Fourier 모형을 두 큐비트/축으로 부호화하고,
+$n=4$에서는 Qiskit Aer의 실제 회로 측정으로 Fisher 정보를 추정했다.
+정확한 $P=\sum_i k_i=0$ 상태 제약과, 제약 없는 상태를 전하-위상 평균
+검출기로 읽는 경우는 모두 공통 방향을 보지 못하지만 물리적 뜻이 다르다.
+전자는 $n=3,4,5,6$에서 각각 $2,3,4,5$개의 방향을 남기므로
+그 자체는 3의 선택 기작이 아니다. 후자는 상태 차원이 줄지 않은
+관측기 효과다. 유한한 위상 기준 손실과 유한 shots에서는 정확한 영 고유값과
+작게 보이는 고유값을 구별해야 한다. 별도의 10큐비트 유한 시계 회로는
+조건부 시간 변화와 $\pi$ 재귀를 보이지만, 재귀는 $P=0$에 의해
+강제된 짝수 에너지 지지의 결과다.
+\end{abstract}
+
+\section{질문과 회로 모형}
+기존 \texttt{condition\_atlas.py}의 cutoff $k_i\in\{-1,0,1\}$,
+$\beta=0.35$를 그대로 사용한다. 허용된 운동량 $k$의 가중치와
+위상 인코딩 상태를
+\begin{equation}
+ w_k=\frac{e^{-\beta\sum_i k_i^2}}{\sum_{k'\in\mathcal K}e^{-\beta\sum_i {k'_i}^2}},
+ \qquad
+ |\psi_{\boldsymbol\theta}\rangle
+ =\sum_{k\in\mathcal K}\sqrt{w_k}\,
+ e^{i k\cdot\boldsymbol\theta}|k\rangle
+\end{equation}
+로 정의했다. 비제약 대조군은 $\mathcal K=\{-1,0,1\}^n$,
+제약군은 $\mathcal K=\{k:\sum_i k_i=0\}$이다. 축당 두 큐비트에
+$0\mapsto 00$, $+1\mapsto 01$, $-1\mapsto 10$을 대응시키고
+$11$은 비워 둔다. 양/음 부호 비트에 각각 $R_z(\theta_i)$와
+$R_z(-\theta_i)$를 적용하면 상대위상 $e^{ik_i\theta_i}$가 생긴다.
+Qiskit \texttt{StatePreparation}으로 상태를 준비하고 역회로를 적용한 뒤
+모든 큐비트를 측정한다. 사용 API의 동작은 Qiskit 공식
+\href{https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.circuit.library.StatePreparation}{StatePreparation}
+및 \href{https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html}{AerSimulator}
+문서를 따랐다.
+
+순수 상태의 매개변수 QFI는
+\begin{equation}
+ F^{\rm Q}_{ij}=4\left(\langle k_i k_j\rangle_w
+ -\langle k_i\rangle_w\langle k_j\rangle_w\right).
+\end{equation}
+$P=0$이면 $F^{\rm Q}\boldsymbol 1=0$이다. 이는 모델에 넣은
+제약의 정확한 결과이며, 우주가 3차원이어야 한다는 설명은 아니다.
+
+\section{검출기 대조군: 같은 상태, 다른 접근 정보}
+각 $i$에 기준위상 $\boldsymbol\phi_i=b\boldsymbol e_i$, $b=0.8$을 둔다.
+준비 역회로 뒤 모든 큐비트가 0일 이진 사건의 확률은
+\begin{equation}
+ p_i(\boldsymbol\theta)=
+ \left|\sum_k w_k e^{ik\cdot(\boldsymbol\theta-\boldsymbol\phi_i)}\right|^2.
+\end{equation}
+비교할 Fisher 행렬은 이진 사건 $i$들을 같은 비율로 사용했을 때의
+단일 interrogation당 고전 Fisher 정보다:
+\begin{equation}
+ F^{\rm C}=\frac1n\sum_{i=1}^n
+ \frac{\nabla p_i\,\nabla p_i^{\mathsf T}}{p_i(1-p_i)}
+ \quad\text{at }\boldsymbol\theta=0.
+\end{equation}
+상대 정보만 보도록 검출기 위상 기준을 제거한 경우는
+\begin{align}
+ \bar p_i(\boldsymbol\theta)
+ &=\frac1{2n+1}\sum_{t=0}^{2n}
+ p_i\!\left(\boldsymbol\theta+
+ \frac{2\pi t}{2n+1}\boldsymbol 1\right)\\
+ &=\sum_q\left|
+ \sum_{k:P(k)=q}w_k
+ e^{ik\cdot(\boldsymbol\theta-\boldsymbol\phi_i)}
+ \right|^2 .
+\end{align}
+$P(k)-P(k')\in[-2n,2n]$이므로 $2n+1$점 이산 평균이 정확히
+서로 다른 전하 섹터의 간섭을 제거한다. 따라서
+$\bar p_i(\boldsymbol\theta+\alpha\boldsymbol 1)=
+\bar p_i(\boldsymbol\theta)$이지만, 상태 자체에는 여전히 모든
+$P$ 섹터가 있다. 평균에 사용된 무작위 위상을 검출기가 기록하고
+사후 조건화할 수 있다면 정보 손실은 달라진다. 여기서는 그 표지를
+사용할 수 없다는 운영적 가정을 명시한다.
+
+\section{정확 계산과 Aer 유한-shots 결과}
+Qiskit \texttt{Statevector}로 계산한 QFI rank는 다음과 같다.
+$n=4$의 비제약 상태 지지 크기는 $81$, $P=0$ 지지 크기는 $19$다.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$n$ & 비제약 상태 QFI rank & $P=0$ 상태 QFI rank & 비제약 상태/전하-평균 검출기 CFI rank \\
+\midrule
+3 & 3 & 2 & 2 \\
+4 & 4 & 3 & 3 \\
+5 & 5 & 4 & 4 \\
+6 & 6 & 5 & 5 \\
+\bottomrule
+\end{tabular}
+\end{center}
+마지막 열은 $n$별 이진 검출기의 정확한 확률 미분이다.
+Aer 회로 샘플링은 $n=4$에서 수행했다. 다음 표의 정확 고유값은
+해석적 미분으로 얻은 CFI이며, Aer 열은 $h=0.15$ 중앙차분과
+독립 회로 샘플링으로 추정했다.
+\begin{center}
+\begin{tabular}{@{}p{42mm}p{37mm}p{53mm}c@{}}
+\toprule
+상태/검출기 & 정확 CFI 고유값 & Aer 추정 고유값 & 1\% rank \\
+\midrule
+비제약/위상 기준 유지 & $(0.54455)\times4$ & $0.485,0.525,0.588,0.633$ & 4 \\
+$P=0$/위상 기준 유지 & $0,(0.86637)\times3$ & $0.00317,0.843,0.857,1.021$ & 3 \\
+비제약/전하 위상 평균 & $0,(0.04319)\times3$ & $0.000132,0.0387,0.0518,0.0558$ & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+이 판정의 1\%는 각 행의 최대 고유값 대비 상대 임계다.
+$P=0$와 위상 평균의 최소 고유값은 정확 계산에서는 0이지만
+중앙차분만으로도 각각 약 $4.4\times10^{-7}$과
+$2.2\times10^{-8}$의 양수값이 생긴다. Aer의 더 큰 잔여값은
+유한 shots의 미분 잡음과 일치하는 규모다. 따라서 샘플 고유값이
+양수라는 이유만으로 네 번째 물리 방향을 선언하거나, 임계 아래라는
+이유만으로 정확한 영을 증명해서는 안 된다.
+
+측정된 회로별 이진 확률을 모수로 쓰는 300회 binomial bootstrap에서는
+1\% 판정 rank가 비제약군에서 $4$로 $300/300$회,
+$P=0$군에서 $3$으로 $285/300$회,
+전하 평균군에서 $3$으로 $235/300$회 나왔다.
+이는 확률 추정치에 조건부인 재표본화 안정성이지 정확한 rank의
+사후 확률이 아니다. 전하 평균군의 비영 CFI 고유값 자체가
+$P=0$군보다 약 20배 작아서, 비슷한 측정 예산에서도 겉보기 차원
+판정이 더 흔들린다.
+
+비제약/제약군은 회로당 8192 shots, 각 36회로를 사용했다.
+전하 평균군은 각 9개 위상에 회로당 1024 shots, 총 324회로였다.
+8큐비트 준비--역준비 회로를 표준 $u3,cx$ 게이트로 컴파일하면
+깊이 992, 명령 1020개였다. 이는 시뮬레이터 실험이며 현행
+실기기에서 가능한 얕은 회로를 주장하지 않는다.
+
+\section{위상 기준 손실의 연속 실험}
+위상 기준을 잃은 interrogation 비율 $\eta$가 검출기에 기록되지
+않는다고 하고, 이진 확률을
+$p_i^{(\eta)}=(1-\eta)p_i+\eta\bar p_i$로 섞었다.
+이는 상태 제약이 아니라 검출기 채널의 고전적 혼합이다.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$\eta$ & 최소/다음 CFI 고유값 & 정확 rank & 1\% 판정 rank \\
+\midrule
+0 & 1.000 & 4 & 4 \\
+0.90 & 0.124 & 4 & 4 \\
+0.95 & 0.0421 & 4 & 4 \\
+0.99 & 0.00223 & 4 & 3 \\
+1 & 0 & 3 & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+선택한 $b=0.8$과 1\% 판정선에서 겉보기 rank가 4에서 3으로
+바뀌는 손실 비율은 $\eta\simeq0.977844$다. 이는 이 회로와
+판정 규약의 수치이지 보편 임계가 아니다. $\eta<1$에서는
+아무리 작아도 기준 유지 사건이 남아 정확 rank가 4다.
+
+\section{유한 시계 조건화: 변화와 재귀의 출처}
+같은 $n=4$, $P=0$, cutoff 1 상태에서
+$E_k=\sum_i k_i^2\in\{0,2,4\}$를 시계의 세 준위
+$m=E_k/2\in\{0,1,2\}$와 짝지었다. 시계는 두 큐비트로 부호화한다.
+\begin{equation}
+ |\Psi\rangle=\sum_k\sqrt{w_k}|m=E_k/2\rangle_C|k\rangle_S,
+ \quad H_C|m\rangle=-2m|m\rangle,
+ \quad H_S|k\rangle=E_k|k\rangle .
+\end{equation}
+따라서 $(H_C+H_S)|\Psi\rangle=0$은 정확하지만,
+상태 준비 단계에서 그렇게 만들었기 때문이다. 연속 시계 위상
+$\tau$를 택할 때 각각의 정규화된 시계 상태
+$|\chi_\tau\rangle=3^{-1/2}\sum_{m=0}^{2}e^{-i2m\tau}|m\rangle$
+에 사영하면
+\begin{equation}
+ p_C(\tau)=\frac13,
+ \qquad
+ |\psi(\tau)\rangle=\sum_k\sqrt{w_k}e^{iE_k\tau}|k\rangle,
+ \qquad
+ \mathcal F(\tau)=|\langle\psi(0)|\psi(\tau)\rangle|^2 .
+\end{equation}
+정확 상태벡터를 시계 결과에 조건화하고 16,384 shots씩 5개의
+10큐비트 Aer 회로를 실행했다.
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$\tau/\pi$ & 정확한 조건부 복귀 충실도 & Aer 조건부 추정 \\
+\midrule
+0 & 1.0000 & 1.0000 \\
+0.25 & 0.5019 & 0.4916 \\
+0.50 & 0.1700 & 0.1757 \\
+0.75 & 0.5019 & 0.5036 \\
+1.00 & 1.0000 & 1.0000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+시계 사영 확률은 각 위상에서 정확히 $1/3$이고 표본에서는
+$0.330$--$0.338$이었다. 즉 이 모형의 조건부 변화는 단순히
+극히 드문 postselection을 골라낸 산물이 아니다. 다만 위상별
+$|\chi_\tau\rangle$는 각 선택 위상에서 수행한 투영 측정이지,
+서로 독립인 시계 시간 눈금이라는 뜻은 아니다.
+
+왜 $\pi$에서 되돌아오는지는 별도 설명이 가능하다.
+$k_i\in\{-1,0,1\}$에서는 $k_i^2\equiv k_i\pmod2$이므로
+$P=\sum_i k_i=0$이면 $E_k$는 모두 짝수다.
+따라서 $e^{iE_k\pi}=1$이 되어 정확한 재귀가 강제된다.
+같은 $\beta$의 비제약 상태에서는 $\pi$ 복귀 충실도가
+$6.95\times10^{-7}$이다. 이 수치는 비제약 시계를 따로
+회로화한 결과가 아니라 동일한 Fourier 가중치의 해석적 대조군이다.
+시계 회로의 표준 게이트 컴파일 깊이는 2522, 명령 2553개이므로
+이 실험 역시 실기기 실현 가능성을 보여주지 않는다.
+
+\section{현재 판정과 다음 실험}
+이 실험은 관측기 Fisher rank 3을 만드는 두 경로가
+\emph{물리적 부분공간 제약}과 \emph{위상 기준 없는 검출기}로
+분리됨을 회로에서 확인했다. 둘 다 $n=4$를 먼저 두면 3이 나오지만,
+$n=5,6$ 대조군은 4와 5를 남긴다. 따라서 I01의 ``왜 3인가''는
+여전히 열린 질문이다. 유한 시계와
+$\hat C|\Psi\rangle=0$의 에너지 매칭을 후속 회로로 확인했지만,
+그 제약과 시계 자체는 준비 과정에 넣었다. 실제 곡률/팽창 동역학은
+없다. 다음 회로 단계는 유한 시계 아래에서도 전하-평균 검출기
+대조군을 동일한 측정 예산으로 비교하고, 다른 에너지 스펙트럼에서
+재귀가 유지되는지 시험하는 것이다.
+
+\paragraph{재현성.} 코드 \texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_condition\_probe.py},
+검사 \texttt{../tests/test\_qiskit\_condition\_probe.py},
+원자료 \texttt{../results/qiskit\_condition\_probe.json}.
+시계 코드 \texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_clock\_probe.py},
+검사 \texttt{../tests/test\_qiskit\_clock\_probe.py},
+원자료 \texttt{../results/qiskit\_clock\_probe.json}.
+\texttt{quantum} 환경의 Qiskit 2.4.2와 Qiskit Aer 0.17.2를 사용했다.
+Windows의 해당 Aer 빌드에서 \texttt{multiplexer} 명령 조립 시
+접근 위반이 발생하여 $u3,cx$로 명시적으로 분해한 뒤 실행했다.
+BLAS 스레드는 1, Aer의 최대 병렬 실행 수는 6으로 제한했다.
+\end{document}

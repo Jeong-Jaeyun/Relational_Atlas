@@ -1,0 +1,76 @@
+% Frozen before executing the protocol-2 grid. Compile with xelatex.
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=25mm}
+\title{I01 선검증 2 사전 프로토콜: 검출 효과, 스펙트럼, 표지 분포}
+\author{RELATIONAL ATLAS}
+\date{2026년 10월 4일}
+\begin{document}
+\maketitle
+
+\section{목적과 금지할 결론}
+이 프로토콜은 선검증 1에서 통과한 ``충분한 균일 위상 표지의 삭제는
+비제약 복귀 검출기의 공통방향 정보를 없앤다''는 조건부 결과가
+기존의 단일 복귀 프로젝터와 $E=\sum_i k_i^2$에만 의존하는지 검사한다.
+발전연구의 주제·제목을 여기서 선택하지 않는다. 세 공간방향의
+자발적 선택도 검증하거나 주장하지 않는다.
+
+\section{고정 격자}
+$k_i\in\{-1,0,1\}$과 $w_k\propto e^{-\beta E_0(k)}$,
+$E_0(k)=\sum_i k_i^2$, $P(k)=\sum_i k_i$를 사용한다.
+\begin{align}
+n&\in\{3,4,5\},& \beta&\in\{0.45,1.20\},&
+b&=1.25,& L&=2n+1,\\
+\tau/\pi&\in\{0,1/2\},&
+E(k)&\in\left\{E_0,\ E_0+0.37E_0^2/n,\ E_0+0.41P^2/n\right\}.
+\end{align}
+각 조건의 상태는 비제약 또는 $P=0$ 준비 상태다.
+표지 $t=0,\ldots,L-1$의 기록 분포는 균일 $a_t=1/L$ 또는
+\begin{equation}
+a_t=\frac{1+0.35\cos(2\pi t/L)}{L}
+\end{equation}
+로 고정한다. 표지를 삭제하는 분석은 이 실제 분포로 합산하며,
+표본을 균일하다고 가정하지 않는다. 공통 위상 검사는
+$0\to0.23$ rad이다.
+
+검출 효과는 세 종류다. 첫째, 기준 상태의 에너지 가중치가
+$v_k\propto e^{-0.15E_0(k)}$인 단일 복귀 프로젝터 $M_{\rm mis}$.
+둘째, $\beta_r=0.15,1.80$인 두 복귀 프로젝터를 각각 0.7, 0.3으로
+섞은 비투영 이진 POVM 효과 $M_{\rm mix}$.
+셋째, $M_{\rm mix}$를 총전하 $P$로 정확히 twirl한 효과
+$M_{\rm twirl}$이다. 각 효과의 두 번째 결과는 $I-M$이며,
+혼합/twirl은 모두 $0\le M\le I$를 유지한다.
+
+\section{사전 기대와 실패 처리}
+총 3$\times$2$\times$3$\times$3$\times$2$\times$2$\times$2
+=432$행을 계산한다. 상태 QFI의 비제약/$P=0$ rank는 $n/(n-1)$이다.
+정확한 공통 위상 불변성의 사전 기대는 다음과 같다.
+\begin{center}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+상태/효과 & 균일 표지 삭제 & 비균일 표지 삭제 \\
+\midrule
+비제약/$M_{\rm mis},M_{\rm mix}$ & 정확 불변 & 일반적으로 깨질 수 있음 \\
+비제약/$M_{\rm twirl}$ & 정확 불변 & 정확 불변 \\
+$P=0$/모든 효과 & 정확 불변 & 정확 불변 \\
+\bottomrule
+\end{tabular}
+\end{center}
+균일 삭제의 충분조건은 $|P-P'|\le2n<L$인 모든 비영 전하차의
+이산 푸리에 평균이 0이라는 점이다. 이 논리는 $E(k)$와 검출 효과의
+상세 가중치에 의존하지 않는다. 그러나 표지 보존 CFI의 full rank는
+검출기가 전하 사이 coherence를 갖고 비특이적인지에 달린 별도
+경험적 판정이다. 예상은 $M_{\rm mis},M_{\rm mix}$에서 비제약 $n$,
+$M_{\rm twirl}$과 $P=0$에서 $n-1$이다. 비균일 삭제의
+공통방향 잔여값과 실제 rank는 모든 행을 보고하며 결과에 맞춰
+격자를 바꾸지 않는다.
+
+확률 미분은 중앙차분과 대조한다. 선택된 $n=3$ 상태는 Qiskit
+Statevector와 별도 Aer density-matrix 회로로 $M_{\rm mis}$와
+$M_{\rm mix}$의 확률을 교차 확인한다. 정확 영은 공통 위상 이동
+전후 확률 차이 $10^{-10}$을 판정선으로 쓰고, Fisher rank는 최대
+고유값 대비 $10^{-8}$ 기준과 공통방향 정보 크기를 함께 보고한다.
+반례가 나오면 감추지 않고 어떤 전제의 실패인지 분리한다.
+QPU는 사용하지 않는다.
+\end{document}

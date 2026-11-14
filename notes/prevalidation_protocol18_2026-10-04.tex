@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{I01 prevalidation 18 protocol:\\Independent high-budget same-sign transfer replication}
+\date{2026-10-04}
+\maketitle
+
+\section*{Motivation and status}
+In the completed stage-17 family, different-pair same-sign transfer had exact
+$\Lambda=9.90$ but bootstrap $p=0.02640$, below nominal significance but above the
+familywise 0.0125 threshold. This is a new, independent follow-up; its evidence is
+not pooled with stage 17.
+
+\section*{Frozen replication}
+Use only source-return $(0,2)$, $n=3$, $P=0$, $\tau=0$, $\epsilon=\pi/2$, skewed
+largest-remainder labels, workers 6, 262144 shots per uniform label, Aer seed
+20261119, and 10000 bounded weak-null bootstraps. The doubled allocation predicts
+$\Lambda\simeq19.79$. The sole primary decision threshold is 0.05.
+
+\section*{Resources and integrity}
+The run uses $2\times3\times7\times262144=11{,}010{,}048$ preparations. Raw counts
+are checkpointed before analysis and must satisfy joint-all-zero count
+$\leq$ clock-acceptance count.
+
+\section*{Reproduction}
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout18\_same\_sign\_replication.py}
+\end{document}

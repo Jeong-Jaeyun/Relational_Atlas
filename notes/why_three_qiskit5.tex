@@ -1,0 +1,136 @@
+% Compile from this directory with: xelatex why_three_qiskit5.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{I01 Qiskit 실험 5: 기준 측정 사이의 위상 드리프트가 숨기는 방향}
+\author{RELATIONAL ATLAS --- 유한 시계와 시간별 기준점 개입}
+\date{2026년 10월 3일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+이전 실험에서 위상 표지와 기준 측정이 있으면 비제약 네 방향의 관측
+Fisher rank가 4로 복원되었다. 여기서는 기준 측정 사이에 미기록된
+위상 드리프트를 허용한다. 과학 측정을 시간 구간의 중간에 놓고 기준
+측정은 양 끝에 둔다. 드리프트가 선형이라는 \emph{정확한} 가정 아래에는
+rank 4지만, 양 끝에서 0이고 중간에서만 변하는 곡률 모수를 허용하면
+과학 공통 위상과 곡률이 정확히 혼동되어 rank 3이다. 중간 기준 측정을
+추가하면 rank 4가 회복된다. Aer 유한-shots 회로는 선형 오가정의
+편향과 중간 기준점의 보정 효과를 확인했다. 따라서 rank 판정의 자원
+가정뿐 아니라 \emph{드리프트 모형의 정확성}도 검증해야 한다.
+\end{abstract}
+
+\section{시간별 위상 영점과 식별 불능}
+과학계는 $n=4$, 운동량 cutoff 1, 5준위 에너지 매칭 시계의
+조건부 복귀 측정이다. 이전 실험과 동일하게 위상 표지 9개를 모두
+기록한다. 각 구간을 정규화한 시간 $u\in[0,1]$에 대해 기준 영점을
+\begin{equation}
+ \delta(u)=\beta_0+\beta_1 u+4\gamma u(1-u)
+ \label{eq:drift}
+\end{equation}
+로 둔다. $\gamma$는 양 끝 기준점에서 사라지고 중간에서 그대로
+나타나는 곡률 진폭이다. 과학 측정은 $u=1/2$에 놓고, 기준 위상이
+알려진 anchor를 $u=0,1$에 먼저 둔다. 과학 조건부 확률의 위상 인자는
+$\boldsymbol\theta+\delta(1/2)\boldsymbol1$이고 기준 확률은 각각
+$\delta(0)=\beta_0$, $\delta(1)=\beta_0+\beta_1$에만 의존한다.
+따라서 양 끝 기준점만 있으면
+\begin{equation}
+ (\boldsymbol\theta,\gamma)\longmapsto
+ (\boldsymbol\theta+c\boldsymbol1,\gamma-c)
+ \label{eq:gauge}
+\end{equation}
+가 \emph{모든 측정 확률}을 보존한다. 이는 측정 횟수 부족이 아니라
+이 설계의 정확한 식별 불능이다. $u=1/2$의 알려진 위상 기준 측정을
+추가하면 그 측정이 $\delta(1/2)$를 직접 기록하므로
+식~\eqref{eq:gauge}의 혼동이 깨진다.
+
+\section{정확 Fisher 판정과 모형 오가정}
+과학 위상 네 개와 nuisance $\beta_0,\beta_1,\gamma$의 결합 Fisher
+행렬을 만들고 nuisance를 Schur 보수로 제거했다. 과학/기준 회로는
+동일한 위상 표본과 같은 시계 위상 $\tau$를 쓴다. 아래 결과는
+$\tau/\pi=0,1/4,1/2,3/4,1$의 다섯 지점에 모두 적용된다.
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+과학계 & 선형 가정, 양 끝 기준 & 곡률 허용, 양 끝 기준
+& 곡률 허용, 중간 기준 추가 \\
+\midrule
+비제약 & 4 & 3 & 4 \\
+$P=0$ & 3 & 3 & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+첫 열의 rank 4는 $\gamma=0$을 \emph{모델에 고정한 조건부 결과}다.
+실제 $\gamma\ne0$인데도 그렇게 분석하면 rank가 높게 계산된다는
+사실은 정확한 추정을 보장하지 않는다. $P=0$ 대조군의 공통방향은
+어느 경우에도 준비 상태의 물리 제약 때문에 사라진다.
+
+\section{Aer 개입: 양 끝 보정과 중간 보정의 대조}
+주입값은 $\alpha=0.300$, $\beta_0=-0.150$, $\beta_1=0.500$,
+$\gamma=0.220$ rad이다. 따라서 양 끝 기준 위상은 $-0.150,0.350$,
+실제 중간 영점은 $0.320$, 과학 측정의 합성 위상은 $0.620$ rad다.
+선형 보간만 쓰면 중간 영점을 $0.100$으로 예측하여 과학 위상을
+$\alpha+\gamma=0.520$으로 잘못 읽는다. 중간 기준점은 이 오차를
+별도로 측정한다.
+
+$\tau=0,\pi/2$ 각각에서 비제약 과학/기준 세 시점에 144회로,
+$P=0$ 과학 대조 두 위상에 72회로를 배치했다. 전체 432회로를
+회로당 4096 shots로 Qiskit Aer statevector 시뮬레이터에서 실행했다.
+병렬 스레드와 실험 수의 상한은 6이다. 비제약/P=0의 시계 후선택률은
+각각 $0.19994/0.20033$으로 설계값 $1/5$와 근접했다.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$\tau/\pi$ & 양 끝 보간 $\hat\alpha$ & 중간 기준 보정 $\hat\alpha$
+& 추정 곡률 $\hat\gamma$ \\
+\midrule
+0 & $0.5180\ [0.5049,0.5311]$ & $0.2975\ [0.2819,0.3131]$
+& $0.2205\ [0.2066,0.2344]$ \\
+1/2 & $0.5035\ [0.4521,0.5549]$ & $0.2960\ [0.2367,0.3553]$
+& $0.2075\ [0.1563,0.2587]$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+괄호는 독립 세그먼트의 Fisher 표준오차로 만든 근사 95\% 구간이며
+위상 단위는 rad이다. 실제 곡률을 허용한 모델에서 양 끝 기준만으로
+얻은 ``$\hat\alpha$''는 $\alpha$의 식별 가능한 추정치가 아니다.
+이는 $\gamma=0$이라고 잘못 가정한 결과를 보여주기 위한 값이다.
+기준 세 점만을 대조한 곡률 0 가설의 정규근사 양측 $p$는 각각
+$9.9\times10^{-214}$, $1.9\times10^{-15}$이었다. 이 $p$는
+단일 난수 seed와 국소 Fisher 근사의 산물이며 독립 반복의 coverage
+보증으로 해석하지 않는다.
+
+$P=0$ 과학 상태에 실제 중간 영점 $0.320$과 선형 예측 영점 $0.100$을
+각각 적용해도 정확한 조건부 확률은 같다. Aer의 표지별 2000회 재배분
+검정은 $\tau=0$에서 $p=0.557$, $\tau=\pi/2$에서 $p=0.416$이었다.
+이 비유의 결과만으로 불변성을 증명하는 것은 아니며, 정확 불변성은
+$P=0$ 상태의 운동량 합이 0이라는 별도 성질에서 온다.
+
+\section{해석과 다음 판별 게이트}
+관측 rank 3이 반복되는 이유가 더 분명해졌다. 이 실험의 새로운
+rank 3은 기준 시계나 위상 표지가 없어 생긴 것이 아니라,
+\emph{기준 측정 시점이 과학 측정 시점의 영점을 결정하지 못해서}
+생겼다. 반대로 선형 드리프트 모형을 단정하면 rank 4라는 숫자를
+얻으면서도 잘못된 과학 위상을 매우 정밀하게 추정할 수 있다.
+이 장난감 모형의 곡률 형태를 실제 장치 잡음 법칙으로 주장하지 않는다.
+준비한 $P=0$, 완벽한 에너지 시계, 알려진 기준 위상도 여전히 자원
+가정이며 자발적 세 공간 차원 선택의 증거가 아니다. QPU는 더 뒤의
+검증 단계로 남겨 둔다.
+
+다음에는 기준점 수와 배치 간격, 그리고 빠른 확률적 위상 성분을
+분리해야 한다. 특히 추가 기준점으로 \emph{식별 가능성}을 복원하는
+문제와 유한 샷에서 그 방향을 \emph{검출 가능}하게 만드는 비용은
+별개의 질문이다.
+
+\paragraph{재현성.} 코드
+\texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_clock\_drift\_intervention.py}, 회귀 검사
+\texttt{../tests/test\_qiskit\_clock\_drift\_intervention.py}, 원자료
+\texttt{../results/qiskit\_clock\_drift\_intervention.json}.
+시작 seed 20261007, Qiskit 2.4.2, Qiskit Aer 0.17.2.
+Windows Aer의 합성 \texttt{multiplexer} 접근 위반을 피하기 위해
+준비 회로를 $u3,cx$로 분해했다. TeX 엔진이 없어 PDF 렌더링은
+아직 검증하지 못했다.
+\end{document}

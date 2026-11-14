@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 선검증 8 결과:\\
+어느 대칭 파괴가 어떤 관측 영을 깨는가}
+\date{2026-10-04}
+\maketitle
+
+\section*{결론}
+두 관측 영의 보호 조건은 서로 달랐다. 준비 직후 system qubit 하나에 넣은
+$R_x(0.01,0.03,0.10)$ coherent pulse는 네 null을 모두 수치 정밀도에서
+보존했다. 그러나 label-dependent readout response는 균일 표지 average에서
+생기는 두 distribution null만 즉시 깨고, $P=0$ constraint null은 계속 영으로
+남겼다.
+
+표지를 버려 관측된 common direction이 없다는 결론에는 상태 제약뿐 아니라
+label별 detector response가 같다는 가정이 필요하다. 반면 이 회로의 $P=0$ 영은
+단일 준비 pulse로 누출된 amplitude가 원래 $P=0$ reference projection에 다시
+들어오지 못해 보호된다. 이 결과는 coherent fault 일반에 대한 면제가 아니라,
+준비와 측정 양쪽에서 sector를 연결하는 coherent reference가 필요한 조건을
+가리킨다.
+
+\section*{정확 Aer contrast}
+모든 수치는 세 축을 각각 Aer statevector로 계산했다. $D_S$는 강한 비제약
+signal, $D_0$는 네 null의 최대 contrast다.
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+fault & strength & $D_S$ & $D_0$ & $D_0/D_S$\\
+\midrule
+국소 준비 $R_x$ & $0.10$ rad & 0.000784804 & $1.7\times10^{-17}$ & $0$\\
+label-dependent readout & 0.001 & 0.000707291 & 0.000023177 & 0.033\\
+label-dependent readout & 0.010 & 0.000556039 & 0.000201448 & 0.362\\
+label-dependent readout & 0.030 & 0.000267446 & 0.000434650 & 1.625\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+사전 기준 $D_0/D_S\le0.1$에 따르면 평균 label readout 오류 0.1\%의 leakage는
+강한 signal의 1/10 이하였지만, 1\%에서는 무시할 수 없고 3\%에서는 가짜
+distribution contrast가 강한 signal을 넘었다. $e=0.01$에서 distribution null의
+$\tau=0,\pi/2$ contrast는 각각 0.000201448, 0.000093372였고, 두 $P=0$
+null은 $4.2\times10^{-17}$ 이하였다.
+
+평균 오류율만으로 이 현상을 설명할 수 없다. 사용한
+$e_l=e\{1+0.8\cos(2\pi l/7)\}$은 label 평균이 정확히 $e$인 반면, label마다
+다른 event response가 균일한 label average와 결합해 cancellation을 깨뜨린다.
+선검증 7의 label-independent 대칭 readout에서는 같은 평균 크기의 오류가 네
+null을 보존했던 것과 대조된다.
+
+\section*{한쪽 coherent 준비 pulse가 constraint null을 보존한 이유}
+pulse 뒤의 상태에는 원래 $P=0$ 밖의 성분이 생길 수 있다. 하지만 과학 위상층은
+charge sector를 섞지 않고, 마지막 reference projection은 원래 $P=0$ reference에만
+overlap한다. 따라서 한쪽에서 누출된 성분은 측정 event에 재결합하지 않는다.
+실제로 $R_x(0.10)$는 강한 signal을 1.083배, 약한 signal을 0.796배로 바꾸었지만
+constraint null에는 common-phase contrast를 만들지 않았다.
+
+다음 검증은 이 보호 논리를 직접 시험해야 한다. 준비 직후의 sector-mixing pulse와
+reference projection 직전의 역 pulse를 짝지어, 누출된 sector가 다시 measurement
+event에 들어오면 $P=0$ null이 어떻게 바뀌는지 검사한다. 이는 오류가 단순히
+존재하는가가 아니라, coherent reference가 준비와 측정 양쪽에 걸쳐 있는가의
+식별 조건을 묻는 실험이다.
+
+\section*{재현 자료}
+사전 프로토콜은 \texttt{prevalidation\_protocol8\_2026-10-04.tex}, 구현은
+\texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout8\_symmetry\_breaking.py},
+회귀 검사는 \texttt{../tests/test\_qiskit\_rank\_holdout8\_symmetry\_breaking.py},
+정확 output은 \texttt{../results/qiskit\_rank\_holdout8\_symmetry\_breaking.json}에 둔다.
+\end{document}
+

@@ -1,0 +1,167 @@
+% Compile from this directory with: xelatex why_three_qiskit3.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{I01 Qiskit 실험 3: 위상 표지의 영점 보정과 시간 드리프트}
+\author{RELATIONAL ATLAS --- 위상 기준 자원 감사}
+\date{2026년 10월 2일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+앞선 실험에서는 적용 위상 $t$의 표지를 보존하면 비제약 $T^4$
+상태의 네 번째 Fisher 방향이 회복되었다. 여기서는 표지의
+\emph{절대 영점}이 모를 때도 그런지 검증했다. 두 수집 블록에
+서로 다른 미지 영점 오차를 넣으면 과학 데이터만으로는 공통
+계의 위상과 영점 오차가 정확히 혼동되어, 표지를 기록해도
+유효 Fisher rank가 3이다. 각 블록에 같은 위상 기준틀을 공유하는
+알려진 위상 기준 측정을 추가하면 rank 4가 복원된다. 5회
+Aer 유한-shots 반복에서 보정한 공통 위상은 실제 $0.300$ rad에
+근접했다. 이것은 ``표지만 있으면 충분하다''는 해석을 반박하고,
+어떤 보정 자원이 필요한지 구체화한다.
+\end{abstract}
+
+\section{모형과 식별 가능성}
+앞선 8큐비트 $n=4$, cutoff 1 회로와 9개 위상 표본
+$\phi_t=2\pi t/9$, 기준 편향 $b=0.8$을 유지한다.
+수집 블록 $b$에서 과학계의 미지 위상 벡터를
+$\boldsymbol\theta$라 하고 실제 적용 위상의 미지 공통 영점을
+$\delta_b$라 두면, 각 이진 측정의 확률은
+\begin{equation}
+ p_{it}^{(b)}(\boldsymbol\theta,\delta_b)=
+ \left|\sum_k w_k
+ e^{ik\cdot[\boldsymbol\theta+\delta_b\boldsymbol1+
+ \phi_t\boldsymbol1-b\boldsymbol e_i]}\right|^2.
+\end{equation}
+표지 $t$를 모두 보존해도 임의의 $c$에 대해
+\begin{equation}
+ (\boldsymbol\theta,\delta_0,\delta_1)
+ \longmapsto
+ (\boldsymbol\theta+c\boldsymbol1,\delta_0-c,\delta_1-c)
+\end{equation}
+는 모든 과학 확률을 그대로 둔다. 따라서 데이터만으로
+공통 $\boldsymbol\theta$를 결정할 수 없다. 이 null 방향은
+통계 부족이 아니라 정확한 식별 불가능성이다.
+
+각 블록에 $\boldsymbol\theta=0$이 \emph{독립적으로 알려진}
+기준계를 넣고 같은 검출기로 $\delta_b$를 측정하는
+\emph{anchor run}을 정의한다. 이는 바로 외부 위상 기준이라는
+추가 자원이며, 기준계가 실제로 알려져 있지 않거나 두 측정
+사이에 위상틀이 달라지면 보정 논증은 성립하지 않는다.
+
+\section{정확 Fisher 정보: 보정 예산과 물리 제약}
+매개변수 $\xi=(\theta_1,\ldots,\theta_4,\delta_0,\delta_1)$의
+결합 Fisher 행렬을 과학 측정과 anchor 측정으로 계산한 뒤,
+미지 $\delta_b$를 Schur 여수
+\begin{equation}
+ F_{\theta|\delta}=F_{\theta\theta}-
+ F_{\theta\delta}F_{\delta\delta}^{+}F_{\delta\theta}
+\end{equation}
+로 제거했다. 여기서 $+$는 특이할 때의 의사역행렬이다.
+비율 $r$은 같은 $(i,t)$ 설정당 anchor shots/과학 shots다.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$r$ & 비제약 공통 방향 정보 & 비제약 정확 rank & 1\% 판정 rank \\
+\midrule
+0 & $\simeq0$ & 3 & 3 \\
+0.001 & 0.000278 & 4 & 3 \\
+0.01 & 0.002754 & 4 & 4 \\
+0.1 & 0.02528 & 4 & 4 \\
+1 & 0.13906 & 4 & 4 \\
+10 & 0.25284 & 4 & 4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+1\% 판정은 해당 행 최대 고유값의 1\%를 넘는 고유값만
+세는 규약이다. 이 정확 모형의 판정 전환점은
+$r\simeq0.00310$이지만, anchor 회로당 shots가 그만큼
+작아도 실험적으로 충분하다는 뜻은 \emph{아니다}. 특히 아래
+유한-shots 검증은 $r=1$에서만 수행했다. $P=0$ 과학 상태는
+anchor를 아무리 늘려도 rank 3이었다. 보정은 검출기가 잃은
+방향을 회복할 수 있으나, 준비 상태의 정확한 제약을 풀지 않는다.
+
+\section{Aer 유한-shots 드리프트 개입}
+실제 공통 과학 위상은 $\alpha=0.300$ rad로 두고,
+두 블록의 고정 영점은 각각
+$\delta_0=-0.150$, $\delta_1=+0.350$ rad로 설정했다.
+과학계와 알려진 위상 anchor는 블록마다 동일한 위상 표본과
+검출기 설정을 사용했다. 비제약 과학 72회로, 비제약 anchor
+72회로, $P=0$ 과학 대조군 72회로, 합계 216회로에
+각각 4096 shots를 사용했다. 이 전체를 서로 다른 seed로
+5번 반복했다. Qiskit Aer는 상태벡터 방법으로 실행했고,
+회로 병렬도는 6으로 제한했다. 회로 수·shots 설정은
+\href{https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html}{공식 AerSimulator 문서}의
+옵션을 따랐다.
+
+첫 반복의 표지별 이진 우도 적합 결과는 다음과 같다.
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+블록 & 실제 $\delta_b$ & 과학 데이터 $\widehat{\alpha+\delta_b}$
+& anchor $\hat\delta_b$ & 보정 $\hat\alpha$ \\
+\midrule
+0 & $-0.150$ & 0.1480 & $-0.1495$ & 0.2975 \\
+1 & $+0.350$ & 0.6515 & $+0.3480$ & 0.3035 \\
+\bottomrule
+\end{tabular}
+\end{center}
+영점을 0이라고 \emph{가정}하면 두 블록은 서로 양립하지 않는
+$0.1480$과 $0.6515$ rad를 과학 위상으로 보고한다.
+각 블록 anchor로 보정한 뒤 Fisher 분산으로 결합하면
+$\hat\alpha=0.30056$ rad, 근사 95\% 구간
+$[0.29561,0.30550]$ rad였다. 다섯 seed의 결합 추정치는
+$0.29803$--$0.30220$ rad였고, 다섯 근사 구간 모두 실제
+$0.300$을 포함했다. 이는 다섯 반복의 내부 일관성 점검이며,
+95\% 구간의 빈도주의 coverage를 검증했다고 주장하지 않는다.
+$P=0$ 대조군에서 두 블록 차이의 위상 표지별 재배분 검정
+$p$는 다섯 반복 모두 $0.24$ 이상이었다. 불검출은 정확
+제약의 해석적 불변성과 일치하지만, 개별 비유의성 자체가
+불변성의 증명은 아니다.
+
+\section{블록 내부의 기록되지 않은 흔들림}
+고정 $\delta_b$는 anchor로 보정할 수 있지만, 매 shot마다
+독립적으로 바뀌고 기록되지 않는
+$\zeta\sim\mathcal N(0,\sigma^2)$는 다르다. 이 경우
+$p_{it}$와 기울기를 $\zeta$에 대해 평균한 뒤 결합 Fisher
+정보를 계산했다. 31점 Gauss--Hermite 수치 적분 스캔이며
+이 표에는 새 Aer 유한-shots 실행이 포함되지 않는다.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$\sigma$ (rad) & 공통 방향 정보 & 상대 방향 정보 & 공통/상대 \\
+\midrule
+0 & 0.27630 & 0.08825 & 3.131 \\
+0.1 & 0.25677 & 0.08520 & 3.014 \\
+0.2 & 0.21186 & 0.07824 & 2.708 \\
+0.4 & 0.12438 & 0.06447 & 1.929 \\
+0.8 & 0.04569 & 0.05114 & 0.894 \\
+\bottomrule
+\end{tabular}
+\end{center}
+한 블록의 평균 영점은 알아도 shot별 흔들림은 표지 정보의
+contrast를 줄인다. 이 범위에서 정확 rank가 바로 3이 되지는
+않지만, 유한 측정 예산의 판정은 점점 어려워진다.
+
+\section{판정과 다음 게이트}
+I01의 관측 rank 3을 해석할 때, 표지의 존재와 표지의
+\emph{보정 가능성}은 별개의 조건이다. 외부 기준 없이 임의의
+블록 영점을 허용하면 앞서 회복한 공통 방향은 다시 식별 불가능하다.
+알려진 위상 anchor는 그 방향을 회복하지만, $P=0$ 제약의
+물리적 기원을 설명하지 않는다. 따라서 자발적 3차원 선택은
+여전히 보류다. 다음 판별은 유한 시계 조건화 아래서도
+같은 보정 논리가 유지되는지, 그리고 시간 내 영점 드리프트가
+anchor 업데이트 주기보다 빨라질 때 무엇이 무너지는지다.
+
+\paragraph{재현성.}
+실행 \texttt{../src/relational\_atlas\_i01/phase\_reference/qiskit\_phase\_anchor\_audit.py},
+검사 \texttt{../tests/test\_qiskit\_phase\_anchor\_audit.py},
+원자료 \texttt{../results/qiskit\_phase\_anchor\_audit.json}.
+Qiskit 2.4.2, Qiskit Aer 0.17.2, 첫 seed 20261005.
+이 Windows 환경의 합성 \texttt{multiplexer} 접근 위반을
+피하기 위해 $u3,cx$ 게이트로 분해했다. TeX 엔진이 없어
+PDF 시각 검증은 아직 못했다.
+\end{document}

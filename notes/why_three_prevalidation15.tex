@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 prevalidation 15 result:\\Dimension dependence of paired support transfer}
+\date{2026-10-04}
+\maketitle
+
+\section*{Implementation crosscheck}
+The generalized $n=3$ circuit reproduces the stage-14 transfer entries with maximum
+error $1.43\times10^{-17}$. Thus the changed clock width and circuit construction
+have not introduced a new $n=3$ mechanism.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+support class & $n=2$ & $n=3$ & $n=4$\\
+\midrule
+same support & 0.001635829 & 0.001442169 & 0.000591890\\
+conjugate partner & $2.6\times10^{-17}$ & $5.4\times10^{-17}$ & $3.7\times10^{-16}$\\
+different pair, same sign & $1.2\times10^{-17}$ & 0.000387617 & 0.000169526\\
+different pair, opposite sign & 0.001401342 & 0.000697812 & 0.000320087\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Conclusion}
+Conjugate-partner transfer is a numerical zero at all tested dimensions. Same-support
+and different-pair opposite-sign transfer remain nonzero at $n=2,3,4$. The
+different-pair same-sign class is nonzero for $n=3,4$ but exactly suppressed for
+$n=2$. Therefore the $n=3$ support pattern is neither a unique artefact nor a
+dimension-independent law; the number of momentum pairs changes the interference
+selection structure.
+
+\section*{Scope}
+This narrows the claim appropriately: the toy circuit exhibits a dimension-dependent
+reference-access phenomenon. It is not evidence that physical space dynamically
+chooses three dimensions.
+
+\section*{Reproduction}
+Code: \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout15\_dimension\_transfer.py}.\\
+Output: \texttt{../results/qiskit\_rank\_holdout15\_dimension\_transfer.json}.
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\begin{document}
+
+\title{I01 선검증 8 사전 프로토콜:\\
+대칭을 깨는 오류에서 관측 영의 조건부 실패}
+\date{2026-10-04}
+\maketitle
+
+\section*{질문}
+선검증 7은 phase-covariant, label-independent 오류에서는 균일 표지 영과
+$P=0$ 제약 영이 모두 남는다는 것을 보였다. 이번 검증은 그 보호 조건을
+의도적으로 하나씩 깨면 어느 영이 먼저 leakage를 보이는지 묻는다. 결과는
+현실 장비의 잡음 추정이 아니라, I01 관측 contrast의 식별 조건을 찾는
+counterexample 실험이다.
+
+\section*{고정 회로와 효과량}
+선검증 6--7과 같은 $n=3$, $L=7$, 2-qubit 에너지-상관 시계, 두 block 공통 위상
+$0,0.6$ rad 및 표지별 shot 가중치를 유지한다. 비교 행은 강한 비제약ㆍ비균일
+$\tau=0$ signal, 약한 비제약ㆍ비균일 $\tau=\pi/2$ signal, 균일ㆍ비제약
+distribution null 두 개, 비균일 $P=0$ constraint null 두 개다. 각 축의
+pooled joint contrast는
+\[
+ \Delta_a=\sum_lw_l\{p_{a,l}^{(0.6)}-p_{a,l}^{(0)}\}
+\]
+이고, 네 null의 최대 규모 $D_0$와 강한 signal 규모 $D_S$를 비교한다.
+판독 기준은 선검증 7과 같게 $D_0\le10^{-10}$, $D_0/D_S\le0.1$,
+$0.1<D_0/D_S\le1$, $D_0/D_S>1$의 네 범주로 미리 고정한다.
+
+\section*{단일 fault scenario}
+이상 기준점과 다음 두 fault를 서로 섞지 않고 계산한다.
+\begin{enumerate}
+\item Coherent preparation fault: 상관 상태 준비 직후, 과학 위상층 직전에
+  system qubit 0에 $R_x(\epsilon)$을 한 번 적용한다.
+  $\epsilon=0.01,0.03,0.10$ rad를 사용한다. 이는 $U(1)$ charge 대칭을 깨고
+  $P=0$ 상태에 charge-sector coherence를 만들 수 있는 국소 반례다.
+\item Label-dependent readout fault: 이상 측정 뒤 모든 output qubit에
+  label $l$별 독립 대칭 bit flip을 적용한다.
+  \[
+   e_l=e\{1+0.8\cos(2\pi l/7)\},\qquad
+   e=0.001,0.01,0.03.
+  \]
+  이 profile의 label 평균은 $e$이며 모든 사용값에서 양수이고 1보다 작다.
+  이는 균일 label average가 detector response까지 균일하다는 가정을 깨는
+  고정된 반례다.
+\end{enumerate}
+각 scenario에서 세 과학 축, 두 block, 일곱 label을 모두 Aer statevector로
+명시 계산한다. coherent fault는 한 qubit에만 걸리므로 축 대칭 축소를 사용하지
+않는다. 읽기 채널은 complete output probability distribution에 정확히 합성한다.
+
+\section*{해석 제한}
+coherent pulse와 cosine label profile은 calibration된 실장 잡음이 아니다.
+관측 영이 남거나 깨진다는 결과는 해당 대칭/균일성 가정의 충분조건 또는
+반례를 보일 뿐, 자발적 차원 선택, 일반적 시계 이론, 실제 하드웨어 성능을
+결정하지 않는다. 이 단계에서 유한-shots $p$값을 산출하지 않는다.
+
+\section*{재현 자료}
+구현은 \texttt{../src/relational\_atlas\_i01/holdout/qiskit\_rank\_holdout8\_symmetry\_breaking.py},
+회귀 검사는 \texttt{../tests/test\_qiskit\_rank\_holdout8\_symmetry\_breaking.py},
+출력은 \texttt{../results/qiskit\_rank\_holdout8\_symmetry\_breaking.json}에 둔다.
+\end{document}
+
