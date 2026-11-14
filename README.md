@@ -96,3 +96,17 @@ paired transverse intervention의 exact Aer 전수 atlas는 한쪽 pulse와 $Z$�
 선택한 작업 주제는 **제약 위상 간섭계에서 코히런트 기준 접근 오류의 전하 섹터 경로 지문**이다. 짝을 이룬 두 $R_x$ 접근의 복귀 진폭은 직접 경로와 두 번의 비트 반전 경로 두 항으로 정확히 분해된다. 이 규칙은 16단계 각도 스캔을 최대 $1.16\times10^{-16}$ 오차로 재현하며, $\epsilon=\pi$의 작은 잔차까지 설명한다. 켤레 비트는 허용 경로가 0개, 다른 축의 같은 부호 비트는 $n=2$에서 0개, $n=3$부터 양수다. 따라서 3은 이 경로의 **최초 개방 차원**이며, 3차원만 선택된다는 뜻은 아니다. 균일 위상 표지에서는 관측 대비가 영으로 돌아가므로 비균일 표지 자원을 가정한다.
 
 정확한 Aer 밀도행렬에서는 오류율 0.03의 준비 amplitude damping과 읽기 오류가 켤레 영을 각각 $7.21\times10^{-6}$, $1.65\times10^{-5}$로 깨지만 phase damping은 계산 정밀도에서 영을 유지했다. 준비 오류의 누출은 접근한 $q_0,q_1$이 아닌 다른 시스템 큐비트에서 왔고, 읽기 오류의 1차 누출은 거의 $q_1$의 한 비트 결과에서 왔다. 현재 유한 샷 예산에 대한 켤레 누출의 근사 noncentrality는 각각 0.0021, 0.0068에 불과하므로 이를 실용적인 오류 위치 추정으로 과장하지 않는다. 관련 원자료는 [잡음 스캔](results/qiskit_rank_holdout19_transfer_noise.json), [정확 경로와 각도 법칙](results/qiskit_rank_holdout20_sector_paths.json), [준비 오류 위치](results/qiskit_rank_holdout21_fault_locality.json), [읽기 오류 경로](results/qiskit_rank_holdout22_readout_paths.json), [개별 원격 큐비트](results/qiskit_rank_holdout23_remote_faults.json)에 있다.
+
+## I01 본연구 24--26: 경로 지문의 인코딩 의존성
+
+주제 결정 뒤의 본연구는 경로 지문 중 어느 부분이 cutoff·코드 밖 위상·접근 연산의 변경에도 남는지를 사전 예측으로 시험했다. 세 단계 모두 정확 계산과 독립 Aer 대조이며, 유한-shots 검출력·잡음 안정성·우주적 차원 선택은 다루지 않았다. 경로 수는 (같은 접근, 켤레, 다른 축·같은 부호, 다른 축·반대 부호) 순서다.
+
+| 단계 | 개입 | 핵심 결과 |
+|---|---|---|
+| 24 | 축당 cutoff 2, one-hot 부호 비트 | $n=2,3,4$ 경로 수 $(5,0,0,2)$, $(19,0,2,2)$, $(85,0,8,10)$. 같은 부호 첫 개방 $n=3$은 유지되고 $n=4$ 값은 4에서 8로 변함. 168개 복귀확률의 희소 진폭식–Aer 최대차 $4.77\times10^{-18}$ |
+| 25 | 펄스 사이에만 방문하는 코드 밖 multi-hot 위상만 변경 | cutoff 1은 완전히 불변. cutoff 2에서는 같은 비트 클래스만 최대 $3.42\times10^{-4}$ 변하고 켤레·다른 축 클래스는 정확히 불변. 끝점 경로 수는 허용 조건이지 신호 크기 결정식이 아님 |
+| 26 | 코드 보존 접근(유효 코드의 $0\leftrightarrow\pm1$만 회전) | 경로 수 $(2,0,0,2)$, $(9,0,2,2)$, $(37,0,8,10)$. 다른 축·같은 부호 첫 개방 $n=3$ 유지, 코드 밖 위상 민감도 0. 진폭식이 $\langle r\vert D_bUD_a\vert w\rangle+s^2\langle r\vert H_bUH_a\vert w\rangle$로 바뀜. 사전 판정 전부 통과 |
+
+문서: [24단계 사전 예측](notes/research_protocol24_charge_graph_cutoff2_2026-10-06.tex)([PDF](output/pdf/research_protocol24_charge_graph_cutoff2_2026-10-06.pdf)), [25단계 사전 예측](notes/research_protocol25_invalid_phase_extension_2026-10-06.tex)([PDF](output/pdf/research_protocol25_invalid_phase_extension_2026-10-06.pdf)), [24--25 결과·증명](notes/research_results24_25_charge_graph_2026-10-06.tex)([PDF](output/pdf/research_results24_25_charge_graph_2026-10-06.pdf)), [26단계 사전 예측](notes/research_protocol26_physical_access_2026-10-15.md), [26단계 결과](notes/research_result26_physical_access_2026-10-15.md). 원자료: [24단계](results/qiskit_rank_holdout24_charge_graph.json), [25단계](results/qiskit_rank_holdout25_invalid_extension.json), [26단계](results/qiskit_rank_holdout26_physical_access.json).
+
+현재 전체 회귀 테스트는 `scripts/test.py`에서 154개 통과한다(2026-11-13, 21--23단계 잡음 누출 회귀 검사 포함).
