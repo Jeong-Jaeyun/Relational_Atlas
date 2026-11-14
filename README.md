@@ -123,4 +123,8 @@ paired transverse intervention의 exact Aer 전수 atlas는 한쪽 pulse와 $Z$�
 
 이 결과를 반영한 [수정 원고](notes/topic_decision_revised_2026-11-13.tex)([PDF](output/pdf/topic_decision_revised_2026-11-13.pdf))가 현재 주장의 기준이다. 10-06 원고는 기록으로 남긴다.
 
-현재 전체 회귀 테스트는 `scripts/test.py`에서 163개 통과한다(2026-11-13).
+## I01 본연구 27b: 유한 샷 twirl on/off (2026-11-13)
+
+[사전 프로토콜](notes/research_protocol27b_twirl_shots_2026-11-13.md)과 분석 코드를 데이터 취득 전에 커밋한 뒤, 528,482,304회 준비의 Aer 실험을 수행했다. [결과](notes/research_result27b_twirl_shots_2026-11-13.md)는 사전 예측 12개와 보조 예측 3개 모두 통과다. 부호를 뒤집으면 대비가 반전되고, twirl을 하면 대비가 사라지며, 켤레 영은 세 조건 모두에서 유지되었다. 버린 twirl 기록을 다시 쓰면 간섭이 회수된다(탐색 결과). [코드](src/relational_atlas_i01/holdout/qiskit_rank_holdout27b_twirl_shots.py), [원자료](results/qiskit_rank_holdout27b_twirl_shots.json).
+
+현재 전체 회귀 테스트는 `scripts/test.py`에서 171개 통과한다(2026-11-13).
