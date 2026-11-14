@@ -121,4 +121,6 @@ paired transverse intervention의 exact Aer 전수 atlas는 한쪽 pulse와 $Z$�
 
 [코드](src/relational_atlas_i01/holdout/qiskit_rank_holdout27a_exact_design.py), [원자료](results/qiskit_rank_holdout27a_exact_design.json).
 
+이 결과를 반영한 [수정 원고](notes/topic_decision_revised_2026-11-13.tex)([PDF](output/pdf/topic_decision_revised_2026-11-13.pdf))가 현재 주장의 기준이다. 10-06 원고는 기록으로 남긴다.
+
 현재 전체 회귀 테스트는 `scripts/test.py`에서 163개 통과한다(2026-11-13).
